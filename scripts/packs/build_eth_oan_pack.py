@@ -24,8 +24,11 @@ What is taken from where
   without boundaries is valid and draws no map. Map surfaces keep using `ETH`,
   whose region, zone and woreda P-codes this pack reuses wherever the unit is
   the same.
-- No samples/. The base samples write kebele as address text and sit on
-  COD-AB woredas, some of which this hierarchy no longer has.
+- samples/ are the base pack's people, moved down one level: the kebele
+  written in address_parts becomes the unit, geo_pcode = <woreda><kebele>.
+  Master Data loads them into g2p_sample_individuals, which both the
+  registry's sample data and the mock identity system seed from, so they must
+  sit on units this pack has. A sample whose kebele is missing stops the build.
 
 Identifiers
 -----------
@@ -191,8 +194,14 @@ def main():
             v["level_value_mnemonic"] = f"{v['level_value_mnemonic']} ({v['level_value_id']})"
         seen.add(key)
 
+    readme = os.path.join(args.out, "README.md")  # hand-written, survives a rebuild
+    readme_text = open(readme, encoding="utf-8").read() if os.path.exists(readme) else None
     if os.path.isdir(args.out):
         shutil.rmtree(args.out)
+    if readme_text is not None:
+        os.makedirs(args.out)
+        with open(readme, "w", encoding="utf-8", newline="\n") as fh:
+            fh.write(readme_text)
     write_json(os.path.join(args.out, "levels.json"), [
         {"level_id": level_ids[m], "level_mnemonic": m,
          "parent_level_id": level_ids[LEVELS[i - 1]] if i else None}
@@ -224,6 +233,18 @@ def main():
     address["sub_levels"] = [s for s in address["sub_levels"] if s["id"] != "kebele"]
     address["lines"] = ["House {house_number}"]
     write_json(os.path.join(args.out, "address.json"), address)
+
+    units = {v["level_value_id"] for v in values}
+    for kind in ("individuals", "households"):
+        recs = read_json(os.path.join(args.base, "samples", f"{kind}.json"))
+        for rec in recs:
+            parts = dict(rec.get("address_parts") or {})
+            kebele = rec["geo_pcode"] + parts.pop("kebele", "")
+            if kebele not in units:
+                raise SystemExit(f"sample {rec.get(kind[:-1] + '_id')}: no unit {kebele} in this pack")
+            rec["geo_pcode"] = kebele
+            rec["address_parts"] = parts
+        write_json(os.path.join(args.out, "samples", f"{kind}.json"), recs)
 
     os.makedirs(os.path.join(args.out, "migration"))
     with open(os.path.join(args.out, "migration", "id_map.csv"), "w", encoding="utf-8", newline="") as fh:

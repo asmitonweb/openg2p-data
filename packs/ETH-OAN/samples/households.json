@@ -1,0 +1,110 @@
+[
+  {
+    "household_id": "ETH-HH-001",
+    "head_individual_id": "ETH-IND-0001",
+    "headship_type": "MALE_HEADED",
+    "size_total": 5,
+    "geo_pcode": "ET01010102",
+    "dwelling_type": "SEMI_PERMANENT",
+    "tenure_status": "HOSTED",
+    "water_source_type": "WELL",
+    "sanitation_type": "FLUSH_TOILET",
+    "lighting_source": "KEROSENE",
+    "cooking_fuel_type": "FIREWOOD",
+    "address_parts": {
+      "house_number": "1145"
+    },
+    "latitude": 14.40715,
+    "longitude": 37.74038
+  },
+  {
+    "household_id": "ETH-HH-002",
+    "head_individual_id": "ETH-IND-0006",
+    "headship_type": "MALE_HEADED",
+    "size_total": 3,
+    "geo_pcode": "ET01010102",
+    "dwelling_type": "PERMANENT",
+    "tenure_status": "OWNED",
+    "water_source_type": "SPRING",
+    "sanitation_type": "PIT_LATRINE",
+    "lighting_source": "KEROSENE",
+    "cooking_fuel_type": "ELECTRICITY",
+    "address_parts": {
+      "house_number": "0876"
+    },
+    "latitude": 14.38917,
+    "longitude": 37.75456
+  },
+  {
+    "household_id": "ETH-HH-003",
+    "head_individual_id": "ETH-IND-0009",
+    "headship_type": "MALE_HEADED",
+    "size_total": 5,
+    "geo_pcode": "ET01010401",
+    "dwelling_type": "PERMANENT",
+    "tenure_status": "HOSTED",
+    "water_source_type": "WELL",
+    "sanitation_type": "FLUSH_TOILET",
+    "lighting_source": "GRID",
+    "cooking_fuel_type": "CHARCOAL",
+    "address_parts": {
+      "house_number": "0312"
+    },
+    "latitude": 14.02755,
+    "longitude": 38.31802
+  },
+  {
+    "household_id": "ETH-HH-004",
+    "head_individual_id": "ETH-IND-0014",
+    "headship_type": "FEMALE_HEADED",
+    "size_total": 2,
+    "geo_pcode": "ET01010401",
+    "dwelling_type": "TEMPORARY",
+    "tenure_status": "OWNED",
+    "water_source_type": "PIPED",
+    "sanitation_type": "FLUSH_TOILET",
+    "lighting_source": "KEROSENE",
+    "cooking_fuel_type": "FIREWOOD",
+    "address_parts": {
+      "house_number": "2210"
+    },
+    "latitude": 14.36212,
+    "longitude": 38.39123
+  },
+  {
+    "household_id": "ETH-HH-005",
+    "head_individual_id": "ETH-IND-0016",
+    "headship_type": "FEMALE_HEADED",
+    "size_total": 2,
+    "geo_pcode": "ET01010805",
+    "dwelling_type": "PERMANENT",
+    "tenure_status": "OWNED",
+    "water_source_type": "WELL",
+    "sanitation_type": "FLUSH_TOILET",
+    "lighting_source": "GRID",
+    "cooking_fuel_type": "CHARCOAL",
+    "address_parts": {
+      "house_number": "0489"
+    },
+    "latitude": 14.09851,
+    "longitude": 38.28554
+  },
+  {
+    "household_id": "ETH-HH-006",
+    "head_individual_id": "ETH-IND-0018",
+    "headship_type": "MALE_HEADED",
+    "size_total": 4,
+    "geo_pcode": "ET01010805",
+    "dwelling_type": "TEMPORARY",
+    "tenure_status": "HOSTED",
+    "water_source_type": "PIPED",
+    "sanitation_type": "PIT_LATRINE",
+    "lighting_source": "KEROSENE",
+    "cooking_fuel_type": "ELECTRICITY",
+    "address_parts": {
+      "house_number": "1703"
+    },
+    "latitude": 14.10132,
+    "longitude": 38.28503
+  }
+]
