@@ -1,0 +1,100 @@
+{
+  "attribute_id": "LIVESTOCK_PRODUCTION_TYPE",
+  "attribute_code": "LIVESTOCK_PRODUCTION_TYPE",
+  "attribute_display": "Livestock production type",
+  "description": "OpenAgriNet farmer registry list, carried over from the previous farmer registry release.",
+  "is_hierarchical": false,
+  "values": [
+    {
+      "value_id": "LPTYPE_BREEDING",
+      "value_code": "BREEDING",
+      "value_display": "Breeding",
+      "sort_order": 1,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "LPTYPE_CASTRATED",
+      "value_code": "CASTRATED",
+      "value_display": "Castrated",
+      "sort_order": 2,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "LPTYPE_DRAFT_POWER",
+      "value_code": "DRAFT_POWER",
+      "value_display": "Draft Power",
+      "sort_order": 3,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "LPTYPE_DUAL_PURPOSE",
+      "value_code": "DUAL_PURPOSE",
+      "value_display": "Dual Purpose",
+      "sort_order": 4,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "LPTYPE_DUNG",
+      "value_code": "DUNG",
+      "value_display": "Dung",
+      "sort_order": 5,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "LPTYPE_EGG",
+      "value_code": "EGG",
+      "value_display": "Egg",
+      "sort_order": 6,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "LPTYPE_HIDE_OR_SKIN",
+      "value_code": "HIDE_OR_SKIN",
+      "value_display": "Hide Or Skin",
+      "sort_order": 7,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "LPTYPE_HONEY",
+      "value_code": "HONEY",
+      "value_display": "Honey",
+      "sort_order": 8,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "LPTYPE_MEAT",
+      "value_code": "MEAT",
+      "value_display": "Meat",
+      "sort_order": 9,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "LPTYPE_MILK",
+      "value_code": "MILK",
+      "value_display": "Milk",
+      "sort_order": 10,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "LPTYPE_OTHER",
+      "value_code": "OTHER",
+      "value_display": "Other",
+      "sort_order": 11,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "LPTYPE_PACK_ANIMAL",
+      "value_code": "PACK_ANIMAL",
+      "value_display": "Pack Animal",
+      "sort_order": 12,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "LPTYPE_WOOL",
+      "value_code": "WOOL",
+      "value_display": "Wool",
+      "sort_order": 13,
+      "display_i18n": {}
+    }
+  ]
+}

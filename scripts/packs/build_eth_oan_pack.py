@@ -18,8 +18,10 @@ What is taken from where
 ------------------------
 - Hierarchy and names come from the source catalog.
 - Code lists, domains and address.json come from the base pack, so the two
-  Ethiopia packs describe a farmer the same way. Kebele moves out of
-  address.json's sub_levels, because here it is a level.
+  Ethiopia packs describe a farmer the same way. Lists only the farmer
+  registry needs are added from eth_oan_additions/ and never replace a base
+  list. Kebele moves out of address.json's sub_levels, because here it is a
+  level.
 - No boundaries/. No polygons exist for the kebeles or the new units. A pack
   without boundaries is valid and draws no map. Map surfaces keep using `ETH`,
   whose region, zone and woreda P-codes this pack reuses wherever the unit is
@@ -76,6 +78,8 @@ SOURCE_LEVEL = {"level-region": "region", "level-zone": "zone",
 COUNTRY = {"pcode": "ET", "name": "Ethiopia"}
 BASE_SOURCE = "OCHA COD-AB"
 OWN_SOURCE = "OpenAgriNet"
+# Code lists this pack adds to the base pack's, laid out as in a pack.
+ADDITIONS = os.path.join(os.path.dirname(os.path.abspath(__file__)), "eth_oan_additions")
 
 
 def read_json(path):
@@ -229,6 +233,16 @@ def main():
         src = os.path.join(args.base, sub)
         if os.path.isdir(src):
             shutil.copytree(src, os.path.join(args.out, sub))
+    # Lists only the farmer registry needs are added on top. They never replace
+    # a base list, so both Ethiopia packs keep describing a farmer the same way.
+    for dirpath, _, files in os.walk(ADDITIONS):
+        for name in files:
+            rel = os.path.relpath(os.path.join(dirpath, name), ADDITIONS)
+            dest = os.path.join(args.out, rel)
+            if os.path.exists(dest):
+                raise SystemExit(f"{rel}: the base pack already has this list")
+            os.makedirs(os.path.dirname(dest), exist_ok=True)
+            shutil.copyfile(os.path.join(dirpath, name), dest)
     address = read_json(os.path.join(args.base, "address.json"))
     address["sub_levels"] = [s for s in address["sub_levels"] if s["id"] != "kebele"]
     address["lines"] = ["House {house_number}"]

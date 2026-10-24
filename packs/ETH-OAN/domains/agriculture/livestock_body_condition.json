@@ -1,0 +1,44 @@
+{
+  "attribute_id": "LIVESTOCK_BODY_CONDITION",
+  "attribute_code": "LIVESTOCK_BODY_CONDITION",
+  "attribute_display": "Livestock body condition",
+  "description": "OpenAgriNet farmer registry list, carried over from the previous farmer registry release.",
+  "is_hierarchical": false,
+  "values": [
+    {
+      "value_id": "LBCOND_POOR",
+      "value_code": "POOR",
+      "value_display": "Poor",
+      "sort_order": 1,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "LBCOND_FAIR",
+      "value_code": "FAIR",
+      "value_display": "Fair",
+      "sort_order": 2,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "LBCOND_GOOD",
+      "value_code": "GOOD",
+      "value_display": "Good",
+      "sort_order": 3,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "LBCOND_VERY_GOOD",
+      "value_code": "VERY_GOOD",
+      "value_display": "Very Good",
+      "sort_order": 4,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "LBCOND_EXCELLENT",
+      "value_code": "EXCELLENT",
+      "value_display": "Excellent",
+      "sort_order": 5,
+      "display_i18n": {}
+    }
+  ]
+}
