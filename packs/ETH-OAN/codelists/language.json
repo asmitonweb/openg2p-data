@@ -1,0 +1,107 @@
+{
+  "attribute_id": "LANGUAGE",
+  "attribute_code": "LANGUAGE",
+  "attribute_display": "Primary language",
+  "description": "OpenAgriNet farmer registry list: the farmer's primary language, as in the previous farmer registry release. Choosing one other than Amharic asks for the names in that language.",
+  "is_hierarchical": false,
+  "values": [
+    {
+      "value_id": "LANG_AMHARIC",
+      "value_code": "AMHARIC",
+      "value_display": "Amharic",
+      "sort_order": 1,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "LANG_AFAAN_OROMO",
+      "value_code": "AFAAN_OROMO",
+      "value_display": "Afaan Oromoo",
+      "sort_order": 2,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "LANG_TIGRINYA",
+      "value_code": "TIGRINYA",
+      "value_display": "Tigrinya",
+      "sort_order": 3,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "LANG_SIDAAMU_AFOO",
+      "value_code": "SIDAAMU_AFOO",
+      "value_display": "Sidaamu Afoo (Sidamo)",
+      "sort_order": 4,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "LANG_AFAR",
+      "value_code": "AFAR",
+      "value_display": "Afar",
+      "sort_order": 5,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "LANG_SOMALI",
+      "value_code": "SOMALI",
+      "value_display": "Somali",
+      "sort_order": 6,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "LANG_GURAGIGNA",
+      "value_code": "GURAGIGNA",
+      "value_display": "Guragigna (Gurage)",
+      "sort_order": 7,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "LANG_WOLAYTTA",
+      "value_code": "WOLAYTTA",
+      "value_display": "Wolaytta",
+      "sort_order": 8,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "LANG_HADIYYISA",
+      "value_code": "HADIYYISA",
+      "value_display": "Hadiyyisa (Hadiyya)",
+      "sort_order": 9,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "LANG_GEDEO",
+      "value_code": "GEDEO",
+      "value_display": "Gedeo",
+      "sort_order": 10,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "LANG_GAMO",
+      "value_code": "GAMO",
+      "value_display": "Gamo",
+      "sort_order": 11,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "LANG_SILTE",
+      "value_code": "SILTE",
+      "value_display": "Silte",
+      "sort_order": 12,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "LANG_KAFI_NOONOO",
+      "value_code": "KAFI_NOONOO",
+      "value_display": "Kafi Noonoo (Kafa)",
+      "sort_order": 13,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "LANG_OTHER",
+      "value_code": "OTHER",
+      "value_display": "Other language",
+      "sort_order": 14,
+      "display_i18n": {}
+    }
+  ]
+}
