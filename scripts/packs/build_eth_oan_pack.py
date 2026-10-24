@@ -22,10 +22,14 @@ What is taken from where
   registry needs are added from eth_oan_additions/ and never replace a base
   list. Kebele moves out of address.json's sub_levels, because here it is a
   level.
-- No boundaries/. No polygons exist for the kebeles or the new units. A pack
-  without boundaries is valid and draws no map. Map surfaces keep using `ETH`,
-  whose region, zone and woreda P-codes this pack reuses wherever the unit is
-  the same.
+- boundaries/ are the base pack's polygons for the units that are still the
+  same unit, so every OAN registry and dashboard draws and looks up locations
+  from Master Data rather than its own copy. A woreda keeps its polygon when
+  its code is COD-AB's. A region or zone keeps it when, besides that, none of
+  the base pack's woredas inside it has left it: a polygon is never larger than
+  the unit now is. The new units (Sidama, South West, the Liyu zones, woredas
+  split since 2021) and the kebeles have no polygon, so coverage is partial
+  and the manifest says how partial (`boundary_coverage`).
 - samples/ are the base pack's people, moved down one level: the kebele
   written in address_parts becomes the unit, geo_pcode = <woreda><kebele>.
   Master Data loads them into g2p_sample_individuals, which both the
@@ -150,6 +154,37 @@ def build_ids(rows, base_codes):
     return ids
 
 
+def carry_boundaries(base, values):
+    """{level: features} from the base pack, for the units that are unchanged."""
+    bdir = os.path.join(base, "boundaries")
+    same = {v["level_value_id"]: v for v in values if v["pcode_source"] == BASE_SOURCE}
+    level_of = {f"l{i}": m for i, m in enumerate(LEVELS)}
+    layers = {m: read_json(os.path.join(bdir, f"{m}.geojson"))["features"]
+              for m in LEVELS if os.path.exists(os.path.join(bdir, f"{m}.geojson"))}
+    kept_woredas = {f["properties"]["pcode"] for f in layers.get("woreda", [])
+                    if f["properties"]["pcode"] in same
+                    and level_of[same[f["properties"]["pcode"]]["level_id"]] == "woreda"}
+    base_woredas = {f["properties"]["pcode"] for f in layers.get("woreda", [])}
+    out = {}
+    for m, features in layers.items():
+        kept = []
+        for f in features:
+            unit = same.get(f["properties"]["pcode"])
+            if not unit or level_of[unit["level_id"]] != m:
+                continue
+            code = unit["level_value_id"]
+            if m == "woreda" and code not in kept_woredas:
+                continue
+            if m in ("region", "zone") and any(w.startswith(code) and w not in kept_woredas for w in base_woredas):
+                continue
+            props = dict(f["properties"])
+            props["area_name"] = unit["display_name"]
+            props["parent_pcode"] = unit["parent_level_value_id"]
+            kept.append({**f, "properties": props})
+        out[m] = kept
+    return out
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
     ap.add_argument("--source", required=True, help="source catalog (geo_level_values.json)")
@@ -213,6 +248,13 @@ def main():
     write_json(os.path.join(args.out, "values.json"), values)
 
     counts = {m: sum(1 for v in values if v["level_id"] == level_ids[m]) for m in LEVELS}
+    boundaries = carry_boundaries(args.base, values)
+    os.makedirs(os.path.join(args.out, "boundaries"))
+    for m, features in boundaries.items():
+        # One line, as the base pack writes them: these are data, not reading.
+        with open(os.path.join(args.out, "boundaries", f"{m}.geojson"), "w", encoding="utf-8", newline="\n") as fh:
+            json.dump({"type": "FeatureCollection", "features": features}, fh, ensure_ascii=False)
+            fh.write("\n")
     base_manifest = read_json(os.path.join(args.base, "manifest.json"))
     write_json(os.path.join(args.out, "manifest.json"), {
         "country": "ETH",
@@ -227,6 +269,8 @@ def main():
         "identifier": "P-code used as level_value_id",
         "levels": LEVELS,
         "unit_counts": counts,
+        # Units with a polygon, per level; the rest have none (see the docstring).
+        "boundary_coverage": {m: len(boundaries.get(m, [])) for m in LEVELS},
     })
 
     for sub in ("codelists", "domains"):

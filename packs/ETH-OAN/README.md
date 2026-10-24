@@ -5,7 +5,7 @@
 | Levels | country → region → zone → woreda | country → region → zone → woreda → **kebele** |
 | Units | 1 / 15 / 107 / 1,148 | 1 / 14 / 125 / 1,362 / 19,535 |
 | Hierarchy as of | OCHA COD-AB cut | after the 2021–2023 reorganisation (Sidama, South West, Liyu zones) |
-| Boundaries | yes | no (no polygons exist for kebeles or the new units) |
+| Boundaries | yes | `ETH`'s, for the unchanged units (none for kebeles or the new units) |
 | Kebele | address text (`address.json`) | a level |
 | Samples | on woredas, kebele as address text | the same people, on their kebele unit |
 
@@ -25,9 +25,22 @@ same input.
 
 ## Selecting it
 
-Set `geoSeed.countryPack: ETH-OAN` in the `openg2p-master-data` chart. Map surfaces keep using
-`ETH`. Every region, zone and woreda whose unit COD-AB also has keeps COD-AB's P-code
-(`pcode_source: OCHA COD-AB`), so those units join to `ETH`'s polygons directly.
+Set `geoSeed.countryPack: ETH-OAN` in the `openg2p-master-data` chart. Every region, zone and
+woreda whose unit COD-AB also has keeps COD-AB's P-code (`pcode_source: OCHA COD-AB`).
+
+## Boundaries
+
+`boundaries/` carries `ETH`'s polygons for the units that are still the same unit, so Master
+Data seeds them with the hierarchy and serves them (`/catalogue/get_geo_boundary`) to every OAN
+registry and dashboard: one map, the same ids as the location fields. A woreda keeps its
+polygon when its code is COD-AB's; a region or zone when, besides that, none of `ETH`'s woredas
+inside it has left it, so no polygon is larger than its unit now is. Kebeles and the units
+created since 2021 have none. `manifest.json` records the count per level
+(`boundary_coverage`); today 1 country, 7 of 14 regions, 85 of 125 zones and 1,063 of 1,362
+woredas. A registry's map pin finds the woreda under it and takes the region and zone from its
+code, which nest; where there is no polygon, the location is chosen from the lists.
+
+The polygons are OCHA COD-AB (CC BY-IGO): show the attribution wherever they are drawn.
 
 ## Identifiers and migrating existing records
 

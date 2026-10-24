@@ -22,5 +22,12 @@
     "zone": 125,
     "woreda": 1362,
     "kebele": 19535
+  },
+  "boundary_coverage": {
+    "country": 1,
+    "region": 7,
+    "zone": 85,
+    "woreda": 1063,
+    "kebele": 0
   }
 }

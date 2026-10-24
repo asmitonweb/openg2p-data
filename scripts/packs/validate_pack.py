@@ -650,11 +650,17 @@ def validate(pack_dir):
         r.warn("no boundaries/ directory — the pack seeds a hierarchy but draws no map")
         return r
 
+    # A pack that declares boundary_coverage has polygons for only some units
+    # (ETH-OAN: none for its kebeles and its new units). The declared counts
+    # must then be exact, and a unit without a polygon is not an error.
+    coverage = manifest.get("boundary_coverage")
     geoms = {}
     for lid in order:
         m = mnemonic[lid]
         path = os.path.join(bdir, f"{m}.geojson")
         if not os.path.exists(path):
+            if coverage is not None and not coverage.get(m):
+                continue
             r.error(f"no boundaries/{m}.geojson for level {m}")
             continue
         fc = read_json(path)
@@ -695,7 +701,11 @@ def validate(pack_dir):
             geoms[pcode] = geom
 
         missing = level_units - seen_pcodes
-        if missing:
+        if coverage is not None:
+            if coverage.get(m) != len(seen_pcodes):
+                r.error(f"manifest boundary_coverage says {coverage.get(m)} {m} polygon(s), "
+                        f"{m}.geojson has {len(seen_pcodes)}")
+        elif missing:
             r.error(f"{len(missing)} {m} unit(s) have no geometry, e.g. "
                     f"{sorted(missing)[:3]}")
 
