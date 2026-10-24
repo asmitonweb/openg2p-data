@@ -1,0 +1,1495 @@
+{
+  "attribute_id": "CROP_COMMODITY",
+  "attribute_code": "CROP_COMMODITY",
+  "attribute_display": "Crop",
+  "description": "Crops, aligned with the Ethiopian Ministry of Agriculture's crop variety list (one entry per MoA crop), plus Malt barley and Other. Source: Ethiopian Ministry of Agriculture crop variety portal (Crop Technologies), http://196.191.93.34/moa-portal/cropopen/varieites/, read 2026-10-16.",
+  "is_hierarchical": false,
+  "attribute_schema": {
+    "type": "object",
+    "properties": {
+      "category": {
+        "type": "string",
+        "x-list-ref": "CROP_CATEGORY",
+        "title": "Category",
+        "description": "The crop's group (MoA crop category)"
+      },
+      "scientific_name": {
+        "type": "string",
+        "title": "Scientific name"
+      }
+    },
+    "required": [
+      "category"
+    ],
+    "additionalProperties": false
+  },
+  "values": [
+    {
+      "value_id": "CROP_TEFF",
+      "value_code": "CROP_TEFF",
+      "value_display": "Teff",
+      "sort_order": 1,
+      "display_i18n": {
+        "am": "ጤፍ"
+      },
+      "attributes": {
+        "category": "CROPCAT_CEREAL",
+        "scientific_name": "Eragrostis tef"
+      }
+    },
+    {
+      "value_id": "CROP_QUINOA",
+      "value_code": "CROP_QUINOA",
+      "value_display": "Quinoa",
+      "sort_order": 2,
+      "display_i18n": {
+        "am": "ኪዩና"
+      },
+      "attributes": {
+        "category": "CROPCAT_CEREAL",
+        "scientific_name": "Chenopodium quinoa Willd."
+      }
+    },
+    {
+      "value_id": "CROP_BREAD_WHEAT",
+      "value_code": "CROP_BREAD_WHEAT",
+      "value_display": "Bread wheat",
+      "sort_order": 3,
+      "display_i18n": {
+        "am": "የዳቦ ስንዴ"
+      },
+      "attributes": {
+        "category": "CROPCAT_CEREAL",
+        "scientific_name": "Triticum aestivum"
+      }
+    },
+    {
+      "value_id": "CROP_DURUM_WHEAT",
+      "value_code": "CROP_DURUM_WHEAT",
+      "value_display": "Durum wheat",
+      "sort_order": 4,
+      "display_i18n": {
+        "am": "የመኮሮኒ ስንዴ"
+      },
+      "attributes": {
+        "category": "CROPCAT_CEREAL",
+        "scientific_name": "Triticum turgidum var. durum"
+      }
+    },
+    {
+      "value_id": "CROP_TRITICALE",
+      "value_code": "CROP_TRITICALE",
+      "value_display": "Triticale",
+      "sort_order": 5,
+      "display_i18n": {},
+      "attributes": {
+        "category": "CROPCAT_CEREAL",
+        "scientific_name": "× Triticosecale"
+      }
+    },
+    {
+      "value_id": "CROP_EMMER_WHEAT",
+      "value_code": "CROP_EMMER_WHEAT",
+      "value_display": "Emmer wheat",
+      "sort_order": 6,
+      "display_i18n": {
+        "am": "አጃ"
+      },
+      "attributes": {
+        "category": "CROPCAT_CEREAL",
+        "scientific_name": "Triticum dicoccum"
+      }
+    },
+    {
+      "value_id": "CROP_BUCKWHEAT",
+      "value_code": "CROP_BUCKWHEAT",
+      "value_display": "Buckwheat",
+      "sort_order": 7,
+      "display_i18n": {},
+      "attributes": {
+        "category": "CROPCAT_CEREAL",
+        "scientific_name": "Fagopyrum esculentum Moench"
+      }
+    },
+    {
+      "value_id": "CROP_BARLEY",
+      "value_code": "CROP_BARLEY",
+      "value_display": "Barley",
+      "sort_order": 8,
+      "display_i18n": {
+        "am": "ገብስ"
+      },
+      "attributes": {
+        "category": "CROPCAT_CEREAL",
+        "scientific_name": "Hordeum vulgare"
+      }
+    },
+    {
+      "value_id": "CROP_MALT_BARLEY",
+      "value_code": "CROP_MALT_BARLEY",
+      "value_display": "Malt barley",
+      "sort_order": 9,
+      "display_i18n": {},
+      "attributes": {
+        "category": "CROPCAT_CEREAL",
+        "scientific_name": "Hordeum vulgare"
+      }
+    },
+    {
+      "value_id": "CROP_SORGHUM",
+      "value_code": "CROP_SORGHUM",
+      "value_display": "Sorghum",
+      "sort_order": 10,
+      "display_i18n": {
+        "am": "ማሽላ"
+      },
+      "attributes": {
+        "category": "CROPCAT_CEREAL",
+        "scientific_name": "Sorghum bicolor"
+      }
+    },
+    {
+      "value_id": "CROP_FINGER_MILLET",
+      "value_code": "CROP_FINGER_MILLET",
+      "value_display": "Finger millet",
+      "sort_order": 11,
+      "display_i18n": {
+        "am": "ዳጉሳ"
+      },
+      "attributes": {
+        "category": "CROPCAT_CEREAL",
+        "scientific_name": "Eleusine coracana"
+      }
+    },
+    {
+      "value_id": "CROP_PEARL_MILLET",
+      "value_code": "CROP_PEARL_MILLET",
+      "value_display": "Pearl millet",
+      "sort_order": 12,
+      "display_i18n": {},
+      "attributes": {
+        "category": "CROPCAT_CEREAL",
+        "scientific_name": "Pennisetum glaucum (L.) R.Br."
+      }
+    },
+    {
+      "value_id": "CROP_FOXTAIL_MILLET",
+      "value_code": "CROP_FOXTAIL_MILLET",
+      "value_display": "Foxtail millet",
+      "sort_order": 13,
+      "display_i18n": {},
+      "attributes": {
+        "category": "CROPCAT_CEREAL",
+        "scientific_name": "Setaria italica"
+      }
+    },
+    {
+      "value_id": "CROP_MAIZE",
+      "value_code": "CROP_MAIZE",
+      "value_display": "Maize",
+      "sort_order": 14,
+      "display_i18n": {
+        "am": "በቆሎ"
+      },
+      "attributes": {
+        "category": "CROPCAT_CEREAL",
+        "scientific_name": "Zea mays L."
+      }
+    },
+    {
+      "value_id": "CROP_RICE",
+      "value_code": "CROP_RICE",
+      "value_display": "Rice",
+      "sort_order": 15,
+      "display_i18n": {
+        "am": "ሩዝ"
+      },
+      "attributes": {
+        "category": "CROPCAT_CEREAL",
+        "scientific_name": "Oryza sativa L. or Oryza glaberrima"
+      }
+    },
+    {
+      "value_id": "CROP_FABA_BEAN",
+      "value_code": "CROP_FABA_BEAN",
+      "value_display": "Faba bean",
+      "sort_order": 16,
+      "display_i18n": {},
+      "attributes": {
+        "category": "CROPCAT_FOOD_LEGUME",
+        "scientific_name": "Vicia faba"
+      }
+    },
+    {
+      "value_id": "CROP_CHICKPEA",
+      "value_code": "CROP_CHICKPEA",
+      "value_display": "Chickpea",
+      "sort_order": 17,
+      "display_i18n": {
+        "am": "ሽምብራ"
+      },
+      "attributes": {
+        "category": "CROPCAT_FOOD_LEGUME",
+        "scientific_name": "Cicer arietinum"
+      }
+    },
+    {
+      "value_id": "CROP_LENTIL",
+      "value_code": "CROP_LENTIL",
+      "value_display": "Lentil",
+      "sort_order": 18,
+      "display_i18n": {
+        "am": "ምስር"
+      },
+      "attributes": {
+        "category": "CROPCAT_FOOD_LEGUME",
+        "scientific_name": "Lens culinaris"
+      }
+    },
+    {
+      "value_id": "CROP_FIELD_PEA",
+      "value_code": "CROP_FIELD_PEA",
+      "value_display": "Field pea",
+      "sort_order": 19,
+      "display_i18n": {},
+      "attributes": {
+        "category": "CROPCAT_FOOD_LEGUME",
+        "scientific_name": "Pisum sativum"
+      }
+    },
+    {
+      "value_id": "CROP_DEKOKO",
+      "value_code": "CROP_DEKOKO",
+      "value_display": "Dekoko",
+      "sort_order": 20,
+      "display_i18n": {
+        "am": "ደቀቆ"
+      },
+      "attributes": {
+        "category": "CROPCAT_FOOD_LEGUME",
+        "scientific_name": "Pisum sativum var. abyssinicum"
+      }
+    },
+    {
+      "value_id": "CROP_COWPEA",
+      "value_code": "CROP_COWPEA",
+      "value_display": "Cowpea",
+      "sort_order": 21,
+      "display_i18n": {},
+      "attributes": {
+        "category": "CROPCAT_FOOD_LEGUME",
+        "scientific_name": "Vigna unguiculata"
+      }
+    },
+    {
+      "value_id": "CROP_HARICOT_BEAN",
+      "value_code": "CROP_HARICOT_BEAN",
+      "value_display": "Haricot bean",
+      "sort_order": 22,
+      "display_i18n": {},
+      "attributes": {
+        "category": "CROPCAT_FOOD_LEGUME",
+        "scientific_name": "Phaseolus vulgaris"
+      }
+    },
+    {
+      "value_id": "CROP_GRASS_PEA",
+      "value_code": "CROP_GRASS_PEA",
+      "value_display": "Grass pea",
+      "sort_order": 23,
+      "display_i18n": {},
+      "attributes": {
+        "category": "CROPCAT_FOOD_LEGUME",
+        "scientific_name": "Lathyrus sativus L."
+      }
+    },
+    {
+      "value_id": "CROP_MUNG_BEAN",
+      "value_code": "CROP_MUNG_BEAN",
+      "value_display": "Mung bean",
+      "sort_order": 24,
+      "display_i18n": {
+        "am": "ማሾ"
+      },
+      "attributes": {
+        "category": "CROPCAT_FOOD_LEGUME",
+        "scientific_name": "Vigna radiata L."
+      }
+    },
+    {
+      "value_id": "CROP_ADZUKI_BEAN",
+      "value_code": "CROP_ADZUKI_BEAN",
+      "value_display": "Adzuki bean",
+      "sort_order": 25,
+      "display_i18n": {},
+      "attributes": {
+        "category": "CROPCAT_FOOD_LEGUME",
+        "scientific_name": "Vigna angularis"
+      }
+    },
+    {
+      "value_id": "CROP_LIMA_BEAN",
+      "value_code": "CROP_LIMA_BEAN",
+      "value_display": "Lima bean",
+      "sort_order": 26,
+      "display_i18n": {},
+      "attributes": {
+        "category": "CROPCAT_FOOD_LEGUME",
+        "scientific_name": "Phaseolus lunatus"
+      }
+    },
+    {
+      "value_id": "CROP_COMMON_BEAN",
+      "value_code": "CROP_COMMON_BEAN",
+      "value_display": "Common bean",
+      "sort_order": 27,
+      "display_i18n": {},
+      "attributes": {
+        "category": "CROPCAT_FOOD_LEGUME",
+        "scientific_name": "Phaseolus vulgaris L."
+      }
+    },
+    {
+      "value_id": "CROP_NOUG",
+      "value_code": "CROP_NOUG",
+      "value_display": "Noug",
+      "sort_order": 28,
+      "display_i18n": {
+        "am": "ኑግ"
+      },
+      "attributes": {
+        "category": "CROPCAT_OILSEED",
+        "scientific_name": "Guizotia abyssinica L."
+      }
+    },
+    {
+      "value_id": "CROP_LINSEED",
+      "value_code": "CROP_LINSEED",
+      "value_display": "Linseed",
+      "sort_order": 29,
+      "display_i18n": {
+        "am": "ተልባ"
+      },
+      "attributes": {
+        "category": "CROPCAT_OILSEED",
+        "scientific_name": "Linum usitatissimum L."
+      }
+    },
+    {
+      "value_id": "CROP_RAPESEED",
+      "value_code": "CROP_RAPESEED",
+      "value_display": "Rapeseed",
+      "sort_order": 30,
+      "display_i18n": {},
+      "attributes": {
+        "category": "CROPCAT_OILSEED",
+        "scientific_name": "Brassica napus"
+      }
+    },
+    {
+      "value_id": "CROP_ETHIOPIAN_MUSTARD",
+      "value_code": "CROP_ETHIOPIAN_MUSTARD",
+      "value_display": "Ethiopian mustard",
+      "sort_order": 31,
+      "display_i18n": {},
+      "attributes": {
+        "category": "CROPCAT_OILSEED",
+        "scientific_name": "Brassica carinata"
+      }
+    },
+    {
+      "value_id": "CROP_SUNFLOWER",
+      "value_code": "CROP_SUNFLOWER",
+      "value_display": "Sunflower",
+      "sort_order": 32,
+      "display_i18n": {
+        "am": "ሱፍ"
+      },
+      "attributes": {
+        "category": "CROPCAT_OILSEED",
+        "scientific_name": "Helianthus annuus"
+      }
+    },
+    {
+      "value_id": "CROP_SAFFLOWER",
+      "value_code": "CROP_SAFFLOWER",
+      "value_display": "Safflower",
+      "sort_order": 33,
+      "display_i18n": {
+        "am": "ሱፍ"
+      },
+      "attributes": {
+        "category": "CROPCAT_OILSEED",
+        "scientific_name": "Carthamus tinctorius L."
+      }
+    },
+    {
+      "value_id": "CROP_SOYBEAN",
+      "value_code": "CROP_SOYBEAN",
+      "value_display": "Soybean",
+      "sort_order": 34,
+      "display_i18n": {
+        "am": "አኩሪ አተር"
+      },
+      "attributes": {
+        "category": "CROPCAT_OILSEED",
+        "scientific_name": "Glycine max"
+      }
+    },
+    {
+      "value_id": "CROP_SESAME",
+      "value_code": "CROP_SESAME",
+      "value_display": "Sesame",
+      "sort_order": 35,
+      "display_i18n": {
+        "am": "ሰሊጥ"
+      },
+      "attributes": {
+        "category": "CROPCAT_OILSEED",
+        "scientific_name": "Sesamum indicum"
+      }
+    },
+    {
+      "value_id": "CROP_GROUNDNUT",
+      "value_code": "CROP_GROUNDNUT",
+      "value_display": "Groundnut",
+      "sort_order": 36,
+      "display_i18n": {
+        "am": "ኦቾሎኒ"
+      },
+      "attributes": {
+        "category": "CROPCAT_OILSEED",
+        "scientific_name": "Arachis hypogaea"
+      }
+    },
+    {
+      "value_id": "CROP_WINE_GRAPE",
+      "value_code": "CROP_WINE_GRAPE",
+      "value_display": "Wine grape",
+      "sort_order": 37,
+      "display_i18n": {
+        "am": "ወይን"
+      },
+      "attributes": {
+        "category": "CROPCAT_FRUIT_VEGETABLE",
+        "scientific_name": "Vitis vinifera"
+      }
+    },
+    {
+      "value_id": "CROP_PEACH",
+      "value_code": "CROP_PEACH",
+      "value_display": "Peach",
+      "sort_order": 38,
+      "display_i18n": {
+        "am": "ኮክ"
+      },
+      "attributes": {
+        "category": "CROPCAT_FRUIT_VEGETABLE",
+        "scientific_name": "Prunus persica"
+      }
+    },
+    {
+      "value_id": "CROP_BANANA",
+      "value_code": "CROP_BANANA",
+      "value_display": "Banana",
+      "sort_order": 39,
+      "display_i18n": {
+        "am": "ሙዝ"
+      },
+      "attributes": {
+        "category": "CROPCAT_FRUIT_VEGETABLE",
+        "scientific_name": "Musa paradisiaca var. sapientum"
+      }
+    },
+    {
+      "value_id": "CROP_MANGO",
+      "value_code": "CROP_MANGO",
+      "value_display": "Mango",
+      "sort_order": 40,
+      "display_i18n": {
+        "am": "ማንጎ"
+      },
+      "attributes": {
+        "category": "CROPCAT_FRUIT_VEGETABLE",
+        "scientific_name": "Mangifera indica L."
+      }
+    },
+    {
+      "value_id": "CROP_PINEAPPLE",
+      "value_code": "CROP_PINEAPPLE",
+      "value_display": "Pineapple",
+      "sort_order": 41,
+      "display_i18n": {
+        "am": "አናናስ"
+      },
+      "attributes": {
+        "category": "CROPCAT_FRUIT_VEGETABLE",
+        "scientific_name": "Ananas comosus"
+      }
+    },
+    {
+      "value_id": "CROP_AVOCADO",
+      "value_code": "CROP_AVOCADO",
+      "value_display": "Avocado",
+      "sort_order": 42,
+      "display_i18n": {
+        "am": "አቮካዶ"
+      },
+      "attributes": {
+        "category": "CROPCAT_FRUIT_VEGETABLE",
+        "scientific_name": "Persea americana Mill."
+      }
+    },
+    {
+      "value_id": "CROP_ZIZIPHUS",
+      "value_code": "CROP_ZIZIPHUS",
+      "value_display": "Ziziphus",
+      "sort_order": 43,
+      "display_i18n": {
+        "am": "ኩርኩራ"
+      },
+      "attributes": {
+        "category": "CROPCAT_FRUIT_VEGETABLE",
+        "scientific_name": "Ziziphus jujuba"
+      }
+    },
+    {
+      "value_id": "CROP_FIG",
+      "value_code": "CROP_FIG",
+      "value_display": "Fig",
+      "sort_order": 44,
+      "display_i18n": {},
+      "attributes": {
+        "category": "CROPCAT_FRUIT_VEGETABLE",
+        "scientific_name": "Ficus carica L."
+      }
+    },
+    {
+      "value_id": "CROP_PAPAYA",
+      "value_code": "CROP_PAPAYA",
+      "value_display": "Papaya",
+      "sort_order": 45,
+      "display_i18n": {
+        "am": "ፓፓያ"
+      },
+      "attributes": {
+        "category": "CROPCAT_FRUIT_VEGETABLE",
+        "scientific_name": "Carica papaya L."
+      }
+    },
+    {
+      "value_id": "CROP_DATE_PALM",
+      "value_code": "CROP_DATE_PALM",
+      "value_display": "Date palm",
+      "sort_order": 46,
+      "display_i18n": {},
+      "attributes": {
+        "category": "CROPCAT_FRUIT_VEGETABLE",
+        "scientific_name": "Phoenix dactylifera L."
+      }
+    },
+    {
+      "value_id": "CROP_GARLIC",
+      "value_code": "CROP_GARLIC",
+      "value_display": "Garlic",
+      "sort_order": 47,
+      "display_i18n": {
+        "am": "ነጭ ሽንኩርት"
+      },
+      "attributes": {
+        "category": "CROPCAT_FRUIT_VEGETABLE",
+        "scientific_name": "Allium sativum"
+      }
+    },
+    {
+      "value_id": "CROP_SHALLOT",
+      "value_code": "CROP_SHALLOT",
+      "value_display": "Shallot",
+      "sort_order": 48,
+      "display_i18n": {
+        "am": "ሽንኩርት"
+      },
+      "attributes": {
+        "category": "CROPCAT_FRUIT_VEGETABLE",
+        "scientific_name": "Allium cepa var. ascalonicum"
+      }
+    },
+    {
+      "value_id": "CROP_CARROT",
+      "value_code": "CROP_CARROT",
+      "value_display": "Carrot",
+      "sort_order": 49,
+      "display_i18n": {
+        "am": "ካሮት"
+      },
+      "attributes": {
+        "category": "CROPCAT_FRUIT_VEGETABLE",
+        "scientific_name": "Daucus carota L."
+      }
+    },
+    {
+      "value_id": "CROP_LETTUCE",
+      "value_code": "CROP_LETTUCE",
+      "value_display": "Lettuce",
+      "sort_order": 50,
+      "display_i18n": {},
+      "attributes": {
+        "category": "CROPCAT_FRUIT_VEGETABLE",
+        "scientific_name": "Lactuca sativa"
+      }
+    },
+    {
+      "value_id": "CROP_SNAP_BEAN",
+      "value_code": "CROP_SNAP_BEAN",
+      "value_display": "Snap bean",
+      "sort_order": 51,
+      "display_i18n": {},
+      "attributes": {
+        "category": "CROPCAT_FRUIT_VEGETABLE",
+        "scientific_name": "Phaseolus vulgaris L."
+      }
+    },
+    {
+      "value_id": "CROP_CAULIFLOWER",
+      "value_code": "CROP_CAULIFLOWER",
+      "value_display": "Cauliflower",
+      "sort_order": 52,
+      "display_i18n": {},
+      "attributes": {
+        "category": "CROPCAT_FRUIT_VEGETABLE",
+        "scientific_name": "Brassica oleracea"
+      }
+    },
+    {
+      "value_id": "CROP_SNOW_PEA",
+      "value_code": "CROP_SNOW_PEA",
+      "value_display": "Snow pea",
+      "sort_order": 53,
+      "display_i18n": {},
+      "attributes": {
+        "category": "CROPCAT_FRUIT_VEGETABLE",
+        "scientific_name": "Pisum sativum var. saccharatum"
+      }
+    },
+    {
+      "value_id": "CROP_PEPPER",
+      "value_code": "CROP_PEPPER",
+      "value_display": "Pepper",
+      "sort_order": 54,
+      "display_i18n": {
+        "am": "ቃሪያ"
+      },
+      "attributes": {
+        "category": "CROPCAT_FRUIT_VEGETABLE",
+        "scientific_name": "Capsicum frutescens"
+      }
+    },
+    {
+      "value_id": "CROP_TOMATO",
+      "value_code": "CROP_TOMATO",
+      "value_display": "Tomato",
+      "sort_order": 55,
+      "display_i18n": {
+        "am": "ቲማቲም"
+      },
+      "attributes": {
+        "category": "CROPCAT_FRUIT_VEGETABLE",
+        "scientific_name": "Lycopersicon esculentum Mill."
+      }
+    },
+    {
+      "value_id": "CROP_ONION",
+      "value_code": "CROP_ONION",
+      "value_display": "Onion",
+      "sort_order": 56,
+      "display_i18n": {
+        "am": "ሽንኩርት"
+      },
+      "attributes": {
+        "category": "CROPCAT_FRUIT_VEGETABLE",
+        "scientific_name": "Allium cepa L."
+      }
+    },
+    {
+      "value_id": "CROP_CABBAGE",
+      "value_code": "CROP_CABBAGE",
+      "value_display": "Cabbage",
+      "sort_order": 57,
+      "display_i18n": {},
+      "attributes": {
+        "category": "CROPCAT_FRUIT_VEGETABLE",
+        "scientific_name": "Brassica oleracea"
+      }
+    },
+    {
+      "value_id": "CROP_WATERMELON",
+      "value_code": "CROP_WATERMELON",
+      "value_display": "Watermelon",
+      "sort_order": 58,
+      "display_i18n": {
+        "am": "ሐባብ"
+      },
+      "attributes": {
+        "category": "CROPCAT_FRUIT_VEGETABLE",
+        "scientific_name": "Citrullus lanatus"
+      }
+    },
+    {
+      "value_id": "CROP_MUSKMELON",
+      "value_code": "CROP_MUSKMELON",
+      "value_display": "Muskmelon",
+      "sort_order": 59,
+      "display_i18n": {},
+      "attributes": {
+        "category": "CROPCAT_FRUIT_VEGETABLE",
+        "scientific_name": "Cucumis melo"
+      }
+    },
+    {
+      "value_id": "CROP_GREEN_COURGETTE",
+      "value_code": "CROP_GREEN_COURGETTE",
+      "value_display": "Green courgette",
+      "sort_order": 60,
+      "display_i18n": {},
+      "attributes": {
+        "category": "CROPCAT_FRUIT_VEGETABLE",
+        "scientific_name": "Cucurbita spp."
+      }
+    },
+    {
+      "value_id": "CROP_YELLOW_COURGETTE",
+      "value_code": "CROP_YELLOW_COURGETTE",
+      "value_display": "Yellow courgette",
+      "sort_order": 61,
+      "display_i18n": {},
+      "attributes": {
+        "category": "CROPCAT_FRUIT_VEGETABLE",
+        "scientific_name": "Cucurbita spp."
+      }
+    },
+    {
+      "value_id": "CROP_BROCCOLI",
+      "value_code": "CROP_BROCCOLI",
+      "value_display": "Broccoli",
+      "sort_order": 62,
+      "display_i18n": {},
+      "attributes": {
+        "category": "CROPCAT_FRUIT_VEGETABLE",
+        "scientific_name": "Brassica oleracea"
+      }
+    },
+    {
+      "value_id": "CROP_SNAP_PEA",
+      "value_code": "CROP_SNAP_PEA",
+      "value_display": "Snap pea",
+      "sort_order": 63,
+      "display_i18n": {},
+      "attributes": {
+        "category": "CROPCAT_FRUIT_VEGETABLE",
+        "scientific_name": "Pisum sativum var. macrocarpon"
+      }
+    },
+    {
+      "value_id": "CROP_SWEET_CORN",
+      "value_code": "CROP_SWEET_CORN",
+      "value_display": "Sweet corn",
+      "sort_order": 64,
+      "display_i18n": {},
+      "attributes": {
+        "category": "CROPCAT_FRUIT_VEGETABLE",
+        "scientific_name": "Zea mays var. rugosa"
+      }
+    },
+    {
+      "value_id": "CROP_FINE_BUSH_BEAN",
+      "value_code": "CROP_FINE_BUSH_BEAN",
+      "value_display": "Fine bush bean",
+      "sort_order": 65,
+      "display_i18n": {},
+      "attributes": {
+        "category": "CROPCAT_FRUIT_VEGETABLE"
+      }
+    },
+    {
+      "value_id": "CROP_OKRA",
+      "value_code": "CROP_OKRA",
+      "value_display": "Okra",
+      "sort_order": 66,
+      "display_i18n": {},
+      "attributes": {
+        "category": "CROPCAT_FRUIT_VEGETABLE",
+        "scientific_name": "Abelmoschus esculentus (L.) Moench"
+      }
+    },
+    {
+      "value_id": "CROP_ANCHOTE",
+      "value_code": "CROP_ANCHOTE",
+      "value_display": "Anchote",
+      "sort_order": 67,
+      "display_i18n": {
+        "am": "አንጮቴ"
+      },
+      "attributes": {
+        "category": "CROPCAT_FRUIT_VEGETABLE",
+        "scientific_name": "Coccinia abyssinica"
+      }
+    },
+    {
+      "value_id": "CROP_AMARANTH",
+      "value_code": "CROP_AMARANTH",
+      "value_display": "Amaranth",
+      "sort_order": 68,
+      "display_i18n": {},
+      "attributes": {
+        "category": "CROPCAT_FRUIT_VEGETABLE",
+        "scientific_name": "Amaranthus cruentus L."
+      }
+    },
+    {
+      "value_id": "CROP_PAK_CHOI",
+      "value_code": "CROP_PAK_CHOI",
+      "value_display": "Pak choi",
+      "sort_order": 69,
+      "display_i18n": {},
+      "attributes": {
+        "category": "CROPCAT_FRUIT_VEGETABLE",
+        "scientific_name": "Brassica rapa var. chinensis"
+      }
+    },
+    {
+      "value_id": "CROP_EGGPLANT",
+      "value_code": "CROP_EGGPLANT",
+      "value_display": "Eggplant",
+      "sort_order": 70,
+      "display_i18n": {},
+      "attributes": {
+        "category": "CROPCAT_FRUIT_VEGETABLE",
+        "scientific_name": "Solanum melongena L."
+      }
+    },
+    {
+      "value_id": "CROP_CUCUMBER",
+      "value_code": "CROP_CUCUMBER",
+      "value_display": "Cucumber",
+      "sort_order": 71,
+      "display_i18n": {},
+      "attributes": {
+        "category": "CROPCAT_FRUIT_VEGETABLE",
+        "scientific_name": "Cucumis sativus"
+      }
+    },
+    {
+      "value_id": "CROP_SUMMER_SQUASH",
+      "value_code": "CROP_SUMMER_SQUASH",
+      "value_display": "Summer squash",
+      "sort_order": 72,
+      "display_i18n": {},
+      "attributes": {
+        "category": "CROPCAT_FRUIT_VEGETABLE",
+        "scientific_name": "Cucurbita pepo"
+      }
+    },
+    {
+      "value_id": "CROP_POTATO",
+      "value_code": "CROP_POTATO",
+      "value_display": "Potato",
+      "sort_order": 73,
+      "display_i18n": {
+        "am": "ድንች"
+      },
+      "attributes": {
+        "category": "CROPCAT_ROOT_TUBER",
+        "scientific_name": "Solanum tuberosum"
+      }
+    },
+    {
+      "value_id": "CROP_SWEET_POTATO",
+      "value_code": "CROP_SWEET_POTATO",
+      "value_display": "Sweet potato",
+      "sort_order": 74,
+      "display_i18n": {
+        "am": "ስኳር ድንች"
+      },
+      "attributes": {
+        "category": "CROPCAT_ROOT_TUBER",
+        "scientific_name": "Ipomoea batatas"
+      }
+    },
+    {
+      "value_id": "CROP_RED_BEET",
+      "value_code": "CROP_RED_BEET",
+      "value_display": "Red beet",
+      "sort_order": 75,
+      "display_i18n": {},
+      "attributes": {
+        "category": "CROPCAT_ROOT_TUBER",
+        "scientific_name": "Beta vulgaris"
+      }
+    },
+    {
+      "value_id": "CROP_TARO",
+      "value_code": "CROP_TARO",
+      "value_display": "Taro",
+      "sort_order": 76,
+      "display_i18n": {},
+      "attributes": {
+        "category": "CROPCAT_ROOT_TUBER",
+        "scientific_name": "Colocasia esculenta"
+      }
+    },
+    {
+      "value_id": "CROP_CASSAVA",
+      "value_code": "CROP_CASSAVA",
+      "value_display": "Cassava",
+      "sort_order": 77,
+      "display_i18n": {},
+      "attributes": {
+        "category": "CROPCAT_ROOT_TUBER",
+        "scientific_name": "Manihot esculenta"
+      }
+    },
+    {
+      "value_id": "CROP_ENSET",
+      "value_code": "CROP_ENSET",
+      "value_display": "Enset",
+      "sort_order": 78,
+      "display_i18n": {
+        "am": "እንሰት"
+      },
+      "attributes": {
+        "category": "CROPCAT_ROOT_TUBER",
+        "scientific_name": "Ensete ventricosum (Welw.) Cheesman"
+      }
+    },
+    {
+      "value_id": "CROP_YAM",
+      "value_code": "CROP_YAM",
+      "value_display": "Yam",
+      "sort_order": 79,
+      "display_i18n": {},
+      "attributes": {
+        "category": "CROPCAT_ROOT_TUBER",
+        "scientific_name": "Dioscorea spp"
+      }
+    },
+    {
+      "value_id": "CROP_COFFEE",
+      "value_code": "CROP_COFFEE",
+      "value_display": "Coffee",
+      "sort_order": 80,
+      "display_i18n": {
+        "am": "ቡና"
+      },
+      "attributes": {
+        "category": "CROPCAT_STIMULANT",
+        "scientific_name": "Coffea arabica L."
+      }
+    },
+    {
+      "value_id": "CROP_COTTON",
+      "value_code": "CROP_COTTON",
+      "value_display": "Cotton",
+      "sort_order": 81,
+      "display_i18n": {
+        "am": "ጥጥ"
+      },
+      "attributes": {
+        "category": "CROPCAT_INDUSTRIAL",
+        "scientific_name": "Gossypium hirsutum"
+      }
+    },
+    {
+      "value_id": "CROP_KENAF",
+      "value_code": "CROP_KENAF",
+      "value_display": "Kenaf",
+      "sort_order": 82,
+      "display_i18n": {},
+      "attributes": {
+        "category": "CROPCAT_INDUSTRIAL",
+        "scientific_name": "Hibiscus spp."
+      }
+    },
+    {
+      "value_id": "CROP_VERNONIA",
+      "value_code": "CROP_VERNONIA",
+      "value_display": "Vernonia",
+      "sort_order": 83,
+      "display_i18n": {},
+      "attributes": {
+        "category": "CROPCAT_INDUSTRIAL",
+        "scientific_name": "Vernonia galamensis"
+      }
+    },
+    {
+      "value_id": "CROP_CASTOR",
+      "value_code": "CROP_CASTOR",
+      "value_display": "Castor",
+      "sort_order": 84,
+      "display_i18n": {
+        "am": "ጉሎ"
+      },
+      "attributes": {
+        "category": "CROPCAT_INDUSTRIAL",
+        "scientific_name": "Ricinus communis L."
+      }
+    },
+    {
+      "value_id": "CROP_CAMELINA",
+      "value_code": "CROP_CAMELINA",
+      "value_display": "Camelina",
+      "sort_order": 85,
+      "display_i18n": {},
+      "attributes": {
+        "category": "CROPCAT_INDUSTRIAL",
+        "scientific_name": "Camelina sativa"
+      }
+    },
+    {
+      "value_id": "CROP_SUGARCANE",
+      "value_code": "CROP_SUGARCANE",
+      "value_display": "Sugarcane",
+      "sort_order": 86,
+      "display_i18n": {
+        "am": "ሸንኮራ"
+      },
+      "attributes": {
+        "category": "CROPCAT_INDUSTRIAL",
+        "scientific_name": "Saccharum officinarum"
+      }
+    },
+    {
+      "value_id": "CROP_TOBACCO",
+      "value_code": "CROP_TOBACCO",
+      "value_display": "Tobacco",
+      "sort_order": 87,
+      "display_i18n": {
+        "am": "ትምባሆ"
+      },
+      "attributes": {
+        "category": "CROPCAT_INDUSTRIAL",
+        "scientific_name": "Nicotiana tabacum"
+      }
+    },
+    {
+      "value_id": "CROP_CACAO",
+      "value_code": "CROP_CACAO",
+      "value_display": "Cacao",
+      "sort_order": 88,
+      "display_i18n": {},
+      "attributes": {
+        "category": "CROPCAT_INDUSTRIAL",
+        "scientific_name": "Theobroma cacao"
+      }
+    },
+    {
+      "value_id": "CROP_SWEET_ANNIE",
+      "value_code": "CROP_SWEET_ANNIE",
+      "value_display": "Sweet annie",
+      "sort_order": 89,
+      "display_i18n": {
+        "am": "አርተሚዚያ"
+      },
+      "attributes": {
+        "category": "CROPCAT_SPICE_MEDICINAL_AROMATIC",
+        "scientific_name": "Artemisia annua"
+      }
+    },
+    {
+      "value_id": "CROP_PYRETHRUM",
+      "value_code": "CROP_PYRETHRUM",
+      "value_display": "Pyrethrum",
+      "sort_order": 90,
+      "display_i18n": {
+        "am": "ፓይረትረም"
+      },
+      "attributes": {
+        "category": "CROPCAT_SPICE_MEDICINAL_AROMATIC",
+        "scientific_name": "Chrysanthemum cinerariaefolium"
+      }
+    },
+    {
+      "value_id": "CROP_AFRICAN_MARIGOLD",
+      "value_code": "CROP_AFRICAN_MARIGOLD",
+      "value_display": "African marigold",
+      "sort_order": 91,
+      "display_i18n": {},
+      "attributes": {
+        "category": "CROPCAT_SPICE_MEDICINAL_AROMATIC",
+        "scientific_name": "Tagetes erecta L."
+      }
+    },
+    {
+      "value_id": "CROP_CHAMOMILE",
+      "value_code": "CROP_CHAMOMILE",
+      "value_display": "Chamomile",
+      "sort_order": 92,
+      "display_i18n": {
+        "am": "ከሞሜላ"
+      },
+      "attributes": {
+        "category": "CROPCAT_SPICE_MEDICINAL_AROMATIC",
+        "scientific_name": "Matricaria chamomilla L."
+      }
+    },
+    {
+      "value_id": "CROP_STEVIA",
+      "value_code": "CROP_STEVIA",
+      "value_display": "Stevia",
+      "sort_order": 93,
+      "display_i18n": {
+        "am": "ስቴቪያ"
+      },
+      "attributes": {
+        "category": "CROPCAT_SPICE_MEDICINAL_AROMATIC",
+        "scientific_name": "Stevia rebaudiana Bertoni L."
+      }
+    },
+    {
+      "value_id": "CROP_HIBISCUS",
+      "value_code": "CROP_HIBISCUS",
+      "value_display": "Hibiscus",
+      "sort_order": 94,
+      "display_i18n": {
+        "am": "ከርከዴ"
+      },
+      "attributes": {
+        "category": "CROPCAT_SPICE_MEDICINAL_AROMATIC",
+        "scientific_name": "Hibiscus sabdariffa L."
+      }
+    },
+    {
+      "value_id": "CROP_CITRONELLA_GRASS",
+      "value_code": "CROP_CITRONELLA_GRASS",
+      "value_display": "Citronella grass",
+      "sort_order": 95,
+      "display_i18n": {
+        "am": "የናርዶስ ሳር"
+      },
+      "attributes": {
+        "category": "CROPCAT_SPICE_MEDICINAL_AROMATIC",
+        "scientific_name": "Cymbopogon winterianus"
+      }
+    },
+    {
+      "value_id": "CROP_LEMONGRASS",
+      "value_code": "CROP_LEMONGRASS",
+      "value_display": "Lemongrass",
+      "sort_order": 96,
+      "display_i18n": {
+        "am": "ሎሚ ሳር"
+      },
+      "attributes": {
+        "category": "CROPCAT_SPICE_MEDICINAL_AROMATIC",
+        "scientific_name": "Cymbopogon citratus (DC) Stapf"
+      }
+    },
+    {
+      "value_id": "CROP_PEPPERMINT",
+      "value_code": "CROP_PEPPERMINT",
+      "value_display": "Peppermint",
+      "sort_order": 97,
+      "display_i18n": {
+        "am": "ናና"
+      },
+      "attributes": {
+        "category": "CROPCAT_SPICE_MEDICINAL_AROMATIC",
+        "scientific_name": "Mentha piperita L."
+      }
+    },
+    {
+      "value_id": "CROP_SPEARMINT",
+      "value_code": "CROP_SPEARMINT",
+      "value_display": "Spearmint",
+      "sort_order": 98,
+      "display_i18n": {
+        "am": "ናና"
+      },
+      "attributes": {
+        "category": "CROPCAT_SPICE_MEDICINAL_AROMATIC",
+        "scientific_name": "Mentha spicata L."
+      }
+    },
+    {
+      "value_id": "CROP_JAPANESE_MINT",
+      "value_code": "CROP_JAPANESE_MINT",
+      "value_display": "Japanese mint",
+      "sort_order": 99,
+      "display_i18n": {
+        "am": "ናና"
+      },
+      "attributes": {
+        "category": "CROPCAT_SPICE_MEDICINAL_AROMATIC",
+        "scientific_name": "Mentha arvensis L."
+      }
+    },
+    {
+      "value_id": "CROP_SPANISH_MINT",
+      "value_code": "CROP_SPANISH_MINT",
+      "value_display": "Spanish mint",
+      "sort_order": 100,
+      "display_i18n": {
+        "am": "ናና"
+      },
+      "attributes": {
+        "category": "CROPCAT_SPICE_MEDICINAL_AROMATIC",
+        "scientific_name": "Mentha spicata 'Spanish pointed'"
+      }
+    },
+    {
+      "value_id": "CROP_GERANIUM",
+      "value_code": "CROP_GERANIUM",
+      "value_display": "Geranium",
+      "sort_order": 101,
+      "display_i18n": {},
+      "attributes": {
+        "category": "CROPCAT_SPICE_MEDICINAL_AROMATIC",
+        "scientific_name": "Pelargonium graveolens L. Herit"
+      }
+    },
+    {
+      "value_id": "CROP_LEMON_VERBENA",
+      "value_code": "CROP_LEMON_VERBENA",
+      "value_display": "Lemon verbena",
+      "sort_order": 102,
+      "display_i18n": {
+        "am": "ሎሚናት"
+      },
+      "attributes": {
+        "category": "CROPCAT_SPICE_MEDICINAL_AROMATIC",
+        "scientific_name": "Aloysia triphylla L."
+      }
+    },
+    {
+      "value_id": "CROP_LAVENDER",
+      "value_code": "CROP_LAVENDER",
+      "value_display": "Lavender",
+      "sort_order": 103,
+      "display_i18n": {},
+      "attributes": {
+        "category": "CROPCAT_SPICE_MEDICINAL_AROMATIC",
+        "scientific_name": "Lavandula angustifolia L."
+      }
+    },
+    {
+      "value_id": "CROP_MARJORAM_OREGANO",
+      "value_code": "CROP_MARJORAM_OREGANO",
+      "value_display": "Marjoram / oregano",
+      "sort_order": 104,
+      "display_i18n": {},
+      "attributes": {
+        "category": "CROPCAT_SPICE_MEDICINAL_AROMATIC",
+        "scientific_name": "Origanum vulgare L."
+      }
+    },
+    {
+      "value_id": "CROP_SAGE",
+      "value_code": "CROP_SAGE",
+      "value_display": "Sage",
+      "sort_order": 105,
+      "display_i18n": {},
+      "attributes": {
+        "category": "CROPCAT_SPICE_MEDICINAL_AROMATIC",
+        "scientific_name": "Salvia officinalis L."
+      }
+    },
+    {
+      "value_id": "CROP_ROSEMARY",
+      "value_code": "CROP_ROSEMARY",
+      "value_display": "Rosemary",
+      "sort_order": 106,
+      "display_i18n": {
+        "am": "ጥብስ ቅጠል"
+      },
+      "attributes": {
+        "category": "CROPCAT_SPICE_MEDICINAL_AROMATIC",
+        "scientific_name": "Rosmarinus officinalis"
+      }
+    },
+    {
+      "value_id": "CROP_LEMON_SCENTED_EUCALYPTUS",
+      "value_code": "CROP_LEMON_SCENTED_EUCALYPTUS",
+      "value_display": "Lemon-scented eucalyptus",
+      "sort_order": 107,
+      "display_i18n": {
+        "am": "ሽቶ ባሕርዛፍ"
+      },
+      "attributes": {
+        "category": "CROPCAT_SPICE_MEDICINAL_AROMATIC",
+        "scientific_name": "Eucalyptus citriodora"
+      }
+    },
+    {
+      "value_id": "CROP_PALMAROSA",
+      "value_code": "CROP_PALMAROSA",
+      "value_display": "Palmarosa",
+      "sort_order": 108,
+      "display_i18n": {
+        "am": "ጠጅ ሳር"
+      },
+      "attributes": {
+        "category": "CROPCAT_SPICE_MEDICINAL_AROMATIC",
+        "scientific_name": "Cymbopogon martinii L."
+      }
+    },
+    {
+      "value_id": "CROP_BLACK_PEPPER",
+      "value_code": "CROP_BLACK_PEPPER",
+      "value_display": "Black pepper",
+      "sort_order": 109,
+      "display_i18n": {},
+      "attributes": {
+        "category": "CROPCAT_SPICE_MEDICINAL_AROMATIC",
+        "scientific_name": "Piper nigrum L."
+      }
+    },
+    {
+      "value_id": "CROP_GINGER",
+      "value_code": "CROP_GINGER",
+      "value_display": "Ginger",
+      "sort_order": 110,
+      "display_i18n": {
+        "am": "ዝንጅብል"
+      },
+      "attributes": {
+        "category": "CROPCAT_SPICE_MEDICINAL_AROMATIC",
+        "scientific_name": "Zingiber officinale Roscoe"
+      }
+    },
+    {
+      "value_id": "CROP_TURMERIC",
+      "value_code": "CROP_TURMERIC",
+      "value_display": "Turmeric",
+      "sort_order": 111,
+      "display_i18n": {
+        "am": "እርድ"
+      },
+      "attributes": {
+        "category": "CROPCAT_SPICE_MEDICINAL_AROMATIC",
+        "scientific_name": "Curcuma domestica"
+      }
+    },
+    {
+      "value_id": "CROP_CARDAMOM",
+      "value_code": "CROP_CARDAMOM",
+      "value_display": "Cardamom",
+      "sort_order": 112,
+      "display_i18n": {},
+      "attributes": {
+        "category": "CROPCAT_SPICE_MEDICINAL_AROMATIC",
+        "scientific_name": "Elettaria cardamomum"
+      }
+    },
+    {
+      "value_id": "CROP_VANILLA",
+      "value_code": "CROP_VANILLA",
+      "value_display": "Vanilla",
+      "sort_order": 113,
+      "display_i18n": {
+        "am": "ቫኒላ"
+      },
+      "attributes": {
+        "category": "CROPCAT_SPICE_MEDICINAL_AROMATIC",
+        "scientific_name": "Vanilla planifolia"
+      }
+    },
+    {
+      "value_id": "CROP_CORIANDER",
+      "value_code": "CROP_CORIANDER",
+      "value_display": "Coriander",
+      "sort_order": 114,
+      "display_i18n": {
+        "am": "ድምብላል"
+      },
+      "attributes": {
+        "category": "CROPCAT_SPICE_MEDICINAL_AROMATIC",
+        "scientific_name": "Coriandrum sativum L."
+      }
+    },
+    {
+      "value_id": "CROP_BLACK_CUMIN",
+      "value_code": "CROP_BLACK_CUMIN",
+      "value_display": "Black cumin",
+      "sort_order": 115,
+      "display_i18n": {
+        "am": "ጥቁር አዝሙድ"
+      },
+      "attributes": {
+        "category": "CROPCAT_SPICE_MEDICINAL_AROMATIC",
+        "scientific_name": "Nigella sativa"
+      }
+    },
+    {
+      "value_id": "CROP_WHITE_CUMIN",
+      "value_code": "CROP_WHITE_CUMIN",
+      "value_display": "White cumin",
+      "sort_order": 116,
+      "display_i18n": {
+        "am": "ነጭ አዝሙድ"
+      },
+      "attributes": {
+        "category": "CROPCAT_SPICE_MEDICINAL_AROMATIC",
+        "scientific_name": "Nigella sativa"
+      }
+    },
+    {
+      "value_id": "CROP_FENUGREEK",
+      "value_code": "CROP_FENUGREEK",
+      "value_display": "Fenugreek",
+      "sort_order": 117,
+      "display_i18n": {
+        "am": "አብሽ"
+      },
+      "attributes": {
+        "category": "CROPCAT_SPICE_MEDICINAL_AROMATIC",
+        "scientific_name": "Trigonella foenum-graecum"
+      }
+    },
+    {
+      "value_id": "CROP_BASIL",
+      "value_code": "CROP_BASIL",
+      "value_display": "Basil",
+      "sort_order": 118,
+      "display_i18n": {},
+      "attributes": {
+        "category": "CROPCAT_SPICE_MEDICINAL_AROMATIC",
+        "scientific_name": "Ocimum basilicum L."
+      }
+    },
+    {
+      "value_id": "CROP_KORARIMA",
+      "value_code": "CROP_KORARIMA",
+      "value_display": "Korarima",
+      "sort_order": 119,
+      "display_i18n": {
+        "am": "ኮረሪማ"
+      },
+      "attributes": {
+        "category": "CROPCAT_SPICE_MEDICINAL_AROMATIC",
+        "scientific_name": "Aframomum corrorima (Braun) P.C.M. Jansen"
+      }
+    },
+    {
+      "value_id": "CROP_ROSE",
+      "value_code": "CROP_ROSE",
+      "value_display": "Rose",
+      "sort_order": 120,
+      "display_i18n": {
+        "am": "ጽጌረዳ"
+      },
+      "attributes": {
+        "category": "CROPCAT_SPICE_MEDICINAL_AROMATIC",
+        "scientific_name": "Rosa damascena Mill"
+      }
+    },
+    {
+      "value_id": "CROP_OTHER",
+      "value_code": "CROP_OTHER",
+      "value_display": "Other",
+      "sort_order": 121,
+      "display_i18n": {},
+      "attributes": {
+        "category": "CROPCAT_OTHER"
+      }
+    }
+  ]
+}

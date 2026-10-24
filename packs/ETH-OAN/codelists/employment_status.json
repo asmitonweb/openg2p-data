@@ -1,0 +1,50 @@
+{
+  "attribute_id": "EMPLOYMENT_STATUS",
+  "attribute_code": "EMPLOYMENT_STATUS",
+  "attribute_display": "Employment status",
+  "is_hierarchical": false,
+  "values": [
+    {
+      "value_id": "EMPLOYED",
+      "value_code": "EMPLOYED",
+      "value_display": "Employed",
+      "sort_order": 1,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "SELF_EMPLOYED",
+      "value_code": "SELF_EMPLOYED",
+      "value_display": "Self employed",
+      "sort_order": 2,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "UNEMPLOYED",
+      "value_code": "UNEMPLOYED",
+      "value_display": "Unemployed",
+      "sort_order": 3,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "STUDENT",
+      "value_code": "STUDENT",
+      "value_display": "Student",
+      "sort_order": 4,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "RETIRED",
+      "value_code": "RETIRED",
+      "value_display": "Retired",
+      "sort_order": 5,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "OTHER",
+      "value_code": "OTHER",
+      "value_display": "Other",
+      "sort_order": 6,
+      "display_i18n": {}
+    }
+  ]
+}

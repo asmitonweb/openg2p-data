@@ -1,0 +1,50 @@
+{
+  "attribute_id": "LIVESTOCK_COUNT_BAND",
+  "attribute_code": "LIVESTOCK_COUNT_BAND",
+  "attribute_display": "Livestock count",
+  "is_hierarchical": false,
+  "values": [
+    {
+      "value_id": "NONE",
+      "value_code": "NONE",
+      "value_display": "None",
+      "sort_order": 1,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "BAND_1_5",
+      "value_code": "BAND_1_5",
+      "value_display": "1-5",
+      "sort_order": 2,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "BAND_6_10",
+      "value_code": "BAND_6_10",
+      "value_display": "6-10",
+      "sort_order": 3,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "BAND_11_20",
+      "value_code": "BAND_11_20",
+      "value_display": "11-20",
+      "sort_order": 4,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "BAND_21_50",
+      "value_code": "BAND_21_50",
+      "value_display": "21-50",
+      "sort_order": 5,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "BAND_50_PLUS",
+      "value_code": "BAND_50_PLUS",
+      "value_display": "More than 50",
+      "sort_order": 6,
+      "display_i18n": {}
+    }
+  ]
+}

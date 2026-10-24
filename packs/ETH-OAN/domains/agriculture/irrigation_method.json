@@ -1,0 +1,36 @@
+{
+  "attribute_id": "IRRIGATION_METHOD",
+  "attribute_code": "IRRIGATION_METHOD",
+  "attribute_display": "Irrigation method",
+  "is_hierarchical": false,
+  "values": [
+    {
+      "value_id": "IRM_FURROW",
+      "value_code": "IRM_FURROW",
+      "value_display": "Furrow",
+      "sort_order": 1,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "IRM_FLOOD",
+      "value_code": "IRM_FLOOD",
+      "value_display": "Flood / basin",
+      "sort_order": 2,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "IRM_SPRINKLER",
+      "value_code": "IRM_SPRINKLER",
+      "value_display": "Sprinkler",
+      "sort_order": 3,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "IRM_DRIP",
+      "value_code": "IRM_DRIP",
+      "value_display": "Drip",
+      "sort_order": 4,
+      "display_i18n": {}
+    }
+  ]
+}

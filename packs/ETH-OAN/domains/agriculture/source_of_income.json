@@ -1,0 +1,36 @@
+{
+  "attribute_id": "SOURCE_OF_INCOME",
+  "attribute_code": "SOURCE_OF_INCOME",
+  "attribute_display": "Source of income",
+  "is_hierarchical": false,
+  "values": [
+    {
+      "value_id": "SOI_CROP_PRODUCTION",
+      "value_code": "SOI_CROP_PRODUCTION",
+      "value_display": "Crop Production",
+      "sort_order": 1,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "SOI_LIVESTOCK_PRODUCTION",
+      "value_code": "SOI_LIVESTOCK_PRODUCTION",
+      "value_display": "Livestock Production",
+      "sort_order": 2,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "SOI_GOVERNMENT_NGO_SUPPORT",
+      "value_code": "SOI_GOVERNMENT_NGO_SUPPORT",
+      "value_display": "Government / NGO Support",
+      "sort_order": 3,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "SOI_OTHERS",
+      "value_code": "SOI_OTHERS",
+      "value_display": "Others",
+      "sort_order": 4,
+      "display_i18n": {}
+    }
+  ]
+}

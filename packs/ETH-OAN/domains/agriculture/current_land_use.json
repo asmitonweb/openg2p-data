@@ -1,0 +1,36 @@
+{
+  "attribute_id": "CURRENT_LAND_USE",
+  "attribute_code": "CURRENT_LAND_USE",
+  "attribute_display": "Current land use",
+  "is_hierarchical": false,
+  "values": [
+    {
+      "value_id": "AGRICULTURAL",
+      "value_code": "AGRICULTURAL",
+      "value_display": "Agricultural",
+      "sort_order": 1,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "RESIDENTIAL",
+      "value_code": "RESIDENTIAL",
+      "value_display": "Residential",
+      "sort_order": 2,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "GRAZING",
+      "value_code": "GRAZING",
+      "value_display": "Grazing",
+      "sort_order": 3,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "FOREST",
+      "value_code": "FOREST",
+      "value_display": "Forest",
+      "sort_order": 4,
+      "display_i18n": {}
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "attribute_id": "CROP_CONDITION",
+  "attribute_code": "CROP_CONDITION",
+  "attribute_display": "Crop condition",
+  "is_hierarchical": false,
+  "values": [
+    {
+      "value_id": "CC_GOOD",
+      "value_code": "CC_GOOD",
+      "value_display": "Good",
+      "sort_order": 1,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "CC_FAIR",
+      "value_code": "CC_FAIR",
+      "value_display": "Fair",
+      "sort_order": 2,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "CC_POOR",
+      "value_code": "CC_POOR",
+      "value_display": "Poor",
+      "sort_order": 3,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "CC_FAILED",
+      "value_code": "CC_FAILED",
+      "value_display": "Failed",
+      "sort_order": 4,
+      "display_i18n": {}
+    }
+  ]
+}

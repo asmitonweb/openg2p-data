@@ -1,0 +1,50 @@
+{
+  "attribute_id": "ASSET_TYPE",
+  "attribute_code": "ASSET_TYPE",
+  "attribute_display": "Asset type",
+  "is_hierarchical": false,
+  "values": [
+    {
+      "value_id": "LAND",
+      "value_code": "LAND",
+      "value_display": "Land",
+      "sort_order": 1,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "LIVESTOCK",
+      "value_code": "LIVESTOCK",
+      "value_display": "Livestock",
+      "sort_order": 2,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "PRODUCTIVE_TOOL",
+      "value_code": "PRODUCTIVE_TOOL",
+      "value_display": "Productive tool",
+      "sort_order": 3,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "CONSUMER_DURABLE",
+      "value_code": "CONSUMER_DURABLE",
+      "value_display": "Consumer durable",
+      "sort_order": 4,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "VEHICLE",
+      "value_code": "VEHICLE",
+      "value_display": "Vehicle",
+      "sort_order": 5,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "OTHER",
+      "value_code": "OTHER",
+      "value_display": "Other",
+      "sort_order": 6,
+      "display_i18n": {}
+    }
+  ]
+}

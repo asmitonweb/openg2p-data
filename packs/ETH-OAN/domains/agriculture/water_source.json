@@ -1,0 +1,50 @@
+{
+  "attribute_id": "WATER_SOURCE",
+  "attribute_code": "WATER_SOURCE",
+  "attribute_display": "Irrigation water source",
+  "is_hierarchical": false,
+  "values": [
+    {
+      "value_id": "WS_RAINFED",
+      "value_code": "WS_RAINFED",
+      "value_display": "RAINFED",
+      "sort_order": 1,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "WS_IRRIGATION_GROUND",
+      "value_code": "WS_IRRIGATION_GROUND",
+      "value_display": "IRRIGATION_GROUND_WATER",
+      "sort_order": 2,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "WS_IRRIGATION_SURFACE",
+      "value_code": "WS_IRRIGATION_SURFACE",
+      "value_display": "IRRIGATION_SURFACE_WATER",
+      "sort_order": 3,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "WS_WELL_GROUND",
+      "value_code": "WS_WELL_GROUND",
+      "value_display": "WELL_GROUND_WATER",
+      "sort_order": 4,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "WS_WATER_HARVESTING",
+      "value_code": "WS_WATER_HARVESTING",
+      "value_display": "WATER_HARVESTING",
+      "sort_order": 5,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "WS_SURFACE_WATER",
+      "value_code": "WS_SURFACE_WATER",
+      "value_display": "SURFACE_WATER",
+      "sort_order": 6,
+      "display_i18n": {}
+    }
+  ]
+}

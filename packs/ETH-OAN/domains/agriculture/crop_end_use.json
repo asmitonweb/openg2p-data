@@ -1,0 +1,36 @@
+{
+  "attribute_id": "CROP_END_USE",
+  "attribute_code": "CROP_END_USE",
+  "attribute_display": "Crop end use",
+  "is_hierarchical": false,
+  "values": [
+    {
+      "value_id": "FOOD_HUMAN_CONSUMPTION",
+      "value_code": "FOOD_HUMAN_CONSUMPTION",
+      "value_display": "Food (human consumption)",
+      "sort_order": 1,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "FEED_ANIMALS",
+      "value_code": "FEED_ANIMALS",
+      "value_display": "Animal feed",
+      "sort_order": 2,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "BIOFUELS_NONFOOD",
+      "value_code": "BIOFUELS_NONFOOD",
+      "value_display": "Biofuels / non-food",
+      "sort_order": 3,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "OTHER",
+      "value_code": "OTHER",
+      "value_display": "Other",
+      "sort_order": 4,
+      "display_i18n": {}
+    }
+  ]
+}

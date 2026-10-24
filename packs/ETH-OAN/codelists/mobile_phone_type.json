@@ -1,0 +1,29 @@
+{
+  "attribute_id": "MOBILE_PHONE_TYPE",
+  "attribute_code": "MOBILE_PHONE_TYPE",
+  "attribute_display": "Mobile phone",
+  "is_hierarchical": false,
+  "values": [
+    {
+      "value_id": "NONE",
+      "value_code": "NONE",
+      "value_display": "None",
+      "sort_order": 1,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "BASIC",
+      "value_code": "BASIC",
+      "value_display": "Basic",
+      "sort_order": 2,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "SMARTPHONE",
+      "value_code": "SMARTPHONE",
+      "value_display": "Smartphone",
+      "sort_order": 3,
+      "display_i18n": {}
+    }
+  ]
+}

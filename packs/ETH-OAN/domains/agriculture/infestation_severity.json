@@ -1,0 +1,29 @@
+{
+  "attribute_id": "INFESTATION_SEVERITY",
+  "attribute_code": "INFESTATION_SEVERITY",
+  "attribute_display": "Infestation severity",
+  "is_hierarchical": false,
+  "values": [
+    {
+      "value_id": "SEV_LOW",
+      "value_code": "SEV_LOW",
+      "value_display": "Low",
+      "sort_order": 1,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "SEV_MEDIUM",
+      "value_code": "SEV_MEDIUM",
+      "value_display": "Medium",
+      "sort_order": 2,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "SEV_HIGH",
+      "value_code": "SEV_HIGH",
+      "value_display": "High",
+      "sort_order": 3,
+      "display_i18n": {}
+    }
+  ]
+}

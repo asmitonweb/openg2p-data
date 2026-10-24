@@ -1,0 +1,39 @@
+{
+  "attribute_id": "GENDER",
+  "attribute_code": "GENDER",
+  "attribute_display": "Gender",
+  "is_hierarchical": false,
+  "values": [
+    {
+      "value_id": "FEMALE",
+      "value_code": "FEMALE",
+      "value_display": "Female",
+      "sort_order": 1,
+      "roles": [
+        "female"
+      ],
+      "display_i18n": {}
+    },
+    {
+      "value_id": "MALE",
+      "value_code": "MALE",
+      "value_display": "Male",
+      "sort_order": 2,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "OTHER",
+      "value_code": "OTHER",
+      "value_display": "Other",
+      "sort_order": 3,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "UNKNOWN",
+      "value_code": "UNKNOWN",
+      "value_display": "Unknown",
+      "sort_order": 4,
+      "display_i18n": {}
+    }
+  ]
+}

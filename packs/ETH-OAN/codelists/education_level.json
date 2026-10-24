@@ -1,0 +1,78 @@
+{
+  "attribute_id": "EDUCATION_LEVEL",
+  "attribute_code": "EDUCATION_LEVEL",
+  "attribute_display": "Education level",
+  "is_hierarchical": false,
+  "values": [
+    {
+      "value_id": "ILLITERATE",
+      "value_code": "ILLITERATE",
+      "value_display": "Illiterate",
+      "sort_order": 1,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "CAN_READ_AND_WRITE",
+      "value_code": "CAN_READ_AND_WRITE",
+      "value_display": "Can read and write",
+      "sort_order": 2,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "NON_FORMAL",
+      "value_code": "NON_FORMAL",
+      "value_display": "Non-formal education",
+      "sort_order": 3,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "NEVER_ATTEND",
+      "value_code": "NEVER_ATTEND",
+      "value_display": "Never attended",
+      "sort_order": 4,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "BASIC",
+      "value_code": "BASIC",
+      "value_display": "Basic",
+      "sort_order": 5,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "PRIMARY",
+      "value_code": "PRIMARY",
+      "value_display": "Primary",
+      "sort_order": 6,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "INTERMEDIARY",
+      "value_code": "INTERMEDIARY",
+      "value_display": "Intermediary",
+      "sort_order": 7,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "SECONDARY",
+      "value_code": "SECONDARY",
+      "value_display": "Secondary",
+      "sort_order": 8,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "TERTIARY",
+      "value_code": "TERTIARY",
+      "value_display": "Tertiary",
+      "sort_order": 9,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "HIGHER_EDUCATION",
+      "value_code": "HIGHER_EDUCATION",
+      "value_display": "Higher education",
+      "sort_order": 10,
+      "display_i18n": {}
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "attribute_id": "SEED_TYPE",
+  "attribute_code": "SEED_TYPE",
+  "attribute_display": "Seed type",
+  "is_hierarchical": false,
+  "values": [
+    {
+      "value_id": "SEED_IMPROVED",
+      "value_code": "SEED_IMPROVED",
+      "value_display": "Improved",
+      "sort_order": 1,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "SEED_LOCAL",
+      "value_code": "SEED_LOCAL",
+      "value_display": "Local",
+      "sort_order": 2,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "SEED_HYBRID",
+      "value_code": "SEED_HYBRID",
+      "value_display": "Hybrid",
+      "sort_order": 3,
+      "display_i18n": {}
+    }
+  ]
+}

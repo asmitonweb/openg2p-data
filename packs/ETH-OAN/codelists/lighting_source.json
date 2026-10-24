@@ -1,0 +1,56 @@
+{
+  "attribute_id": "LIGHTING_SOURCE",
+  "attribute_code": "LIGHTING_SOURCE",
+  "attribute_display": "Lighting source",
+  "is_hierarchical": false,
+  "values": [
+    {
+      "value_id": "GRID",
+      "value_code": "GRID",
+      "value_display": "Grid",
+      "sort_order": 1,
+      "roles": [
+        "electrified"
+      ],
+      "display_i18n": {}
+    },
+    {
+      "value_id": "SOLAR",
+      "value_code": "SOLAR",
+      "value_display": "Solar",
+      "sort_order": 2,
+      "roles": [
+        "electrified"
+      ],
+      "display_i18n": {}
+    },
+    {
+      "value_id": "GENERATOR",
+      "value_code": "GENERATOR",
+      "value_display": "Generator",
+      "sort_order": 3,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "KEROSENE",
+      "value_code": "KEROSENE",
+      "value_display": "Kerosene",
+      "sort_order": 4,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "CANDLE",
+      "value_code": "CANDLE",
+      "value_display": "Candle",
+      "sort_order": 5,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "NONE",
+      "value_code": "NONE",
+      "value_display": "None",
+      "sort_order": 6,
+      "display_i18n": {}
+    }
+  ]
+}

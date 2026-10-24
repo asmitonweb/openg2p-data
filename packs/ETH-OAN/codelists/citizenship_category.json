@@ -1,0 +1,43 @@
+{
+  "attribute_id": "CITIZENSHIP_CATEGORY",
+  "attribute_code": "CITIZENSHIP_CATEGORY",
+  "attribute_display": "Citizenship category",
+  "is_hierarchical": false,
+  "values": [
+    {
+      "value_id": "CITIZEN",
+      "value_code": "CITIZEN",
+      "value_display": "Citizen",
+      "sort_order": 1,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "REFUGEE",
+      "value_code": "REFUGEE",
+      "value_display": "Refugee",
+      "sort_order": 2,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "IDP",
+      "value_code": "IDP",
+      "value_display": "Internally displaced",
+      "sort_order": 3,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "RETURNEE",
+      "value_code": "RETURNEE",
+      "value_display": "Returnee",
+      "sort_order": 4,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "RESIDENT",
+      "value_code": "RESIDENT",
+      "value_display": "Resident",
+      "sort_order": 5,
+      "display_i18n": {}
+    }
+  ]
+}

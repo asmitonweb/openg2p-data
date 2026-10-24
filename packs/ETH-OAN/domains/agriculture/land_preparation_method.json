@@ -1,0 +1,36 @@
+{
+  "attribute_id": "LAND_PREPARATION_METHOD",
+  "attribute_code": "LAND_PREPARATION_METHOD",
+  "attribute_display": "Land preparation method",
+  "is_hierarchical": false,
+  "values": [
+    {
+      "value_id": "LPM_OXEN",
+      "value_code": "LPM_OXEN",
+      "value_display": "Oxen plough",
+      "sort_order": 1,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "LPM_TRACTOR",
+      "value_code": "LPM_TRACTOR",
+      "value_display": "Tractor",
+      "sort_order": 2,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "LPM_MANUAL",
+      "value_code": "LPM_MANUAL",
+      "value_display": "Manual (hoe)",
+      "sort_order": 3,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "LPM_ZERO_TILLAGE",
+      "value_code": "LPM_ZERO_TILLAGE",
+      "value_display": "Zero tillage",
+      "sort_order": 4,
+      "display_i18n": {}
+    }
+  ]
+}

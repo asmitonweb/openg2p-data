@@ -1,0 +1,32 @@
+{
+  "attribute_id": "DISABILITY_STATUS",
+  "attribute_code": "DISABILITY_STATUS",
+  "attribute_display": "Disability status",
+  "is_hierarchical": false,
+  "values": [
+    {
+      "value_id": "YES",
+      "value_code": "YES",
+      "value_display": "Yes",
+      "sort_order": 1,
+      "roles": [
+        "disability_yes"
+      ],
+      "display_i18n": {}
+    },
+    {
+      "value_id": "NO",
+      "value_code": "NO",
+      "value_display": "No",
+      "sort_order": 2,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "UNKNOWN",
+      "value_code": "UNKNOWN",
+      "value_display": "Unknown",
+      "sort_order": 3,
+      "display_i18n": {}
+    }
+  ]
+}

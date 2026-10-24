@@ -1,0 +1,29 @@
+{
+  "attribute_id": "RESIDENCY_STATUS",
+  "attribute_code": "RESIDENCY_STATUS",
+  "attribute_display": "Residency status",
+  "is_hierarchical": false,
+  "values": [
+    {
+      "value_id": "USUAL_MEMBER",
+      "value_code": "USUAL_MEMBER",
+      "value_display": "Usual member",
+      "sort_order": 1,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "TEMPORARY",
+      "value_code": "TEMPORARY",
+      "value_display": "Temporary",
+      "sort_order": 2,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "ABSENT",
+      "value_code": "ABSENT",
+      "value_display": "Absent",
+      "sort_order": 3,
+      "display_i18n": {}
+    }
+  ]
+}

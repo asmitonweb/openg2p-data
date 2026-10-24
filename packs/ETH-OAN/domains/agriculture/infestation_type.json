@@ -1,0 +1,29 @@
+{
+  "attribute_id": "INFESTATION_TYPE",
+  "attribute_code": "INFESTATION_TYPE",
+  "attribute_display": "Infestation type",
+  "is_hierarchical": false,
+  "values": [
+    {
+      "value_id": "INFT_PEST",
+      "value_code": "INFT_PEST",
+      "value_display": "Pest",
+      "sort_order": 1,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "INFT_DISEASE",
+      "value_code": "INFT_DISEASE",
+      "value_display": "Disease",
+      "sort_order": 2,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "INFT_WEED",
+      "value_code": "INFT_WEED",
+      "value_display": "Weed",
+      "sort_order": 3,
+      "display_i18n": {}
+    }
+  ]
+}

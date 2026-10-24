@@ -1,0 +1,36 @@
+{
+  "attribute_id": "PREFERRED_CONTACT_METHOD",
+  "attribute_code": "PREFERRED_CONTACT_METHOD",
+  "attribute_display": "Preferred contact method",
+  "is_hierarchical": false,
+  "values": [
+    {
+      "value_id": "CALL",
+      "value_code": "CALL",
+      "value_display": "Call",
+      "sort_order": 1,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "SMS",
+      "value_code": "SMS",
+      "value_display": "SMS",
+      "sort_order": 2,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "VIA_LOCAL_OFFICE",
+      "value_code": "VIA_LOCAL_OFFICE",
+      "value_display": "Via local office",
+      "sort_order": 3,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "NONE",
+      "value_code": "NONE",
+      "value_display": "None",
+      "sort_order": 4,
+      "display_i18n": {}
+    }
+  ]
+}

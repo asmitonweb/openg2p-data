@@ -1,0 +1,36 @@
+{
+  "attribute_id": "PEST_CONTROL_ACTION",
+  "attribute_code": "PEST_CONTROL_ACTION",
+  "attribute_display": "Pest control action",
+  "is_hierarchical": false,
+  "values": [
+    {
+      "value_id": "CTRL_CHEMICAL",
+      "value_code": "CTRL_CHEMICAL",
+      "value_display": "Chemical",
+      "sort_order": 1,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "CTRL_BIOLOGICAL",
+      "value_code": "CTRL_BIOLOGICAL",
+      "value_display": "Biological",
+      "sort_order": 2,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "CTRL_CULTURAL",
+      "value_code": "CTRL_CULTURAL",
+      "value_display": "Cultural / manual",
+      "sort_order": 3,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "CTRL_NONE",
+      "value_code": "CTRL_NONE",
+      "value_display": "None",
+      "sort_order": 4,
+      "display_i18n": {}
+    }
+  ]
+}

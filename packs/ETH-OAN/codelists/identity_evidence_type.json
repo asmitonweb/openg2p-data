@@ -1,0 +1,36 @@
+{
+  "attribute_id": "IDENTITY_EVIDENCE_TYPE",
+  "attribute_code": "IDENTITY_EVIDENCE_TYPE",
+  "attribute_display": "Identity evidence",
+  "is_hierarchical": false,
+  "values": [
+    {
+      "value_id": "FOUNDATIONAL_ID_VERIFIED",
+      "value_code": "FOUNDATIONAL_ID_VERIFIED",
+      "value_display": "Foundational ID verified",
+      "sort_order": 1,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "DOCUMENT",
+      "value_code": "DOCUMENT",
+      "value_display": "Document",
+      "sort_order": 2,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "NONE",
+      "value_code": "NONE",
+      "value_display": "None",
+      "sort_order": 3,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "EXCEPTION",
+      "value_code": "EXCEPTION",
+      "value_display": "Exception",
+      "sort_order": 4,
+      "display_i18n": {}
+    }
+  ]
+}

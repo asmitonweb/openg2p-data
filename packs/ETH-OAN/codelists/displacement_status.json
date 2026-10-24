@@ -1,0 +1,39 @@
+{
+  "attribute_id": "DISPLACEMENT_STATUS",
+  "attribute_code": "DISPLACEMENT_STATUS",
+  "attribute_display": "Displacement status",
+  "is_hierarchical": false,
+  "values": [
+    {
+      "value_id": "HOST_COMMUNITY",
+      "value_code": "HOST_COMMUNITY",
+      "value_display": "Host community",
+      "sort_order": 1,
+      "roles": [
+        "not_displaced"
+      ],
+      "display_i18n": {}
+    },
+    {
+      "value_id": "IDP",
+      "value_code": "IDP",
+      "value_display": "Internally displaced",
+      "sort_order": 2,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "RETURNEE",
+      "value_code": "RETURNEE",
+      "value_display": "Returnee",
+      "sort_order": 3,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "REFUGEE",
+      "value_code": "REFUGEE",
+      "value_display": "Refugee",
+      "sort_order": 4,
+      "display_i18n": {}
+    }
+  ]
+}

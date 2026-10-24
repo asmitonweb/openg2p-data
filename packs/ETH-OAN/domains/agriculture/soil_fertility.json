@@ -1,0 +1,29 @@
+{
+  "attribute_id": "SOIL_FERTILITY",
+  "attribute_code": "SOIL_FERTILITY",
+  "attribute_display": "Soil fertility",
+  "is_hierarchical": false,
+  "values": [
+    {
+      "value_id": "SF_HIGH",
+      "value_code": "SF_HIGH",
+      "value_display": "HIGH",
+      "sort_order": 1,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "SF_MEDIUM",
+      "value_code": "SF_MEDIUM",
+      "value_display": "MEDIUM",
+      "sort_order": 2,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "SF_LOW",
+      "value_code": "SF_LOW",
+      "value_display": "LOW",
+      "sort_order": 3,
+      "display_i18n": {}
+    }
+  ]
+}

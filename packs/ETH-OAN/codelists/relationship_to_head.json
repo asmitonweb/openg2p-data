@@ -1,0 +1,50 @@
+{
+  "attribute_id": "RELATIONSHIP_TO_HEAD",
+  "attribute_code": "RELATIONSHIP_TO_HEAD",
+  "attribute_display": "Relationship to head of household",
+  "is_hierarchical": false,
+  "values": [
+    {
+      "value_id": "SPOUSE",
+      "value_code": "SPOUSE",
+      "value_display": "Spouse",
+      "sort_order": 2,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "CHILD",
+      "value_code": "CHILD",
+      "value_display": "Child",
+      "sort_order": 3,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "PARENT",
+      "value_code": "PARENT",
+      "value_display": "Parent",
+      "sort_order": 4,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "SIBLING",
+      "value_code": "SIBLING",
+      "value_display": "Sibling",
+      "sort_order": 5,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "OTHER_RELATIVE",
+      "value_code": "OTHER_RELATIVE",
+      "value_display": "Other relative",
+      "sort_order": 6,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "NON_RELATIVE",
+      "value_code": "NON_RELATIVE",
+      "value_display": "Non relative",
+      "sort_order": 7,
+      "display_i18n": {}
+    }
+  ]
+}

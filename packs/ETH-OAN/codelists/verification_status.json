@@ -1,0 +1,36 @@
+{
+  "attribute_id": "VERIFICATION_STATUS",
+  "attribute_code": "VERIFICATION_STATUS",
+  "attribute_display": "Verification status",
+  "is_hierarchical": false,
+  "values": [
+    {
+      "value_id": "VERIFIED",
+      "value_code": "VERIFIED",
+      "value_display": "Verified",
+      "sort_order": 1,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "PENDING",
+      "value_code": "PENDING",
+      "value_display": "Pending",
+      "sort_order": 2,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "FAILED",
+      "value_code": "FAILED",
+      "value_display": "Failed",
+      "sort_order": 3,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "EXCEPTION",
+      "value_code": "EXCEPTION",
+      "value_display": "Exception",
+      "sort_order": 4,
+      "display_i18n": {}
+    }
+  ]
+}

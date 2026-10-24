@@ -1,0 +1,36 @@
+{
+  "attribute_id": "DISABILITY_SEVERITY",
+  "attribute_code": "DISABILITY_SEVERITY",
+  "attribute_display": "Disability severity",
+  "is_hierarchical": false,
+  "values": [
+    {
+      "value_id": "NO_DIFFICULTY",
+      "value_code": "NO_DIFFICULTY",
+      "value_display": "No difficulty",
+      "sort_order": 1,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "SOME_DIFFICULTY",
+      "value_code": "SOME_DIFFICULTY",
+      "value_display": "Some difficulty",
+      "sort_order": 2,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "A_LOT_OF_DIFFICULTY",
+      "value_code": "A_LOT_OF_DIFFICULTY",
+      "value_display": "A lot of difficulty",
+      "sort_order": 3,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "CANNOT_DO_AT_ALL",
+      "value_code": "CANNOT_DO_AT_ALL",
+      "value_display": "Cannot do at all",
+      "sort_order": 4,
+      "display_i18n": {}
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "attribute_id": "FLOOR_MATERIAL",
+  "attribute_code": "FLOOR_MATERIAL",
+  "attribute_display": "Floor material",
+  "is_hierarchical": false,
+  "values": [
+    {
+      "value_id": "EARTH",
+      "value_code": "EARTH",
+      "value_display": "Earth",
+      "sort_order": 1,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "WOOD",
+      "value_code": "WOOD",
+      "value_display": "Wood",
+      "sort_order": 2,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "CEMENT",
+      "value_code": "CEMENT",
+      "value_display": "Cement",
+      "sort_order": 3,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "TILE",
+      "value_code": "TILE",
+      "value_display": "Tile",
+      "sort_order": 4,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "OTHER",
+      "value_code": "OTHER",
+      "value_display": "Other",
+      "sort_order": 5,
+      "display_i18n": {}
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "country_code": "ET",
+  "_comment": [
+    "How an address is written in this country, BELOW the lowest level in",
+    "levels.json. Everything at or above that level is already identified by a",
+    "P-code and must never be repeated here as text — a stored 'Tahtay Adiyabo,",
+    "North Western, Tigray' is the pcode's ancestry frozen at write time, and it",
+    "goes stale the day a woreda is renamed or resplit.",
+    "",
+    "So: the P-code says WHICH unit, and this file says what is written below it.",
+    "The two never overlap, and only one of them can drift.",
+    "",
+    "The shape is country data for the same reason code lists are. Ethiopia ends",
+    "at kebele and house number, has no residential street names, and does not",
+    "use postal codes for delivery. A pack that hardcoded 'street, city, ZIP'",
+    "would force every one of those to be invented here."
+  ],
+  "sub_levels": [
+    {
+      "id": "house_number",
+      "label": "House number",
+      "label_i18n": {
+        "am": "የቤት ቁጥር"
+      },
+      "required": false
+    }
+  ],
+  "uses_postal_code": false,
+  "uses_street_names": false,
+  "_lines_comment": [
+    "How the parts compose into the flat address lines a registry stores.",
+    "Placeholders are sub_level ids; a line whose parts are all absent is",
+    "omitted rather than emitted blank. Ethiopia fills one line and leaves the",
+    "second empty — which is the point: address_line_2 ends up NULL instead of",
+    "carrying something invented to fill it."
+  ],
+  "lines": [
+    "House {house_number}"
+  ]
+}

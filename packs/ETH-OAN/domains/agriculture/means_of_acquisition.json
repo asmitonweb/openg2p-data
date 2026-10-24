@@ -1,0 +1,50 @@
+{
+  "attribute_id": "MEANS_OF_ACQUISITION",
+  "attribute_code": "MEANS_OF_ACQUISITION",
+  "attribute_display": "How the land was acquired",
+  "is_hierarchical": false,
+  "values": [
+    {
+      "value_id": "MOA_INHERITANCE",
+      "value_code": "MOA_INHERITANCE",
+      "value_display": "INHERITANCE",
+      "sort_order": 1,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "MOA_DONATION_GIFT",
+      "value_code": "MOA_DONATION_GIFT",
+      "value_display": "DONATION_GIFT",
+      "sort_order": 2,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "MOA_EXPROPRIATION",
+      "value_code": "MOA_EXPROPRIATION",
+      "value_display": "EXPROPRIATION",
+      "sort_order": 3,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "MOA_RENTING_LEASING",
+      "value_code": "MOA_RENTING_LEASING",
+      "value_display": "RENTING_LEASING",
+      "sort_order": 4,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "MOA_REALLOCATION",
+      "value_code": "MOA_REALLOCATION",
+      "value_display": "REALLOCATION",
+      "sort_order": 5,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "MOA_DIVORCE_SETTLEMENT",
+      "value_code": "MOA_DIVORCE_SETTLEMENT",
+      "value_display": "DIVORCE_SETTLEMENT",
+      "sort_order": 6,
+      "display_i18n": {}
+    }
+  ]
+}

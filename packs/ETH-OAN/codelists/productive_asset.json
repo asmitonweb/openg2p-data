@@ -1,0 +1,29 @@
+{
+  "attribute_id": "PRODUCTIVE_ASSET",
+  "attribute_code": "PRODUCTIVE_ASSET",
+  "attribute_display": "Productive asset",
+  "is_hierarchical": false,
+  "values": [
+    {
+      "value_id": "PLOUGH",
+      "value_code": "PLOUGH",
+      "value_display": "Plough",
+      "sort_order": 1,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "IRRIGATION_PUMP",
+      "value_code": "IRRIGATION_PUMP",
+      "value_display": "Irrigation pump",
+      "sort_order": 2,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "OTHER",
+      "value_code": "OTHER",
+      "value_display": "Other",
+      "sort_order": 3,
+      "display_i18n": {}
+    }
+  ]
+}

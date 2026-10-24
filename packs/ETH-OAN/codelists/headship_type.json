@@ -1,0 +1,43 @@
+{
+  "attribute_id": "HEADSHIP_TYPE",
+  "attribute_code": "HEADSHIP_TYPE",
+  "attribute_display": "Headship type",
+  "is_hierarchical": false,
+  "values": [
+    {
+      "value_id": "MALE_HEADED",
+      "value_code": "MALE_HEADED",
+      "value_display": "Male headed",
+      "sort_order": 1,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "FEMALE_HEADED",
+      "value_code": "FEMALE_HEADED",
+      "value_display": "Female headed",
+      "sort_order": 2,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "CHILD_HEADED",
+      "value_code": "CHILD_HEADED",
+      "value_display": "Child headed",
+      "sort_order": 3,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "ELDERLY_HEADED",
+      "value_code": "ELDERLY_HEADED",
+      "value_display": "Elderly headed",
+      "sort_order": 4,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "DISABLED_HEADED",
+      "value_code": "DISABLED_HEADED",
+      "value_display": "Disabled headed",
+      "sort_order": 5,
+      "display_i18n": {}
+    }
+  ]
+}

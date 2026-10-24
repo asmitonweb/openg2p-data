@@ -1,0 +1,63 @@
+{
+  "attribute_id": "COOKING_FUEL_TYPE",
+  "attribute_code": "COOKING_FUEL_TYPE",
+  "attribute_display": "Cooking fuel",
+  "is_hierarchical": false,
+  "values": [
+    {
+      "value_id": "ELECTRICITY",
+      "value_code": "ELECTRICITY",
+      "value_display": "Electricity",
+      "sort_order": 1,
+      "roles": [
+        "clean_cooking"
+      ],
+      "display_i18n": {}
+    },
+    {
+      "value_id": "GAS",
+      "value_code": "GAS",
+      "value_display": "Gas",
+      "sort_order": 2,
+      "roles": [
+        "clean_cooking"
+      ],
+      "display_i18n": {}
+    },
+    {
+      "value_id": "KEROSENE",
+      "value_code": "KEROSENE",
+      "value_display": "Kerosene",
+      "sort_order": 3,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "CHARCOAL",
+      "value_code": "CHARCOAL",
+      "value_display": "Charcoal",
+      "sort_order": 4,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "FIREWOOD",
+      "value_code": "FIREWOOD",
+      "value_display": "Firewood",
+      "sort_order": 5,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "BIOMASS",
+      "value_code": "BIOMASS",
+      "value_display": "Biomass",
+      "sort_order": 6,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "OTHER",
+      "value_code": "OTHER",
+      "value_display": "Other",
+      "sort_order": 7,
+      "display_i18n": {}
+    }
+  ]
+}

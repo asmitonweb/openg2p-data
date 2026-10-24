@@ -1,0 +1,22 @@
+{
+  "attribute_id": "SUBJECT_ID_TYPE",
+  "attribute_code": "SUBJECT_ID_TYPE",
+  "attribute_display": "Subject ID type",
+  "is_hierarchical": false,
+  "values": [
+    {
+      "value_id": "FAYDA_FAN",
+      "value_code": "FAYDA_FAN",
+      "value_display": "Fayda FAN (national ID)",
+      "sort_order": 1,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "FARMER_ID",
+      "value_code": "FARMER_ID",
+      "value_display": "Farmer ID",
+      "sort_order": 2,
+      "display_i18n": {}
+    }
+  ]
+}

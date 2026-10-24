@@ -1,0 +1,72 @@
+{
+  "attribute_id": "CROP_CATEGORY",
+  "attribute_code": "CROP_CATEGORY",
+  "attribute_display": "Crop category",
+  "description": "Crop groups of the Ethiopian Ministry of Agriculture's crop variety list, plus Other. Source: Ethiopian Ministry of Agriculture crop variety portal (Crop Technologies), http://196.191.93.34/moa-portal/cropopen/varieites/, read 2026-10-16.",
+  "is_hierarchical": false,
+  "values": [
+    {
+      "value_id": "CROPCAT_CEREAL",
+      "value_code": "CROPCAT_CEREAL",
+      "value_display": "Cereals",
+      "sort_order": 1,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "CROPCAT_FOOD_LEGUME",
+      "value_code": "CROPCAT_FOOD_LEGUME",
+      "value_display": "Food legumes",
+      "sort_order": 2,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "CROPCAT_OILSEED",
+      "value_code": "CROPCAT_OILSEED",
+      "value_display": "Oilseeds",
+      "sort_order": 3,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "CROPCAT_FRUIT_VEGETABLE",
+      "value_code": "CROPCAT_FRUIT_VEGETABLE",
+      "value_display": "Fruits and vegetables",
+      "sort_order": 4,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "CROPCAT_ROOT_TUBER",
+      "value_code": "CROPCAT_ROOT_TUBER",
+      "value_display": "Roots and tubers",
+      "sort_order": 5,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "CROPCAT_STIMULANT",
+      "value_code": "CROPCAT_STIMULANT",
+      "value_display": "Stimulant crops",
+      "sort_order": 6,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "CROPCAT_INDUSTRIAL",
+      "value_code": "CROPCAT_INDUSTRIAL",
+      "value_display": "Industrial crops",
+      "sort_order": 7,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "CROPCAT_SPICE_MEDICINAL_AROMATIC",
+      "value_code": "CROPCAT_SPICE_MEDICINAL_AROMATIC",
+      "value_display": "Spices, condiments, medicinal and aromatic plants",
+      "sort_order": 8,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "CROPCAT_OTHER",
+      "value_code": "CROPCAT_OTHER",
+      "value_display": "Other",
+      "sort_order": 9,
+      "display_i18n": {}
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "attribute_id": "PREFIX",
+  "attribute_code": "PREFIX",
+  "attribute_display": "Prefix",
+  "is_hierarchical": false,
+  "values": [
+    {
+      "value_id": "MR",
+      "value_code": "MR",
+      "value_display": "Mr",
+      "sort_order": 1,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "MRS",
+      "value_code": "MRS",
+      "value_display": "Mrs",
+      "sort_order": 2,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "MISS",
+      "value_code": "MISS",
+      "value_display": "Miss",
+      "sort_order": 3,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "MS",
+      "value_code": "MS",
+      "value_display": "Ms",
+      "sort_order": 4,
+      "display_i18n": {}
+    }
+  ]
+}

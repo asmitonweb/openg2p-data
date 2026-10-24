@@ -1,0 +1,85 @@
+{
+  "attribute_id": "SHOCK_TYPE",
+  "attribute_code": "SHOCK_TYPE",
+  "attribute_display": "Shock experienced",
+  "is_hierarchical": false,
+  "values": [
+    {
+      "value_id": "DROUGHT",
+      "value_code": "DROUGHT",
+      "value_display": "Drought",
+      "sort_order": 1,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "FLOOD",
+      "value_code": "FLOOD",
+      "value_display": "Flood",
+      "sort_order": 2,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "CONFLICT",
+      "value_code": "CONFLICT",
+      "value_display": "Conflict",
+      "sort_order": 3,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "ILLNESS",
+      "value_code": "ILLNESS",
+      "value_display": "Illness",
+      "sort_order": 4,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "DEATH_OF_EARNER",
+      "value_code": "DEATH_OF_EARNER",
+      "value_display": "Death of earner",
+      "sort_order": 5,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "JOB_LOSS",
+      "value_code": "JOB_LOSS",
+      "value_display": "Job loss",
+      "sort_order": 6,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "PRICE_SHOCK",
+      "value_code": "PRICE_SHOCK",
+      "value_display": "Price shock",
+      "sort_order": 7,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "CROP_FAILURE",
+      "value_code": "CROP_FAILURE",
+      "value_display": "Crop failure",
+      "sort_order": 8,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "LIVESTOCK_LOSS",
+      "value_code": "LIVESTOCK_LOSS",
+      "value_display": "Livestock loss",
+      "sort_order": 9,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "FIRE",
+      "value_code": "FIRE",
+      "value_display": "Fire",
+      "sort_order": 10,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "OTHER",
+      "value_code": "OTHER",
+      "value_display": "Other",
+      "sort_order": 11,
+      "display_i18n": {}
+    }
+  ]
+}

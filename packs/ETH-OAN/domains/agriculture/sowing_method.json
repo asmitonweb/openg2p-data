@@ -1,0 +1,29 @@
+{
+  "attribute_id": "SOWING_METHOD",
+  "attribute_code": "SOWING_METHOD",
+  "attribute_display": "Sowing method",
+  "is_hierarchical": false,
+  "values": [
+    {
+      "value_id": "SOW_BROADCAST",
+      "value_code": "SOW_BROADCAST",
+      "value_display": "Broadcast",
+      "sort_order": 1,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "SOW_ROW",
+      "value_code": "SOW_ROW",
+      "value_display": "Row planting",
+      "sort_order": 2,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "SOW_TRANSPLANT",
+      "value_code": "SOW_TRANSPLANT",
+      "value_display": "Transplanting",
+      "sort_order": 3,
+      "display_i18n": {}
+    }
+  ]
+}

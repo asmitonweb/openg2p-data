@@ -1,0 +1,26 @@
+{
+  "country": "ETH",
+  "synthetic": false,
+  "source": "OpenAgriNet farmer registry location catalog; codes reused from OCHA COD-AB where the unit is unchanged",
+  "source_sha256": "9ff52cc2fb5a34e4b04c550f2ddb2ad9b1d611b8dcafcad60c9918a6035c8125",
+  "base_pack": "ETH",
+  "base_pack_version": "2026-04-17T09:59:45.523963",
+  "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+  "license_note": "Attribution required. Boundaries are operational, not a statement on legal or political status.",
+  "version": "2026-10-24",
+  "identifier": "P-code used as level_value_id",
+  "levels": [
+    "country",
+    "region",
+    "zone",
+    "woreda",
+    "kebele"
+  ],
+  "unit_counts": {
+    "country": 1,
+    "region": 14,
+    "zone": 125,
+    "woreda": 1362,
+    "kebele": 19535
+  }
+}

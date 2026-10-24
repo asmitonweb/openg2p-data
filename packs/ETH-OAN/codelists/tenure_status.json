@@ -1,0 +1,36 @@
+{
+  "attribute_id": "TENURE_STATUS",
+  "attribute_code": "TENURE_STATUS",
+  "attribute_display": "Tenure status",
+  "is_hierarchical": false,
+  "values": [
+    {
+      "value_id": "OWNED",
+      "value_code": "OWNED",
+      "value_display": "Owned",
+      "sort_order": 1,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "RENTED",
+      "value_code": "RENTED",
+      "value_display": "Rented",
+      "sort_order": 2,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "HOSTED",
+      "value_code": "HOSTED",
+      "value_display": "Hosted",
+      "sort_order": 3,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "TEMPORARY",
+      "value_code": "TEMPORARY",
+      "value_display": "Temporary",
+      "sort_order": 4,
+      "display_i18n": {}
+    }
+  ]
+}

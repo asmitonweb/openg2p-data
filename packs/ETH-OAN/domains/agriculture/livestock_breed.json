@@ -1,0 +1,29 @@
+{
+  "attribute_id": "LIVESTOCK_BREED",
+  "attribute_code": "LIVESTOCK_BREED",
+  "attribute_display": "Livestock breed",
+  "is_hierarchical": false,
+  "values": [
+    {
+      "value_id": "BREED_IMPROVED",
+      "value_code": "BREED_IMPROVED",
+      "value_display": "IMPROVED",
+      "sort_order": 1,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "BREED_LOCAL",
+      "value_code": "BREED_LOCAL",
+      "value_display": "LOCAL",
+      "sort_order": 2,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "BREED_HYBRID",
+      "value_code": "BREED_HYBRID",
+      "value_display": "HYBRID",
+      "sort_order": 3,
+      "display_i18n": {}
+    }
+  ]
+}

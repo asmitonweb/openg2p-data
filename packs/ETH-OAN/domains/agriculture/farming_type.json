@@ -1,0 +1,43 @@
+{
+  "attribute_id": "FARMING_TYPE",
+  "attribute_code": "FARMING_TYPE",
+  "attribute_display": "Farming type",
+  "is_hierarchical": false,
+  "values": [
+    {
+      "value_id": "CROP",
+      "value_code": "CROP",
+      "value_display": "Crop",
+      "sort_order": 1,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "LIVESTOCK",
+      "value_code": "LIVESTOCK",
+      "value_display": "Livestock",
+      "sort_order": 2,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "MIXED",
+      "value_code": "MIXED",
+      "value_display": "Mixed",
+      "sort_order": 3,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AQUACULTURE",
+      "value_code": "AQUACULTURE",
+      "value_display": "Aquaculture",
+      "sort_order": 4,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGROFORESTRY",
+      "value_code": "AGROFORESTRY",
+      "value_display": "Agroforestry",
+      "sort_order": 5,
+      "display_i18n": {}
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "attribute_id": "CROPPING_SYSTEM",
+  "attribute_code": "CROPPING_SYSTEM",
+  "attribute_display": "Cropping system",
+  "is_hierarchical": false,
+  "values": [
+    {
+      "value_id": "CSYS_PURE",
+      "value_code": "CSYS_PURE",
+      "value_display": "Pure stand",
+      "sort_order": 1,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "CSYS_MIXED",
+      "value_code": "CSYS_MIXED",
+      "value_display": "Mixed",
+      "sort_order": 2,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "CSYS_INTERCROPPED",
+      "value_code": "CSYS_INTERCROPPED",
+      "value_display": "Intercropped",
+      "sort_order": 3,
+      "display_i18n": {}
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "attribute_id": "AGE_METHOD",
+  "attribute_code": "AGE_METHOD",
+  "attribute_display": "How age was established",
+  "is_hierarchical": false,
+  "values": [
+    {
+      "value_id": "DOCUMENTED",
+      "value_code": "DOCUMENTED",
+      "value_display": "Documented",
+      "sort_order": 1,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "ESTIMATED",
+      "value_code": "ESTIMATED",
+      "value_display": "Estimated",
+      "sort_order": 2,
+      "display_i18n": {}
+    }
+  ]
+}

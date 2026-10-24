@@ -1,0 +1,29 @@
+{
+  "attribute_id": "LAND_OWNERSHIP_TYPE",
+  "attribute_code": "LAND_OWNERSHIP_TYPE",
+  "attribute_display": "Land ownership type",
+  "is_hierarchical": false,
+  "values": [
+    {
+      "value_id": "OWNER",
+      "value_code": "OWNER",
+      "value_display": "Owner",
+      "sort_order": 1,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "TENANT",
+      "value_code": "TENANT",
+      "value_display": "Tenant",
+      "sort_order": 2,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "CROP_SHARE",
+      "value_code": "CROP_SHARE",
+      "value_display": "Crop share",
+      "sort_order": 3,
+      "display_i18n": {}
+    }
+  ]
+}

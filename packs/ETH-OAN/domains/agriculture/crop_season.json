@@ -1,0 +1,29 @@
+{
+  "attribute_id": "CROP_SEASON",
+  "attribute_code": "CROP_SEASON",
+  "attribute_display": "Cropping season",
+  "is_hierarchical": false,
+  "values": [
+    {
+      "value_id": "SEASON_MEHER",
+      "value_code": "SEASON_MEHER",
+      "value_display": "Meher (main rains)",
+      "sort_order": 1,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "SEASON_BELG",
+      "value_code": "SEASON_BELG",
+      "value_display": "Belg (short rains)",
+      "sort_order": 2,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "SEASON_IRRIGATION",
+      "value_code": "SEASON_IRRIGATION",
+      "value_display": "Irrigation (dry season)",
+      "sort_order": 3,
+      "display_i18n": {}
+    }
+  ]
+}

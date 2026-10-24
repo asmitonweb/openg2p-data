@@ -1,0 +1,92 @@
+{
+  "attribute_id": "LIVELIHOOD",
+  "attribute_code": "LIVELIHOOD",
+  "attribute_display": "Livelihood",
+  "is_hierarchical": false,
+  "values": [
+    {
+      "value_id": "AGRICULTURE",
+      "value_code": "AGRICULTURE",
+      "value_display": "Agriculture",
+      "sort_order": 1,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "LIVESTOCK",
+      "value_code": "LIVESTOCK",
+      "value_display": "Livestock",
+      "sort_order": 2,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "FISHING",
+      "value_code": "FISHING",
+      "value_display": "Fishing",
+      "sort_order": 3,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "WAGE_LABOR",
+      "value_code": "WAGE_LABOR",
+      "value_display": "Wage labor",
+      "sort_order": 4,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "SELF_EMPLOYMENT",
+      "value_code": "SELF_EMPLOYMENT",
+      "value_display": "Self employment",
+      "sort_order": 5,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "GOVERNMENT_EMPLOYEE",
+      "value_code": "GOVERNMENT_EMPLOYEE",
+      "value_display": "Government employee",
+      "sort_order": 6,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "PRIVATE_SECTOR_EMPLOYEE",
+      "value_code": "PRIVATE_SECTOR_EMPLOYEE",
+      "value_display": "Private sector employee",
+      "sort_order": 7,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "BUSINESS_TRADE",
+      "value_code": "BUSINESS_TRADE",
+      "value_display": "Business trade",
+      "sort_order": 8,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "REMITTANCE",
+      "value_code": "REMITTANCE",
+      "value_display": "Remittance",
+      "sort_order": 9,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "PENSION",
+      "value_code": "PENSION",
+      "value_display": "Pension",
+      "sort_order": 10,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "UNEMPLOYED",
+      "value_code": "UNEMPLOYED",
+      "value_display": "Unemployed",
+      "sort_order": 11,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "OTHER",
+      "value_code": "OTHER",
+      "value_display": "Other",
+      "sort_order": 12,
+      "display_i18n": {}
+    }
+  ]
+}

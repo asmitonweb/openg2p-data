@@ -1,0 +1,29 @@
+{
+  "attribute_id": "DWELLING_TYPE",
+  "attribute_code": "DWELLING_TYPE",
+  "attribute_display": "Dwelling type",
+  "is_hierarchical": false,
+  "values": [
+    {
+      "value_id": "PERMANENT",
+      "value_code": "PERMANENT",
+      "value_display": "Permanent",
+      "sort_order": 1,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "SEMI_PERMANENT",
+      "value_code": "SEMI_PERMANENT",
+      "value_display": "Semi permanent",
+      "sort_order": 2,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "TEMPORARY",
+      "value_code": "TEMPORARY",
+      "value_display": "Temporary",
+      "sort_order": 3,
+      "display_i18n": {}
+    }
+  ]
+}
