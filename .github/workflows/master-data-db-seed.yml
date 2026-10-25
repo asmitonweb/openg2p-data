@@ -1,0 +1,55 @@
+# Builds and publishes the Master Data db-seed image carrying this repository's
+# packs (docker/master-data-db-seed/Dockerfile) to GitHub Container Registry.
+#
+# Push a tag named master-data-db-seed/<image tag>, for example
+# master-data-db-seed/0.0.0-develop.118-oan.1, at the commit to ship. The image
+# is ghcr.io/<owner>/master-data-db-seed:<image tag>; the job prints its digest,
+# which is what a chart pins.
+name: master-data-db-seed
+
+on:
+  push:
+    tags:
+      - "master-data-db-seed/*"
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  image:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Image name and tag
+        id: meta
+        run: |
+          echo "image=ghcr.io/${GITHUB_REPOSITORY_OWNER,,}/master-data-db-seed" >> "$GITHUB_OUTPUT"
+          echo "tag=${GITHUB_REF_NAME#master-data-db-seed/}" >> "$GITHUB_OUTPUT"
+
+      - uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: docker/setup-buildx-action@v3
+
+      - id: build
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: docker/master-data-db-seed/Dockerfile
+          push: true
+          provenance: false
+          tags: ${{ steps.meta.outputs.image }}:${{ steps.meta.outputs.tag }}
+          labels: |
+            org.opencontainers.image.source=https://github.com/${{ github.repository }}
+            org.opencontainers.image.title=master-data-db-seed
+            org.opencontainers.image.version=${{ steps.meta.outputs.tag }}
+            org.openg2p.pin.openg2p-data-repo=https://github.com/${{ github.repository }}.git
+            org.openg2p.pin.openg2p-data-branch=${{ github.sha }}
+
+      - name: Digest
+        run: echo "${{ steps.meta.outputs.image }}:${{ steps.meta.outputs.tag }}@${{ steps.build.outputs.digest }}" | tee -a "$GITHUB_STEP_SUMMARY"

@@ -1,4 +1,6 @@
-# The image carries the repository as upstream's does: everything but Git.
+# The image carries the repository as upstream's does: its content, not its
+# Git history or build tooling.
 .git
 docker
 **/__pycache__
+.github
