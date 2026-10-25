@@ -1,0 +1,4 @@
+# The image carries the repository as upstream's does: everything but Git.
+.git
+docker
+**/__pycache__
