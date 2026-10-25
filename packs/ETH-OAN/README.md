@@ -60,9 +60,11 @@ parent's code. Compared with the source catalog:
 whether it was kept, re-minted or merged. Use it to rewrite geo ids already stored in a
 registry before you point that environment at this pack.
 
-## Known issue inherited from `ETH`
+## `SELF` in Relationship to the head
 
-`validate_pack.py` reports `RELATIONSHIP_TO_HEAD … no value carries the 'head_of_household'
-role`, and six samples with `relationship_to_head='SELF'`, which the list does not contain. Both
-come from the code list copied from `ETH`, which fails the same 7 checks on `develop`. The fix belongs upstream, in `ETH`'s code list; the next rebuild then picks
-it up.
+`ETH`'s list no longer has `SELF`, so on its own it fails `validate_pack.py`: no value carries
+the `head_of_household` role, and six samples use `SELF`. The pack contract needs one value with
+that role, so this pack adds `SELF` (sort order 1, role `head_of_household`) from
+[`eth_oan_additions/values/`](../../scripts/packs/eth_oan_additions/values). The farmer registry
+marks the head with Is Head, and accepts `SELF` only for that member. If `ETH` gets `SELF` back,
+the build stops and names the addition to drop.

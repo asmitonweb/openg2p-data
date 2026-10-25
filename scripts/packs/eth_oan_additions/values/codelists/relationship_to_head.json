@@ -1,0 +1,15 @@
+{
+  "description": "The value that carries the head_of_household role, which the pack contract requires and the base list no longer has. The farmer registry marks the head with Is Head; Self is accepted only for that member.",
+  "values": [
+    {
+      "value_id": "SELF",
+      "value_code": "SELF",
+      "value_display": "Self (head)",
+      "sort_order": 1,
+      "roles": [
+        "head_of_household"
+      ],
+      "display_i18n": {}
+    }
+  ]
+}

@@ -20,7 +20,8 @@ What is taken from where
 - Code lists, domains and address.json come from the base pack, so the two
   Ethiopia packs describe a farmer the same way. Lists only the farmer
   registry needs are added from eth_oan_additions/ and never replace a base
-  list. Kebele moves out of address.json's sub_levels, because here it is a
+  list. eth_oan_additions/values/ adds values to a base list, never replacing
+  one: SELF, which carries the head_of_household role the contract requires. Kebele moves out of address.json's sub_levels, because here it is a
   level.
 - boundaries/ are the base pack's polygons for the units that are still the
   same unit, so every OAN registry and dashboard draws and looks up locations
@@ -280,6 +281,8 @@ def main():
     # Lists only the farmer registry needs are added on top. They never replace
     # a base list, so both Ethiopia packs keep describing a farmer the same way.
     for dirpath, _, files in os.walk(ADDITIONS):
+        if os.path.relpath(dirpath, ADDITIONS).split(os.sep)[0] == "values":
+            continue
         for name in files:
             rel = os.path.relpath(os.path.join(dirpath, name), ADDITIONS)
             dest = os.path.join(args.out, rel)
@@ -287,7 +290,25 @@ def main():
                 raise SystemExit(f"{rel}: the base pack already has this list")
             os.makedirs(os.path.dirname(dest), exist_ok=True)
             shutil.copyfile(os.path.join(dirpath, name), dest)
-    address = read_json(os.path.join(args.base, "address.json"))
+    # Values a base list lacks but the pack contract needs, such as the value
+    # that carries a role. Added, never replacing one: a base value with the
+    # same id stops the build, so the addition is dropped once ETH has it.
+    values_dir = os.path.join(ADDITIONS, "values")
+    for dirpath, _, files in os.walk(values_dir):
+        for name in files:
+            rel = os.path.relpath(os.path.join(dirpath, name), values_dir)
+            dest = os.path.join(args.out, rel)
+            if not os.path.exists(dest):
+                raise SystemExit(f"{rel}: the base pack has no such list to add values to")
+            doc = read_json(dest)
+            have = {v["value_id"] for v in doc["values"]}
+            for value in read_json(os.path.join(dirpath, name))["values"]:
+                if value["value_id"] in have:
+                    raise SystemExit(f"{rel}: the base pack already has {value['value_id']}; drop the addition")
+                doc["values"].append(value)
+            doc["values"].sort(key=lambda v: v.get("sort_order", 0))
+            write_json(dest, doc)
+    address =read_json(os.path.join(args.base, "address.json"))
     address["sub_levels"] = [s for s in address["sub_levels"] if s["id"] != "kebele"]
     address["lines"] = ["House {house_number}"]
     write_json(os.path.join(args.out, "address.json"), address)
