@@ -1,6 +1,6 @@
 # ATI Farmer catalogue alignment
 
-The OAN fork adds six distinct machinery values to ETH-OAN through `scripts/packs/eth_oan_additions/values/domains/agriculture/farm_machinery.json`. The committed materialized country pack contains those additions. The existing generator applies this directory after copying ETH lists. Native ETH, geography, the upstream seed loader and all existing values remain unchanged.
+The OAN fork adds six distinct machinery values and three distinct crop values to ETH-OAN through the standard `scripts/packs/eth_oan_additions/values/domains/agriculture/` files. The committed materialized country pack contains those additions. The existing generator applies this directory after copying ETH lists. Native ETH, geography, the upstream seed loader and all existing values remain unchanged.
 
 ## Source and crosswalk
 
@@ -19,17 +19,27 @@ The original ATI Farmers Profile v2 and candidate v3 workbooks have identical ma
 
 The existing MACH_ROW_PLANTER, MACH_THRESHER, MACH_COMBINE and other original IDs remain unchanged. No `standaloneharvester` choice occurs in either workbook. That alias remains unmapped until its source and meaning are established. New translations reproduce the source labels exactly; repeated English text in the source translations is preserved rather than translated speculatively.
 
-## Remaining choice gaps
+## Additional source crop choices
+
+| Source name | English source label | Choice row | Target value ID/code | Typed category |
+| --- | --- | --- | --- | --- |
+| food_barley | Food Barley | 227 | CROP_FOOD_BARLEY | CROPCAT_CEREAL |
+| tea | Tea | 259 | CROP_TEA | CROPCAT_STIMULANT |
+| cumin | Cumin | 264 | CROP_CUMIN | CROPCAT_SPICE_MEDICINAL_AROMATIC |
+
+The source English/Amharic/Afaan Oromoo labels are retained exactly. Food barley remains distinct from generic Barley; generic Cumin remains distinct from Black/White cumin. No scientific name is inferred. The standard typed schema requires a category, which the workbook does not provide. Classification provenance is recorded separately: [FAO lists barley among cereals](https://www.fao.org/fileadmin/templates/ess/documents/meetings_and_workshops/WCA_2020_expert_meeting_2014/WCA2020_Volume_1_full_24102014.pdf), [FAO classifies tea as a stimulant crop](https://www.fao.org/4/x9892e/X9892e06.htm), and [UN Statistics lists cumin seeds among spices](https://unstats.un.org/unsd/classifications/Econ/Structure/Detail/EN/32/0909). These broad categories do not assert equivalence with another catalogue value.
+
+## Other choice inventory
 
 The [read-only inventory](../reference/ati-choice-inventory.json) compares actual source choices with the current Farmer mapper and both MDS value IDs and codes. Code presence does not establish semantic correctness or deployed state.
 
-- Finance rows 293-296 contain loan/Loans, insurance/Insurance, saving/Savings and digital_banking/Digital Banking. The pack has no matching finance attribute. No new list or semantic mapping is introduced in this change.
-- The current mapper emits CROP_FOOD_BARLEY, CROP_TEA and CROP_CUMIN for food_barley, tea and cumin; these IDs/codes are absent. Generic Barley and Black/White cumin are not asserted equivalent. These remain source mapping/catalogue decisions.
+- Finance rows 293-296 contain loan/Loans, insurance/Insurance, saving/Savings and digital_banking/Digital Banking. These are supported registry-owned static schema options; the registry owner retains their validation. No shared MDS finance list is needed or introduced.
+- The original mapper gaps for CROP_FOOD_BARLEY, CROP_TEA and CROP_CUMIN are closed by the three distinct additions above. The inventory preserves baseline membership alongside the resulting pack membership.
 - The v3 choices include SEASON_MEHER, SEASON_BELG and SEASON_IRRIGATION, already present in CROP_SEASON. BEGA is absent from both inspected choice sheets. No BEGA-to-irrigation equivalence is asserted.
 - Audited language, gender, farming type, land ownership, water, livestock, income, education, marital status, household relationship and cluster-role mapper codes resolve existing pack values. LANGUAGE uses LANG_* IDs but unprefixed value codes; the inventory checks both.
 - Boolean questions, source institutional union names, geographic entities and identity-document configuration are separate contracts. They are inventoried rather than invented as new shared catalogues.
 
-Registry mappers and models are not edited here. The receiving mapper must use this crosswalk explicitly. Unknown values continue to fail native validation until their catalogue decision is implemented.
+Registry mappers and models are not edited here. The receiving mapper must use this crosswalk explicitly. Unknown values continue to fail native validation until their catalogue decision is implemented. The nine codes here become available to consumers only after a separately reviewed seed-image rollout and the normal MDS approval process.
 
 ## Validation and delivery
 

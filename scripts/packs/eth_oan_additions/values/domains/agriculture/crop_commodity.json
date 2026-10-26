@@ -1,0 +1,44 @@
+{
+  "description": "Distinct ATI source crop choices; names and translations from v2/v3, classification provenance separately recorded in reference/ati-catalogue-source.json.",
+  "values": [
+    {
+      "value_id": "CROP_FOOD_BARLEY",
+      "value_code": "CROP_FOOD_BARLEY",
+      "value_display": "Food Barley",
+      "sort_order": 122,
+      "display_i18n": {
+        "am": "የምግብ ገብስ",
+        "om": "Garbuu Nyaata"
+      },
+      "attributes": {
+        "category": "CROPCAT_CEREAL"
+      }
+    },
+    {
+      "value_id": "CROP_TEA",
+      "value_code": "CROP_TEA",
+      "value_display": "Tea",
+      "sort_order": 123,
+      "display_i18n": {
+        "am": "ሻይ",
+        "om": "Baala Shaayee"
+      },
+      "attributes": {
+        "category": "CROPCAT_STIMULANT"
+      }
+    },
+    {
+      "value_id": "CROP_CUMIN",
+      "value_code": "CROP_CUMIN",
+      "value_display": "Cumin",
+      "sort_order": 124,
+      "display_i18n": {
+        "am": "ከሙን",
+        "om": "Kumin"
+      },
+      "attributes": {
+        "category": "CROPCAT_SPICE_MEDICINAL_AROMATIC"
+      }
+    }
+  ]
+}

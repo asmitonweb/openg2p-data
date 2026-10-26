@@ -11,7 +11,8 @@
       "code_present": true,
       "matching_value_ids": [
         "MALE"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_gender",
@@ -23,7 +24,8 @@
       "code_present": true,
       "matching_value_ids": [
         "FEMALE"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_language",
@@ -35,7 +37,8 @@
       "code_present": true,
       "matching_value_ids": [
         "LANG_AFAAN_OROMO"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_language",
@@ -47,7 +50,8 @@
       "code_present": true,
       "matching_value_ids": [
         "LANG_AFAR"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_language",
@@ -59,7 +63,8 @@
       "code_present": true,
       "matching_value_ids": [
         "LANG_AMHARIC"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_language",
@@ -71,7 +76,8 @@
       "code_present": true,
       "matching_value_ids": [
         "LANG_GAMO"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_language",
@@ -83,7 +89,8 @@
       "code_present": true,
       "matching_value_ids": [
         "LANG_GEDEO"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_language",
@@ -95,7 +102,8 @@
       "code_present": true,
       "matching_value_ids": [
         "LANG_GURAGIGNA"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_language",
@@ -107,7 +115,8 @@
       "code_present": true,
       "matching_value_ids": [
         "LANG_HADIYYISA"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_language",
@@ -119,7 +128,8 @@
       "code_present": true,
       "matching_value_ids": [
         "LANG_KAFI_NOONOO"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_language",
@@ -131,7 +141,8 @@
       "code_present": true,
       "matching_value_ids": [
         "LANG_SIDAAMU_AFOO"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_language",
@@ -143,7 +154,8 @@
       "code_present": true,
       "matching_value_ids": [
         "LANG_SILTE"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_language",
@@ -155,7 +167,8 @@
       "code_present": true,
       "matching_value_ids": [
         "LANG_SOMALI"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_language",
@@ -167,7 +180,8 @@
       "code_present": true,
       "matching_value_ids": [
         "LANG_TIGRINYA"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_language",
@@ -179,7 +193,8 @@
       "code_present": true,
       "matching_value_ids": [
         "LANG_WOLAYTTA"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_farming_type",
@@ -191,7 +206,8 @@
       "code_present": true,
       "matching_value_ids": [
         "CROP"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_farming_type",
@@ -203,7 +219,8 @@
       "code_present": true,
       "matching_value_ids": [
         "LIVESTOCK"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_farming_type",
@@ -215,7 +232,8 @@
       "code_present": true,
       "matching_value_ids": [
         "MIXED"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_primary_commodity",
@@ -227,7 +245,8 @@
       "code_present": true,
       "matching_value_ids": [
         "CROP_TEFF"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_primary_commodity",
@@ -239,7 +258,8 @@
       "code_present": true,
       "matching_value_ids": [
         "CROP_MAIZE"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_primary_commodity",
@@ -251,7 +271,8 @@
       "code_present": true,
       "matching_value_ids": [
         "CROP_SESAME"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_primary_commodity",
@@ -263,7 +284,8 @@
       "code_present": true,
       "matching_value_ids": [
         "CROP_MALT_BARLEY"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_primary_commodity",
@@ -275,7 +297,8 @@
       "code_present": true,
       "matching_value_ids": [
         "CROP_BREAD_WHEAT"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_primary_commodity",
@@ -287,7 +310,8 @@
       "code_present": true,
       "matching_value_ids": [
         "CROP_TOMATO"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_primary_commodity",
@@ -299,7 +323,8 @@
       "code_present": true,
       "matching_value_ids": [
         "CROP_ONION"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_primary_commodity",
@@ -311,7 +336,8 @@
       "code_present": true,
       "matching_value_ids": [
         "CROP_AVOCADO"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_primary_commodity",
@@ -323,7 +349,8 @@
       "code_present": true,
       "matching_value_ids": [
         "CROP_BANANA"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_primary_commodity",
@@ -335,7 +362,8 @@
       "code_present": true,
       "matching_value_ids": [
         "CROP_MANGO"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_primary_commodity",
@@ -347,7 +375,8 @@
       "code_present": true,
       "matching_value_ids": [
         "CROP_SOYBEAN"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_farmer_role",
@@ -359,7 +388,8 @@
       "code_present": true,
       "matching_value_ids": [
         "LEAD"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_farmer_role",
@@ -371,7 +401,8 @@
       "code_present": true,
       "matching_value_ids": [
         "DEPUTY"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_farmer_role",
@@ -383,7 +414,8 @@
       "code_present": true,
       "matching_value_ids": [
         "SECRETARY"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_farmer_role",
@@ -395,7 +427,8 @@
       "code_present": true,
       "matching_value_ids": [
         "ACCOUNTANT"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_farmer_role",
@@ -407,7 +440,8 @@
       "code_present": true,
       "matching_value_ids": [
         "MEMBER"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_land_ownership",
@@ -419,7 +453,8 @@
       "code_present": true,
       "matching_value_ids": [
         "OWNER"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_land_ownership",
@@ -431,7 +466,8 @@
       "code_present": true,
       "matching_value_ids": [
         "TENANT"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_crops_list",
@@ -443,7 +479,8 @@
       "code_present": true,
       "matching_value_ids": [
         "CROP_MAIZE"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_crops_list",
@@ -455,7 +492,8 @@
       "code_present": true,
       "matching_value_ids": [
         "CROP_BREAD_WHEAT"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_crops_list",
@@ -467,7 +505,8 @@
       "code_present": true,
       "matching_value_ids": [
         "CROP_TEFF"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_crops_list",
@@ -479,7 +518,8 @@
       "code_present": true,
       "matching_value_ids": [
         "CROP_MALT_BARLEY"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_crops_list",
@@ -488,8 +528,12 @@
       "source_label": "Food Barley",
       "attribute": "CROP_COMMODITY",
       "current_mapper_code": "CROP_FOOD_BARLEY",
-      "code_present": false,
-      "matching_value_ids": []
+      "code_present": true,
+      "matching_value_ids": [
+        "CROP_FOOD_BARLEY"
+      ],
+      "baseline_code_present": false,
+      "resolution": "Distinct OAN catalogue addition in this change"
     },
     {
       "source_list": "choices_crops_list",
@@ -501,7 +545,8 @@
       "code_present": true,
       "matching_value_ids": [
         "CROP_SORGHUM"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_crops_list",
@@ -513,7 +558,8 @@
       "code_present": true,
       "matching_value_ids": [
         "CROP_RICE"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_crops_list",
@@ -525,7 +571,8 @@
       "code_present": true,
       "matching_value_ids": [
         "CROP_FINGER_MILLET"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_crops_list",
@@ -537,7 +584,8 @@
       "code_present": true,
       "matching_value_ids": [
         "CROP_FABA_BEAN"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_crops_list",
@@ -549,7 +597,8 @@
       "code_present": true,
       "matching_value_ids": [
         "CROP_FIELD_PEA"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_crops_list",
@@ -561,7 +610,8 @@
       "code_present": true,
       "matching_value_ids": [
         "CROP_HARICOT_BEAN"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_crops_list",
@@ -573,7 +623,8 @@
       "code_present": true,
       "matching_value_ids": [
         "CROP_SOYBEAN"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_crops_list",
@@ -585,7 +636,8 @@
       "code_present": true,
       "matching_value_ids": [
         "CROP_CHICKPEA"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_crops_list",
@@ -597,7 +649,8 @@
       "code_present": true,
       "matching_value_ids": [
         "CROP_LENTIL"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_crops_list",
@@ -609,7 +662,8 @@
       "code_present": true,
       "matching_value_ids": [
         "CROP_NOUG"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_crops_list",
@@ -621,7 +675,8 @@
       "code_present": true,
       "matching_value_ids": [
         "CROP_SESAME"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_crops_list",
@@ -633,7 +688,8 @@
       "code_present": true,
       "matching_value_ids": [
         "CROP_SUNFLOWER"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_crops_list",
@@ -645,7 +701,8 @@
       "code_present": true,
       "matching_value_ids": [
         "CROP_AVOCADO"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_crops_list",
@@ -657,7 +714,8 @@
       "code_present": true,
       "matching_value_ids": [
         "CROP_BANANA"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_crops_list",
@@ -669,7 +727,8 @@
       "code_present": true,
       "matching_value_ids": [
         "CROP_MANGO"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_crops_list",
@@ -681,7 +740,8 @@
       "code_present": true,
       "matching_value_ids": [
         "CROP_PAPAYA"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_crops_list",
@@ -693,7 +753,8 @@
       "code_present": true,
       "matching_value_ids": [
         "CROP_PINEAPPLE"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_crops_list",
@@ -705,7 +766,8 @@
       "code_present": true,
       "matching_value_ids": [
         "CROP_TOMATO"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_crops_list",
@@ -717,7 +779,8 @@
       "code_present": true,
       "matching_value_ids": [
         "CROP_ONION"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_crops_list",
@@ -729,7 +792,8 @@
       "code_present": true,
       "matching_value_ids": [
         "CROP_CABBAGE"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_crops_list",
@@ -741,7 +805,8 @@
       "code_present": true,
       "matching_value_ids": [
         "CROP_CARROT"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_crops_list",
@@ -753,7 +818,8 @@
       "code_present": true,
       "matching_value_ids": [
         "CROP_GARLIC"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_crops_list",
@@ -765,7 +831,8 @@
       "code_present": true,
       "matching_value_ids": [
         "CROP_SHALLOT"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_crops_list",
@@ -777,7 +844,8 @@
       "code_present": true,
       "matching_value_ids": [
         "CROP_PEPPER"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_crops_list",
@@ -789,7 +857,8 @@
       "code_present": true,
       "matching_value_ids": [
         "CROP_POTATO"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_crops_list",
@@ -801,7 +870,8 @@
       "code_present": true,
       "matching_value_ids": [
         "CROP_SWEET_POTATO"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_crops_list",
@@ -813,7 +883,8 @@
       "code_present": true,
       "matching_value_ids": [
         "CROP_ENSET"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_crops_list",
@@ -825,7 +896,8 @@
       "code_present": true,
       "matching_value_ids": [
         "CROP_TARO"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_crops_list",
@@ -837,7 +909,8 @@
       "code_present": true,
       "matching_value_ids": [
         "CROP_YAM"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_crops_list",
@@ -849,7 +922,8 @@
       "code_present": true,
       "matching_value_ids": [
         "CROP_CASSAVA"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_crops_list",
@@ -861,7 +935,8 @@
       "code_present": true,
       "matching_value_ids": [
         "CROP_COFFEE"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_crops_list",
@@ -870,8 +945,12 @@
       "source_label": "Tea",
       "attribute": "CROP_COMMODITY",
       "current_mapper_code": "CROP_TEA",
-      "code_present": false,
-      "matching_value_ids": []
+      "code_present": true,
+      "matching_value_ids": [
+        "CROP_TEA"
+      ],
+      "baseline_code_present": false,
+      "resolution": "Distinct OAN catalogue addition in this change"
     },
     {
       "source_list": "choices_crops_list",
@@ -883,7 +962,8 @@
       "code_present": true,
       "matching_value_ids": [
         "CROP_GINGER"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_crops_list",
@@ -895,7 +975,8 @@
       "code_present": true,
       "matching_value_ids": [
         "CROP_TURMERIC"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_crops_list",
@@ -907,7 +988,8 @@
       "code_present": true,
       "matching_value_ids": [
         "CROP_CARDAMOM"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_crops_list",
@@ -919,7 +1001,8 @@
       "code_present": true,
       "matching_value_ids": [
         "CROP_KORARIMA"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_crops_list",
@@ -928,8 +1011,12 @@
       "source_label": "Cumin",
       "attribute": "CROP_COMMODITY",
       "current_mapper_code": "CROP_CUMIN",
-      "code_present": false,
-      "matching_value_ids": []
+      "code_present": true,
+      "matching_value_ids": [
+        "CROP_CUMIN"
+      ],
+      "baseline_code_present": false,
+      "resolution": "Distinct OAN catalogue addition in this change"
     },
     {
       "source_list": "choices_crops_list",
@@ -941,7 +1028,8 @@
       "code_present": true,
       "matching_value_ids": [
         "CROP_FENUGREEK"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_crops_list",
@@ -953,7 +1041,8 @@
       "code_present": true,
       "matching_value_ids": [
         "CROP_BLACK_PEPPER"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_crop_water_source",
@@ -965,7 +1054,8 @@
       "code_present": true,
       "matching_value_ids": [
         "WS_RAINFED"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_crop_water_source",
@@ -977,7 +1067,8 @@
       "code_present": true,
       "matching_value_ids": [
         "WS_IRRIGATION_GROUND"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_crop_water_source",
@@ -989,7 +1080,8 @@
       "code_present": true,
       "matching_value_ids": [
         "WS_IRRIGATION_SURFACE"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_livestocks",
@@ -1001,7 +1093,8 @@
       "code_present": true,
       "matching_value_ids": [
         "LSTK_CATTLE"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_livestocks",
@@ -1013,7 +1106,8 @@
       "code_present": true,
       "matching_value_ids": [
         "LSTK_CAMEL"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_livestocks",
@@ -1025,7 +1119,8 @@
       "code_present": true,
       "matching_value_ids": [
         "LSTK_SHEEP"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_livestocks",
@@ -1037,7 +1132,8 @@
       "code_present": true,
       "matching_value_ids": [
         "LSTK_GOAT"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_livestocks",
@@ -1049,7 +1145,8 @@
       "code_present": true,
       "matching_value_ids": [
         "LSTK_CHICKEN"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_livestocks",
@@ -1061,7 +1158,8 @@
       "code_present": true,
       "matching_value_ids": [
         "LSTK_DONKEY"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_livestocks",
@@ -1073,7 +1171,8 @@
       "code_present": true,
       "matching_value_ids": [
         "LSTK_HORSE"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_livestocks",
@@ -1085,7 +1184,8 @@
       "code_present": true,
       "matching_value_ids": [
         "LSTK_MULE"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_livestock_water_source",
@@ -1097,7 +1197,8 @@
       "code_present": true,
       "matching_value_ids": [
         "WS_WELL_GROUND"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_livestock_water_source",
@@ -1109,7 +1210,8 @@
       "code_present": true,
       "matching_value_ids": [
         "WS_WATER_HARVESTING"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_livestock_water_source",
@@ -1121,7 +1223,8 @@
       "code_present": true,
       "matching_value_ids": [
         "WS_SURFACE_WATER"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_income_source",
@@ -1133,7 +1236,8 @@
       "code_present": true,
       "matching_value_ids": [
         "SOI_CROP_PRODUCTION"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_income_source",
@@ -1145,7 +1249,8 @@
       "code_present": true,
       "matching_value_ids": [
         "SOI_LIVESTOCK_PRODUCTION"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_income_source",
@@ -1157,7 +1262,8 @@
       "code_present": true,
       "matching_value_ids": [
         "SOI_GOVERNMENT_NGO_SUPPORT"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_income_source",
@@ -1169,7 +1275,8 @@
       "code_present": true,
       "matching_value_ids": [
         "SOI_OTHERS"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_member_gender",
@@ -1181,7 +1288,8 @@
       "code_present": true,
       "matching_value_ids": [
         "MALE"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_member_gender",
@@ -1193,7 +1301,8 @@
       "code_present": true,
       "matching_value_ids": [
         "FEMALE"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_marital_status",
@@ -1205,7 +1314,8 @@
       "code_present": true,
       "matching_value_ids": [
         "SINGLE"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_marital_status",
@@ -1217,7 +1327,8 @@
       "code_present": true,
       "matching_value_ids": [
         "MARRIED"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_marital_status",
@@ -1229,7 +1340,8 @@
       "code_present": true,
       "matching_value_ids": [
         "DIVORCED"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_marital_status",
@@ -1241,7 +1353,8 @@
       "code_present": true,
       "matching_value_ids": [
         "WIDOWED"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_education_level",
@@ -1253,7 +1366,8 @@
       "code_present": true,
       "matching_value_ids": [
         "ILLITERATE"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_education_level",
@@ -1265,7 +1379,8 @@
       "code_present": true,
       "matching_value_ids": [
         "CAN_READ_AND_WRITE"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_education_level",
@@ -1277,7 +1392,8 @@
       "code_present": true,
       "matching_value_ids": [
         "BASIC"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_education_level",
@@ -1289,7 +1405,8 @@
       "code_present": true,
       "matching_value_ids": [
         "INTERMEDIARY"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_education_level",
@@ -1301,7 +1418,8 @@
       "code_present": true,
       "matching_value_ids": [
         "HIGHER_EDUCATION"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_household_relationship",
@@ -1313,7 +1431,8 @@
       "code_present": true,
       "matching_value_ids": [
         "SPOUSE"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_household_relationship",
@@ -1325,7 +1444,8 @@
       "code_present": true,
       "matching_value_ids": [
         "SPOUSE"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_household_relationship",
@@ -1337,7 +1457,8 @@
       "code_present": true,
       "matching_value_ids": [
         "CHILD"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_household_relationship",
@@ -1349,7 +1470,8 @@
       "code_present": true,
       "matching_value_ids": [
         "CHILD"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "choices_household_relationship",
@@ -1361,7 +1483,8 @@
       "code_present": true,
       "matching_value_ids": [
         "OTHER_RELATIVE"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "oan_crop_season",
@@ -1373,7 +1496,8 @@
       "code_present": true,
       "matching_value_ids": [
         "SEASON_MEHER"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "oan_crop_season",
@@ -1385,7 +1509,8 @@
       "code_present": true,
       "matching_value_ids": [
         "SEASON_BELG"
-      ]
+      ],
+      "baseline_code_present": true
     },
     {
       "source_list": "oan_crop_season",
@@ -1397,7 +1522,8 @@
       "code_present": true,
       "matching_value_ids": [
         "SEASON_IRRIGATION"
-      ]
+      ],
+      "baseline_code_present": true
     }
   ],
   "other_lists": {

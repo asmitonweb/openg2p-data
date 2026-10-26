@@ -58,3 +58,19 @@ class CatalogueContractTests(unittest.TestCase):
             if row["decision"] == "distinct OAN addition":
                 value = target[row["target_value_id"]]
                 self.assertEqual(value["display_i18n"], {"am":rows[row["source_name"]]["label::Amharic (am)"], "om":rows[row["source_name"]]["label::Afaan Oromoo (om)"]})
+
+    def test_source_crop_additions_keep_exact_labels_translations_and_distinct_ids(self):
+        source = read(ROOT/"reference/ati-catalogue-source.json")
+        original, revised = source["source_workbooks"]
+        rows = [{r["name"]:r for r in book["choices"] if r["list_name"] == "choices_crops_list"} for book in [original, revised]]
+        self.assertEqual(rows[0], rows[1])
+        target = {v["value_id"]:v for v in read(OAN/"domains/agriculture/crop_commodity.json")["values"]}
+        for entry in source["crop_crosswalk"]:
+            row = rows[1][entry["source_name"]]
+            value = target[entry["target_value_id"]]
+            self.assertEqual(value["value_display"], row["label::English (en)"])
+            self.assertEqual(value["display_i18n"], {"am":row["label::Amharic (am)"], "om":row["label::Afaan Oromoo (om)"]})
+            self.assertNotIn("scientific_name", value["attributes"])
+        codes = {entry["target_value_id"] for entry in source["crop_crosswalk"]}
+        self.assertEqual(len(codes), 3)
+        self.assertTrue(codes.isdisjoint({"CROP_BARLEY", "CROP_BLACK_CUMIN", "CROP_WHITE_CUMIN"}))

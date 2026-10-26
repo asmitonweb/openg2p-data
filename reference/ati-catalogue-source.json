@@ -6,6 +6,30 @@
       "sheet": "choices",
       "choices": [
         {
+          "row": 227,
+          "list_name": "choices_crops_list",
+          "name": "food_barley",
+          "label::English (en)": "Food Barley",
+          "label::Amharic (am)": "የምግብ ገብስ",
+          "label::Afaan Oromoo (om)": "Garbuu Nyaata"
+        },
+        {
+          "row": 259,
+          "list_name": "choices_crops_list",
+          "name": "tea",
+          "label::English (en)": "Tea",
+          "label::Amharic (am)": "ሻይ",
+          "label::Afaan Oromoo (om)": "Baala Shaayee"
+        },
+        {
+          "row": 264,
+          "list_name": "choices_crops_list",
+          "name": "cumin",
+          "label::English (en)": "Cumin",
+          "label::Amharic (am)": "ከሙን",
+          "label::Afaan Oromoo (om)": "Kumin"
+        },
+        {
           "row": 283,
           "list_name": "choices_machinery",
           "name": "tractor",
@@ -108,6 +132,30 @@
       "sha256": "c7b022fc4007bf50a3d8dc9e8555d3eec536156fa16e72b501e031a45d92cfae",
       "sheet": "choices",
       "choices": [
+        {
+          "row": 227,
+          "list_name": "choices_crops_list",
+          "name": "food_barley",
+          "label::English (en)": "Food Barley",
+          "label::Amharic (am)": "የምግብ ገብስ",
+          "label::Afaan Oromoo (om)": "Garbuu Nyaata"
+        },
+        {
+          "row": 259,
+          "list_name": "choices_crops_list",
+          "name": "tea",
+          "label::English (en)": "Tea",
+          "label::Amharic (am)": "ሻይ",
+          "label::Afaan Oromoo (om)": "Baala Shaayee"
+        },
+        {
+          "row": 264,
+          "list_name": "choices_crops_list",
+          "name": "cumin",
+          "label::English (en)": "Cumin",
+          "label::Amharic (am)": "ከሙን",
+          "label::Afaan Oromoo (om)": "Kumin"
+        },
         {
           "row": 283,
           "list_name": "choices_machinery",
@@ -310,12 +358,65 @@
     "standaloneharvester"
   ],
   "pending_catalogue_decisions": {
-    "finance": [
-      "loan",
-      "insurance",
-      "saving",
-      "digital_banking"
-    ],
+    "finance": "No MDS list: existing registry-owned static options loan/insurance/saving/digital_banking remain supported and server-validated by the registry owner.",
     "BEGA": "Absent from v2/v3 choice lists inspected; no mapping to irrigation is asserted."
-  }
+  },
+  "crop_crosswalk": [
+    {
+      "source_list": "choices_crops_list",
+      "source_name": "food_barley",
+      "source_row": 227,
+      "source_label_en": "Food Barley",
+      "target_attribute": "CROP_COMMODITY",
+      "target_value_id": "CROP_FOOD_BARLEY",
+      "category": "CROPCAT_CEREAL",
+      "decision": "distinct OAN addition; no species or broader crop alias inferred"
+    },
+    {
+      "source_list": "choices_crops_list",
+      "source_name": "tea",
+      "source_row": 259,
+      "source_label_en": "Tea",
+      "target_attribute": "CROP_COMMODITY",
+      "target_value_id": "CROP_TEA",
+      "category": "CROPCAT_STIMULANT",
+      "decision": "distinct OAN addition; no species or broader crop alias inferred"
+    },
+    {
+      "source_list": "choices_crops_list",
+      "source_name": "cumin",
+      "source_row": 264,
+      "source_label_en": "Cumin",
+      "target_attribute": "CROP_COMMODITY",
+      "target_value_id": "CROP_CUMIN",
+      "category": "CROPCAT_SPICE_MEDICINAL_AROMATIC",
+      "decision": "distinct OAN addition; no species or broader crop alias inferred"
+    }
+  ],
+  "category_provenance": [
+    {
+      "target": "CROPCAT_CEREAL",
+      "applies_to": [
+        "CROP_FOOD_BARLEY"
+      ],
+      "source": "https://www.fao.org/fileadmin/templates/ess/documents/meetings_and_workshops/WCA_2020_expert_meeting_2014/WCA2020_Volume_1_full_24102014.pdf",
+      "basis": "FAO Indicative Crop Classification lists Barley under Cereals; classifying the source Food Barley here does not collapse its identity into generic Barley."
+    },
+    {
+      "target": "CROPCAT_STIMULANT",
+      "applies_to": [
+        "CROP_TEA"
+      ],
+      "source": "https://www.fao.org/4/x9892e/X9892e06.htm",
+      "basis": "FAO Food Balance Sheets handbook classifies tea among stimulant crops."
+    },
+    {
+      "target": "CROPCAT_SPICE_MEDICINAL_AROMATIC",
+      "applies_to": [
+        "CROP_CUMIN"
+      ],
+      "source": "https://unstats.un.org/unsd/classifications/Econ/Structure/Detail/EN/32/0909",
+      "basis": "UN Statistics classification lists cumin seeds as spices; no black/white cumin specialization is inferred."
+    }
+  ]
 }
