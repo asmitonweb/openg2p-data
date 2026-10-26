@@ -60,3 +60,7 @@ live together.
 `generate_nsr_data.py` and `generate_farmer_data.py` do stay: they read the shared
 demography above and write committed fixture files, so they move with
 `demography/`'s columns rather than with a registry's schema.
+
+## OAN catalogue delivery
+
+The ETH-OAN ATI machinery additions, exact workbook provenance and remaining catalogue gaps are documented in [ATI catalogue alignment](docs/ati-catalogue.md). Run `bash ci/validate.sh` before building the standard Master Data seed image. CI builds without publication; the existing release-tag workflow is separately gated by the same validation.

@@ -1,0 +1,27 @@
+name: catalogue checks
+on:
+  pull_request:
+  push:
+    branches: ["oan/ethiopia-locations", "feat/oan-ati-catalogue"]
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: "3.12"
+      - run: bash ci/validate.sh
+  image:
+    needs: validate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Build native seed image without publication
+        run: >-
+          docker build -f docker/master-data-db-seed/Dockerfile
+          --label org.openg2p.pin.openg2p-data-branch=${{ github.sha }}
+          --label org.openg2p.pin.openg2p-data-repo=https://github.com/${{ github.repository }}.git
+          -t master-data-db-seed:ci .

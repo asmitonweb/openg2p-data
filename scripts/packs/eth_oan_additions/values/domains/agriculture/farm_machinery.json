@@ -1,0 +1,65 @@
+{
+  "description": "Distinct ATI Farmers Profile choices (v2/v3 choices rows 285-290). See docs/ati-catalogue.md and reference/ati-catalogue-source.json. Existing ETH values are preserved.",
+  "values": [
+    {
+      "value_id": "MACH_PLANTER",
+      "value_code": "MACH_PLANTER",
+      "value_display": "Planter",
+      "sort_order": 7,
+      "display_i18n": {
+        "am": "ፕላንተር",
+        "om": "Meshaa Serarn Fechasuu"
+      }
+    },
+    {
+      "value_id": "MACH_HARVESTER",
+      "value_code": "MACH_HARVESTER",
+      "value_display": "Harvester",
+      "sort_order": 8,
+      "display_i18n": {
+        "am": "Harvester",
+        "om": "Harvester"
+      }
+    },
+    {
+      "value_id": "MACH_COMBINER",
+      "value_code": "MACH_COMBINER",
+      "value_display": "Combiner",
+      "sort_order": 9,
+      "display_i18n": {
+        "am": "Combiner",
+        "om": "Combiner"
+      }
+    },
+    {
+      "value_id": "MACH_MULTI_CROP_TRASHER",
+      "value_code": "MACH_MULTI_CROP_TRASHER",
+      "value_display": "Multi-crop trasher",
+      "sort_order": 10,
+      "display_i18n": {
+        "am": "Multi-crop trasher",
+        "om": "Multi-crop trasher"
+      }
+    },
+    {
+      "value_id": "MACH_MAIZE_SHELLER",
+      "value_code": "MACH_MAIZE_SHELLER",
+      "value_display": "Maize sheller",
+      "sort_order": 11,
+      "display_i18n": {
+        "am": "Maize sheller",
+        "om": "Maize sheller"
+      }
+    },
+    {
+      "value_id": "MACH_RICE_POLISHER",
+      "value_code": "MACH_RICE_POLISHER",
+      "value_display": "Rice polisher",
+      "sort_order": 12,
+      "display_i18n": {
+        "am": "Rice polisher",
+        "om": "Rice polisher"
+      }
+    }
+  ]
+}

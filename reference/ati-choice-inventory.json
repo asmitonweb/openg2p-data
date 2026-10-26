@@ -1,0 +1,1430 @@
+{
+  "scope": "Read-only current mapper/code membership inventory; code presence is not semantic approval. Machinery crosswalk is separate. Finance has no catalogue list.",
+  "rows": [
+    {
+      "source_list": "choices_gender",
+      "source_row": 7,
+      "source_name": "male",
+      "source_label": "Male",
+      "attribute": "GENDER",
+      "current_mapper_code": "MALE",
+      "code_present": true,
+      "matching_value_ids": [
+        "MALE"
+      ]
+    },
+    {
+      "source_list": "choices_gender",
+      "source_row": 8,
+      "source_name": "female",
+      "source_label": "Female",
+      "attribute": "GENDER",
+      "current_mapper_code": "FEMALE",
+      "code_present": true,
+      "matching_value_ids": [
+        "FEMALE"
+      ]
+    },
+    {
+      "source_list": "choices_language",
+      "source_row": 11,
+      "source_name": "Afaan Oromoo",
+      "source_label": "Afaan Oromoo",
+      "attribute": "LANGUAGE",
+      "current_mapper_code": "AFAAN_OROMO",
+      "code_present": true,
+      "matching_value_ids": [
+        "LANG_AFAAN_OROMO"
+      ]
+    },
+    {
+      "source_list": "choices_language",
+      "source_row": 12,
+      "source_name": "Afar",
+      "source_label": "Afar",
+      "attribute": "LANGUAGE",
+      "current_mapper_code": "AFAR",
+      "code_present": true,
+      "matching_value_ids": [
+        "LANG_AFAR"
+      ]
+    },
+    {
+      "source_list": "choices_language",
+      "source_row": 13,
+      "source_name": "Amharic",
+      "source_label": "Amharic",
+      "attribute": "LANGUAGE",
+      "current_mapper_code": "AMHARIC",
+      "code_present": true,
+      "matching_value_ids": [
+        "LANG_AMHARIC"
+      ]
+    },
+    {
+      "source_list": "choices_language",
+      "source_row": 14,
+      "source_name": "Gamo",
+      "source_label": "Gamo",
+      "attribute": "LANGUAGE",
+      "current_mapper_code": "GAMO",
+      "code_present": true,
+      "matching_value_ids": [
+        "LANG_GAMO"
+      ]
+    },
+    {
+      "source_list": "choices_language",
+      "source_row": 15,
+      "source_name": "Gedeo",
+      "source_label": "Gedeo",
+      "attribute": "LANGUAGE",
+      "current_mapper_code": "GEDEO",
+      "code_present": true,
+      "matching_value_ids": [
+        "LANG_GEDEO"
+      ]
+    },
+    {
+      "source_list": "choices_language",
+      "source_row": 16,
+      "source_name": "Gurage",
+      "source_label": "Gurage",
+      "attribute": "LANGUAGE",
+      "current_mapper_code": "GURAGIGNA",
+      "code_present": true,
+      "matching_value_ids": [
+        "LANG_GURAGIGNA"
+      ]
+    },
+    {
+      "source_list": "choices_language",
+      "source_row": 17,
+      "source_name": "Hadiyya",
+      "source_label": "Hadiyya",
+      "attribute": "LANGUAGE",
+      "current_mapper_code": "HADIYYISA",
+      "code_present": true,
+      "matching_value_ids": [
+        "LANG_HADIYYISA"
+      ]
+    },
+    {
+      "source_list": "choices_language",
+      "source_row": 18,
+      "source_name": "Kafa",
+      "source_label": "Kafa",
+      "attribute": "LANGUAGE",
+      "current_mapper_code": "KAFI_NOONOO",
+      "code_present": true,
+      "matching_value_ids": [
+        "LANG_KAFI_NOONOO"
+      ]
+    },
+    {
+      "source_list": "choices_language",
+      "source_row": 19,
+      "source_name": "Sidamo",
+      "source_label": "Sidamo",
+      "attribute": "LANGUAGE",
+      "current_mapper_code": "SIDAAMU_AFOO",
+      "code_present": true,
+      "matching_value_ids": [
+        "LANG_SIDAAMU_AFOO"
+      ]
+    },
+    {
+      "source_list": "choices_language",
+      "source_row": 20,
+      "source_name": "Silte",
+      "source_label": "Silt'e",
+      "attribute": "LANGUAGE",
+      "current_mapper_code": "SILTE",
+      "code_present": true,
+      "matching_value_ids": [
+        "LANG_SILTE"
+      ]
+    },
+    {
+      "source_list": "choices_language",
+      "source_row": 21,
+      "source_name": "Somali",
+      "source_label": "Somali",
+      "attribute": "LANGUAGE",
+      "current_mapper_code": "SOMALI",
+      "code_present": true,
+      "matching_value_ids": [
+        "LANG_SOMALI"
+      ]
+    },
+    {
+      "source_list": "choices_language",
+      "source_row": 22,
+      "source_name": "Tigrinya",
+      "source_label": "Tigrinya",
+      "attribute": "LANGUAGE",
+      "current_mapper_code": "TIGRINYA",
+      "code_present": true,
+      "matching_value_ids": [
+        "LANG_TIGRINYA"
+      ]
+    },
+    {
+      "source_list": "choices_language",
+      "source_row": 23,
+      "source_name": "Wolaytta",
+      "source_label": "Wolaytta",
+      "attribute": "LANGUAGE",
+      "current_mapper_code": "WOLAYTTA",
+      "code_present": true,
+      "matching_value_ids": [
+        "LANG_WOLAYTTA"
+      ]
+    },
+    {
+      "source_list": "choices_farming_type",
+      "source_row": 26,
+      "source_name": "crop_farming",
+      "source_label": "Crop Farming",
+      "attribute": "FARMING_TYPE",
+      "current_mapper_code": "CROP",
+      "code_present": true,
+      "matching_value_ids": [
+        "CROP"
+      ]
+    },
+    {
+      "source_list": "choices_farming_type",
+      "source_row": 27,
+      "source_name": "livestock_farming",
+      "source_label": "Livestock Farming",
+      "attribute": "FARMING_TYPE",
+      "current_mapper_code": "LIVESTOCK",
+      "code_present": true,
+      "matching_value_ids": [
+        "LIVESTOCK"
+      ]
+    },
+    {
+      "source_list": "choices_farming_type",
+      "source_row": 28,
+      "source_name": "mixed_farming",
+      "source_label": "Mixed Farming",
+      "attribute": "FARMING_TYPE",
+      "current_mapper_code": "MIXED",
+      "code_present": true,
+      "matching_value_ids": [
+        "MIXED"
+      ]
+    },
+    {
+      "source_list": "choices_primary_commodity",
+      "source_row": 201,
+      "source_name": "teff",
+      "source_label": "Teff",
+      "attribute": "CROP_COMMODITY",
+      "current_mapper_code": "CROP_TEFF",
+      "code_present": true,
+      "matching_value_ids": [
+        "CROP_TEFF"
+      ]
+    },
+    {
+      "source_list": "choices_primary_commodity",
+      "source_row": 202,
+      "source_name": "maize",
+      "source_label": "Maize",
+      "attribute": "CROP_COMMODITY",
+      "current_mapper_code": "CROP_MAIZE",
+      "code_present": true,
+      "matching_value_ids": [
+        "CROP_MAIZE"
+      ]
+    },
+    {
+      "source_list": "choices_primary_commodity",
+      "source_row": 203,
+      "source_name": "sesame",
+      "source_label": "Sesame",
+      "attribute": "CROP_COMMODITY",
+      "current_mapper_code": "CROP_SESAME",
+      "code_present": true,
+      "matching_value_ids": [
+        "CROP_SESAME"
+      ]
+    },
+    {
+      "source_list": "choices_primary_commodity",
+      "source_row": 204,
+      "source_name": "malt",
+      "source_label": "Malt Barley",
+      "attribute": "CROP_COMMODITY",
+      "current_mapper_code": "CROP_MALT_BARLEY",
+      "code_present": true,
+      "matching_value_ids": [
+        "CROP_MALT_BARLEY"
+      ]
+    },
+    {
+      "source_list": "choices_primary_commodity",
+      "source_row": 205,
+      "source_name": "wheat",
+      "source_label": "Wheat",
+      "attribute": "CROP_COMMODITY",
+      "current_mapper_code": "CROP_BREAD_WHEAT",
+      "code_present": true,
+      "matching_value_ids": [
+        "CROP_BREAD_WHEAT"
+      ]
+    },
+    {
+      "source_list": "choices_primary_commodity",
+      "source_row": 206,
+      "source_name": "tomato",
+      "source_label": "Tomato",
+      "attribute": "CROP_COMMODITY",
+      "current_mapper_code": "CROP_TOMATO",
+      "code_present": true,
+      "matching_value_ids": [
+        "CROP_TOMATO"
+      ]
+    },
+    {
+      "source_list": "choices_primary_commodity",
+      "source_row": 207,
+      "source_name": "onion",
+      "source_label": "Onion",
+      "attribute": "CROP_COMMODITY",
+      "current_mapper_code": "CROP_ONION",
+      "code_present": true,
+      "matching_value_ids": [
+        "CROP_ONION"
+      ]
+    },
+    {
+      "source_list": "choices_primary_commodity",
+      "source_row": 208,
+      "source_name": "avocado",
+      "source_label": "Avocado",
+      "attribute": "CROP_COMMODITY",
+      "current_mapper_code": "CROP_AVOCADO",
+      "code_present": true,
+      "matching_value_ids": [
+        "CROP_AVOCADO"
+      ]
+    },
+    {
+      "source_list": "choices_primary_commodity",
+      "source_row": 209,
+      "source_name": "banana",
+      "source_label": "Banana",
+      "attribute": "CROP_COMMODITY",
+      "current_mapper_code": "CROP_BANANA",
+      "code_present": true,
+      "matching_value_ids": [
+        "CROP_BANANA"
+      ]
+    },
+    {
+      "source_list": "choices_primary_commodity",
+      "source_row": 210,
+      "source_name": "mango",
+      "source_label": "Mango",
+      "attribute": "CROP_COMMODITY",
+      "current_mapper_code": "CROP_MANGO",
+      "code_present": true,
+      "matching_value_ids": [
+        "CROP_MANGO"
+      ]
+    },
+    {
+      "source_list": "choices_primary_commodity",
+      "source_row": 211,
+      "source_name": "soybean",
+      "source_label": "Soybean",
+      "attribute": "CROP_COMMODITY",
+      "current_mapper_code": "CROP_SOYBEAN",
+      "code_present": true,
+      "matching_value_ids": [
+        "CROP_SOYBEAN"
+      ]
+    },
+    {
+      "source_list": "choices_farmer_role",
+      "source_row": 212,
+      "source_name": "lead",
+      "source_label": "Lead",
+      "attribute": "FARMER_CLUSTER_ROLE",
+      "current_mapper_code": "LEAD",
+      "code_present": true,
+      "matching_value_ids": [
+        "LEAD"
+      ]
+    },
+    {
+      "source_list": "choices_farmer_role",
+      "source_row": 213,
+      "source_name": "deputy",
+      "source_label": "Deputy",
+      "attribute": "FARMER_CLUSTER_ROLE",
+      "current_mapper_code": "DEPUTY",
+      "code_present": true,
+      "matching_value_ids": [
+        "DEPUTY"
+      ]
+    },
+    {
+      "source_list": "choices_farmer_role",
+      "source_row": 214,
+      "source_name": "secretary",
+      "source_label": "Secretary",
+      "attribute": "FARMER_CLUSTER_ROLE",
+      "current_mapper_code": "SECRETARY",
+      "code_present": true,
+      "matching_value_ids": [
+        "SECRETARY"
+      ]
+    },
+    {
+      "source_list": "choices_farmer_role",
+      "source_row": 215,
+      "source_name": "accountant",
+      "source_label": "Accountant",
+      "attribute": "FARMER_CLUSTER_ROLE",
+      "current_mapper_code": "ACCOUNTANT",
+      "code_present": true,
+      "matching_value_ids": [
+        "ACCOUNTANT"
+      ]
+    },
+    {
+      "source_list": "choices_farmer_role",
+      "source_row": 216,
+      "source_name": "member",
+      "source_label": "Member",
+      "attribute": "FARMER_CLUSTER_ROLE",
+      "current_mapper_code": "MEMBER",
+      "code_present": true,
+      "matching_value_ids": [
+        "MEMBER"
+      ]
+    },
+    {
+      "source_list": "choices_land_ownership",
+      "source_row": 217,
+      "source_name": "owner",
+      "source_label": "Owner",
+      "attribute": "LAND_OWNERSHIP_TYPE",
+      "current_mapper_code": "OWNER",
+      "code_present": true,
+      "matching_value_ids": [
+        "OWNER"
+      ]
+    },
+    {
+      "source_list": "choices_land_ownership",
+      "source_row": 218,
+      "source_name": "tenant",
+      "source_label": "Tenant",
+      "attribute": "LAND_OWNERSHIP_TYPE",
+      "current_mapper_code": "TENANT",
+      "code_present": true,
+      "matching_value_ids": [
+        "TENANT"
+      ]
+    },
+    {
+      "source_list": "choices_crops_list",
+      "source_row": 223,
+      "source_name": "maize",
+      "source_label": "Maize (Corn)",
+      "attribute": "CROP_COMMODITY",
+      "current_mapper_code": "CROP_MAIZE",
+      "code_present": true,
+      "matching_value_ids": [
+        "CROP_MAIZE"
+      ]
+    },
+    {
+      "source_list": "choices_crops_list",
+      "source_row": 224,
+      "source_name": "wheat",
+      "source_label": "Wheat",
+      "attribute": "CROP_COMMODITY",
+      "current_mapper_code": "CROP_BREAD_WHEAT",
+      "code_present": true,
+      "matching_value_ids": [
+        "CROP_BREAD_WHEAT"
+      ]
+    },
+    {
+      "source_list": "choices_crops_list",
+      "source_row": 225,
+      "source_name": "teff",
+      "source_label": "Teff",
+      "attribute": "CROP_COMMODITY",
+      "current_mapper_code": "CROP_TEFF",
+      "code_present": true,
+      "matching_value_ids": [
+        "CROP_TEFF"
+      ]
+    },
+    {
+      "source_list": "choices_crops_list",
+      "source_row": 226,
+      "source_name": "malt_barley",
+      "source_label": "Malt Barley",
+      "attribute": "CROP_COMMODITY",
+      "current_mapper_code": "CROP_MALT_BARLEY",
+      "code_present": true,
+      "matching_value_ids": [
+        "CROP_MALT_BARLEY"
+      ]
+    },
+    {
+      "source_list": "choices_crops_list",
+      "source_row": 227,
+      "source_name": "food_barley",
+      "source_label": "Food Barley",
+      "attribute": "CROP_COMMODITY",
+      "current_mapper_code": "CROP_FOOD_BARLEY",
+      "code_present": false,
+      "matching_value_ids": []
+    },
+    {
+      "source_list": "choices_crops_list",
+      "source_row": 228,
+      "source_name": "sorghum",
+      "source_label": "Sorghum",
+      "attribute": "CROP_COMMODITY",
+      "current_mapper_code": "CROP_SORGHUM",
+      "code_present": true,
+      "matching_value_ids": [
+        "CROP_SORGHUM"
+      ]
+    },
+    {
+      "source_list": "choices_crops_list",
+      "source_row": 229,
+      "source_name": "rice",
+      "source_label": "Rice",
+      "attribute": "CROP_COMMODITY",
+      "current_mapper_code": "CROP_RICE",
+      "code_present": true,
+      "matching_value_ids": [
+        "CROP_RICE"
+      ]
+    },
+    {
+      "source_list": "choices_crops_list",
+      "source_row": 230,
+      "source_name": "finger_millet",
+      "source_label": "Finger Millet",
+      "attribute": "CROP_COMMODITY",
+      "current_mapper_code": "CROP_FINGER_MILLET",
+      "code_present": true,
+      "matching_value_ids": [
+        "CROP_FINGER_MILLET"
+      ]
+    },
+    {
+      "source_list": "choices_crops_list",
+      "source_row": 231,
+      "source_name": "faba_bean",
+      "source_label": "Faba Bean",
+      "attribute": "CROP_COMMODITY",
+      "current_mapper_code": "CROP_FABA_BEAN",
+      "code_present": true,
+      "matching_value_ids": [
+        "CROP_FABA_BEAN"
+      ]
+    },
+    {
+      "source_list": "choices_crops_list",
+      "source_row": 232,
+      "source_name": "field_pea",
+      "source_label": "Field Pea",
+      "attribute": "CROP_COMMODITY",
+      "current_mapper_code": "CROP_FIELD_PEA",
+      "code_present": true,
+      "matching_value_ids": [
+        "CROP_FIELD_PEA"
+      ]
+    },
+    {
+      "source_list": "choices_crops_list",
+      "source_row": 233,
+      "source_name": "haricot_bean",
+      "source_label": "Haricot Bean",
+      "attribute": "CROP_COMMODITY",
+      "current_mapper_code": "CROP_HARICOT_BEAN",
+      "code_present": true,
+      "matching_value_ids": [
+        "CROP_HARICOT_BEAN"
+      ]
+    },
+    {
+      "source_list": "choices_crops_list",
+      "source_row": 234,
+      "source_name": "soybean",
+      "source_label": "Soybean",
+      "attribute": "CROP_COMMODITY",
+      "current_mapper_code": "CROP_SOYBEAN",
+      "code_present": true,
+      "matching_value_ids": [
+        "CROP_SOYBEAN"
+      ]
+    },
+    {
+      "source_list": "choices_crops_list",
+      "source_row": 235,
+      "source_name": "chickpea ",
+      "source_label": "Chickpea ",
+      "attribute": "CROP_COMMODITY",
+      "current_mapper_code": "CROP_CHICKPEA",
+      "code_present": true,
+      "matching_value_ids": [
+        "CROP_CHICKPEA"
+      ]
+    },
+    {
+      "source_list": "choices_crops_list",
+      "source_row": 236,
+      "source_name": "lentil",
+      "source_label": "Lentil",
+      "attribute": "CROP_COMMODITY",
+      "current_mapper_code": "CROP_LENTIL",
+      "code_present": true,
+      "matching_value_ids": [
+        "CROP_LENTIL"
+      ]
+    },
+    {
+      "source_list": "choices_crops_list",
+      "source_row": 237,
+      "source_name": "nug",
+      "source_label": "Nug",
+      "attribute": "CROP_COMMODITY",
+      "current_mapper_code": "CROP_NOUG",
+      "code_present": true,
+      "matching_value_ids": [
+        "CROP_NOUG"
+      ]
+    },
+    {
+      "source_list": "choices_crops_list",
+      "source_row": 238,
+      "source_name": "sesame",
+      "source_label": "Sesame",
+      "attribute": "CROP_COMMODITY",
+      "current_mapper_code": "CROP_SESAME",
+      "code_present": true,
+      "matching_value_ids": [
+        "CROP_SESAME"
+      ]
+    },
+    {
+      "source_list": "choices_crops_list",
+      "source_row": 239,
+      "source_name": "sunflower",
+      "source_label": "Sunflower",
+      "attribute": "CROP_COMMODITY",
+      "current_mapper_code": "CROP_SUNFLOWER",
+      "code_present": true,
+      "matching_value_ids": [
+        "CROP_SUNFLOWER"
+      ]
+    },
+    {
+      "source_list": "choices_crops_list",
+      "source_row": 240,
+      "source_name": "avocado",
+      "source_label": "Avocado",
+      "attribute": "CROP_COMMODITY",
+      "current_mapper_code": "CROP_AVOCADO",
+      "code_present": true,
+      "matching_value_ids": [
+        "CROP_AVOCADO"
+      ]
+    },
+    {
+      "source_list": "choices_crops_list",
+      "source_row": 241,
+      "source_name": "banana",
+      "source_label": "Banana",
+      "attribute": "CROP_COMMODITY",
+      "current_mapper_code": "CROP_BANANA",
+      "code_present": true,
+      "matching_value_ids": [
+        "CROP_BANANA"
+      ]
+    },
+    {
+      "source_list": "choices_crops_list",
+      "source_row": 242,
+      "source_name": "mango",
+      "source_label": "Mango",
+      "attribute": "CROP_COMMODITY",
+      "current_mapper_code": "CROP_MANGO",
+      "code_present": true,
+      "matching_value_ids": [
+        "CROP_MANGO"
+      ]
+    },
+    {
+      "source_list": "choices_crops_list",
+      "source_row": 243,
+      "source_name": "papaya",
+      "source_label": "Papaya",
+      "attribute": "CROP_COMMODITY",
+      "current_mapper_code": "CROP_PAPAYA",
+      "code_present": true,
+      "matching_value_ids": [
+        "CROP_PAPAYA"
+      ]
+    },
+    {
+      "source_list": "choices_crops_list",
+      "source_row": 244,
+      "source_name": "pineapple",
+      "source_label": "Pineapple",
+      "attribute": "CROP_COMMODITY",
+      "current_mapper_code": "CROP_PINEAPPLE",
+      "code_present": true,
+      "matching_value_ids": [
+        "CROP_PINEAPPLE"
+      ]
+    },
+    {
+      "source_list": "choices_crops_list",
+      "source_row": 245,
+      "source_name": "tomato",
+      "source_label": "Tomato",
+      "attribute": "CROP_COMMODITY",
+      "current_mapper_code": "CROP_TOMATO",
+      "code_present": true,
+      "matching_value_ids": [
+        "CROP_TOMATO"
+      ]
+    },
+    {
+      "source_list": "choices_crops_list",
+      "source_row": 246,
+      "source_name": "onion",
+      "source_label": "Onion",
+      "attribute": "CROP_COMMODITY",
+      "current_mapper_code": "CROP_ONION",
+      "code_present": true,
+      "matching_value_ids": [
+        "CROP_ONION"
+      ]
+    },
+    {
+      "source_list": "choices_crops_list",
+      "source_row": 247,
+      "source_name": "cabbage",
+      "source_label": "Cabbage",
+      "attribute": "CROP_COMMODITY",
+      "current_mapper_code": "CROP_CABBAGE",
+      "code_present": true,
+      "matching_value_ids": [
+        "CROP_CABBAGE"
+      ]
+    },
+    {
+      "source_list": "choices_crops_list",
+      "source_row": 248,
+      "source_name": "carrot",
+      "source_label": "Carrot",
+      "attribute": "CROP_COMMODITY",
+      "current_mapper_code": "CROP_CARROT",
+      "code_present": true,
+      "matching_value_ids": [
+        "CROP_CARROT"
+      ]
+    },
+    {
+      "source_list": "choices_crops_list",
+      "source_row": 249,
+      "source_name": "garlic",
+      "source_label": "Garlic",
+      "attribute": "CROP_COMMODITY",
+      "current_mapper_code": "CROP_GARLIC",
+      "code_present": true,
+      "matching_value_ids": [
+        "CROP_GARLIC"
+      ]
+    },
+    {
+      "source_list": "choices_crops_list",
+      "source_row": 250,
+      "source_name": "shallot",
+      "source_label": "Shallot",
+      "attribute": "CROP_COMMODITY",
+      "current_mapper_code": "CROP_SHALLOT",
+      "code_present": true,
+      "matching_value_ids": [
+        "CROP_SHALLOT"
+      ]
+    },
+    {
+      "source_list": "choices_crops_list",
+      "source_row": 251,
+      "source_name": "pepper",
+      "source_label": "Pepper",
+      "attribute": "CROP_COMMODITY",
+      "current_mapper_code": "CROP_PEPPER",
+      "code_present": true,
+      "matching_value_ids": [
+        "CROP_PEPPER"
+      ]
+    },
+    {
+      "source_list": "choices_crops_list",
+      "source_row": 252,
+      "source_name": "potato",
+      "source_label": "Potato",
+      "attribute": "CROP_COMMODITY",
+      "current_mapper_code": "CROP_POTATO",
+      "code_present": true,
+      "matching_value_ids": [
+        "CROP_POTATO"
+      ]
+    },
+    {
+      "source_list": "choices_crops_list",
+      "source_row": 253,
+      "source_name": "sweet_potato",
+      "source_label": "Sweet Potato",
+      "attribute": "CROP_COMMODITY",
+      "current_mapper_code": "CROP_SWEET_POTATO",
+      "code_present": true,
+      "matching_value_ids": [
+        "CROP_SWEET_POTATO"
+      ]
+    },
+    {
+      "source_list": "choices_crops_list",
+      "source_row": 254,
+      "source_name": "false_banana",
+      "source_label": "False Banana",
+      "attribute": "CROP_COMMODITY",
+      "current_mapper_code": "CROP_ENSET",
+      "code_present": true,
+      "matching_value_ids": [
+        "CROP_ENSET"
+      ]
+    },
+    {
+      "source_list": "choices_crops_list",
+      "source_row": 255,
+      "source_name": "taro",
+      "source_label": "Taro",
+      "attribute": "CROP_COMMODITY",
+      "current_mapper_code": "CROP_TARO",
+      "code_present": true,
+      "matching_value_ids": [
+        "CROP_TARO"
+      ]
+    },
+    {
+      "source_list": "choices_crops_list",
+      "source_row": 256,
+      "source_name": "yam",
+      "source_label": "Yam",
+      "attribute": "CROP_COMMODITY",
+      "current_mapper_code": "CROP_YAM",
+      "code_present": true,
+      "matching_value_ids": [
+        "CROP_YAM"
+      ]
+    },
+    {
+      "source_list": "choices_crops_list",
+      "source_row": 257,
+      "source_name": "cassava",
+      "source_label": "Cassava",
+      "attribute": "CROP_COMMODITY",
+      "current_mapper_code": "CROP_CASSAVA",
+      "code_present": true,
+      "matching_value_ids": [
+        "CROP_CASSAVA"
+      ]
+    },
+    {
+      "source_list": "choices_crops_list",
+      "source_row": 258,
+      "source_name": "coffee",
+      "source_label": "Coffee",
+      "attribute": "CROP_COMMODITY",
+      "current_mapper_code": "CROP_COFFEE",
+      "code_present": true,
+      "matching_value_ids": [
+        "CROP_COFFEE"
+      ]
+    },
+    {
+      "source_list": "choices_crops_list",
+      "source_row": 259,
+      "source_name": "tea",
+      "source_label": "Tea",
+      "attribute": "CROP_COMMODITY",
+      "current_mapper_code": "CROP_TEA",
+      "code_present": false,
+      "matching_value_ids": []
+    },
+    {
+      "source_list": "choices_crops_list",
+      "source_row": 260,
+      "source_name": "ginger",
+      "source_label": "Ginger",
+      "attribute": "CROP_COMMODITY",
+      "current_mapper_code": "CROP_GINGER",
+      "code_present": true,
+      "matching_value_ids": [
+        "CROP_GINGER"
+      ]
+    },
+    {
+      "source_list": "choices_crops_list",
+      "source_row": 261,
+      "source_name": "turmeric ",
+      "source_label": "Turmeric ",
+      "attribute": "CROP_COMMODITY",
+      "current_mapper_code": "CROP_TURMERIC",
+      "code_present": true,
+      "matching_value_ids": [
+        "CROP_TURMERIC"
+      ]
+    },
+    {
+      "source_list": "choices_crops_list",
+      "source_row": 262,
+      "source_name": "cardamom",
+      "source_label": "Cardamom",
+      "attribute": "CROP_COMMODITY",
+      "current_mapper_code": "CROP_CARDAMOM",
+      "code_present": true,
+      "matching_value_ids": [
+        "CROP_CARDAMOM"
+      ]
+    },
+    {
+      "source_list": "choices_crops_list",
+      "source_row": 263,
+      "source_name": "korerima",
+      "source_label": "Korerima",
+      "attribute": "CROP_COMMODITY",
+      "current_mapper_code": "CROP_KORARIMA",
+      "code_present": true,
+      "matching_value_ids": [
+        "CROP_KORARIMA"
+      ]
+    },
+    {
+      "source_list": "choices_crops_list",
+      "source_row": 264,
+      "source_name": "cumin",
+      "source_label": "Cumin",
+      "attribute": "CROP_COMMODITY",
+      "current_mapper_code": "CROP_CUMIN",
+      "code_present": false,
+      "matching_value_ids": []
+    },
+    {
+      "source_list": "choices_crops_list",
+      "source_row": 265,
+      "source_name": "fenugreek",
+      "source_label": "Fenugreek",
+      "attribute": "CROP_COMMODITY",
+      "current_mapper_code": "CROP_FENUGREEK",
+      "code_present": true,
+      "matching_value_ids": [
+        "CROP_FENUGREEK"
+      ]
+    },
+    {
+      "source_list": "choices_crops_list",
+      "source_row": 266,
+      "source_name": "black_pepper ",
+      "source_label": "Black Pepper",
+      "attribute": "CROP_COMMODITY",
+      "current_mapper_code": "CROP_BLACK_PEPPER",
+      "code_present": true,
+      "matching_value_ids": [
+        "CROP_BLACK_PEPPER"
+      ]
+    },
+    {
+      "source_list": "choices_crop_water_source",
+      "source_row": 267,
+      "source_name": "rainfall",
+      "source_label": "Rain fed",
+      "attribute": "WATER_SOURCE",
+      "current_mapper_code": "WS_RAINFED",
+      "code_present": true,
+      "matching_value_ids": [
+        "WS_RAINFED"
+      ]
+    },
+    {
+      "source_list": "choices_crop_water_source",
+      "source_row": 268,
+      "source_name": "irrigation_ground",
+      "source_label": "Irrigation - Ground Water",
+      "attribute": "WATER_SOURCE",
+      "current_mapper_code": "WS_IRRIGATION_GROUND",
+      "code_present": true,
+      "matching_value_ids": [
+        "WS_IRRIGATION_GROUND"
+      ]
+    },
+    {
+      "source_list": "choices_crop_water_source",
+      "source_row": 269,
+      "source_name": "irrigation_surface",
+      "source_label": "Irrigation - Surface Water",
+      "attribute": "WATER_SOURCE",
+      "current_mapper_code": "WS_IRRIGATION_SURFACE",
+      "code_present": true,
+      "matching_value_ids": [
+        "WS_IRRIGATION_SURFACE"
+      ]
+    },
+    {
+      "source_list": "choices_livestocks",
+      "source_row": 270,
+      "source_name": "cattle",
+      "source_label": "Cattle",
+      "attribute": "LIVESTOCK_TYPE",
+      "current_mapper_code": "LSTK_CATTLE",
+      "code_present": true,
+      "matching_value_ids": [
+        "LSTK_CATTLE"
+      ]
+    },
+    {
+      "source_list": "choices_livestocks",
+      "source_row": 271,
+      "source_name": "camel",
+      "source_label": "Camel",
+      "attribute": "LIVESTOCK_TYPE",
+      "current_mapper_code": "LSTK_CAMEL",
+      "code_present": true,
+      "matching_value_ids": [
+        "LSTK_CAMEL"
+      ]
+    },
+    {
+      "source_list": "choices_livestocks",
+      "source_row": 272,
+      "source_name": "sheep",
+      "source_label": "Sheep",
+      "attribute": "LIVESTOCK_TYPE",
+      "current_mapper_code": "LSTK_SHEEP",
+      "code_present": true,
+      "matching_value_ids": [
+        "LSTK_SHEEP"
+      ]
+    },
+    {
+      "source_list": "choices_livestocks",
+      "source_row": 273,
+      "source_name": "goat",
+      "source_label": "Goat",
+      "attribute": "LIVESTOCK_TYPE",
+      "current_mapper_code": "LSTK_GOAT",
+      "code_present": true,
+      "matching_value_ids": [
+        "LSTK_GOAT"
+      ]
+    },
+    {
+      "source_list": "choices_livestocks",
+      "source_row": 274,
+      "source_name": "chicken",
+      "source_label": "Chicken",
+      "attribute": "LIVESTOCK_TYPE",
+      "current_mapper_code": "LSTK_CHICKEN",
+      "code_present": true,
+      "matching_value_ids": [
+        "LSTK_CHICKEN"
+      ]
+    },
+    {
+      "source_list": "choices_livestocks",
+      "source_row": 275,
+      "source_name": "donkey",
+      "source_label": "Donkey",
+      "attribute": "LIVESTOCK_TYPE",
+      "current_mapper_code": "LSTK_DONKEY",
+      "code_present": true,
+      "matching_value_ids": [
+        "LSTK_DONKEY"
+      ]
+    },
+    {
+      "source_list": "choices_livestocks",
+      "source_row": 276,
+      "source_name": "horse",
+      "source_label": "Horse",
+      "attribute": "LIVESTOCK_TYPE",
+      "current_mapper_code": "LSTK_HORSE",
+      "code_present": true,
+      "matching_value_ids": [
+        "LSTK_HORSE"
+      ]
+    },
+    {
+      "source_list": "choices_livestocks",
+      "source_row": 277,
+      "source_name": "mule",
+      "source_label": "Mule",
+      "attribute": "LIVESTOCK_TYPE",
+      "current_mapper_code": "LSTK_MULE",
+      "code_present": true,
+      "matching_value_ids": [
+        "LSTK_MULE"
+      ]
+    },
+    {
+      "source_list": "choices_livestock_water_source",
+      "source_row": 278,
+      "source_name": "well_water",
+      "source_label": "Well Water (Groundwater)",
+      "attribute": "WATER_SOURCE",
+      "current_mapper_code": "WS_WELL_GROUND",
+      "code_present": true,
+      "matching_value_ids": [
+        "WS_WELL_GROUND"
+      ]
+    },
+    {
+      "source_list": "choices_livestock_water_source",
+      "source_row": 279,
+      "source_name": "water_harvesting",
+      "source_label": "Water Harvesting",
+      "attribute": "WATER_SOURCE",
+      "current_mapper_code": "WS_WATER_HARVESTING",
+      "code_present": true,
+      "matching_value_ids": [
+        "WS_WATER_HARVESTING"
+      ]
+    },
+    {
+      "source_list": "choices_livestock_water_source",
+      "source_row": 280,
+      "source_name": "surface_water",
+      "source_label": "Surface Water",
+      "attribute": "WATER_SOURCE",
+      "current_mapper_code": "WS_SURFACE_WATER",
+      "code_present": true,
+      "matching_value_ids": [
+        "WS_SURFACE_WATER"
+      ]
+    },
+    {
+      "source_list": "choices_income_source",
+      "source_row": 297,
+      "source_name": "crop",
+      "source_label": "Crop Production",
+      "attribute": "SOURCE_OF_INCOME",
+      "current_mapper_code": "SOI_CROP_PRODUCTION",
+      "code_present": true,
+      "matching_value_ids": [
+        "SOI_CROP_PRODUCTION"
+      ]
+    },
+    {
+      "source_list": "choices_income_source",
+      "source_row": 298,
+      "source_name": "livestock",
+      "source_label": "Livestock Production",
+      "attribute": "SOURCE_OF_INCOME",
+      "current_mapper_code": "SOI_LIVESTOCK_PRODUCTION",
+      "code_present": true,
+      "matching_value_ids": [
+        "SOI_LIVESTOCK_PRODUCTION"
+      ]
+    },
+    {
+      "source_list": "choices_income_source",
+      "source_row": 299,
+      "source_name": "gov_ngo",
+      "source_label": "Government/ NGO support",
+      "attribute": "SOURCE_OF_INCOME",
+      "current_mapper_code": "SOI_GOVERNMENT_NGO_SUPPORT",
+      "code_present": true,
+      "matching_value_ids": [
+        "SOI_GOVERNMENT_NGO_SUPPORT"
+      ]
+    },
+    {
+      "source_list": "choices_income_source",
+      "source_row": 300,
+      "source_name": "other",
+      "source_label": "Other",
+      "attribute": "SOURCE_OF_INCOME",
+      "current_mapper_code": "SOI_OTHERS",
+      "code_present": true,
+      "matching_value_ids": [
+        "SOI_OTHERS"
+      ]
+    },
+    {
+      "source_list": "choices_member_gender",
+      "source_row": 303,
+      "source_name": "male",
+      "source_label": "Male",
+      "attribute": "GENDER",
+      "current_mapper_code": "MALE",
+      "code_present": true,
+      "matching_value_ids": [
+        "MALE"
+      ]
+    },
+    {
+      "source_list": "choices_member_gender",
+      "source_row": 304,
+      "source_name": "female",
+      "source_label": "Female",
+      "attribute": "GENDER",
+      "current_mapper_code": "FEMALE",
+      "code_present": true,
+      "matching_value_ids": [
+        "FEMALE"
+      ]
+    },
+    {
+      "source_list": "choices_marital_status",
+      "source_row": 305,
+      "source_name": "single",
+      "source_label": "Single",
+      "attribute": "MARITAL_STATUS",
+      "current_mapper_code": "SINGLE",
+      "code_present": true,
+      "matching_value_ids": [
+        "SINGLE"
+      ]
+    },
+    {
+      "source_list": "choices_marital_status",
+      "source_row": 306,
+      "source_name": "married",
+      "source_label": "Married",
+      "attribute": "MARITAL_STATUS",
+      "current_mapper_code": "MARRIED",
+      "code_present": true,
+      "matching_value_ids": [
+        "MARRIED"
+      ]
+    },
+    {
+      "source_list": "choices_marital_status",
+      "source_row": 307,
+      "source_name": "divorced",
+      "source_label": "Divorced",
+      "attribute": "MARITAL_STATUS",
+      "current_mapper_code": "DIVORCED",
+      "code_present": true,
+      "matching_value_ids": [
+        "DIVORCED"
+      ]
+    },
+    {
+      "source_list": "choices_marital_status",
+      "source_row": 308,
+      "source_name": "widowed",
+      "source_label": "Widowed/widower",
+      "attribute": "MARITAL_STATUS",
+      "current_mapper_code": "WIDOWED",
+      "code_present": true,
+      "matching_value_ids": [
+        "WIDOWED"
+      ]
+    },
+    {
+      "source_list": "choices_education_level",
+      "source_row": 309,
+      "source_name": "illiterate",
+      "source_label": "Illiterate",
+      "attribute": "EDUCATION_LEVEL",
+      "current_mapper_code": "ILLITERATE",
+      "code_present": true,
+      "matching_value_ids": [
+        "ILLITERATE"
+      ]
+    },
+    {
+      "source_list": "choices_education_level",
+      "source_row": 310,
+      "source_name": "read_write",
+      "source_label": "Can Read and Write",
+      "attribute": "EDUCATION_LEVEL",
+      "current_mapper_code": "CAN_READ_AND_WRITE",
+      "code_present": true,
+      "matching_value_ids": [
+        "CAN_READ_AND_WRITE"
+      ]
+    },
+    {
+      "source_list": "choices_education_level",
+      "source_row": 311,
+      "source_name": "basic",
+      "source_label": "Basic (1-8)",
+      "attribute": "EDUCATION_LEVEL",
+      "current_mapper_code": "BASIC",
+      "code_present": true,
+      "matching_value_ids": [
+        "BASIC"
+      ]
+    },
+    {
+      "source_list": "choices_education_level",
+      "source_row": 312,
+      "source_name": "intermediary",
+      "source_label": "Intermediary (9-12)",
+      "attribute": "EDUCATION_LEVEL",
+      "current_mapper_code": "INTERMEDIARY",
+      "code_present": true,
+      "matching_value_ids": [
+        "INTERMEDIARY"
+      ]
+    },
+    {
+      "source_list": "choices_education_level",
+      "source_row": 313,
+      "source_name": "higher_education",
+      "source_label": "Higher Education (University and College)",
+      "attribute": "EDUCATION_LEVEL",
+      "current_mapper_code": "HIGHER_EDUCATION",
+      "code_present": true,
+      "matching_value_ids": [
+        "HIGHER_EDUCATION"
+      ]
+    },
+    {
+      "source_list": "choices_household_relationship",
+      "source_row": 324,
+      "source_name": "Wife",
+      "source_label": "Wife",
+      "attribute": "RELATIONSHIP_TO_HEAD",
+      "current_mapper_code": "SPOUSE",
+      "code_present": true,
+      "matching_value_ids": [
+        "SPOUSE"
+      ]
+    },
+    {
+      "source_list": "choices_household_relationship",
+      "source_row": 325,
+      "source_name": "Husband",
+      "source_label": "Husband",
+      "attribute": "RELATIONSHIP_TO_HEAD",
+      "current_mapper_code": "SPOUSE",
+      "code_present": true,
+      "matching_value_ids": [
+        "SPOUSE"
+      ]
+    },
+    {
+      "source_list": "choices_household_relationship",
+      "source_row": 326,
+      "source_name": "Son",
+      "source_label": "Son",
+      "attribute": "RELATIONSHIP_TO_HEAD",
+      "current_mapper_code": "CHILD",
+      "code_present": true,
+      "matching_value_ids": [
+        "CHILD"
+      ]
+    },
+    {
+      "source_list": "choices_household_relationship",
+      "source_row": 327,
+      "source_name": "Daughter",
+      "source_label": "Daughter",
+      "attribute": "RELATIONSHIP_TO_HEAD",
+      "current_mapper_code": "CHILD",
+      "code_present": true,
+      "matching_value_ids": [
+        "CHILD"
+      ]
+    },
+    {
+      "source_list": "choices_household_relationship",
+      "source_row": 328,
+      "source_name": "Other",
+      "source_label": "Other",
+      "attribute": "RELATIONSHIP_TO_HEAD",
+      "current_mapper_code": "OTHER_RELATIVE",
+      "code_present": true,
+      "matching_value_ids": [
+        "OTHER_RELATIVE"
+      ]
+    },
+    {
+      "source_list": "oan_crop_season",
+      "source_row": 351,
+      "source_name": "SEASON_MEHER",
+      "source_label": "Season Meher",
+      "attribute": "CROP_SEASON",
+      "current_mapper_code": "SEASON_MEHER",
+      "code_present": true,
+      "matching_value_ids": [
+        "SEASON_MEHER"
+      ]
+    },
+    {
+      "source_list": "oan_crop_season",
+      "source_row": 352,
+      "source_name": "SEASON_BELG",
+      "source_label": "Season Belg",
+      "attribute": "CROP_SEASON",
+      "current_mapper_code": "SEASON_BELG",
+      "code_present": true,
+      "matching_value_ids": [
+        "SEASON_BELG"
+      ]
+    },
+    {
+      "source_list": "oan_crop_season",
+      "source_row": 353,
+      "source_name": "SEASON_IRRIGATION",
+      "source_label": "Season Irrigation",
+      "attribute": "CROP_SEASON",
+      "current_mapper_code": "SEASON_IRRIGATION",
+      "code_present": true,
+      "matching_value_ids": [
+        "SEASON_IRRIGATION"
+      ]
+    }
+  ],
+  "other_lists": {
+    "choices_consent_form": 1,
+    "choices_member_registered": 2,
+    "choices_household_head": 2,
+    "choices_phone_number": 2,
+    "choices_national_id": 2,
+    "choices_disability": 2,
+    "choices_primary_cooperative": 2,
+    "choices_union": 2,
+    "choices_name_union": 164,
+    "choices_famer_cluster": 2,
+    "choices_tenant": 2,
+    "choices_owner": 2,
+    "choices_machinery_access": 2,
+    "choices_machinery": 8,
+    "choices_finance_access": 2,
+    "choices_finance": 4,
+    "choices_additional_farmers": 2,
+    "choices_other_hh_members": 2,
+    "choices_fertilizer": 2,
+    "choices_pesticide": 2,
+    "choices_insecticide": 2,
+    "choices_improved_seed": 2,
+    "choices_add_farmer_data": 2,
+    "choices_region": 14,
+    "oan_identity_document_type": 6
+  }
+}

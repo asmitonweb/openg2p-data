@@ -1,0 +1,321 @@
+{
+  "source_workbooks": [
+    {
+      "file": "ATI_Farmers_Profile_ODK_Form_v2.xlsx",
+      "sha256": "139f37a18dca7426c1a44eb8510bb8cfcc57383c27fd78434b4a957a4e4d1bf9",
+      "sheet": "choices",
+      "choices": [
+        {
+          "row": 283,
+          "list_name": "choices_machinery",
+          "name": "tractor",
+          "label::English (en)": "Tractor",
+          "label::Amharic (am)": "ትራክተር",
+          "label::Afaan Oromoo (om)": "Tiraaktaroota"
+        },
+        {
+          "row": 284,
+          "list_name": "choices_machinery",
+          "name": "combine_harvester",
+          "label::English (en)": "Combine Harvester",
+          "label::Amharic (am)": "ኮምባይን ሃርቨስተር",
+          "label::Afaan Oromoo (om)": "Mashina Midhan Sesabuu"
+        },
+        {
+          "row": 285,
+          "list_name": "choices_machinery",
+          "name": "planter",
+          "label::English (en)": "Planter",
+          "label::Amharic (am)": "ፕላንተር",
+          "label::Afaan Oromoo (om)": "Meshaa Serarn Fechasuu"
+        },
+        {
+          "row": 286,
+          "list_name": "choices_machinery",
+          "name": "harvester",
+          "label::English (en)": "Harvester",
+          "label::Amharic (am)": "Harvester",
+          "label::Afaan Oromoo (om)": "Harvester"
+        },
+        {
+          "row": 287,
+          "list_name": "choices_machinery",
+          "name": "combiner",
+          "label::English (en)": "Combiner",
+          "label::Amharic (am)": "Combiner",
+          "label::Afaan Oromoo (om)": "Combiner"
+        },
+        {
+          "row": 288,
+          "list_name": "choices_machinery",
+          "name": "multi_crop_trasher",
+          "label::English (en)": "Multi-crop trasher",
+          "label::Amharic (am)": "Multi-crop trasher",
+          "label::Afaan Oromoo (om)": "Multi-crop trasher"
+        },
+        {
+          "row": 289,
+          "list_name": "choices_machinery",
+          "name": "maize_sheller",
+          "label::English (en)": "Maize sheller",
+          "label::Amharic (am)": "Maize sheller",
+          "label::Afaan Oromoo (om)": "Maize sheller"
+        },
+        {
+          "row": 290,
+          "list_name": "choices_machinery",
+          "name": "rice_polisher",
+          "label::English (en)": "Rice polisher",
+          "label::Amharic (am)": "Rice polisher",
+          "label::Afaan Oromoo (om)": "Rice polisher"
+        },
+        {
+          "row": 293,
+          "list_name": "choices_finance",
+          "name": "loan",
+          "label::English (en)": "Loans",
+          "label::Amharic (am)": "ብድር",
+          "label::Afaan Oromoo (om)": "Liqaa"
+        },
+        {
+          "row": 294,
+          "list_name": "choices_finance",
+          "name": "insurance",
+          "label::English (en)": "Insurance",
+          "label::Amharic (am)": "ኢንሹራንስ ",
+          "label::Afaan Oromoo (om)": "Inshuransii"
+        },
+        {
+          "row": 295,
+          "list_name": "choices_finance",
+          "name": "saving",
+          "label::English (en)": "Savings",
+          "label::Amharic (am)": "ተቀማጭ",
+          "label::Afaan Oromoo (om)": "Qusannaa"
+        },
+        {
+          "row": 296,
+          "list_name": "choices_finance",
+          "name": "digital_banking",
+          "label::English (en)": "Digital Banking",
+          "label::Amharic (am)": "ዲጂታል ባንኪንግ",
+          "label::Afaan Oromoo (om)": "Baankii Dijitaalaa"
+        }
+      ]
+    },
+    {
+      "file": "ATI_Farmers_Profile_ODK_Form_v3.xlsx",
+      "sha256": "c7b022fc4007bf50a3d8dc9e8555d3eec536156fa16e72b501e031a45d92cfae",
+      "sheet": "choices",
+      "choices": [
+        {
+          "row": 283,
+          "list_name": "choices_machinery",
+          "name": "tractor",
+          "label::English (en)": "Tractor",
+          "label::Amharic (am)": "ትራክተር",
+          "label::Afaan Oromoo (om)": "Tiraaktaroota"
+        },
+        {
+          "row": 284,
+          "list_name": "choices_machinery",
+          "name": "combine_harvester",
+          "label::English (en)": "Combine Harvester",
+          "label::Amharic (am)": "ኮምባይን ሃርቨስተር",
+          "label::Afaan Oromoo (om)": "Mashina Midhan Sesabuu"
+        },
+        {
+          "row": 285,
+          "list_name": "choices_machinery",
+          "name": "planter",
+          "label::English (en)": "Planter",
+          "label::Amharic (am)": "ፕላንተር",
+          "label::Afaan Oromoo (om)": "Meshaa Serarn Fechasuu"
+        },
+        {
+          "row": 286,
+          "list_name": "choices_machinery",
+          "name": "harvester",
+          "label::English (en)": "Harvester",
+          "label::Amharic (am)": "Harvester",
+          "label::Afaan Oromoo (om)": "Harvester"
+        },
+        {
+          "row": 287,
+          "list_name": "choices_machinery",
+          "name": "combiner",
+          "label::English (en)": "Combiner",
+          "label::Amharic (am)": "Combiner",
+          "label::Afaan Oromoo (om)": "Combiner"
+        },
+        {
+          "row": 288,
+          "list_name": "choices_machinery",
+          "name": "multi_crop_trasher",
+          "label::English (en)": "Multi-crop trasher",
+          "label::Amharic (am)": "Multi-crop trasher",
+          "label::Afaan Oromoo (om)": "Multi-crop trasher"
+        },
+        {
+          "row": 289,
+          "list_name": "choices_machinery",
+          "name": "maize_sheller",
+          "label::English (en)": "Maize sheller",
+          "label::Amharic (am)": "Maize sheller",
+          "label::Afaan Oromoo (om)": "Maize sheller"
+        },
+        {
+          "row": 290,
+          "list_name": "choices_machinery",
+          "name": "rice_polisher",
+          "label::English (en)": "Rice polisher",
+          "label::Amharic (am)": "Rice polisher",
+          "label::Afaan Oromoo (om)": "Rice polisher"
+        },
+        {
+          "row": 293,
+          "list_name": "choices_finance",
+          "name": "loan",
+          "label::English (en)": "Loans",
+          "label::Amharic (am)": "ብድር",
+          "label::Afaan Oromoo (om)": "Liqaa"
+        },
+        {
+          "row": 294,
+          "list_name": "choices_finance",
+          "name": "insurance",
+          "label::English (en)": "Insurance",
+          "label::Amharic (am)": "ኢንሹራንስ ",
+          "label::Afaan Oromoo (om)": "Inshuransii"
+        },
+        {
+          "row": 295,
+          "list_name": "choices_finance",
+          "name": "saving",
+          "label::English (en)": "Savings",
+          "label::Amharic (am)": "ተቀማጭ",
+          "label::Afaan Oromoo (om)": "Qusannaa"
+        },
+        {
+          "row": 296,
+          "list_name": "choices_finance",
+          "name": "digital_banking",
+          "label::English (en)": "Digital Banking",
+          "label::Amharic (am)": "ዲጂታል ባንኪንግ",
+          "label::Afaan Oromoo (om)": "Baankii Dijitaalaa"
+        },
+        {
+          "row": 351,
+          "list_name": "oan_crop_season",
+          "name": "SEASON_MEHER",
+          "label::English (en)": "Season Meher",
+          "label::Amharic (am)": "Season Meher",
+          "label::Afaan Oromoo (om)": "Season Meher"
+        },
+        {
+          "row": 352,
+          "list_name": "oan_crop_season",
+          "name": "SEASON_BELG",
+          "label::English (en)": "Season Belg",
+          "label::Amharic (am)": "Season Belg",
+          "label::Afaan Oromoo (om)": "Season Belg"
+        },
+        {
+          "row": 353,
+          "list_name": "oan_crop_season",
+          "name": "SEASON_IRRIGATION",
+          "label::English (en)": "Season Irrigation",
+          "label::Amharic (am)": "Season Irrigation",
+          "label::Afaan Oromoo (om)": "Season Irrigation"
+        }
+      ]
+    }
+  ],
+  "baseline_git_commit": "e9183ec0a9ee2fa2e66e52d7b44323cca6167b69",
+  "machinery_crosswalk": [
+    {
+      "source_list": "choices_machinery",
+      "source_name": "tractor",
+      "source_row": 283,
+      "source_label_en": "Tractor",
+      "target_attribute": "FARM_MACHINERY",
+      "target_value_id": "MACH_TRACTOR",
+      "decision": "existing exact label"
+    },
+    {
+      "source_list": "choices_machinery",
+      "source_name": "combine_harvester",
+      "source_row": 284,
+      "source_label_en": "Combine Harvester",
+      "target_attribute": "FARM_MACHINERY",
+      "target_value_id": "MACH_COMBINE",
+      "decision": "existing exact label"
+    },
+    {
+      "source_list": "choices_machinery",
+      "source_name": "planter",
+      "source_row": 285,
+      "source_label_en": "Planter",
+      "target_attribute": "FARM_MACHINERY",
+      "target_value_id": "MACH_PLANTER",
+      "decision": "distinct OAN addition"
+    },
+    {
+      "source_list": "choices_machinery",
+      "source_name": "harvester",
+      "source_row": 286,
+      "source_label_en": "Harvester",
+      "target_attribute": "FARM_MACHINERY",
+      "target_value_id": "MACH_HARVESTER",
+      "decision": "distinct OAN addition"
+    },
+    {
+      "source_list": "choices_machinery",
+      "source_name": "combiner",
+      "source_row": 287,
+      "source_label_en": "Combiner",
+      "target_attribute": "FARM_MACHINERY",
+      "target_value_id": "MACH_COMBINER",
+      "decision": "distinct OAN addition"
+    },
+    {
+      "source_list": "choices_machinery",
+      "source_name": "multi_crop_trasher",
+      "source_row": 288,
+      "source_label_en": "Multi-crop trasher",
+      "target_attribute": "FARM_MACHINERY",
+      "target_value_id": "MACH_MULTI_CROP_TRASHER",
+      "decision": "distinct OAN addition"
+    },
+    {
+      "source_list": "choices_machinery",
+      "source_name": "maize_sheller",
+      "source_row": 289,
+      "source_label_en": "Maize sheller",
+      "target_attribute": "FARM_MACHINERY",
+      "target_value_id": "MACH_MAIZE_SHELLER",
+      "decision": "distinct OAN addition"
+    },
+    {
+      "source_list": "choices_machinery",
+      "source_name": "rice_polisher",
+      "source_row": 290,
+      "source_label_en": "Rice polisher",
+      "target_attribute": "FARM_MACHINERY",
+      "target_value_id": "MACH_RICE_POLISHER",
+      "decision": "distinct OAN addition"
+    }
+  ],
+  "unmapped_aliases": [
+    "standaloneharvester"
+  ],
+  "pending_catalogue_decisions": {
+    "finance": [
+      "loan",
+      "insurance",
+      "saving",
+      "digital_banking"
+    ],
+    "BEGA": "Absent from v2/v3 choice lists inspected; no mapping to irrigation is asserted."
+  }
+}
