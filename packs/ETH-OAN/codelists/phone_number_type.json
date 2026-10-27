@@ -1,0 +1,30 @@
+{
+  "attribute_id": "PHONE_NUMBER_TYPE",
+  "attribute_code": "PHONE_NUMBER_TYPE",
+  "attribute_display": "Phone number type",
+  "description": "OpenAgriNet farmer registry list: the role of one of a person's phone numbers.",
+  "is_hierarchical": false,
+  "values": [
+    {
+      "value_id": "PHONE_PRIMARY",
+      "value_code": "PRIMARY",
+      "value_display": "Primary",
+      "sort_order": 1,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "PHONE_SECONDARY",
+      "value_code": "SECONDARY",
+      "value_display": "Secondary",
+      "sort_order": 2,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "PHONE_OTHER",
+      "value_code": "OTHER",
+      "value_display": "Other",
+      "sort_order": 3,
+      "display_i18n": {}
+    }
+  ]
+}

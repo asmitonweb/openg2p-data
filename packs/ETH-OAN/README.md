@@ -68,3 +68,14 @@ that role, so this pack adds `SELF` (sort order 1, role `head_of_household`) fro
 [`eth_oan_additions/values/`](../../scripts/packs/eth_oan_additions/values). The farmer registry
 marks the head with Is Head, and accepts `SELF` only for that member. If `ETH` gets `SELF` back,
 the build stops and names the addition to drop.
+
+## Lists the farmer registry adds
+
+The farmer registry's own choice lists come from Master Data like every other dropdown, so the
+lists `ETH` does not have are added from
+[`eth_oan_additions/`](../../scripts/packs/eth_oan_additions) and never replace a base list:
+`LANGUAGE`, `LIVESTOCK_BODY_CONDITION`, `LIVESTOCK_PRODUCTION_TYPE`, and the document and
+finance lists `IDENTITY_DOCUMENT_TYPE`, `BANK_DOCUMENT_TYPE`, `LAND_DOCUMENT_TYPE`,
+`REPRESENTATIVE_DOCUMENT_TYPE`, `FARMER_DOCUMENT_TYPE`, `DOCUMENT_PURPOSE`,
+`PHONE_NUMBER_TYPE`, `FINANCE_ACCESS_TYPE`. Their codes are the values the registry already
+stores (`FAYDA`, `PRIMARY`, `LOAN`, ...), so an existing record needs no rewrite.

@@ -1,0 +1,37 @@
+{
+  "attribute_id": "DOCUMENT_PURPOSE",
+  "attribute_code": "DOCUMENT_PURPOSE",
+  "attribute_display": "Document purpose",
+  "description": "OpenAgriNet farmer registry list: why another document is attached to a record.",
+  "is_hierarchical": false,
+  "values": [
+    {
+      "value_id": "DOCPURP_IDENTITY_VERIFICATION",
+      "value_code": "IDENTITY_VERIFICATION",
+      "value_display": "Identity verification",
+      "sort_order": 1,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "DOCPURP_ELIGIBILITY",
+      "value_code": "ELIGIBILITY",
+      "value_display": "Programme eligibility",
+      "sort_order": 2,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "DOCPURP_RECORD_CORRECTION",
+      "value_code": "RECORD_CORRECTION",
+      "value_display": "Record correction",
+      "sort_order": 3,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "DOCPURP_OTHER_PURPOSE",
+      "value_code": "OTHER_PURPOSE",
+      "value_display": "Other purpose",
+      "sort_order": 4,
+      "display_i18n": {}
+    }
+  ]
+}

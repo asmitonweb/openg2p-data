@@ -1,0 +1,30 @@
+{
+  "attribute_id": "REPRESENTATIVE_DOCUMENT_TYPE",
+  "attribute_code": "REPRESENTATIVE_DOCUMENT_TYPE",
+  "attribute_display": "Representative document type",
+  "description": "OpenAgriNet farmer registry list: the document that lets someone act for the farmer.",
+  "is_hierarchical": false,
+  "values": [
+    {
+      "value_id": "REPDOC_POWER_OF_ATTORNEY",
+      "value_code": "POWER_OF_ATTORNEY",
+      "value_display": "Power of attorney",
+      "sort_order": 1,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "REPDOC_GUARDIANSHIP_DOCUMENT",
+      "value_code": "GUARDIANSHIP_DOCUMENT",
+      "value_display": "Guardianship document",
+      "sort_order": 2,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "REPDOC_REPRESENTATIVE_ID",
+      "value_code": "REPRESENTATIVE_ID",
+      "value_display": "Representative's identity document",
+      "sort_order": 3,
+      "display_i18n": {}
+    }
+  ]
+}
