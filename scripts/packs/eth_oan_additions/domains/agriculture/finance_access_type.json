@@ -1,0 +1,37 @@
+{
+  "attribute_id": "FINANCE_ACCESS_TYPE",
+  "attribute_code": "FINANCE_ACCESS_TYPE",
+  "attribute_display": "Finance access type",
+  "description": "OpenAgriNet farmer registry list: the financial services a farmer has access to.",
+  "is_hierarchical": false,
+  "values": [
+    {
+      "value_id": "FIN_LOAN",
+      "value_code": "LOAN",
+      "value_display": "Loan",
+      "sort_order": 1,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "FIN_INSURANCE",
+      "value_code": "INSURANCE",
+      "value_display": "Insurance",
+      "sort_order": 2,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "FIN_SAVING",
+      "value_code": "SAVING",
+      "value_display": "Saving",
+      "sort_order": 3,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "FIN_DIGITAL_BANKING",
+      "value_code": "DIGITAL_BANKING",
+      "value_display": "Digital banking",
+      "sort_order": 4,
+      "display_i18n": {}
+    }
+  ]
+}

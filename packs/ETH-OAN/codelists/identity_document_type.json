@@ -1,0 +1,51 @@
+{
+  "attribute_id": "IDENTITY_DOCUMENT_TYPE",
+  "attribute_code": "IDENTITY_DOCUMENT_TYPE",
+  "attribute_display": "Identity document type",
+  "description": "OpenAgriNet farmer registry list: the kind of identity document attached to a farmer's record.",
+  "is_hierarchical": false,
+  "values": [
+    {
+      "value_id": "IDDOC_FAYDA",
+      "value_code": "FAYDA",
+      "value_display": "Fayda credential",
+      "sort_order": 1,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "IDDOC_KEBELE_WOREDA_ID",
+      "value_code": "KEBELE_WOREDA_ID",
+      "value_display": "Kebele/Woreda resident ID",
+      "sort_order": 2,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "IDDOC_PASSPORT",
+      "value_code": "PASSPORT",
+      "value_display": "Ethiopian passport",
+      "sort_order": 3,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "IDDOC_DRIVING_LICENCE",
+      "value_code": "DRIVING_LICENCE",
+      "value_display": "Driving licence",
+      "sort_order": 4,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "IDDOC_KEBELE_CONFIRMATION_LETTER",
+      "value_code": "KEBELE_CONFIRMATION_LETTER",
+      "value_display": "Kebele confirmation letter with photo",
+      "sort_order": 5,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "IDDOC_OTHER_GOVERNMENT_ID",
+      "value_code": "OTHER_GOVERNMENT_ID",
+      "value_display": "Other government photo ID",
+      "sort_order": 6,
+      "display_i18n": {}
+    }
+  ]
+}

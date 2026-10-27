@@ -1,0 +1,23 @@
+{
+  "attribute_id": "BANK_DOCUMENT_TYPE",
+  "attribute_code": "BANK_DOCUMENT_TYPE",
+  "attribute_display": "Bank document type",
+  "description": "OpenAgriNet farmer registry list: the kind of bank document attached to a farmer's record.",
+  "is_hierarchical": false,
+  "values": [
+    {
+      "value_id": "BANKDOC_BANK_PASSBOOK",
+      "value_code": "BANK_PASSBOOK",
+      "value_display": "Bank passbook identification page",
+      "sort_order": 1,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "BANKDOC_BANK_ACCOUNT_CONFIRMATION",
+      "value_code": "BANK_ACCOUNT_CONFIRMATION",
+      "value_display": "Bank-issued account confirmation",
+      "sort_order": 2,
+      "display_i18n": {}
+    }
+  ]
+}
