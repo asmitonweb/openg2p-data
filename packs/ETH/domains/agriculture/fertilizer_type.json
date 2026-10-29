@@ -14,28 +14,28 @@
     {
       "value_id": "FERT_DAP",
       "value_code": "FERT_DAP",
-      "value_display": "DAP",
+      "value_display": "DAP (diammonium phosphate)",
       "sort_order": 2,
       "display_i18n": {}
     },
     {
       "value_id": "FERT_NPS",
       "value_code": "FERT_NPS",
-      "value_display": "NPS",
+      "value_display": "NPS (nitrogen, phosphorus and sulphur)",
       "sort_order": 3,
       "display_i18n": {}
     },
     {
       "value_id": "FERT_NPSB",
       "value_code": "FERT_NPSB",
-      "value_display": "NPSB",
+      "value_display": "NPSB (nitrogen, phosphorus, sulphur and boron)",
       "sort_order": 4,
       "display_i18n": {}
     },
     {
       "value_id": "FERT_NPSZNB",
       "value_code": "FERT_NPSZNB",
-      "value_display": "NPSZnB",
+      "value_display": "NPSZnB (nitrogen, phosphorus, sulphur, zinc and boron)",
       "sort_order": 5,
       "display_i18n": {}
     },

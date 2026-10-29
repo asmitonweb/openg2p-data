@@ -1,0 +1,953 @@
+{
+  "attribute_id": "AGRO_CHEMICAL",
+  "attribute_code": "AGRO_CHEMICAL",
+  "attribute_display": "Agro chemical",
+  "is_hierarchical": false,
+  "values": [
+    {
+      "value_id": "AGRO_CHEMICAL_PESTICIDE_CHLORPYRIFOS",
+      "value_code": "PESTICIDE_CHLORPYRIFOS",
+      "value_display": "Chlorpyrifos",
+      "sort_order": 1,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_PESTICIDE_IMIDACLOPRID",
+      "value_code": "PESTICIDE_IMIDACLOPRID",
+      "value_display": "Imidacloprid",
+      "sort_order": 2,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_PESTICIDE_MALATHION",
+      "value_code": "PESTICIDE_MALATHION",
+      "value_display": "Malathion",
+      "sort_order": 3,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_PESTICIDE_CYPERMETHRIN",
+      "value_code": "PESTICIDE_CYPERMETHRIN",
+      "value_display": "Cypermethrin",
+      "sort_order": 4,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_PESTICIDE_DELTAMETHRIN",
+      "value_code": "PESTICIDE_DELTAMETHRIN",
+      "value_display": "Deltamethrin",
+      "sort_order": 5,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_PESTICIDE_THIAMETHOXAM",
+      "value_code": "PESTICIDE_THIAMETHOXAM",
+      "value_display": "Thiamethoxam",
+      "sort_order": 6,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_PESTICIDE_ACEPHATE",
+      "value_code": "PESTICIDE_ACEPHATE",
+      "value_display": "Acephate",
+      "sort_order": 7,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_PESTICIDE_LAMBDA_CYHALOTHRIN",
+      "value_code": "PESTICIDE_LAMBDA_CYHALOTHRIN",
+      "value_display": "Lambda-cyhalothrin",
+      "sort_order": 8,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_PESTICIDE_BIFENTHRIN",
+      "value_code": "PESTICIDE_BIFENTHRIN",
+      "value_display": "Bifenthrin",
+      "sort_order": 9,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_PESTICIDE_SPINOSAD",
+      "value_code": "PESTICIDE_SPINOSAD",
+      "value_display": "Spinosad",
+      "sort_order": 10,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_PESTICIDE_MANCOZEB",
+      "value_code": "PESTICIDE_MANCOZEB",
+      "value_display": "Mancozeb",
+      "sort_order": 11,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_PESTICIDE_CARBENDAZIM",
+      "value_code": "PESTICIDE_CARBENDAZIM",
+      "value_display": "Carbendazim",
+      "sort_order": 12,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_PESTICIDE_COPPER_OXYCHLORIDE",
+      "value_code": "PESTICIDE_COPPER_OXYCHLORIDE",
+      "value_display": "Copper oxychloride",
+      "sort_order": 13,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_PESTICIDE_PROPICONAZOLE",
+      "value_code": "PESTICIDE_PROPICONAZOLE",
+      "value_display": "Propiconazole",
+      "sort_order": 14,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_PESTICIDE_TEBUCONAZOLE",
+      "value_code": "PESTICIDE_TEBUCONAZOLE",
+      "value_display": "Tebuconazole",
+      "sort_order": 15,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_PESTICIDE_HEXACONAZOLE",
+      "value_code": "PESTICIDE_HEXACONAZOLE",
+      "value_display": "Hexaconazole",
+      "sort_order": 16,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_PESTICIDE_THIRAM",
+      "value_code": "PESTICIDE_THIRAM",
+      "value_display": "Thiram",
+      "sort_order": 17,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_PESTICIDE_CAPTAN",
+      "value_code": "PESTICIDE_CAPTAN",
+      "value_display": "Captan",
+      "sort_order": 18,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_PESTICIDE_IPRODIONE",
+      "value_code": "PESTICIDE_IPRODIONE",
+      "value_display": "Iprodione",
+      "sort_order": 19,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_PESTICIDE_AZOXYSTROBIN",
+      "value_code": "PESTICIDE_AZOXYSTROBIN",
+      "value_display": "Azoxystrobin",
+      "sort_order": 20,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_PESTICIDE_GLYPHOSATE",
+      "value_code": "PESTICIDE_GLYPHOSATE",
+      "value_display": "Glyphosate (pesticide)",
+      "sort_order": 21,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_PESTICIDE_ATRAZINE",
+      "value_code": "PESTICIDE_ATRAZINE",
+      "value_display": "Atrazine (pesticide)",
+      "sort_order": 22,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_PESTICIDE_2_4_D",
+      "value_code": "PESTICIDE_2_4_D",
+      "value_display": "2,4-D (pesticide)",
+      "sort_order": 23,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_PESTICIDE_PENDIMETHALIN",
+      "value_code": "PESTICIDE_PENDIMETHALIN",
+      "value_display": "Pendimethalin (pesticide)",
+      "sort_order": 24,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_PESTICIDE_PARAQUAT",
+      "value_code": "PESTICIDE_PARAQUAT",
+      "value_display": "Paraquat (pesticide)",
+      "sort_order": 25,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_PESTICIDE_BUTACHLOR",
+      "value_code": "PESTICIDE_BUTACHLOR",
+      "value_display": "Butachlor (pesticide)",
+      "sort_order": 26,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_PESTICIDE_METRIBUZIN",
+      "value_code": "PESTICIDE_METRIBUZIN",
+      "value_display": "Metribuzin (pesticide)",
+      "sort_order": 27,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_PESTICIDE_OXYFLUORFEN",
+      "value_code": "PESTICIDE_OXYFLUORFEN",
+      "value_display": "Oxyfluorfen (pesticide)",
+      "sort_order": 28,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_PESTICIDE_IMAZETHAPYR",
+      "value_code": "PESTICIDE_IMAZETHAPYR",
+      "value_display": "Imazethapyr (pesticide)",
+      "sort_order": 29,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_PESTICIDE_PRETILACHLOR",
+      "value_code": "PESTICIDE_PRETILACHLOR",
+      "value_display": "Pretilachlor (pesticide)",
+      "sort_order": 30,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_PESTICIDE_BROMADIOLONE",
+      "value_code": "PESTICIDE_BROMADIOLONE",
+      "value_display": "Bromadiolone",
+      "sort_order": 31,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_PESTICIDE_BRODIFACOUM",
+      "value_code": "PESTICIDE_BRODIFACOUM",
+      "value_display": "Brodifacoum",
+      "sort_order": 32,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_PESTICIDE_ZINC_PHOSPHIDE",
+      "value_code": "PESTICIDE_ZINC_PHOSPHIDE",
+      "value_display": "Zinc phosphide",
+      "sort_order": 33,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_PESTICIDE_WARFARIN",
+      "value_code": "PESTICIDE_WARFARIN",
+      "value_display": "Warfarin",
+      "sort_order": 34,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_PESTICIDE_COUMATETRALYL",
+      "value_code": "PESTICIDE_COUMATETRALYL",
+      "value_display": "Coumatetralyl",
+      "sort_order": 35,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_PESTICIDE_DIFETHIALONE",
+      "value_code": "PESTICIDE_DIFETHIALONE",
+      "value_display": "Difethialone",
+      "sort_order": 36,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_PESTICIDE_FLOCOUMAFEN",
+      "value_code": "PESTICIDE_FLOCOUMAFEN",
+      "value_display": "Flocoumafen",
+      "sort_order": 37,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_PESTICIDE_ALUMINIUM_PHOSPHIDE",
+      "value_code": "PESTICIDE_ALUMINIUM_PHOSPHIDE",
+      "value_display": "Aluminium phosphide",
+      "sort_order": 38,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_PESTICIDE_STREPTOMYCIN",
+      "value_code": "PESTICIDE_STREPTOMYCIN",
+      "value_display": "Streptomycin",
+      "sort_order": 39,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_PESTICIDE_COPPER_HYDROXIDE",
+      "value_code": "PESTICIDE_COPPER_HYDROXIDE",
+      "value_display": "Copper hydroxide",
+      "sort_order": 40,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_PESTICIDE_KASUGAMYCIN",
+      "value_code": "PESTICIDE_KASUGAMYCIN",
+      "value_display": "Kasugamycin",
+      "sort_order": 41,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_PESTICIDE_OXYTETRACYCLINE",
+      "value_code": "PESTICIDE_OXYTETRACYCLINE",
+      "value_display": "Oxytetracycline",
+      "sort_order": 42,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_PESTICIDE_BORDEAUX_MIXTURE",
+      "value_code": "PESTICIDE_BORDEAUX_MIXTURE",
+      "value_display": "Bordeaux mixture",
+      "sort_order": 43,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_PESTICIDE_VALIDAMYCIN",
+      "value_code": "PESTICIDE_VALIDAMYCIN",
+      "value_display": "Validamycin",
+      "sort_order": 44,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_PESTICIDE_CARBOFURAN",
+      "value_code": "PESTICIDE_CARBOFURAN",
+      "value_display": "Carbofuran",
+      "sort_order": 45,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_PESTICIDE_FENAMIPHOS",
+      "value_code": "PESTICIDE_FENAMIPHOS",
+      "value_display": "Fenamiphos",
+      "sort_order": 46,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_PESTICIDE_ETHOPROPHOS",
+      "value_code": "PESTICIDE_ETHOPROPHOS",
+      "value_display": "Ethoprophos",
+      "sort_order": 47,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_PESTICIDE_OXAMYL",
+      "value_code": "PESTICIDE_OXAMYL",
+      "value_display": "Oxamyl",
+      "sort_order": 48,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_PESTICIDE_CADUSAFOS",
+      "value_code": "PESTICIDE_CADUSAFOS",
+      "value_display": "Cadusafos",
+      "sort_order": 49,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_PESTICIDE_FLUOPYRAM",
+      "value_code": "PESTICIDE_FLUOPYRAM",
+      "value_display": "Fluopyram",
+      "sort_order": 50,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_PESTICIDE_ABAMECTIN",
+      "value_code": "PESTICIDE_ABAMECTIN",
+      "value_display": "Abamectin",
+      "sort_order": 51,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_PESTICIDE_DICOFOL",
+      "value_code": "PESTICIDE_DICOFOL",
+      "value_display": "Dicofol",
+      "sort_order": 52,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_PESTICIDE_PROPARGITE",
+      "value_code": "PESTICIDE_PROPARGITE",
+      "value_display": "Propargite",
+      "sort_order": 53,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_PESTICIDE_HEXYTHIAZOX",
+      "value_code": "PESTICIDE_HEXYTHIAZOX",
+      "value_display": "Hexythiazox",
+      "sort_order": 54,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_PESTICIDE_SPIROMESIFEN",
+      "value_code": "PESTICIDE_SPIROMESIFEN",
+      "value_display": "Spiromesifen",
+      "sort_order": 55,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_PESTICIDE_BIFENAZATE",
+      "value_code": "PESTICIDE_BIFENAZATE",
+      "value_display": "Bifenazate",
+      "sort_order": 56,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_PESTICIDE_CLOFENTEZINE",
+      "value_code": "PESTICIDE_CLOFENTEZINE",
+      "value_display": "Clofentezine",
+      "sort_order": 57,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_PESTICIDE_METALDEHYDE",
+      "value_code": "PESTICIDE_METALDEHYDE",
+      "value_display": "Metaldehyde",
+      "sort_order": 58,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_PESTICIDE_METHIOCARB",
+      "value_code": "PESTICIDE_METHIOCARB",
+      "value_display": "Methiocarb",
+      "sort_order": 59,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_PESTICIDE_IRON_PHOSPHATE",
+      "value_code": "PESTICIDE_IRON_PHOSPHATE",
+      "value_display": "Iron phosphate",
+      "sort_order": 60,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_PESTICIDE_NICLOSAMIDE",
+      "value_code": "PESTICIDE_NICLOSAMIDE",
+      "value_display": "Niclosamide",
+      "sort_order": 61,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_PESTICIDE_FIPRONIL",
+      "value_code": "PESTICIDE_FIPRONIL",
+      "value_display": "Fipronil",
+      "sort_order": 62,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_PESTICIDE_PERMETHRIN",
+      "value_code": "PESTICIDE_PERMETHRIN",
+      "value_display": "Permethrin",
+      "sort_order": 63,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_PESTICIDE_HEXAFLUMURON",
+      "value_code": "PESTICIDE_HEXAFLUMURON",
+      "value_display": "Hexaflumuron",
+      "sort_order": 64,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_PESTICIDE_AVITROL",
+      "value_code": "PESTICIDE_AVITROL",
+      "value_display": "Avitrol",
+      "sort_order": 65,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_PESTICIDE_STARLICIDE",
+      "value_code": "PESTICIDE_STARLICIDE",
+      "value_display": "Starlicide",
+      "sort_order": 66,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_PESTICIDE_ROTENONE",
+      "value_code": "PESTICIDE_ROTENONE",
+      "value_display": "Rotenone",
+      "sort_order": 67,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_PESTICIDE_ANTIMYCIN_A",
+      "value_code": "PESTICIDE_ANTIMYCIN_A",
+      "value_display": "Antimycin A",
+      "sort_order": 68,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_PESTICIDE_TFM",
+      "value_code": "PESTICIDE_TFM",
+      "value_display": "TFM",
+      "sort_order": 69,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_PESTICIDE_COPPER_SULPHATE",
+      "value_code": "PESTICIDE_COPPER_SULPHATE",
+      "value_display": "Copper sulphate (pesticide)",
+      "sort_order": 70,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_PESTICIDE_SIMAZINE",
+      "value_code": "PESTICIDE_SIMAZINE",
+      "value_display": "Simazine (pesticide)",
+      "sort_order": 71,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_PESTICIDE_DIQUAT",
+      "value_code": "PESTICIDE_DIQUAT",
+      "value_display": "Diquat (pesticide)",
+      "sort_order": 72,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_PESTICIDE_ENDOTHALL",
+      "value_code": "PESTICIDE_ENDOTHALL",
+      "value_display": "Endothall (pesticide)",
+      "sort_order": 73,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_PESTICIDE_VIRUS_X",
+      "value_code": "PESTICIDE_VIRUS_X",
+      "value_display": "Virus-X",
+      "sort_order": 74,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_PESTICIDE_SALICYLIC_ACID",
+      "value_code": "PESTICIDE_SALICYLIC_ACID",
+      "value_display": "Salicylic acid",
+      "sort_order": 75,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_PESTICIDE_NEEM_OIL",
+      "value_code": "PESTICIDE_NEEM_OIL",
+      "value_display": "Neem oil",
+      "sort_order": 76,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_WEEDICIDE_PENDIMETHALIN",
+      "value_code": "WEEDICIDE_PENDIMETHALIN",
+      "value_display": "Pendimethalin (weedicide)",
+      "sort_order": 77,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_WEEDICIDE_ATRAZINE",
+      "value_code": "WEEDICIDE_ATRAZINE",
+      "value_display": "Atrazine (weedicide)",
+      "sort_order": 78,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_WEEDICIDE_BUTACHLOR",
+      "value_code": "WEEDICIDE_BUTACHLOR",
+      "value_display": "Butachlor (weedicide)",
+      "sort_order": 79,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_WEEDICIDE_METOLACHLOR",
+      "value_code": "WEEDICIDE_METOLACHLOR",
+      "value_display": "Metolachlor",
+      "sort_order": 80,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_WEEDICIDE_OXYFLUORFEN",
+      "value_code": "WEEDICIDE_OXYFLUORFEN",
+      "value_display": "Oxyfluorfen (weedicide)",
+      "sort_order": 81,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_WEEDICIDE_PRETILACHLOR",
+      "value_code": "WEEDICIDE_PRETILACHLOR",
+      "value_display": "Pretilachlor (weedicide)",
+      "sort_order": 82,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_WEEDICIDE_ALACHLOR",
+      "value_code": "WEEDICIDE_ALACHLOR",
+      "value_display": "Alachlor",
+      "sort_order": 83,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_WEEDICIDE_ISOPROTURON",
+      "value_code": "WEEDICIDE_ISOPROTURON",
+      "value_display": "Isoproturon",
+      "sort_order": 84,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_WEEDICIDE_FLUCHLORALIN",
+      "value_code": "WEEDICIDE_FLUCHLORALIN",
+      "value_display": "Fluchloralin",
+      "sort_order": 85,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_WEEDICIDE_TRIFLURALIN",
+      "value_code": "WEEDICIDE_TRIFLURALIN",
+      "value_display": "Trifluralin",
+      "sort_order": 86,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_WEEDICIDE_2_4_D",
+      "value_code": "WEEDICIDE_2_4_D",
+      "value_display": "2,4-D (weedicide)",
+      "sort_order": 87,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_WEEDICIDE_METSULFURON_METHYL",
+      "value_code": "WEEDICIDE_METSULFURON_METHYL",
+      "value_display": "Metsulfuron methyl",
+      "sort_order": 88,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_WEEDICIDE_CLODINAFOP",
+      "value_code": "WEEDICIDE_CLODINAFOP",
+      "value_display": "Clodinafop",
+      "sort_order": 89,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_WEEDICIDE_FENOXAPROP",
+      "value_code": "WEEDICIDE_FENOXAPROP",
+      "value_display": "Fenoxaprop",
+      "sort_order": 90,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_WEEDICIDE_BISPYRIBAC_SODIUM",
+      "value_code": "WEEDICIDE_BISPYRIBAC_SODIUM",
+      "value_display": "Bispyribac sodium",
+      "sort_order": 91,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_WEEDICIDE_ETHOXYSULFURON",
+      "value_code": "WEEDICIDE_ETHOXYSULFURON",
+      "value_display": "Ethoxysulfuron",
+      "sort_order": 92,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_WEEDICIDE_PINOXADEN",
+      "value_code": "WEEDICIDE_PINOXADEN",
+      "value_display": "Pinoxaden",
+      "sort_order": 93,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_WEEDICIDE_METRIBUZIN",
+      "value_code": "WEEDICIDE_METRIBUZIN",
+      "value_display": "Metribuzin (weedicide)",
+      "sort_order": 94,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_WEEDICIDE_CARFENTRAZONE",
+      "value_code": "WEEDICIDE_CARFENTRAZONE",
+      "value_display": "Carfentrazone",
+      "sort_order": 95,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_WEEDICIDE_TEMBOTRIONE",
+      "value_code": "WEEDICIDE_TEMBOTRIONE",
+      "value_display": "Tembotrione",
+      "sort_order": 96,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_WEEDICIDE_GLYPHOSATE",
+      "value_code": "WEEDICIDE_GLYPHOSATE",
+      "value_display": "Glyphosate (weedicide)",
+      "sort_order": 97,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_WEEDICIDE_2_4_D_AMINE",
+      "value_code": "WEEDICIDE_2_4_D_AMINE",
+      "value_display": "2,4-D amine",
+      "sort_order": 98,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_WEEDICIDE_IMAZETHAPYR",
+      "value_code": "WEEDICIDE_IMAZETHAPYR",
+      "value_display": "Imazethapyr (weedicide)",
+      "sort_order": 99,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_WEEDICIDE_METSULFURON",
+      "value_code": "WEEDICIDE_METSULFURON",
+      "value_display": "Metsulfuron",
+      "sort_order": 100,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_WEEDICIDE_TRICLOPYR",
+      "value_code": "WEEDICIDE_TRICLOPYR",
+      "value_display": "Triclopyr",
+      "sort_order": 101,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_WEEDICIDE_PICLORAM",
+      "value_code": "WEEDICIDE_PICLORAM",
+      "value_display": "Picloram",
+      "sort_order": 102,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_WEEDICIDE_DICAMBA",
+      "value_code": "WEEDICIDE_DICAMBA",
+      "value_display": "Dicamba",
+      "sort_order": 103,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_WEEDICIDE_AMINOPYRALID",
+      "value_code": "WEEDICIDE_AMINOPYRALID",
+      "value_display": "Aminopyralid",
+      "sort_order": 104,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_WEEDICIDE_FLUROXYPYR",
+      "value_code": "WEEDICIDE_FLUROXYPYR",
+      "value_display": "Fluroxypyr",
+      "sort_order": 105,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_WEEDICIDE_CLOPYRALID",
+      "value_code": "WEEDICIDE_CLOPYRALID",
+      "value_display": "Clopyralid",
+      "sort_order": 106,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_WEEDICIDE_PARAQUAT",
+      "value_code": "WEEDICIDE_PARAQUAT",
+      "value_display": "Paraquat (weedicide)",
+      "sort_order": 107,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_WEEDICIDE_DIQUAT",
+      "value_code": "WEEDICIDE_DIQUAT",
+      "value_display": "Diquat (weedicide)",
+      "sort_order": 108,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_WEEDICIDE_GLUFOSINATE",
+      "value_code": "WEEDICIDE_GLUFOSINATE",
+      "value_display": "Glufosinate",
+      "sort_order": 109,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_WEEDICIDE_FLUMIOXAZIN",
+      "value_code": "WEEDICIDE_FLUMIOXAZIN",
+      "value_display": "Flumioxazin",
+      "sort_order": 110,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_WEEDICIDE_ACIFLUORFEN",
+      "value_code": "WEEDICIDE_ACIFLUORFEN",
+      "value_display": "Acifluorfen",
+      "sort_order": 111,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_WEEDICIDE_BENTAZON",
+      "value_code": "WEEDICIDE_BENTAZON",
+      "value_display": "Bentazon",
+      "sort_order": 112,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_WEEDICIDE_BROMOXYNIL",
+      "value_code": "WEEDICIDE_BROMOXYNIL",
+      "value_display": "Bromoxynil",
+      "sort_order": 113,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_WEEDICIDE_PYRAFLUFEN",
+      "value_code": "WEEDICIDE_PYRAFLUFEN",
+      "value_display": "Pyraflufen",
+      "sort_order": 114,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_WEEDICIDE_FLUAZIFOP",
+      "value_code": "WEEDICIDE_FLUAZIFOP",
+      "value_display": "Fluazifop",
+      "sort_order": 115,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_WEEDICIDE_QUIZALOFOP",
+      "value_code": "WEEDICIDE_QUIZALOFOP",
+      "value_display": "Quizalofop",
+      "sort_order": 116,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_WEEDICIDE_SETHOXYDIM",
+      "value_code": "WEEDICIDE_SETHOXYDIM",
+      "value_display": "Sethoxydim",
+      "sort_order": 117,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_WEEDICIDE_CYCLOXYDIM",
+      "value_code": "WEEDICIDE_CYCLOXYDIM",
+      "value_display": "Cycloxydim",
+      "sort_order": 118,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_WEEDICIDE_HALOXYFOP",
+      "value_code": "WEEDICIDE_HALOXYFOP",
+      "value_display": "Haloxyfop",
+      "sort_order": 119,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_WEEDICIDE_PROPAQUIZAFOP",
+      "value_code": "WEEDICIDE_PROPAQUIZAFOP",
+      "value_display": "Propaquizafop",
+      "sort_order": 120,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_WEEDICIDE_TRALKOXYDIM",
+      "value_code": "WEEDICIDE_TRALKOXYDIM",
+      "value_display": "Tralkoxydim",
+      "sort_order": 121,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_WEEDICIDE_MCPA",
+      "value_code": "WEEDICIDE_MCPA",
+      "value_display": "MCPA",
+      "sort_order": 122,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_WEEDICIDE_HALOSULFURON_METHYL",
+      "value_code": "WEEDICIDE_HALOSULFURON_METHYL",
+      "value_display": "Halosulfuron methyl",
+      "sort_order": 123,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_WEEDICIDE_IMAZOSULFURON",
+      "value_code": "WEEDICIDE_IMAZOSULFURON",
+      "value_display": "Imazosulfuron",
+      "sort_order": 124,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_WEEDICIDE_2_4_D_METSULFURON",
+      "value_code": "WEEDICIDE_2_4_D_METSULFURON",
+      "value_display": "2,4-D + metsulfuron",
+      "sort_order": 125,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_WEEDICIDE_PYRAZOSULFURON",
+      "value_code": "WEEDICIDE_PYRAZOSULFURON",
+      "value_display": "Pyrazosulfuron",
+      "sort_order": 126,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_WEEDICIDE_PENOXSULAM",
+      "value_code": "WEEDICIDE_PENOXSULAM",
+      "value_display": "Penoxsulam",
+      "sort_order": 127,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_WEEDICIDE_COPPER_SULPHATE",
+      "value_code": "WEEDICIDE_COPPER_SULPHATE",
+      "value_display": "Copper sulphate (weedicide)",
+      "sort_order": 128,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_WEEDICIDE_FLURIDONE",
+      "value_code": "WEEDICIDE_FLURIDONE",
+      "value_display": "Fluridone",
+      "sort_order": 129,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_WEEDICIDE_ENDOTHALL",
+      "value_code": "WEEDICIDE_ENDOTHALL",
+      "value_display": "Endothall (weedicide)",
+      "sort_order": 130,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_WEEDICIDE_IMAZAPYR",
+      "value_code": "WEEDICIDE_IMAZAPYR",
+      "value_display": "Imazapyr",
+      "sort_order": 131,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_WEEDICIDE_SIMAZINE",
+      "value_code": "WEEDICIDE_SIMAZINE",
+      "value_display": "Simazine (weedicide)",
+      "sort_order": 132,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_WEEDICIDE_ISOXAFLUTOLE",
+      "value_code": "WEEDICIDE_ISOXAFLUTOLE",
+      "value_display": "Isoxaflutole",
+      "sort_order": 133,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_WEEDICIDE_FLUMETSULAM",
+      "value_code": "WEEDICIDE_FLUMETSULAM",
+      "value_display": "Flumetsulam",
+      "sort_order": 134,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRO_CHEMICAL_WEEDICIDE_CLOMAZONE",
+      "value_code": "WEEDICIDE_CLOMAZONE",
+      "value_display": "Clomazone",
+      "sort_order": 135,
+      "display_i18n": {}
+    }
+  ]
+}

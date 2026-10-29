@@ -1,0 +1,37 @@
+{
+  "attribute_id": "DA_EDUCATION_LEVEL",
+  "attribute_code": "DA_EDUCATION_LEVEL",
+  "attribute_display": "Development Agent qualification",
+  "description": "Highest agricultural qualification of a Development Agent (extension worker): the level the ATVET / university awarded. Not the general schooling scale (EDUCATION_LEVEL), which a DA has completed by definition. Source: OpenAgriNet DA Registry field list (Oct 2026).",
+  "is_hierarchical": false,
+  "values": [
+    {
+      "value_id": "CERTIFICATE",
+      "value_code": "CERTIFICATE",
+      "value_display": "Certificate",
+      "sort_order": 1,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "DIPLOMA",
+      "value_code": "DIPLOMA",
+      "value_display": "Diploma",
+      "sort_order": 2,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "DEGREE",
+      "value_code": "DEGREE",
+      "value_display": "Degree",
+      "sort_order": 3,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "MASTERS",
+      "value_code": "MASTERS",
+      "value_display": "Masters",
+      "sort_order": 4,
+      "display_i18n": {}
+    }
+  ]
+}

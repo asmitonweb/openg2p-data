@@ -1,0 +1,29 @@
+{
+  "attribute_schema": {
+    "type": "object",
+    "properties": {
+      "requires_ear_tag": {
+        "type": "boolean",
+        "title": "Requires ear tag"
+      },
+      "is_flock_species": {
+        "type": "boolean",
+        "title": "Recorded as a flock"
+      }
+    },
+    "required": [
+      "requires_ear_tag",
+      "is_flock_species"
+    ],
+    "additionalProperties": false
+  },
+  "values": {
+    "CATTLE": {"requires_ear_tag": true, "is_flock_species": false},
+    "GOATS": {"requires_ear_tag": true, "is_flock_species": false},
+    "SHEEP": {"requires_ear_tag": true, "is_flock_species": false},
+    "POULTRY": {"requires_ear_tag": false, "is_flock_species": true},
+    "CAMELS": {"requires_ear_tag": true, "is_flock_species": false},
+    "EQUINES": {"requires_ear_tag": true, "is_flock_species": false},
+    "OTHER": {"requires_ear_tag": false, "is_flock_species": false}
+  }
+}

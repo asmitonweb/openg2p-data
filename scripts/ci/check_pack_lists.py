@@ -22,7 +22,8 @@ against another checkout (a PR's base) and fails only on findings the change
 introduces; the rest are listed, so they stay visible until someone fixes them.
 
 It also checks that packs/ETH-OAN matches scripts/packs/eth_oan_additions: an
-addition that is not in the built pack means build_eth_oan_pack.py was not run,
+addition that is not in the built pack (for attributes/, a list whose schema or
+value attributes differ from the overlay) means build_eth_oan_pack.py was not run,
 and a pack edited by hand loses that edit at the next rebuild. Those findings
 always fail.
 
@@ -128,6 +129,19 @@ def additions_errors(root):
                 if built.get(v["value_id"]) != v:
                     errors.append((rel, (f"{rel}: {v['value_id']} differs from {target} or is missing "
                                          f"(run build_eth_oan_pack.py)")))
+        elif sub.startswith("attributes/"):
+            target = f"{BUILT}/{sub[len('attributes/'):]}"
+            if not os.path.exists(os.path.join(root, target)):
+                errors.append((rel, f"{rel}: sets attributes on {target}, which does not exist"))
+                continue
+            overlay, built = read_json(root, rel), read_json(root, target)
+            if built.get("attribute_schema") != overlay.get("attribute_schema"):
+                errors.append((rel, f"{rel}: attribute_schema differs from {target} (run build_eth_oan_pack.py)"))
+            by_code = {v.get("value_code") or v["value_id"]: v for v in built["values"]}
+            for code, attributes in (overlay.get("values") or {}).items():
+                if (by_code.get(code) or {}).get("attributes") != attributes:
+                    errors.append((rel, (f"{rel}: attributes of {code} differ from {target} or the value is "
+                                         f"missing (run build_eth_oan_pack.py)")))
         else:
             target = f"{BUILT}/{sub}"
             if not os.path.exists(os.path.join(root, target)):

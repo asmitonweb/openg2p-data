@@ -7,6 +7,8 @@
 The SQL upserts the theme and its values (the background image is stored as the
 theme's `dashboard_image` data URI, the only image attribute the registry
 platform's theme model has) and points the registry's configuration row at it.
+A registry entry with a `logo` also sets the configuration row's
+`registry_logo` to that image's data URI.
 Ids are derived from the theme id, so re-running is idempotent. Pure standard
 library: it runs inside the registry db-seed image.
 """
@@ -67,7 +69,15 @@ def render(theme, registry):
         f"{rows}\n"
         'ON CONFLICT ("theme_value_id") DO UPDATE SET "attribute_value" = EXCLUDED."attribute_value";\n\n'
         f'UPDATE "public"."g2p_registry_configuration" SET "registry_theme_id" = {lit(theme_id)};\n'
+        + logo(theme, registry)
     )
+
+
+def logo(theme, registry):
+    path = theme["registries"][registry].get("logo")
+    if not path:
+        return ""
+    return f'UPDATE "public"."g2p_registry_configuration" SET "registry_logo" = {lit(data_uri(THEME_DIR / path))};\n'
 
 
 def main(argv):

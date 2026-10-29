@@ -1,0 +1,23 @@
+{
+  "attribute_id": "DA_SOURCE",
+  "attribute_code": "DA_SOURCE",
+  "attribute_display": "Development Agent record source",
+  "description": "How a Development Agent's record reached the registry: entered on the web form, imported from a file, or pushed by DA Services. Source: OpenAgriNet DA Registry field list (Oct 2026).",
+  "is_hierarchical": false,
+  "values": [
+    {
+      "value_id": "WEB_INTAKE",
+      "value_code": "WEB_INTAKE",
+      "value_display": "Web intake",
+      "sort_order": 1,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "CSV_IMPORT",
+      "value_code": "CSV_IMPORT",
+      "value_display": "File import",
+      "sort_order": 2,
+      "display_i18n": {}
+    }
+  ]
+}

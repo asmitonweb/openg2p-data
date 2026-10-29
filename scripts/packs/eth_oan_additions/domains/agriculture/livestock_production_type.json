@@ -22,14 +22,14 @@
     {
       "value_id": "LPTYPE_DRAFT_POWER",
       "value_code": "DRAFT_POWER",
-      "value_display": "Draft Power",
+      "value_display": "Draft power",
       "sort_order": 3,
       "display_i18n": {}
     },
     {
       "value_id": "LPTYPE_DUAL_PURPOSE",
       "value_code": "DUAL_PURPOSE",
-      "value_display": "Dual Purpose",
+      "value_display": "Dual purpose",
       "sort_order": 4,
       "display_i18n": {}
     },
@@ -50,7 +50,7 @@
     {
       "value_id": "LPTYPE_HIDE_OR_SKIN",
       "value_code": "HIDE_OR_SKIN",
-      "value_display": "Hide Or Skin",
+      "value_display": "Hide or skin",
       "sort_order": 7,
       "display_i18n": {}
     },
@@ -85,7 +85,7 @@
     {
       "value_id": "LPTYPE_PACK_ANIMAL",
       "value_code": "PACK_ANIMAL",
-      "value_display": "Pack Animal",
+      "value_display": "Pack animal",
       "sort_order": 12,
       "display_i18n": {}
     },

@@ -583,6 +583,784 @@ def check_farm_samples(pack_dir, r):
         r.warn(f"farms.json has no record for {len(missing)} sample people")
 
 
+# farmer_ids.json, crop_sown.json and livestock.json: what the Crop Sown and the
+# Livestock registries seed for the sample people. A loader copies these values
+# into intake forms and invents none, so they are checked as a registry would
+# check them: against the pack's lists, against the person's own farms.json, and
+# against the rules the registries' domain services apply (a harvest follows a
+# sowing, a sown area fits the plot, a birth belongs to a female animal).
+
+# The day the livestock samples are written against: an event is never later.
+SAMPLE_AS_OF = datetime.date(2026, 10, 29)
+# Animals in the samples are registered by the start of the last quarter.
+LAST_REGISTRATION = datetime.date(2026, 10, 1)
+# Ethiopia, with a margin: a point outside it is a swapped latitude and longitude.
+ETHIOPIA_BOUNDS = (3.0, 15.5, 32.5, 48.5)  # lat min, lat max, lon min, lon max
+
+FARMER_ID = re.compile(r"^FR-[0-9]{12}$")
+MOBILE = re.compile(r"^0[79][0-9]{8}$")
+# letters, spaces and apostrophes: what the registries accept as a person's name
+PERSON_NAME = re.compile(r"^[A-Za-z]+(?:[ '][A-Za-z]+)*$")
+EAR_TAG = re.compile(r"^ET[0-9]{10}$")
+
+# farms.json names a species by its LIVESTOCK_TYPE code; the registries use
+# LIVESTOCK_SPECIES. This is the one place the two are joined.
+LIVESTOCK_SPECIES_OF_TYPE = {
+    "LSTK_CATTLE": "CATTLE", "LSTK_GOAT": "GOATS", "LSTK_SHEEP": "SHEEP", "LSTK_CHICKEN": "POULTRY",
+    "LSTK_DONKEY": "EQUINES", "LSTK_HORSE": "EQUINES", "LSTK_MULE": "EQUINES", "LSTK_CAMEL": "CAMELS",
+}
+
+# Options the registries' forms fix themselves (static select widgets).
+CROP_OPTIONS = {
+    "cropping_system": {"MONO_CROPPING", "INTER_CROPPING"},
+    "seed_class": {"LOCAL", "IMPROVED"}, "actual_seed_class": {"LOCAL", "IMPROVED"},
+    "seed_source": {"GOVERNMENT / WOREDS AGRICULTURE", "AGRICULTURE COOPERATIVE / UNION",
+                    "PRIVATE SEED ENTERPRISE", "FARMER-TO-FARMER EXCHANGE / SAVED"},
+    "agro_ecological_zone": {"KOLLA", "WOINA_DEGA", "DEGA", "WURCH", "BEREHA"},
+    "fpc_type": {"GREEN"},
+    "crop_maturity_status": {"READY_FOR_HARVEST", "NOT_YET_READY_FOR_HARVEST"},
+    "cluster_crop_maturity_status": {"READY_FOR_HARVEST", "NOT_YET_READY_FOR_HARVEST"},
+    "pesticide_method": {"chemical_spray", "hand_picking", "early_harvesting"},
+    "pesticide_type": {"insecticide", "fungicide", "herbicide", "rodenticide", "bactericide", "nematicide",
+                       "acaricide", "molluscicide", "termiticide", "avicide", "piscicide", "algicide", "virucide"},
+    "weed_control_method": {"chemical_spray", "hand_picking", "early_harvesting"},
+    "weedicide_type": {"pre_emergent", "post_emergent", "systemic", "contact", "graminicide", "broadleaf",
+                       "sedge", "aquatic", "foliar", "soil"},
+    "disease_control_method": {"chemical_spray", "hand_picking", "early_harvesting"},
+    "fungicide_type": {"fungicide", "bactericide"},
+    "growth_stage": {"EMERGENCE", "VEGETATIVE", "FLOWERING", "MATURITY"},
+    "severity_level": {"LOW", "MEDIUM", "HIGH"},
+}
+CROP_OPTIONS["actual_seed_source"] = CROP_OPTIONS["seed_source"]
+CROP_BOOLEANS = {"is_plot_not_registered", "has_pest_disease", "cluster_has_pest_disease"}
+
+# section -> field -> code list. A list the pack does not ship is not checked,
+# but then the field must be left out (see CROP_LEFT_OUT).
+CROP_CODED = {
+    "planning": {"soil_fertility_type": "SOIL_FERTILITY", "season": "CROP_SEASON", "commodity": "CROP_COMMODITY",
+                 "crop_category": "CROP_CATEGORY", "seed_variety": "SEED_VARIETY",
+                 "planned_fertilizer_type": "FERTILIZER_TYPE", "water_source": "WATER_SOURCE"},
+    "clusters": {"season": "CROP_SEASON", "primary_commodity": "CROP_COMMODITY",
+                 "secondary_commodity": "CROP_COMMODITY", "water_source": "WATER_SOURCE"},
+    "cultivation": {"season": "CROP_SEASON", "commodity": "CROP_COMMODITY", "crop_category": "CROP_CATEGORY",
+                    "seed_variety": "SEED_VARIETY", "actual_fertilizer_type": "FERTILIZER_TYPE",
+                    "water_source": "WATER_SOURCE"},
+    "cultivation_clusters": {"season": "CROP_SEASON", "primary_commodity": "CROP_COMMODITY",
+                             "secondary_commodity": "CROP_COMMODITY", "water_source": "WATER_SOURCE"},
+    "sowing": {"cluster_season": "CROP_SEASON", "season": "CROP_SEASON", "commodity": "CROP_COMMODITY",
+               "fertilizer_type": "FERTILIZER_TYPE"},
+    "infestations": {"commodity": "CROP_COMMODITY", "infestation_type": "INFESTATION_TYPE"},
+    "harvest": {"commodity": "CROP_COMMODITY"},
+}
+# Fields of the registries' forms whose list is not in the pack (at the time of
+# writing): the samples leave them out rather than guess a code.
+CROP_LEFT_OUT = {
+    "plot_category": "PLOT_CATEGORY", "ownership_type": "OWNERSHIP_TYPE", "crop_variety": "CROP_VARIETY",
+    "water_source_method": "WATER_SOURCE_METHOD", "water_source_frequency": "WATER_SOURCE_FREQUENCY",
+    "land_prep_method": "LAND_PREP_METHOD", "cultivation_type": "MACHINERY", "pest_type": "PEST",
+    "weed_type": "WEED", "disease_type": "CROP_DISEASE",
+}
+CROP_SECTIONS = ("planning", "clusters", "cultivation", "cultivation_clusters", "sowing", "infestations", "harvest")
+CROP_DATES = {
+    "planning": ("start_gc", "end_gc", "planned_date"), "clusters": ("start_gc", "end_gc", "establishing_date"),
+    "cultivation": ("start_gc", "end_gc", "actual_cultivation_date"),
+    "cultivation_clusters": ("start_gc", "end_gc", "establishing_date"), "sowing": ("sowing_date",),
+    "infestations": ("observation_date",), "harvest": ("harvest_date", "cluster_harvest_date"),
+}
+# Free text a person reads: no underscores or hyphens (codes keep theirs).
+CROP_FREE_TEXT = (
+    "land_id", "cluster_id", "cluster_name", "infestation_id", "pest_name", "pesticide_name", "pesticide_frequency",
+    "weed_name", "weedicide_name", "weedicide_frequency", "disease_name", "fungicide_name",
+    "disease_frequency_of_application", "nutrient_name", "shock_event_name", "local_name", "scientific_name",
+)
+CROP_NAMES = ("da_name", "supervisor_name")
+CROP_MOBILES = ("da_mobile_number", "supervisor_mobile_number")
+
+LIVESTOCK_OPTIONS = {
+    "animals": {"gender": {"MALE", "FEMALE", "MIXED"}, "health_status": {"HEALTHY", "SICK", "QUARANTINED", "DECEASED"},
+                "vaccination_status": {"UP_TO_DATE", "OVERDUE", "NONE"}},
+    "health_events": {"event_type": {"DISEASE", "INJURY", "TREATMENT", "RECOVERY"},
+                      "location": {"HOME", "VETERINARY", "MARKET", "FIELD", "QUARANTINE_CENTER", "OTHER"}},
+    "vaccinations": {},
+    "vital_events": {"event_type": {"BIRTH", "MORTALITY", "DISEASE"},
+                     "cause": {"DISEASE", "ACCIDENT", "PREDATION", "SLAUGHTER", "UNKNOWN"},
+                     "location": {"HOME", "VETERINARY", "MARKET", "FIELD", "QUARANTINE_CENTER", "OTHER"},
+                     "offspring_gender": {"MALE", "FEMALE", "MIXED"}},
+    "breeding": {"event_type": {"NATURAL", "AI"}, "outcome": {"PENDING", "SUCCESSFUL", "FAILED"},
+                 "location": {"HOME", "VETERINARY", "MARKET", "FIELD", "QUARANTINE_CENTER", "OTHER"}},
+}
+LIVESTOCK_CODED = {
+    "animals": {"species": "LIVESTOCK_SPECIES", "breed": "LIVESTOCK_BREED"},
+    "health_events": {"species": "LIVESTOCK_SPECIES", "disease_type": "LIVESTOCK_DISEASE"},
+    "vaccinations": {"species": "LIVESTOCK_SPECIES", "vaccine_type": "VACCINE_TYPE"},
+    "vital_events": {"species": "LIVESTOCK_SPECIES", "disease_type": "LIVESTOCK_DISEASE"},
+    "breeding": {"species": "LIVESTOCK_SPECIES"},
+}
+LIVESTOCK_SECTIONS = ("animals", "health_events", "vaccinations", "vital_events", "breeding")
+LIVESTOCK_DATES = {
+    "animals": ("date_of_birth", "registration_date"), "health_events": ("date_onset", "date_resolution"),
+    "vaccinations": ("vaccination_date", "next_due_date"), "vital_events": ("event_date", "date_onset", "date_resolution"),
+    "breeding": ("breeding_date", "expected_calving_date", "pregnancy_confirmation_date"),
+}
+LIVESTOCK_FREE_TEXT = (
+    "secondary_identifier", "batch_number", "treatment", "location_details", "notes", "sire_or_semen_id",
+    "ai_technique", "semen_batch_number", "reporting_officer", "administered_by",
+)
+LIVESTOCK_NAMES = ("veterinarian_name", "ai_technician_name", "administered_by", "reporting_officer")
+# Two breedings of the same kind within this many days are one cycle logged twice.
+BREEDING_CYCLE_DAYS = 21
+
+
+def _agriculture_lists(pack_dir):
+    """{list id: {value_code: value}} of the pack's code lists and agriculture lists."""
+    lists = {}
+    for sub in ("codelists", os.path.join("domains", "agriculture")):
+        dd = os.path.join(pack_dir, sub)
+        if os.path.isdir(dd):
+            for fn in os.listdir(dd):
+                if fn.endswith(".json"):
+                    doc = read_json(os.path.join(dd, fn))
+                    lists[doc.get("attribute_id")] = {v.get("value_code"): v for v in doc.get("values", [])}
+    return lists
+
+
+def _iso(value):
+    """A real YYYY-MM-DD date, or None."""
+    if not isinstance(value, str) or not re.match(r"^[0-9]{4}-[0-9]{2}-[0-9]{2}$", value):
+        return None
+    try:
+        return datetime.date.fromisoformat(value)
+    except ValueError:
+        return None
+
+
+def _number(value):
+    return value if isinstance(value, (int, float)) and not isinstance(value, bool) else None
+
+
+def check_farmer_ids(pack_dir, r):
+    """Every sample person has a Farmer ID, as the Farmer Registry would issue it.
+
+    The Crop Sown and Livestock registries identify a farmer by Farmer ID, so a
+    sample person without one cannot be seeded there. The ids follow the people's
+    numbers (ETH-IND-0007 is FR-100000000007), so a reader can tell whose it is.
+    """
+    path = os.path.join(pack_dir, "samples", "farmer_ids.json")
+    if not os.path.exists(path):
+        return
+    people = {i.get("individual_id") for i in read_json(os.path.join(pack_dir, "samples", "individuals.json"))}
+    seen, farmer_ids = set(), set()
+    for rec in read_json(path):
+        ident, fid = rec.get("individual_id"), rec.get("farmer_id")
+        if ident not in people:
+            r.error(f"farmer_ids.json names unknown individual {ident}")
+        if ident in seen:
+            r.error(f"farmer_ids.json has more than one id for {ident}")
+        seen.add(ident)
+        if not isinstance(fid, str) or not FARMER_ID.match(fid):
+            r.error(f"farmer_ids.json: {ident} has farmer_id={fid!r}, which is not FR- and twelve digits")
+            continue
+        if fid in farmer_ids:
+            r.error(f"farmer_ids.json: farmer_id {fid} is used by more than one person")
+        farmer_ids.add(fid)
+        number = str(ident).rsplit("-", 1)[-1]
+        if number.isdigit() and fid != f"FR-1000000000{int(number) % 100:02d}":
+            r.error(f"farmer_ids.json: {ident} has {fid}, expected FR-1000000000{int(number) % 100:02d}")
+    if people - seen:
+        r.error(f"farmer_ids.json has no id for {sorted(people - seen)}")
+
+
+def _check_free_text(r, label, row, fields):
+    for field in fields:
+        val = row.get(field)
+        if isinstance(val, str) and ("_" in val or "-" in val):
+            r.error(f"{label}: {field}={val!r} has an underscore or hyphen; free text reads like a person wrote it")
+
+
+def _check_staff(r, label, row):
+    for field in CROP_NAMES:
+        if row.get(field) is not None and not (isinstance(row[field], str) and PERSON_NAME.match(row[field])):
+            r.error(f"{label}: {field}={row[field]!r} is not a person's name (letters and spaces)")
+    for field in CROP_MOBILES:
+        if row.get(field) is not None and not (isinstance(row[field], str) and MOBILE.match(row[field])):
+            r.error(f"{label}: {field}={row[field]!r} is not an Ethiopian mobile number (09XXXXXXXX)")
+
+
+def _check_coded(r, label, row, fields, lists):
+    for field, attr in fields.items():
+        val = row.get(field)
+        if val is None:
+            continue
+        if attr not in lists:
+            r.error(f"{label}: {field} is set but the pack has no {attr} list; leave the field out")
+        elif val not in lists[attr]:
+            r.error(f"{label}: {field}={val!r} is not a value of {attr}")
+
+
+def _check_location(r, label, loc):
+    if not isinstance(loc, dict) or _number(loc.get("latitude")) is None or _number(loc.get("longitude")) is None:
+        r.error(f"{label}: location needs a numeric latitude and longitude")
+        return
+    lat, lon = loc["latitude"], loc["longitude"]
+    lat_min, lat_max, lon_min, lon_max = ETHIOPIA_BOUNDS
+    if not (lat_min <= lat <= lat_max and lon_min <= lon <= lon_max):
+        r.error(f"{label}: location ({lat}, {lon}) is not in Ethiopia")
+
+
+def check_crop_sown_samples(pack_dir, r):
+    """Crop Sown samples: the same people, lands, crops and season as farms.json.
+
+    One record per farmer and crop year, so one production season per person:
+    a person whose farms.json crops sit in several seasons is seeded with one of
+    them. Every line then follows the stages a farmer reports in order (plan,
+    cultivate, sow, observe, harvest), on a land the person owns, within the
+    land's size.
+    """
+    path = os.path.join(pack_dir, "samples", "crop_sown.json")
+    if not os.path.exists(path):
+        return
+    if not os.path.exists(os.path.join(pack_dir, "samples", "farms.json")):
+        r.error("%s needs samples/farms.json" % os.path.basename(path))
+        return
+    samples = os.path.join(pack_dir, "samples")
+    farms = {f.get("individual_id"): f for f in read_json(os.path.join(samples, "farms.json"))}
+    lists = _agriculture_lists(pack_dir)
+    seen = set()
+    infestation_types, edge = set(), {"multi_land": 0, "inter": 0, "cluster_sowing": 0, "cluster_harvest": 0,
+                                      "loss": 0, "planning_only": 0}
+    for rec in read_json(path):
+        ident = rec.get("individual_id")
+        who = f"crop_sown.json {ident}"
+        farm = farms.get(ident)
+        if farm is None:
+            r.error(f"{who}: no farms.json record for this person")
+            continue
+        if ident in seen:
+            r.error(f"{who}: more than one record for this person")
+        seen.add(ident)
+        season = rec.get("production_season")
+        if "CROP_SEASON" in lists and season not in lists["CROP_SEASON"]:
+            r.error(f"{who}: production_season={season!r} is not a value of CROP_SEASON")
+        lands = {land.get("land_ref"): land.get("land_size") for land in farm.get("lands", [])}
+        farm_crop = {c.get("land_ref"): c for c in farm.get("crops", [])}
+        if not any(c.get("season") == season for c in farm_crop.values()):
+            r.error(f"{who}: none of the person's farms.json crops is in {season}")
+        _check_location(r, who, rec.get("location"))
+        for section in CROP_SECTIONS:
+            if not isinstance(rec.get(section), list):
+                r.error(f"{who}: {section} must be a list (empty when there are none)")
+                rec[section] = []
+        label_of, ref_of = {}, {}  # land_ref -> land_id and back
+        rows = [(s, i, row) for s in CROP_SECTIONS for i, row in enumerate(rec[s])]
+        for section, i, row in rows:
+            label = f"{who} {section}[{i}]"
+            ref, land_id = row.get("land_ref"), row.get("land_id")
+            if ref not in lands:
+                r.error(f"{label}: land_ref {ref!r} is not one of the person's lands in farms.json")
+            if not isinstance(land_id, str) or not land_id.strip():
+                r.error(f"{label}: land_id is required")
+            else:
+                if label_of.setdefault(ref, land_id) != land_id:
+                    r.error(f"{label}: land_ref {ref} is called {land_id!r} here and {label_of[ref]!r} elsewhere")
+                if ref_of.setdefault(land_id, ref) != ref:
+                    r.error(f"{label}: land_id {land_id!r} stands for {ref} and {ref_of[land_id]}")
+            _check_coded(r, label, row, CROP_CODED[section], lists)
+            for field, allowed in CROP_OPTIONS.items():
+                if row.get(field) is not None and row[field] not in allowed:
+                    r.error(f"{label}: {field}={row[field]!r} is not an option of the form")
+            for field in CROP_BOOLEANS & row.keys():
+                if not isinstance(row[field], bool):
+                    r.error(f"{label}: {field} must be true or false")
+            for field, attr in CROP_LEFT_OUT.items():
+                if field in row and attr not in lists:
+                    r.error(f"{label}: {field} is set but the pack has no {attr} list; leave the field out")
+            if section == "infestations" and "cluster_status" in row:
+                r.error(f"{label}: cluster_status is a CLUSTER_STATUS list the pack lacks; leave it out")
+            _check_free_text(r, label, row, CROP_FREE_TEXT)
+            _check_staff(r, label, row)
+            for field in CROP_DATES[section]:
+                if row.get(field) is not None and _iso(row[field]) is None:
+                    r.error(f"{label}: {field}={row[field]!r} is not an ISO date")
+                elif _iso(row.get(field)) and field != "establishing_date" and _iso(row[field]).year != REFERENCE_YEAR:
+                    r.error(f"{label}: {field}={row[field]} is not in {REFERENCE_YEAR}; the loader moves dates to the crop year")
+            for field in ("planned_area", "actual_crop_area", "area_sown", "area_harvested", "cluster_area_sown",
+                          "cluster_area_harvested", "qty_harvested", "cluster_qty_harvested"):
+                if row.get(field) is not None and not (_number(row[field]) is not None and row[field] > 0):
+                    r.error(f"{label}: {field}={row[field]!r} must be a positive number")
+            # the season of the line is the season of the record
+            for field in ("season", "cluster_season"):
+                if row.get(field) is not None and row[field] != season:
+                    r.error(f"{label}: {field}={row[field]} but the production season is {season}")
+            if section in ("planning", "cultivation") and row.get("season") != season:
+                r.error(f"{label}: season is required and must be the production season {season}")
+            # the crop on the land is the crop of farms.json
+            commodity = row.get("commodity") or row.get("primary_commodity")
+            if commodity is not None and ref in farm_crop and commodity != farm_crop[ref].get("commodity"):
+                r.error(f"{label}: {commodity} on {ref}, but farms.json has {farm_crop[ref].get('commodity')}")
+            if section in ("planning", "cultivation") and not row.get("commodity"):
+                r.error(f"{label}: commodity is required")
+
+        # clusters named by sowing and harvest rows
+        cluster_keys = {(c.get("land_ref"), c.get("cluster_name")) for c in rec["clusters"]}
+        cultivation_cluster_keys = {(c.get("land_ref"), c.get("cluster_name")) for c in rec["cultivation_clusters"]}
+        for section in ("clusters", "cultivation_clusters"):
+            for i, c in enumerate(rec[section]):
+                label = f"{who} {section}[{i}]"
+                timad, area = _number(c.get("cluster_area_timad")), _number(c.get("cluster_area_hectare"))
+                if not c.get("cluster_name"):
+                    r.error(f"{label}: cluster_name is required")
+                if timad is not None and area is not None and abs(timad * 0.25 - area) > 1e-6:
+                    r.error(f"{label}: cluster_area_hectare={area} but {timad} timad is {timad * 0.25} ha")
+                for field in ("cluster_plan", "collected_land"):
+                    if _number(c.get(field)) is not None and area is not None and c[field] > area:
+                        r.error(f"{label}: {field}={c[field]} exceeds cluster_area_hectare={area}")
+                if _number(c.get("collected_by_combiner")) is not None and _number(c.get("cluster_plan")) is not None \
+                        and c["collected_by_combiner"] > c["cluster_plan"]:
+                    r.error(f"{label}: collected_by_combiner exceeds cluster_plan")
+        independent = {}  # (land_ref, commodity) -> {stage: row}
+        clustered = {}  # (land_ref, cluster_name) -> {stage: row}
+        for section in ("sowing", "harvest"):
+            for i, row in enumerate(rec[section]):
+                label = f"{who} {section}[{i}]"
+                status = row.get("cluster_status")
+                if not (isinstance(status, list) and len(status) == 1 and status[0] in ("CLUSTER", "INDEPENDENT")):
+                    r.error(f"{label}: cluster_status must be [\"CLUSTER\"] or [\"INDEPENDENT\"]")
+                    continue
+                if not row.get("commodity"):
+                    r.error(f"{label}: commodity is required")
+                key = (row.get("land_ref"), row.get("cluster_name") if status[0] == "CLUSTER" else row.get("commodity"))
+                if status[0] == "CLUSTER":
+                    if key not in cluster_keys or key not in cultivation_cluster_keys:
+                        r.error(f"{label}: cluster {row.get('cluster_name')!r} on {row.get('land_ref')} has no matching "
+                                f"clusters and cultivation_clusters rows")
+                    if clustered.setdefault(key, {}).setdefault(section, row) is not row:
+                        r.error(f"{label}: a second {section} row for the same cluster and land")
+                    edge["cluster_" + section] += 1
+                    needed = ("cluster_area_sown",) if section == "sowing" else ("cluster_harvest_date", "cluster_qty_harvested")
+                else:
+                    if row.get("cluster_name"):
+                        r.error(f"{label}: an INDEPENDENT row carries a cluster_name")
+                    if independent.setdefault(key, {}).setdefault(section, row) is not row:
+                        r.error(f"{label}: a second {section} row for the same crop and land")
+                    needed = ("area_sown", "sowing_date") if section == "sowing" else ("harvest_date", "qty_harvested")
+                for field in needed:
+                    if row.get(field) is None:
+                        r.error(f"{label}: {field} is required on a {status[0]} row")
+                if section == "harvest":
+                    qty = row.get("qty_harvested") if status[0] == "INDEPENDENT" else row.get("cluster_qty_harvested")
+                    stored = row.get("qty_stored" if status[0] == "INDEPENDENT" else "cluster_qty_stored") or 0
+                    sold = row.get("qty_sold" if status[0] == "INDEPENDENT" else "cluster_qty_sold") or 0
+                    if qty is not None and stored + sold > qty:
+                        r.error(f"{label}: stored and sold together exceed the harvested quantity")
+                    loss = row.get("post_harvest_loss_pct" if status[0] == "INDEPENDENT" else "cluster_post_harvest_loss_pct")
+                    if loss is not None and not (_number(loss) is not None and 0 <= loss <= 100):
+                        r.error(f"{label}: post harvest loss must be between 0 and 100")
+                    if loss:
+                        edge["loss"] += 1
+        for section in ("planning", "cultivation"):
+            for row in rec[section]:
+                independent.setdefault((row.get("land_ref"), row.get("commodity")), {}).setdefault(section, row)
+        for i, row in enumerate(rec["infestations"]):
+            label = f"{who} infestations[{i}]"
+            independent.setdefault((row.get("land_ref"), row.get("commodity")), {}).setdefault("infestation", row)
+            kind = row.get("infestation_type")
+            infestation_types.add(kind)
+            name_field = {"INFT_PEST": "pest_name", "INFT_WEED": "weed_name", "INFT_DISEASE": "disease_name"}.get(kind)
+            if name_field and not row.get(name_field):
+                r.error(f"{label}: a {kind} row needs {name_field}")
+            # a number: the registry stores it in a numeric column, where "12%" fails the save
+            damage = row.get("estimated_damage_pct")
+            if damage is not None and not (_number(damage) is not None and 0 <= damage <= 100):
+                r.error(f"{label}: estimated_damage_pct={damage!r} must be a number from 0 to 100")
+
+        # stages of a land follow one another
+        for (ref, what), stages in sorted(independent.items(), key=lambda kv: str(kv[0])):
+            label = f"{who} {ref} {what}"
+            plan, cult, sow = stages.get("planning"), stages.get("cultivation"), stages.get("sowing")
+            infest, harv = stages.get("infestation"), stages.get("harvest")
+            if cult and not plan:
+                r.error(f"{label}: cultivated but never planned")
+            if sow and not cult:
+                r.error(f"{label}: sown but never cultivated")
+            if infest and not sow:
+                r.error(f"{label}: an infestation without a sowing")
+            if harv and not sow:
+                r.error(f"{label}: harvested but never sown")
+            if sow and bool(sow.get("has_pest_disease")) != bool(infest):
+                r.error(f"{label}: has_pest_disease does not match the infestation rows")
+            dates = [("planned_date", plan), ("actual_cultivation_date", cult), ("sowing_date", sow),
+                     ("observation_date", infest), ("harvest_date", harv)]
+            dates = [(f, _iso(row.get(f))) for f, row in dates if row and _iso(row.get(f))]
+            for (fa, da), (fb, db) in zip(dates, dates[1:]):
+                if not da < db:
+                    r.error(f"{label}: {fa} {da} must be before {fb} {db}")
+            window = plan or cult
+            start, end = (_iso(window.get("start_gc")), _iso(window.get("end_gc"))) if window else (None, None)
+            for f, d in dates:
+                if (start and d < start) or (end and d > end):
+                    r.error(f"{label}: {f} {d} is outside the season window {start} to {end}")
+            if cult and sow and _number(sow.get("area_sown")) and _number(cult.get("actual_crop_area")) \
+                    and sow["area_sown"] > cult["actual_crop_area"]:
+                r.error(f"{label}: area_sown exceeds the cultivated area")
+            if sow and harv and _number(harv.get("area_harvested")) and _number(sow.get("area_sown")) \
+                    and harv["area_harvested"] > sow["area_sown"]:
+                r.error(f"{label}: area_harvested exceeds the sown area")
+        for (ref, name), stages in sorted(clustered.items(), key=lambda kv: str(kv[0])):
+            label = f"{who} {ref} cluster {name}"
+            plan = next((c for c in rec["clusters"] if (c.get("land_ref"), c.get("cluster_name")) == (ref, name)), None)
+            cult = next((c for c in rec["cultivation_clusters"]
+                         if (c.get("land_ref"), c.get("cluster_name")) == (ref, name)), None)
+            harv = stages.get("harvest")
+            plan_d, cult_d = _iso(plan.get("start_gc")) if plan else None, _iso(cult.get("start_gc")) if cult else None
+            harv_d = _iso(harv.get("cluster_harvest_date")) if harv else None
+            if plan_d and cult_d and not plan_d < cult_d:
+                r.error(f"{label}: cultivation {cult_d} must be after planning {plan_d}")
+            if cult_d and harv_d and not cult_d < harv_d:
+                r.error(f"{label}: harvest {harv_d} must be after cultivation {cult_d}")
+            end = _iso(cult.get("end_gc")) if cult else None
+            if harv_d and end and harv_d > end:
+                r.error(f"{label}: harvest {harv_d} is after the cluster's season end {end}")
+            sown = stages.get("sowing", {}).get("cluster_area_sown")
+            cultivated = sum(c.get("actual_crop_area") or 0 for c in rec["cultivation"] if c.get("land_ref") == ref)
+            if _number(sown) and sown > cultivated:
+                r.error(f"{label}: cluster_area_sown {sown} exceeds the {cultivated} ha cultivated on {ref}")
+            if harv and _number(harv.get("cluster_area_harvested")) and _number(sown) \
+                    and harv["cluster_area_harvested"] > sown:
+                r.error(f"{label}: cluster_area_harvested exceeds cluster_area_sown")
+
+        # the plot is only so large
+        for ref, size in lands.items():
+            if not _number(size):
+                continue
+            for section, field in (("planning", "planned_area"), ("cultivation", "actual_crop_area"),
+                                   ("sowing", "area_sown")):
+                total = sum(row.get(field) or 0 for row in rec[section] if row.get("land_ref") == ref)
+                if section == "sowing":
+                    total += sum(row.get("cluster_area_sown") or 0 for row in rec[section] if row.get("land_ref") == ref)
+                if total > size + 1e-6:
+                    r.error(f"{who} {ref}: {field} adds up to {total:g} ha on a {size:g} ha land")
+            for section, cluster_section, field in (("planning", "clusters", "planned_area"),
+                                                    ("cultivation", "cultivation_clusters", "actual_crop_area")):
+                total = sum(row.get(field) or 0 for row in rec[section] if row.get("land_ref") == ref) + \
+                    sum(c.get("cluster_area_hectare") or 0 for c in rec[cluster_section] if c.get("land_ref") == ref)
+                if total > size + 1e-6:
+                    r.error(f"{who} {ref}: {field} and the cluster area add up to {total:g} ha on a {size:g} ha land")
+        # every crop of the season is planned
+        for ref, crop in farm_crop.items():
+            if crop.get("season") == season and not any(p.get("land_ref") == ref for p in rec["planning"]):
+                r.error(f"{who}: the {crop.get('commodity')} on {ref} (in {season}) has no planning line")
+        if len({p.get("land_ref") for p in rec["planning"]}) >= 2:
+            edge["multi_land"] += 1
+        edge["inter"] += sum(1 for p in rec["planning"] if p.get("cropping_system") == "INTER_CROPPING")
+        if rec["planning"] and not any(rec[s] for s in CROP_SECTIONS if s not in ("planning", "clusters")):
+            edge["planning_only"] += 1
+
+    with_crops = {i for i, f in farms.items() if f.get("crops")}
+    if with_crops - seen:
+        r.error(f"crop_sown.json has no record for {sorted(with_crops - seen)}, who have crops in farms.json")
+    if seen - with_crops:
+        r.error(f"crop_sown.json has records for {sorted(seen - with_crops)}, who have no crops in farms.json")
+    wanted = {"INFT_PEST", "INFT_WEED", "INFT_DISEASE"} & set(lists.get("INFESTATION_TYPE", {}))
+    if wanted - infestation_types:
+        r.error(f"crop_sown.json has no infestation of type {sorted(wanted - infestation_types)}")
+    for what, ok, text in (
+            ("multi_land", edge["multi_land"] >= 2, "two people with crop lines on different lands"),
+            ("inter", edge["inter"] >= 1, "an INTER_CROPPING line"),
+            ("cluster", edge["cluster_sowing"] >= 2 and edge["cluster_harvest"] >= 2, "two CLUSTER sowing and harvest lines"),
+            ("loss", edge["loss"] >= 1, "a harvest with a post harvest loss"),
+            ("planning_only", edge["planning_only"] >= 1, "a person with planning only")):
+        if not ok:
+            r.error(f"crop_sown.json must keep {text}, so registries see the case")
+
+
+def check_livestock_samples(pack_dir, r):
+    """Livestock samples: the animals of farms.json, and what happened to them.
+
+    Heads per species equal farms.json head_count. An event names an animal of the
+    same person and agrees with it: a mortality is a deceased animal, a disease a
+    sick one, a birth or a breeding a female, and a vaccine belongs to the
+    animal's species.
+    """
+    path = os.path.join(pack_dir, "samples", "livestock.json")
+    if not os.path.exists(path):
+        return
+    if not os.path.exists(os.path.join(pack_dir, "samples", "farms.json")):
+        r.error("%s needs samples/farms.json" % os.path.basename(path))
+        return
+    samples = os.path.join(pack_dir, "samples")
+    farms = {f.get("individual_id"): f for f in read_json(os.path.join(samples, "farms.json"))}
+    lists = _agriculture_lists(pack_dir)
+    seen = set()
+    edge = {"sick_disease": 0, "overdue": 0, "birth": 0, "mortality": 0, "ai": 0, "natural": 0, "animals_only": 0}
+    tags_in_file, secondary_in_file = set(), set()
+    for rec in read_json(path):
+        ident = rec.get("individual_id")
+        who = f"livestock.json {ident}"
+        farm = farms.get(ident)
+        if farm is None:
+            r.error(f"{who}: no farms.json record for this person")
+            continue
+        if ident in seen:
+            r.error(f"{who}: more than one record for this person")
+        seen.add(ident)
+        _check_location(r, who, rec.get("location"))
+        staff = rec.get("survey_personnel") or {}
+        for field in ("surveyor_name", "supervisor_name"):
+            if not (isinstance(staff.get(field), str) and PERSON_NAME.match(staff[field])):
+                r.error(f"{who}: survey_personnel.{field}={staff.get(field)!r} is not a person's name")
+        for field in ("surveyor_mobile_number", "supervisor_mobile_number"):
+            if not (isinstance(staff.get(field), str) and MOBILE.match(staff[field])):
+                r.error(f"{who}: survey_personnel.{field}={staff.get(field)!r} is not an Ethiopian mobile number (09XXXXXXXX)")
+        for section in LIVESTOCK_SECTIONS:
+            if not isinstance(rec.get(section), list):
+                r.error(f"{who}: {section} must be a list (empty when there are none)")
+                rec[section] = []
+        animals = {}  # normalised identifier -> animal
+        heads = {}
+        for i, a in enumerate(rec["animals"]):
+            label = f"{who} animals[{i}]"
+            for field in ("species", "breed", "gender", "health_status", "vaccination_status", "registration_date",
+                          "weight", "quantity"):
+                if a.get(field) is None:
+                    r.error(f"{label}: {field} is required")
+            tag = re.sub(r"\s+", "", str(a.get("ear_tag_id") or "")).upper()
+            if not EAR_TAG.match(tag):
+                r.error(f"{label}: ear_tag_id={a.get('ear_tag_id')!r} is not ET and ten digits (spaces allowed)")
+            elif tag in tags_in_file:
+                r.error(f"{label}: ear_tag_id {a.get('ear_tag_id')!r} is used twice in livestock.json")
+            tags_in_file.add(tag)
+            animals[tag] = a
+            second = a.get("secondary_identifier")
+            if second is not None:
+                if second in secondary_in_file:
+                    r.error(f"{label}: secondary_identifier {second!r} is used twice in livestock.json")
+                secondary_in_file.add(second)
+                animals[second] = a
+            _check_coded(r, label, a, LIVESTOCK_CODED["animals"], lists)
+            for field, allowed in LIVESTOCK_OPTIONS["animals"].items():
+                if a.get(field) is not None and a[field] not in allowed:
+                    r.error(f"{label}: {field}={a[field]!r} is not an option of the form")
+            qty = a.get("quantity")
+            if qty is not None and not (isinstance(qty, int) and not isinstance(qty, bool) and qty >= 1):
+                r.error(f"{label}: quantity must be a whole number of at least 1")
+            elif isinstance(qty, int):
+                if qty > 1 and a.get("gender") != "MIXED":
+                    r.error(f"{label}: a herd row (quantity {qty}) has gender MIXED")
+                if qty == 1 and a.get("gender") == "MIXED":
+                    r.error(f"{label}: gender MIXED belongs to a herd row (quantity above 1)")
+                heads[(a.get("species"), a.get("breed"))] = heads.get((a.get("species"), a.get("breed")), 0) + qty
+            if a.get("weight") is not None and not (_number(a["weight"]) is not None and a["weight"] > 0):
+                r.error(f"{label}: weight must be a positive number")
+            for field in LIVESTOCK_DATES["animals"]:
+                if a.get(field) is not None and _iso(a[field]) is None:
+                    r.error(f"{label}: {field}={a[field]!r} is not an ISO date")
+            born, registered = _iso(a.get("date_of_birth")), _iso(a.get("registration_date"))
+            if born and born > SAMPLE_AS_OF:
+                r.error(f"{label}: born {born}, after {SAMPLE_AS_OF}")
+            if registered and (registered.year != REFERENCE_YEAR or registered > LAST_REGISTRATION):
+                r.error(f"{label}: registration_date {registered} must be in {REFERENCE_YEAR}, not after {LAST_REGISTRATION}")
+            if born and registered and registered < born:
+                r.error(f"{label}: registered {registered} before it was born {born}")
+            if born is None and a.get("quantity") == 1:
+                r.error(f"{label}: an individual animal needs date_of_birth")
+            _check_free_text(r, label, a, LIVESTOCK_FREE_TEXT)
+        # heads per species and breed are the farms.json head_count
+        expected = {}
+        for stock in farm.get("livestock", []):
+            key = (LIVESTOCK_SPECIES_OF_TYPE.get(stock.get("livestock_type")), stock.get("breed"))
+            expected[key] = expected.get(key, 0) + (stock.get("head_count") or 0)
+        for key in sorted(set(expected) | set(heads), key=str):
+            if expected.get(key, 0) != heads.get(key, 0):
+                r.error(f"{who}: {heads.get(key, 0)} head of {key[0]} {key[1]}, farms.json has {expected.get(key, 0)}")
+
+        def animal_of(section, i, row):
+            label = f"{who} {section}[{i}]"
+            key = re.sub(r"\s+", "", str(row.get("ear_tag_id") or "")).upper()
+            animal = animals.get(key) or animals.get(row.get("ear_tag_id"))
+            if animal is None:
+                r.error(f"{label}: ear_tag_id {row.get('ear_tag_id')!r} is not an animal of this person")
+            elif row.get("species") != animal.get("species"):
+                r.error(f"{label}: species {row.get('species')!r}, but the animal is {animal.get('species')!r}")
+            _check_coded(r, label, row, LIVESTOCK_CODED[section], lists)
+            for field, allowed in LIVESTOCK_OPTIONS[section].items():
+                if row.get(field) is not None and row[field] not in allowed:
+                    r.error(f"{label}: {field}={row[field]!r} is not an option of the form")
+            for field in LIVESTOCK_DATES[section]:
+                if row.get(field) is not None:
+                    d = _iso(row[field])
+                    if d is None:
+                        r.error(f"{label}: {field}={row[field]!r} is not an ISO date")
+                    elif field not in ("next_due_date", "expected_calving_date") and d > SAMPLE_AS_OF:
+                        r.error(f"{label}: {field} {d} is after {SAMPLE_AS_OF}")
+            _check_free_text(r, label, row, LIVESTOCK_FREE_TEXT)
+            for field in LIVESTOCK_NAMES:
+                if row.get(field) is not None and not (isinstance(row[field], str) and PERSON_NAME.match(row[field])):
+                    r.error(f"{label}: {field}={row[field]!r} is not a person's name (letters and spaces)")
+            return label, animal
+
+        vaccinated = set()
+        for i, v in enumerate(rec["vaccinations"]):
+            label, animal = animal_of("vaccinations", i, v)
+            for field in ("vaccine_type", "vaccination_date"):
+                if v.get(field) is None:
+                    r.error(f"{label}: {field} is required")
+            vaccine = lists.get("VACCINE_TYPE", {}).get(v.get("vaccine_type"))
+            if vaccine and (vaccine.get("attributes") or {}).get("species") != v.get("species"):
+                r.error(f"{label}: {v.get('vaccine_type')} is a vaccine for "
+                        f"{(vaccine.get('attributes') or {}).get('species')}, not {v.get('species')}")
+            if animal is not None:
+                vaccinated.add(id(animal))
+                born, given = _iso(animal.get("date_of_birth")), _iso(v.get("vaccination_date"))
+                if born and given and given < born:
+                    r.error(f"{label}: vaccinated {given} before the animal was born {born}")
+                if animal.get("vaccination_status") != "UP_TO_DATE":
+                    r.error(f"{label}: a vaccinated animal is UP_TO_DATE, this one is {animal.get('vaccination_status')}")
+        for i, a in enumerate(rec["animals"]):
+            if a.get("vaccination_status") == "UP_TO_DATE" and id(a) not in vaccinated:
+                r.error(f"{who} animals[{i}]: UP_TO_DATE without a vaccination row")
+            if a.get("vaccination_status") == "OVERDUE":
+                edge["overdue"] += 1
+
+        sick_by_event = set()
+        for i, h in enumerate(rec["health_events"]):
+            label, animal = animal_of("health_events", i, h)
+            kind = h.get("event_type")
+            if kind is None:
+                r.error(f"{label}: event_type is required")
+            if kind == "DISEASE" and not h.get("disease_type"):
+                r.error(f"{label}: a DISEASE event needs disease_type")
+            if kind != "RECOVERY" and not h.get("date_onset"):
+                r.error(f"{label}: date_onset is required for {kind}")
+            if kind not in ("TREATMENT", None) and not h.get("date_resolution"):
+                r.error(f"{label}: date_resolution is required for {kind}")
+            onset, resolved = _iso(h.get("date_onset")), _iso(h.get("date_resolution"))
+            if onset and resolved and resolved < onset:
+                r.error(f"{label}: resolved {resolved} before onset {onset}")
+            if h.get("is_notifiable") is not None and not isinstance(h["is_notifiable"], bool):
+                r.error(f"{label}: is_notifiable must be true or false")
+            if animal is not None and kind in ("DISEASE", "INJURY"):
+                sick_by_event.add(id(animal))
+                if animal.get("health_status") != "SICK":
+                    r.error(f"{label}: an animal with a {kind} event is SICK, this one is {animal.get('health_status')}")
+                if kind == "DISEASE":
+                    edge["sick_disease"] += 1
+            if animal is not None and kind == "RECOVERY" and animal.get("health_status") != "HEALTHY":
+                r.error(f"{label}: an animal that recovered is HEALTHY")
+
+        died = set()
+        for i, e in enumerate(rec["vital_events"]):
+            label, animal = animal_of("vital_events", i, e)
+            kind = e.get("event_type")
+            for field in ("event_type", "event_date"):
+                if e.get(field) is None:
+                    r.error(f"{label}: {field} is required")
+            if kind == "DISEASE" and not e.get("disease_type"):
+                r.error(f"{label}: a DISEASE event needs disease_type")
+            if kind != "BIRTH" and e.get("offspring_count"):
+                r.error(f"{label}: offspring_count belongs to a BIRTH event")
+            if kind == "BIRTH":
+                edge["birth"] += 1
+                if animal is not None and animal.get("gender") != "FEMALE":
+                    r.error(f"{label}: a birth is logged against a female animal")
+                if not (isinstance(e.get("offspring_count"), int) and e["offspring_count"] >= 1):
+                    r.error(f"{label}: a BIRTH event needs offspring_count of at least 1")
+                if not e.get("offspring_gender"):
+                    r.error(f"{label}: a BIRTH event needs offspring_gender")
+            if kind == "MORTALITY" and animal is not None:
+                edge["mortality"] += 1
+                if id(animal) in died:
+                    r.error(f"{label}: a second MORTALITY event for the same animal")
+                died.add(id(animal))
+                if animal.get("health_status") != "DECEASED":
+                    r.error(f"{label}: a MORTALITY event means the animal is DECEASED, this one is "
+                            f"{animal.get('health_status')}")
+            if kind == "DISEASE" and animal is not None:
+                sick_by_event.add(id(animal))
+                if animal.get("health_status") != "SICK":
+                    r.error(f"{label}: an animal with a DISEASE event is SICK")
+        for i, a in enumerate(rec["animals"]):
+            if a.get("health_status") == "DECEASED" and id(a) not in died:
+                r.error(f"{who} animals[{i}]: DECEASED without a MORTALITY event")
+
+        last_breeding = {}
+        for i, b in enumerate(rec["breeding"]):
+            label, animal = animal_of("breeding", i, b)
+            kind = b.get("event_type")
+            if kind is None or b.get("breeding_date") is None:
+                r.error(f"{label}: event_type and breeding_date are required")
+            if animal is not None and animal.get("gender") != "FEMALE":
+                r.error(f"{label}: breeding is logged against a female animal")
+            if kind == "AI":
+                edge["ai"] += 1
+                for field in ("semen_batch_number", "ai_technician_name", "sire_or_semen_id"):
+                    if not b.get(field):
+                        r.error(f"{label}: an AI breeding needs {field}")
+            if kind == "NATURAL":
+                edge["natural"] += 1
+                if not b.get("sire_or_semen_id"):
+                    r.error(f"{label}: a NATURAL breeding names the sire (sire_or_semen_id)")
+            served, calving = _iso(b.get("breeding_date")), _iso(b.get("expected_calving_date"))
+            if served and calving and calving < served:
+                r.error(f"{label}: expected calving {calving} before the breeding {served}")
+            confirmed = _iso(b.get("pregnancy_confirmation_date"))
+            if served and confirmed and confirmed < served:
+                r.error(f"{label}: pregnancy confirmed {confirmed} before the breeding {served}")
+            if b.get("pregnancy_confirmed") is not None and not isinstance(b["pregnancy_confirmed"], bool):
+                r.error(f"{label}: pregnancy_confirmed must be true or false")
+            if served and animal is not None:
+                key = (id(animal), kind)
+                if key in last_breeding and abs((served - last_breeding[key]).days) <= BREEDING_CYCLE_DAYS:
+                    r.error(f"{label}: within {BREEDING_CYCLE_DAYS} days of another {kind} breeding of the same animal")
+                last_breeding[key] = served
+        if rec["animals"] and not any(rec[s] for s in LIVESTOCK_SECTIONS if s != "animals"):
+            edge["animals_only"] += 1
+
+    with_stock = {i for i, f in farms.items() if f.get("livestock")}
+    if with_stock - seen:
+        r.error(f"livestock.json has no record for {sorted(with_stock - seen)}, who have livestock in farms.json")
+    if seen - with_stock:
+        r.error(f"livestock.json has records for {sorted(seen - with_stock)}, who have no livestock in farms.json")
+    for ok, text in ((edge["sick_disease"] >= 1, "a SICK animal with a DISEASE health event"),
+                     (edge["overdue"] >= 1, "an OVERDUE vaccination status"),
+                     (edge["birth"] >= 1, "a BIRTH vital event with offspring"),
+                     (edge["mortality"] >= 1, "a MORTALITY event"),
+                     (edge["ai"] >= 1, "an AI breeding with a semen batch"),
+                     (edge["natural"] >= 1, "a NATURAL breeding"),
+                     (edge["animals_only"] >= 1, "a person with animals only")):
+        if not ok:
+            r.error(f"livestock.json must keep {text}, so registries see the case")
+
+
+def check_crop_livestock_locations(pack_dir, r, geoms):
+    """A farm or herd stands in the woreda its owner lives in.
+
+    The Crop Sown and Livestock forms place a pin and derive the administrative
+    area from it, so a pin outside the woreda of the person's household would
+    seed a record in a place the person is not registered in.
+    """
+    samples = os.path.join(pack_dir, "samples")
+    households = {h.get("household_id"): h for h in read_json(os.path.join(samples, "households.json"))} \
+        if os.path.exists(os.path.join(samples, "households.json")) else {}
+    people = {i.get("individual_id"): i for i in read_json(os.path.join(samples, "individuals.json"))} \
+        if os.path.exists(os.path.join(samples, "individuals.json")) else {}
+    for name in ("crop_sown.json", "livestock.json"):
+        path = os.path.join(samples, name)
+        if not os.path.exists(path):
+            continue
+        for rec in read_json(path):
+            ident = rec.get("individual_id")
+            loc = rec.get("location") or {}
+            person = people.get(ident)
+            home = households.get(person.get("household_id")) if person else None
+            if home is None or _number(loc.get("latitude")) is None or _number(loc.get("longitude")) is None:
+                continue
+            woreda = str(home.get("geo_pcode") or "")[:8]
+            geom = geoms.get(woreda)
+            if geom and not point_in_polygon((loc["longitude"], loc["latitude"]), geom):
+                r.error(f"{name} {ident} is at ({loc['latitude']}, {loc['longitude']}), outside {woreda}, "
+                        f"the woreda of its owner's household")
+
+
 def check_sample_locations(pack_dir, r, geoms):
     """A sample's coordinates must fall inside the unit its P-code names.
 
@@ -719,6 +1497,9 @@ def validate(pack_dir):
     check_codelists(pack_dir, r)
     check_samples(pack_dir, r, set(vals))
     check_farm_samples(pack_dir, r)
+    check_farmer_ids(pack_dir, r)
+    check_crop_sown_samples(pack_dir, r)
+    check_livestock_samples(pack_dir, r)
 
     # -- boundaries --------------------------------------------------------
     bdir = os.path.join(pack_dir, "boundaries")
@@ -786,6 +1567,7 @@ def validate(pack_dir):
                     f"{sorted(missing)[:3]}")
 
     check_sample_locations(pack_dir, r, geoms)
+    check_crop_livestock_locations(pack_dir, r, geoms)
 
     # -- nesting and coverage ---------------------------------------------
     # The invariant drill-down depends on: a child lies inside its parent, and a

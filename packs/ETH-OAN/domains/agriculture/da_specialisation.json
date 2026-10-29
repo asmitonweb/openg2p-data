@@ -1,0 +1,51 @@
+{
+  "attribute_id": "DA_SPECIALISATION",
+  "attribute_code": "DA_SPECIALISATION",
+  "attribute_display": "Development Agent specialisation",
+  "description": "Extension discipline a Development Agent is trained and deployed for, as used by the Ministry of Agriculture's kebele-level extension system (one DA per discipline per kebele). Source: OpenAgriNet DA Registry field list (Oct 2026).",
+  "is_hierarchical": false,
+  "values": [
+    {
+      "value_id": "CROP_PRODUCTION",
+      "value_code": "CROP_PRODUCTION",
+      "value_display": "Crop production",
+      "sort_order": 1,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "LIVESTOCK",
+      "value_code": "LIVESTOCK",
+      "value_display": "Livestock",
+      "sort_order": 2,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "NATURAL_RESOURCES",
+      "value_code": "NATURAL_RESOURCES",
+      "value_display": "Natural resources",
+      "sort_order": 3,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "AGRONOMY",
+      "value_code": "AGRONOMY",
+      "value_display": "Agronomy",
+      "sort_order": 4,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "HORTICULTURE",
+      "value_code": "HORTICULTURE",
+      "value_display": "Horticulture",
+      "sort_order": 5,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "OTHER",
+      "value_code": "OTHER",
+      "value_display": "Other",
+      "sort_order": 6,
+      "display_i18n": {}
+    }
+  ]
+}

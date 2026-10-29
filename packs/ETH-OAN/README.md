@@ -69,6 +69,22 @@ that role, so this pack adds `SELF` (sort order 1, role `head_of_household`) fro
 marks the head with Is Head, and accepts `SELF` only for that member. If `ETH` gets `SELF` back,
 the build stops and names the addition to drop.
 
+## Species settings on `LIVESTOCK_SPECIES`
+
+The livestock registry asks the pack, not its own code, how to record an animal of a species.
+`LIVESTOCK_SPECIES` therefore carries an `attribute_schema` with two booleans per value:
+`requires_ear_tag` (the animal carries an ear tag) and `is_flock_species` (it is recorded as a
+flock with a head count). Cattle, goats, sheep, camels and equines are tagged individually;
+poultry is a flock; other has neither. The settings come from
+[`eth_oan_additions/attributes/`](../../scripts/packs/eth_oan_additions/attributes), which only
+adds attributes to a base list and never replaces a value. The build stops if the overlay names a
+value the list lacks, or if the base list already has a different `attribute_schema`.
+
+`VACCINE_TYPE` (an OAN list) has an optional `interval_days` attribute next to `species`: the
+default number of days until the next dose, from which the livestock registry fills a
+vaccination's next due date. An approved row in the registry's Vaccine Schedule register
+overrides it. Values without `interval_days` get no default due date.
+
 ## Lists the farmer registry adds
 
 The farmer registry's own choice lists come from Master Data like every other dropdown, so the

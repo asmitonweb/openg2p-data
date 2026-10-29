@@ -7,42 +7,42 @@
     {
       "value_id": "MOA_INHERITANCE",
       "value_code": "MOA_INHERITANCE",
-      "value_display": "INHERITANCE",
+      "value_display": "Inheritance",
       "sort_order": 1,
       "display_i18n": {}
     },
     {
       "value_id": "MOA_DONATION_GIFT",
       "value_code": "MOA_DONATION_GIFT",
-      "value_display": "DONATION_GIFT",
+      "value_display": "Donation or gift",
       "sort_order": 2,
       "display_i18n": {}
     },
     {
       "value_id": "MOA_EXPROPRIATION",
       "value_code": "MOA_EXPROPRIATION",
-      "value_display": "EXPROPRIATION",
+      "value_display": "Expropriation",
       "sort_order": 3,
       "display_i18n": {}
     },
     {
       "value_id": "MOA_RENTING_LEASING",
       "value_code": "MOA_RENTING_LEASING",
-      "value_display": "RENTING_LEASING",
+      "value_display": "Renting or leasing",
       "sort_order": 4,
       "display_i18n": {}
     },
     {
       "value_id": "MOA_REALLOCATION",
       "value_code": "MOA_REALLOCATION",
-      "value_display": "REALLOCATION",
+      "value_display": "Reallocation",
       "sort_order": 5,
       "display_i18n": {}
     },
     {
       "value_id": "MOA_DIVORCE_SETTLEMENT",
       "value_code": "MOA_DIVORCE_SETTLEMENT",
-      "value_display": "DIVORCE_SETTLEMENT",
+      "value_display": "Divorce settlement",
       "sort_order": 6,
       "display_i18n": {}
     }

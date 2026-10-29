@@ -818,7 +818,7 @@ def convert_fertilizers():
         {
             "value_id": "FERT_BIO_RHIZO",
             "value_code": "FERT_BIO_RHIZO",
-            "value_display": "Bio-Rhizobium",
+            "value_display": "Bio-rhizobium",
             "sort_order": 8,
             "display_i18n": {}
         },

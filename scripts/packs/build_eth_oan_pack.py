@@ -21,7 +21,13 @@ What is taken from where
   Ethiopia packs describe a farmer the same way. Lists only the farmer
   registry needs are added from eth_oan_additions/ and never replace a base
   list. eth_oan_additions/values/ adds values to a base list, never replacing
-  one: SELF, which carries the head_of_household role the contract requires. Kebele moves out of address.json's sub_levels, because here it is a
+  one: SELF, which carries the head_of_household role the contract requires.
+  eth_oan_additions/attributes/ adds per-value `attributes`, and the
+  `attribute_schema` describing them, to a base list, never replacing a value:
+  LIVESTOCK_SPECIES says per species whether an animal carries an ear tag and
+  whether it is recorded as a flock. Each file is {"attribute_schema": ...,
+  "values": {value_id: attributes}}; the build stops if a named value is
+  missing or the base list already has a different attribute_schema. Kebele moves out of address.json's sub_levels, because here it is a
   level.
 - boundaries/ are the base pack's polygons for the units that are still the
   same unit, so every OAN registry and dashboard draws and looks up locations
@@ -186,6 +192,33 @@ def carry_boundaries(base, values):
     return out
 
 
+def apply_attributes(out):
+    """Add per-value attributes from eth_oan_additions/attributes/ to base lists."""
+    attrs_dir = os.path.join(ADDITIONS, "attributes")
+    for dirpath, _, files in os.walk(attrs_dir):
+        for name in sorted(files):
+            rel = os.path.relpath(os.path.join(dirpath, name), attrs_dir)
+            dest = os.path.join(out, rel)
+            if not os.path.exists(dest):
+                raise SystemExit(f"{rel}: the base pack has no such list to add attributes to")
+            doc = read_json(dest)
+            overlay = read_json(os.path.join(dirpath, name))
+            have = doc.get("attribute_schema")
+            if have is not None and have != overlay["attribute_schema"]:
+                raise SystemExit(f"{rel}: the base list already has a different attribute_schema")
+            by_id = {v["value_id"]: v for v in doc["values"]}
+            for value_id in overlay["values"]:
+                if value_id not in by_id:
+                    raise SystemExit(f"{rel}: the base list has no value {value_id}")
+            doc["attribute_schema"] = overlay["attribute_schema"]
+            for value_id, attributes in overlay["values"].items():
+                by_id[value_id]["attributes"] = attributes
+            missing = [v["value_id"] for v in doc["values"] if "attributes" not in v]
+            if missing:
+                raise SystemExit(f"{rel}: no attributes for {', '.join(missing)}")
+            write_json(dest, doc)
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
     ap.add_argument("--source", required=True, help="source catalog (geo_level_values.json)")
@@ -281,7 +314,7 @@ def main():
     # Lists only the farmer registry needs are added on top. They never replace
     # a base list, so both Ethiopia packs keep describing a farmer the same way.
     for dirpath, _, files in os.walk(ADDITIONS):
-        if os.path.relpath(dirpath, ADDITIONS).split(os.sep)[0] == "values":
+        if os.path.relpath(dirpath, ADDITIONS).split(os.sep)[0] in ("values", "attributes"):
             continue
         for name in files:
             rel = os.path.relpath(os.path.join(dirpath, name), ADDITIONS)
@@ -308,6 +341,7 @@ def main():
                 doc["values"].append(value)
             doc["values"].sort(key=lambda v: v.get("sort_order", 0))
             write_json(dest, doc)
+    apply_attributes(args.out)
     address =read_json(os.path.join(args.base, "address.json"))
     address["sub_levels"] = [s for s in address["sub_levels"] if s["id"] != "kebele"]
     address["lines"] = ["House {house_number}"]

@@ -1692,7 +1692,7 @@
     {
       "value_id": "VAR_COWPEA_JERGADE",
       "value_code": "VAR_COWPEA_JERGADE",
-      "value_display": "Cowpea – Jergade (NLLP_CPC-145-21)",
+      "value_display": "Cowpea – Jergade (NLLP-CPC-145-21)",
       "sort_order": 227,
       "display_i18n": {},
       "attributes": {
@@ -1705,7 +1705,7 @@
     {
       "value_id": "VAR_COWPEA_KECHENE",
       "value_code": "VAR_COWPEA_KECHENE",
-      "value_display": "Cowpea – Kechene (NLLP_CPC-103B)",
+      "value_display": "Cowpea – Kechene (NLLP-CPC-103B)",
       "sort_order": 228,
       "display_i18n": {},
       "attributes": {

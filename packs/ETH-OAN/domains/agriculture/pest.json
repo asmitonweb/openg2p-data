@@ -1,0 +1,169 @@
+{
+  "attribute_id": "PEST",
+  "attribute_code": "PEST",
+  "attribute_display": "Pest",
+  "is_hierarchical": false,
+  "values": [
+    {
+      "value_id": "PEST_APHIDS",
+      "value_code": "APHIDS",
+      "value_display": "Aphids",
+      "sort_order": 1,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "PEST_WHITEFLIES",
+      "value_code": "WHITEFLIES",
+      "value_display": "Whiteflies",
+      "sort_order": 2,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "PEST_THRIPS",
+      "value_code": "THRIPS",
+      "value_display": "Thrips",
+      "sort_order": 3,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "PEST_STEM_BORER",
+      "value_code": "STEM_BORER",
+      "value_display": "Stem borer",
+      "sort_order": 4,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "PEST_LEAF_MINER",
+      "value_code": "LEAF_MINER",
+      "value_display": "Leaf miner",
+      "sort_order": 5,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "PEST_ARMYWORM",
+      "value_code": "ARMYWORM",
+      "value_display": "Armyworm",
+      "sort_order": 6,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "PEST_CUTWORM",
+      "value_code": "CUTWORM",
+      "value_display": "Cutworm",
+      "sort_order": 7,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "PEST_BOLLWORM",
+      "value_code": "BOLLWORM",
+      "value_display": "Bollworm",
+      "sort_order": 8,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "PEST_BEETLES",
+      "value_code": "BEETLES",
+      "value_display": "Beetles",
+      "sort_order": 9,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "PEST_MEALYBUGS",
+      "value_code": "MEALYBUGS",
+      "value_display": "Mealybugs",
+      "sort_order": 10,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "PEST_GRASSHOPPERS",
+      "value_code": "GRASSHOPPERS",
+      "value_display": "Grasshoppers",
+      "sort_order": 11,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "PEST_LEAFHOPPER_JASSIDS",
+      "value_code": "LEAFHOPPER_JASSIDS",
+      "value_display": "Leafhopper (jassids)",
+      "sort_order": 12,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "PEST_RATS",
+      "value_code": "RATS",
+      "value_display": "Rats",
+      "sort_order": 13,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "PEST_FIELD_MOUSE",
+      "value_code": "FIELD_MOUSE",
+      "value_display": "Field mouse",
+      "sort_order": 14,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "PEST_SNAILS",
+      "value_code": "SNAILS",
+      "value_display": "Snails",
+      "sort_order": 15,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "PEST_SLUGS",
+      "value_code": "SLUGS",
+      "value_display": "Slugs",
+      "sort_order": 16,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "PEST_LEAF_SPOT",
+      "value_code": "LEAF_SPOT",
+      "value_display": "Leaf spot",
+      "sort_order": 17,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "PEST_POWDERY_MILDEW",
+      "value_code": "POWDERY_MILDEW",
+      "value_display": "Powdery mildew",
+      "sort_order": 18,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "PEST_DOWNY_MILDEW",
+      "value_code": "DOWNY_MILDEW",
+      "value_display": "Downy mildew",
+      "sort_order": 19,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "PEST_RUST",
+      "value_code": "RUST",
+      "value_display": "Rust",
+      "sort_order": 20,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "PEST_BLIGHT",
+      "value_code": "BLIGHT",
+      "value_display": "Blight",
+      "sort_order": 21,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "PEST_WILT",
+      "value_code": "WILT",
+      "value_display": "Wilt",
+      "sort_order": 22,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "PEST_MOSAIC_VIRUS",
+      "value_code": "MOSAIC_VIRUS",
+      "value_display": "Mosaic virus",
+      "sort_order": 23,
+      "display_i18n": {}
+    }
+  ]
+}

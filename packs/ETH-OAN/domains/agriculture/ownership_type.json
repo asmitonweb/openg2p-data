@@ -1,0 +1,36 @@
+{
+  "attribute_id": "OWNERSHIP_TYPE",
+  "attribute_code": "OWNERSHIP_TYPE",
+  "attribute_display": "Ownership type",
+  "is_hierarchical": false,
+  "values": [
+    {
+      "value_id": "OWNERSHIP_TYPE_OWNER",
+      "value_code": "OWNER",
+      "value_display": "Owner",
+      "sort_order": 1,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "OWNERSHIP_TYPE_TENANT",
+      "value_code": "TENANT",
+      "value_display": "Tenant",
+      "sort_order": 2,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "OWNERSHIP_TYPE_CROP_SHARING",
+      "value_code": "CROP_SHARING",
+      "value_display": "Crop sharing",
+      "sort_order": 3,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "OWNERSHIP_TYPE_FAMILY_GIFT",
+      "value_code": "FAMILY_GIFT",
+      "value_display": "Family gift",
+      "sort_order": 4,
+      "display_i18n": {}
+    }
+  ]
+}

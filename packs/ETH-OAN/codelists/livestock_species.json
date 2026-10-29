@@ -9,49 +9,95 @@
       "value_code": "CATTLE",
       "value_display": "Cattle",
       "sort_order": 1,
-      "display_i18n": {}
+      "display_i18n": {},
+      "attributes": {
+        "requires_ear_tag": true,
+        "is_flock_species": false
+      }
     },
     {
       "value_id": "GOATS",
       "value_code": "GOATS",
       "value_display": "Goats",
       "sort_order": 2,
-      "display_i18n": {}
+      "display_i18n": {},
+      "attributes": {
+        "requires_ear_tag": true,
+        "is_flock_species": false
+      }
     },
     {
       "value_id": "SHEEP",
       "value_code": "SHEEP",
       "value_display": "Sheep",
       "sort_order": 3,
-      "display_i18n": {}
+      "display_i18n": {},
+      "attributes": {
+        "requires_ear_tag": true,
+        "is_flock_species": false
+      }
     },
     {
       "value_id": "POULTRY",
       "value_code": "POULTRY",
       "value_display": "Poultry",
       "sort_order": 4,
-      "display_i18n": {}
+      "display_i18n": {},
+      "attributes": {
+        "requires_ear_tag": false,
+        "is_flock_species": true
+      }
     },
     {
       "value_id": "CAMELS",
       "value_code": "CAMELS",
       "value_display": "Camels",
       "sort_order": 5,
-      "display_i18n": {}
+      "display_i18n": {},
+      "attributes": {
+        "requires_ear_tag": true,
+        "is_flock_species": false
+      }
     },
     {
       "value_id": "EQUINES",
       "value_code": "EQUINES",
       "value_display": "Equines",
       "sort_order": 6,
-      "display_i18n": {}
+      "display_i18n": {},
+      "attributes": {
+        "requires_ear_tag": true,
+        "is_flock_species": false
+      }
     },
     {
       "value_id": "OTHER",
       "value_code": "OTHER",
       "value_display": "Other",
       "sort_order": 7,
-      "display_i18n": {}
+      "display_i18n": {},
+      "attributes": {
+        "requires_ear_tag": false,
+        "is_flock_species": false
+      }
     }
-  ]
+  ],
+  "attribute_schema": {
+    "type": "object",
+    "properties": {
+      "requires_ear_tag": {
+        "type": "boolean",
+        "title": "Requires ear tag"
+      },
+      "is_flock_species": {
+        "type": "boolean",
+        "title": "Recorded as a flock"
+      }
+    },
+    "required": [
+      "requires_ear_tag",
+      "is_flock_species"
+    ],
+    "additionalProperties": false
+  }
 }

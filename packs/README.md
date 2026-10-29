@@ -39,6 +39,15 @@ samples/farms.json             their farm facts, for registries that hold farmer
                                lands, crops, livestock, farm inputs and
                                membership per individual_id, in value_codes of
                                codelists/ and domains/agriculture/
+samples/farmer_ids.json        the Farmer ID (FR- and twelve digits) of every sample
+                               person, for registries that identify a farmer by it
+samples/crop_sown.json         what the Crop Sown registry seeds for the people with
+                               crops in farms.json: one season, and the planning,
+                               cluster, cultivation, sowing, infestation and
+                               harvest lines of their lands
+samples/livestock.json         what the Livestock registry seeds for the people with
+                               livestock in farms.json: animals, vaccinations,
+                               health, vital and breeding events
 ```
 
 Everything after `manifest.json` is optional — a pack with geography alone is

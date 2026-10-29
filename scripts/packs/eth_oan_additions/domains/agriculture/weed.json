@@ -1,0 +1,155 @@
+{
+  "attribute_id": "WEED",
+  "attribute_code": "WEED",
+  "attribute_display": "Weed",
+  "is_hierarchical": false,
+  "values": [
+    {
+      "value_id": "WEED_ANNUAL",
+      "value_code": "ANNUAL",
+      "value_display": "Annual weed",
+      "sort_order": 1,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "WEED_BIENNIAL",
+      "value_code": "BIENNIAL",
+      "value_display": "Biennial weed",
+      "sort_order": 2,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "WEED_PERENNIAL",
+      "value_code": "PERENNIAL",
+      "value_display": "Perennial weed",
+      "sort_order": 3,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "WEED_KHARIF_SUMMER",
+      "value_code": "KHARIF_SUMMER",
+      "value_display": "Kharif / summer",
+      "sort_order": 4,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "WEED_RABI_WINTER",
+      "value_code": "RABI_WINTER",
+      "value_display": "Rabi / winter",
+      "sort_order": 5,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "WEED_YEAR_ROUND",
+      "value_code": "YEAR_ROUND",
+      "value_display": "Year-round",
+      "sort_order": 6,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "WEED_GRASSY",
+      "value_code": "GRASSY",
+      "value_display": "Grassy",
+      "sort_order": 7,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "WEED_SEDGE",
+      "value_code": "SEDGE",
+      "value_display": "Sedge",
+      "sort_order": 8,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "WEED_BROADLEAF",
+      "value_code": "BROADLEAF",
+      "value_display": "Broadleaf",
+      "sort_order": 9,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "WEED_AQUATIC",
+      "value_code": "AQUATIC",
+      "value_display": "Aquatic",
+      "sort_order": 10,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "WEED_TERRESTRIAL",
+      "value_code": "TERRESTRIAL",
+      "value_display": "Terrestrial",
+      "sort_order": 11,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "WEED_PARASITIC",
+      "value_code": "PARASITIC",
+      "value_display": "Parasitic",
+      "sort_order": 12,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "WEED_EPIPHYTIC",
+      "value_code": "EPIPHYTIC",
+      "value_display": "Epiphytic",
+      "sort_order": 13,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "WEED_NOXIOUS",
+      "value_code": "NOXIOUS",
+      "value_display": "Noxious",
+      "sort_order": 14,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "WEED_POISONOUS",
+      "value_code": "POISONOUS",
+      "value_display": "Poisonous",
+      "sort_order": 15,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "WEED_ALLELOPATHIC",
+      "value_code": "ALLELOPATHIC",
+      "value_display": "Allelopathic",
+      "sort_order": 16,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "WEED_INVASIVE",
+      "value_code": "INVASIVE",
+      "value_display": "Invasive",
+      "sort_order": 17,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "WEED_CLIMBING",
+      "value_code": "CLIMBING",
+      "value_display": "Climbing",
+      "sort_order": 18,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "WEED_ROSETTE",
+      "value_code": "ROSETTE",
+      "value_display": "Rosette",
+      "sort_order": 19,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "WEED_CREEPING",
+      "value_code": "CREEPING",
+      "value_display": "Creeping",
+      "sort_order": 20,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "WEED_ERECT",
+      "value_code": "ERECT",
+      "value_display": "Erect",
+      "sort_order": 21,
+      "display_i18n": {}
+    }
+  ]
+}

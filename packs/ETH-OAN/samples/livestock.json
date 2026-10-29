@@ -1,0 +1,948 @@
+[
+  {
+    "individual_id": "ETH-IND-0001",
+    "survey_personnel": {
+      "surveyor_name": "Yeshi Kebede",
+      "surveyor_mobile_number": "0912148121",
+      "supervisor_name": "Tadesse Berhanu",
+      "supervisor_mobile_number": "0952800638"
+    },
+    "location": {
+      "latitude": 14.41125,
+      "longitude": 37.74358
+    },
+    "animals": [
+      {
+        "ear_tag_id": "ET 0001 0100 01",
+        "species": "CATTLE",
+        "breed": "BREED_LOCAL",
+        "quantity": 1,
+        "weight": 320,
+        "date_of_birth": "2019-04-12",
+        "gender": "FEMALE",
+        "health_status": "HEALTHY",
+        "vaccination_status": "UP_TO_DATE",
+        "registration_date": "2026-02-10"
+      },
+      {
+        "ear_tag_id": "ET 0001 0100 02",
+        "species": "CATTLE",
+        "breed": "BREED_LOCAL",
+        "quantity": 1,
+        "weight": 385,
+        "date_of_birth": "2018-07-03",
+        "gender": "MALE",
+        "health_status": "HEALTHY",
+        "vaccination_status": "UP_TO_DATE",
+        "registration_date": "2026-02-10"
+      },
+      {
+        "ear_tag_id": "ET 0001 0100 03",
+        "species": "CATTLE",
+        "breed": "BREED_LOCAL",
+        "quantity": 1,
+        "weight": 290,
+        "date_of_birth": "2021-09-18",
+        "gender": "FEMALE",
+        "health_status": "SICK",
+        "vaccination_status": "UP_TO_DATE",
+        "registration_date": "2026-02-10"
+      },
+      {
+        "ear_tag_id": "ET 0001 0100 04",
+        "species": "CATTLE",
+        "breed": "BREED_LOCAL",
+        "quantity": 1,
+        "weight": 125,
+        "date_of_birth": "2025-10-02",
+        "gender": "MALE",
+        "health_status": "HEALTHY",
+        "vaccination_status": "NONE",
+        "registration_date": "2026-02-10"
+      }
+    ],
+    "health_events": [
+      {
+        "ear_tag_id": "ET 0001 0100 03",
+        "species": "CATTLE",
+        "event_type": "DISEASE",
+        "disease_type": "LIVESTOCK_DISEASE_LSD",
+        "date_onset": "2026-10-08",
+        "date_resolution": "2026-10-22",
+        "is_notifiable": false,
+        "treatment": "Antibiotic injection and wound dressing for six days",
+        "veterinarian_name": "Getachew Alemu",
+        "location": "HOME",
+        "location_details": "Cattle shed at the homestead",
+        "notes": "Skin nodules on the neck and flanks; the herd was kept apart until they healed"
+      }
+    ],
+    "vaccinations": [
+      {
+        "ear_tag_id": "ET 0001 0100 01",
+        "species": "CATTLE",
+        "vaccine_type": "VACCINE_TYPE_FMD_CATTLE",
+        "vaccination_date": "2026-03-05",
+        "batch_number": "FMD 2026 031",
+        "administered_by": "Yeshi Kebede"
+      },
+      {
+        "ear_tag_id": "ET 0001 0100 02",
+        "species": "CATTLE",
+        "vaccine_type": "VACCINE_TYPE_LSD",
+        "vaccination_date": "2026-03-05",
+        "batch_number": "LSD 2026 017",
+        "administered_by": "Yeshi Kebede"
+      },
+      {
+        "ear_tag_id": "ET 0001 0100 03",
+        "species": "CATTLE",
+        "vaccine_type": "VACCINE_TYPE_FMD_CATTLE",
+        "vaccination_date": "2026-03-05",
+        "batch_number": "FMD 2026 031",
+        "administered_by": "Yeshi Kebede"
+      }
+    ],
+    "vital_events": [],
+    "breeding": [
+      {
+        "ear_tag_id": "ET 0001 0100 01",
+        "species": "CATTLE",
+        "event_type": "NATURAL",
+        "breeding_date": "2026-04-18",
+        "sire_or_semen_id": "ET 0001 0100 02",
+        "location": "FIELD",
+        "location_details": "Communal grazing land",
+        "expected_calving_date": "2027-01-27",
+        "pregnancy_confirmed": true,
+        "pregnancy_confirmation_date": "2026-06-02",
+        "outcome": "PENDING",
+        "notes": "Served by the household bull"
+      }
+    ]
+  },
+  {
+    "individual_id": "ETH-IND-0002",
+    "survey_personnel": {
+      "surveyor_name": "Tadesse Berhanu",
+      "surveyor_mobile_number": "0952800638",
+      "supervisor_name": "Berhanu Abebe",
+      "supervisor_mobile_number": "0941923320"
+    },
+    "location": {
+      "latitude": 14.40355,
+      "longitude": 37.74508
+    },
+    "animals": [
+      {
+        "ear_tag_id": "ET 0002 0200 01",
+        "species": "GOATS",
+        "breed": "BREED_LOCAL",
+        "quantity": 1,
+        "weight": 34,
+        "date_of_birth": "2022-03-08",
+        "gender": "FEMALE",
+        "health_status": "HEALTHY",
+        "vaccination_status": "UP_TO_DATE",
+        "registration_date": "2026-02-12"
+      },
+      {
+        "ear_tag_id": "ET 0002 0200 02",
+        "species": "GOATS",
+        "breed": "BREED_LOCAL",
+        "quantity": 1,
+        "weight": 32,
+        "date_of_birth": "2022-09-21",
+        "gender": "FEMALE",
+        "health_status": "HEALTHY",
+        "vaccination_status": "UP_TO_DATE",
+        "registration_date": "2026-02-12"
+      },
+      {
+        "ear_tag_id": "ET 0002 0200 03",
+        "species": "GOATS",
+        "breed": "BREED_LOCAL",
+        "quantity": 1,
+        "weight": 30,
+        "date_of_birth": "2023-02-14",
+        "gender": "FEMALE",
+        "health_status": "HEALTHY",
+        "vaccination_status": "UP_TO_DATE",
+        "registration_date": "2026-02-12"
+      },
+      {
+        "ear_tag_id": "ET 0002 0200 04",
+        "species": "GOATS",
+        "breed": "BREED_LOCAL",
+        "quantity": 1,
+        "weight": 41,
+        "date_of_birth": "2021-11-02",
+        "gender": "MALE",
+        "health_status": "HEALTHY",
+        "vaccination_status": "UP_TO_DATE",
+        "registration_date": "2026-02-12"
+      },
+      {
+        "ear_tag_id": "ET 0002 0200 05",
+        "species": "GOATS",
+        "breed": "BREED_LOCAL",
+        "quantity": 1,
+        "weight": 29,
+        "date_of_birth": "2023-06-30",
+        "gender": "FEMALE",
+        "health_status": "HEALTHY",
+        "vaccination_status": "OVERDUE",
+        "registration_date": "2026-02-12"
+      },
+      {
+        "ear_tag_id": "ET 0002 0200 06",
+        "species": "GOATS",
+        "breed": "BREED_LOCAL",
+        "quantity": 1,
+        "weight": 26,
+        "date_of_birth": "2024-01-19",
+        "gender": "FEMALE",
+        "health_status": "HEALTHY",
+        "vaccination_status": "NONE",
+        "registration_date": "2026-02-12"
+      },
+      {
+        "ear_tag_id": "ET 0002 0200 07",
+        "species": "GOATS",
+        "breed": "BREED_LOCAL",
+        "quantity": 1,
+        "weight": 27,
+        "date_of_birth": "2024-04-05",
+        "gender": "MALE",
+        "health_status": "HEALTHY",
+        "vaccination_status": "NONE",
+        "registration_date": "2026-02-12"
+      },
+      {
+        "ear_tag_id": "ET 0002 0200 08",
+        "species": "GOATS",
+        "breed": "BREED_LOCAL",
+        "quantity": 1,
+        "weight": 18,
+        "date_of_birth": "2025-03-11",
+        "gender": "FEMALE",
+        "health_status": "HEALTHY",
+        "vaccination_status": "NONE",
+        "registration_date": "2026-02-12"
+      },
+      {
+        "ear_tag_id": "ET 0002 0200 09",
+        "species": "GOATS",
+        "breed": "BREED_LOCAL",
+        "quantity": 1,
+        "weight": 14,
+        "date_of_birth": "2025-08-27",
+        "gender": "MALE",
+        "health_status": "HEALTHY",
+        "vaccination_status": "NONE",
+        "registration_date": "2026-02-12"
+      }
+    ],
+    "health_events": [],
+    "vaccinations": [
+      {
+        "ear_tag_id": "ET 0002 0200 01",
+        "species": "GOATS",
+        "vaccine_type": "VACCINE_TYPE_PPR_GOAT",
+        "vaccination_date": "2026-04-14",
+        "batch_number": "PPR 2026 204",
+        "administered_by": "Tadesse Berhanu"
+      },
+      {
+        "ear_tag_id": "ET 0002 0200 02",
+        "species": "GOATS",
+        "vaccine_type": "VACCINE_TYPE_PPR_GOAT",
+        "vaccination_date": "2026-04-14",
+        "batch_number": "PPR 2026 204",
+        "administered_by": "Tadesse Berhanu"
+      },
+      {
+        "ear_tag_id": "ET 0002 0200 03",
+        "species": "GOATS",
+        "vaccine_type": "VACCINE_TYPE_PPR_GOAT",
+        "vaccination_date": "2026-04-14",
+        "batch_number": "PPR 2026 204",
+        "administered_by": "Tadesse Berhanu"
+      },
+      {
+        "ear_tag_id": "ET 0002 0200 04",
+        "species": "GOATS",
+        "vaccine_type": "VACCINE_TYPE_PPR_GOAT",
+        "vaccination_date": "2026-04-14",
+        "batch_number": "PPR 2026 204",
+        "administered_by": "Tadesse Berhanu"
+      }
+    ],
+    "vital_events": [],
+    "breeding": []
+  },
+  {
+    "individual_id": "ETH-IND-0006",
+    "survey_personnel": {
+      "surveyor_name": "Yeshi Kebede",
+      "surveyor_mobile_number": "0912148121",
+      "supervisor_name": "Berhanu Abebe",
+      "supervisor_mobile_number": "0941923320"
+    },
+    "location": {
+      "latitude": 14.39207,
+      "longitude": 37.75076
+    },
+    "animals": [
+      {
+        "ear_tag_id": "ET 0006 0100 01",
+        "species": "CATTLE",
+        "breed": "BREED_LOCAL",
+        "quantity": 1,
+        "weight": 330,
+        "date_of_birth": "2019-05-23",
+        "gender": "FEMALE",
+        "health_status": "HEALTHY",
+        "vaccination_status": "UP_TO_DATE",
+        "registration_date": "2026-02-12"
+      },
+      {
+        "ear_tag_id": "ET 0006 0100 02",
+        "species": "CATTLE",
+        "breed": "BREED_LOCAL",
+        "quantity": 1,
+        "weight": 305,
+        "date_of_birth": "2020-10-09",
+        "gender": "FEMALE",
+        "health_status": "HEALTHY",
+        "vaccination_status": "UP_TO_DATE",
+        "registration_date": "2026-02-12"
+      },
+      {
+        "ear_tag_id": "ET 0006 0100 03",
+        "species": "CATTLE",
+        "breed": "BREED_LOCAL",
+        "quantity": 1,
+        "weight": 400,
+        "date_of_birth": "2018-12-01",
+        "gender": "MALE",
+        "health_status": "HEALTHY",
+        "vaccination_status": "UP_TO_DATE",
+        "registration_date": "2026-02-12"
+      },
+      {
+        "ear_tag_id": "ET 0006 0100 04",
+        "species": "CATTLE",
+        "breed": "BREED_LOCAL",
+        "quantity": 1,
+        "weight": 210,
+        "date_of_birth": "2024-07-15",
+        "gender": "FEMALE",
+        "health_status": "HEALTHY",
+        "vaccination_status": "NONE",
+        "registration_date": "2026-02-12"
+      }
+    ],
+    "health_events": [],
+    "vaccinations": [
+      {
+        "ear_tag_id": "ET 0006 0100 01",
+        "species": "CATTLE",
+        "vaccine_type": "VACCINE_TYPE_LSD",
+        "vaccination_date": "2026-03-10",
+        "batch_number": "LSD 2026 044",
+        "administered_by": "Yeshi Kebede"
+      },
+      {
+        "ear_tag_id": "ET 0006 0100 02",
+        "species": "CATTLE",
+        "vaccine_type": "VACCINE_TYPE_LSD",
+        "vaccination_date": "2026-03-10",
+        "batch_number": "LSD 2026 044",
+        "administered_by": "Yeshi Kebede"
+      },
+      {
+        "ear_tag_id": "ET 0006 0100 03",
+        "species": "CATTLE",
+        "vaccine_type": "VACCINE_TYPE_ANTHRAX_CATTLE",
+        "vaccination_date": "2026-03-10",
+        "batch_number": "ANT 2026 012",
+        "administered_by": "Yeshi Kebede"
+      }
+    ],
+    "vital_events": [
+      {
+        "ear_tag_id": "ET 0006 0100 01",
+        "species": "CATTLE",
+        "event_type": "BIRTH",
+        "event_date": "2026-08-14",
+        "location": "HOME",
+        "location_details": "Cattle shed at the homestead",
+        "offspring_count": 1,
+        "offspring_gender": "FEMALE",
+        "reporting_officer": "Yeshi Kebede",
+        "notes": "Healthy heifer calf, born without help"
+      }
+    ],
+    "breeding": []
+  },
+  {
+    "individual_id": "ETH-IND-0007",
+    "survey_personnel": {
+      "surveyor_name": "Tadesse Berhanu",
+      "surveyor_mobile_number": "0952800638",
+      "supervisor_name": "Berhanu Abebe",
+      "supervisor_mobile_number": "0941923320"
+    },
+    "location": {
+      "latitude": 14.38497,
+      "longitude": 37.75186
+    },
+    "animals": [
+      {
+        "ear_tag_id": "ET 0007 0200 01",
+        "species": "GOATS",
+        "breed": "BREED_LOCAL",
+        "quantity": 1,
+        "weight": 33,
+        "date_of_birth": "2022-05-17",
+        "gender": "FEMALE",
+        "health_status": "HEALTHY",
+        "vaccination_status": "UP_TO_DATE",
+        "registration_date": "2026-02-13"
+      },
+      {
+        "ear_tag_id": "ET 0007 0200 02",
+        "species": "GOATS",
+        "breed": "BREED_LOCAL",
+        "quantity": 1,
+        "weight": 31,
+        "date_of_birth": "2022-12-03",
+        "gender": "FEMALE",
+        "health_status": "HEALTHY",
+        "vaccination_status": "UP_TO_DATE",
+        "registration_date": "2026-02-13"
+      },
+      {
+        "ear_tag_id": "ET 0007 0200 03",
+        "species": "GOATS",
+        "breed": "BREED_LOCAL",
+        "quantity": 1,
+        "weight": 42,
+        "date_of_birth": "2021-08-25",
+        "gender": "MALE",
+        "health_status": "HEALTHY",
+        "vaccination_status": "UP_TO_DATE",
+        "registration_date": "2026-02-13"
+      },
+      {
+        "ear_tag_id": "ET 0007 0200 04",
+        "species": "GOATS",
+        "breed": "BREED_LOCAL",
+        "quantity": 1,
+        "weight": 28,
+        "date_of_birth": "2023-04-09",
+        "gender": "FEMALE",
+        "health_status": "HEALTHY",
+        "vaccination_status": "NONE",
+        "registration_date": "2026-02-13"
+      },
+      {
+        "ear_tag_id": "ET 0007 0200 05",
+        "species": "GOATS",
+        "breed": "BREED_LOCAL",
+        "quantity": 1,
+        "weight": 27,
+        "date_of_birth": "2023-10-28",
+        "gender": "FEMALE",
+        "health_status": "HEALTHY",
+        "vaccination_status": "NONE",
+        "registration_date": "2026-02-13"
+      },
+      {
+        "ear_tag_id": "ET 0007 0200 06",
+        "species": "GOATS",
+        "breed": "BREED_LOCAL",
+        "quantity": 1,
+        "weight": 25,
+        "date_of_birth": "2024-06-12",
+        "gender": "MALE",
+        "health_status": "HEALTHY",
+        "vaccination_status": "NONE",
+        "registration_date": "2026-02-13"
+      },
+      {
+        "ear_tag_id": "ET 0007 0200 07",
+        "species": "GOATS",
+        "breed": "BREED_LOCAL",
+        "quantity": 1,
+        "weight": 22,
+        "date_of_birth": "2024-11-30",
+        "gender": "FEMALE",
+        "health_status": "HEALTHY",
+        "vaccination_status": "NONE",
+        "registration_date": "2026-02-13"
+      },
+      {
+        "ear_tag_id": "ET 0007 0200 08",
+        "species": "GOATS",
+        "breed": "BREED_LOCAL",
+        "quantity": 1,
+        "weight": 17,
+        "date_of_birth": "2025-05-06",
+        "gender": "FEMALE",
+        "health_status": "HEALTHY",
+        "vaccination_status": "NONE",
+        "registration_date": "2026-02-13"
+      },
+      {
+        "ear_tag_id": "ET 0007 0200 09",
+        "species": "GOATS",
+        "breed": "BREED_LOCAL",
+        "quantity": 1,
+        "weight": 13,
+        "date_of_birth": "2025-09-19",
+        "gender": "MALE",
+        "health_status": "HEALTHY",
+        "vaccination_status": "NONE",
+        "registration_date": "2026-02-13"
+      }
+    ],
+    "health_events": [
+      {
+        "ear_tag_id": "ET 0007 0200 04",
+        "species": "GOATS",
+        "event_type": "TREATMENT",
+        "date_onset": "2026-07-20",
+        "treatment": "Deworming with albendazole, one dose",
+        "veterinarian_name": "Getachew Alemu",
+        "location": "VETERINARY",
+        "location_details": "Kebele animal health post",
+        "notes": "Routine deworming before the rainy season peak"
+      }
+    ],
+    "vaccinations": [
+      {
+        "ear_tag_id": "ET 0007 0200 01",
+        "species": "GOATS",
+        "vaccine_type": "VACCINE_TYPE_PPR_GOAT",
+        "vaccination_date": "2026-04-16",
+        "batch_number": "PPR 2026 207",
+        "administered_by": "Tadesse Berhanu"
+      },
+      {
+        "ear_tag_id": "ET 0007 0200 02",
+        "species": "GOATS",
+        "vaccine_type": "VACCINE_TYPE_PPR_GOAT",
+        "vaccination_date": "2026-04-16",
+        "batch_number": "PPR 2026 207",
+        "administered_by": "Tadesse Berhanu"
+      },
+      {
+        "ear_tag_id": "ET 0007 0200 03",
+        "species": "GOATS",
+        "vaccine_type": "VACCINE_TYPE_PPR_GOAT",
+        "vaccination_date": "2026-04-16",
+        "batch_number": "PPR 2026 207",
+        "administered_by": "Tadesse Berhanu"
+      }
+    ],
+    "vital_events": [],
+    "breeding": []
+  },
+  {
+    "individual_id": "ETH-IND-0009",
+    "survey_personnel": {
+      "surveyor_name": "Bethlehem Dawit",
+      "surveyor_mobile_number": "0920856921",
+      "supervisor_name": "Tigist Mekonnen",
+      "supervisor_mobile_number": "0921118013"
+    },
+    "location": {
+      "latitude": 14.03085,
+      "longitude": 38.32212
+    },
+    "animals": [
+      {
+        "ear_tag_id": "ET 0009 0400 01",
+        "species": "POULTRY",
+        "breed": "BREED_LOCAL",
+        "quantity": 15,
+        "weight": 1.8,
+        "gender": "MIXED",
+        "health_status": "HEALTHY",
+        "vaccination_status": "NONE",
+        "registration_date": "2026-02-16",
+        "secondary_identifier": "Abebe Berhanu Flock"
+      }
+    ],
+    "health_events": [],
+    "vaccinations": [],
+    "vital_events": [],
+    "breeding": []
+  },
+  {
+    "individual_id": "ETH-IND-0010",
+    "survey_personnel": {
+      "surveyor_name": "Abebe Berhanu",
+      "surveyor_mobile_number": "0959031795",
+      "supervisor_name": "Tigist Mekonnen",
+      "supervisor_mobile_number": "0921118013"
+    },
+    "location": {
+      "latitude": 14.02445,
+      "longitude": 38.31362
+    },
+    "animals": [
+      {
+        "ear_tag_id": "ET 0010 0500 01",
+        "species": "EQUINES",
+        "breed": "BREED_LOCAL",
+        "quantity": 1,
+        "weight": 160,
+        "date_of_birth": "2020-02-20",
+        "gender": "FEMALE",
+        "health_status": "HEALTHY",
+        "vaccination_status": "NONE",
+        "registration_date": "2026-02-16"
+      },
+      {
+        "ear_tag_id": "ET 0010 0500 02",
+        "species": "EQUINES",
+        "breed": "BREED_LOCAL",
+        "quantity": 1,
+        "weight": 175,
+        "date_of_birth": "2019-09-07",
+        "gender": "MALE",
+        "health_status": "HEALTHY",
+        "vaccination_status": "NONE",
+        "registration_date": "2026-02-16"
+      }
+    ],
+    "health_events": [],
+    "vaccinations": [],
+    "vital_events": [],
+    "breeding": []
+  },
+  {
+    "individual_id": "ETH-IND-0014",
+    "survey_personnel": {
+      "surveyor_name": "Abebe Berhanu",
+      "surveyor_mobile_number": "0959031795",
+      "supervisor_name": "Bethlehem Dawit",
+      "supervisor_mobile_number": "0920856921"
+    },
+    "location": {
+      "latitude": 14.36662,
+      "longitude": 38.39383
+    },
+    "animals": [
+      {
+        "ear_tag_id": "ET 0014 0400 01",
+        "species": "POULTRY",
+        "breed": "BREED_LOCAL",
+        "quantity": 15,
+        "weight": 1.7,
+        "gender": "MIXED",
+        "health_status": "HEALTHY",
+        "vaccination_status": "UP_TO_DATE",
+        "registration_date": "2026-02-17",
+        "secondary_identifier": "Tigist Mekonnen Flock"
+      }
+    ],
+    "health_events": [],
+    "vaccinations": [
+      {
+        "ear_tag_id": "ET 0014 0400 01",
+        "species": "POULTRY",
+        "vaccine_type": "VACCINE_TYPE_NEWCASTLE",
+        "vaccination_date": "2026-03-22",
+        "batch_number": "NCD 2026 088",
+        "administered_by": "Abebe Berhanu"
+      }
+    ],
+    "vital_events": [],
+    "breeding": []
+  },
+  {
+    "individual_id": "ETH-IND-0016",
+    "survey_personnel": {
+      "surveyor_name": "Bekele Mulugeta",
+      "surveyor_mobile_number": "0936065802",
+      "supervisor_name": "Selamawit Dawit",
+      "supervisor_mobile_number": "0925577406"
+    },
+    "location": {
+      "latitude": 14.09571,
+      "longitude": 38.28944
+    },
+    "animals": [
+      {
+        "ear_tag_id": "ET 0016 0100 01",
+        "species": "CATTLE",
+        "breed": "BREED_LOCAL",
+        "quantity": 1,
+        "weight": 340,
+        "date_of_birth": "2020-01-30",
+        "gender": "FEMALE",
+        "health_status": "HEALTHY",
+        "vaccination_status": "UP_TO_DATE",
+        "registration_date": "2026-02-18"
+      },
+      {
+        "ear_tag_id": "ET 0016 0100 02",
+        "species": "CATTLE",
+        "breed": "BREED_LOCAL",
+        "quantity": 1,
+        "weight": 315,
+        "date_of_birth": "2021-06-14",
+        "gender": "FEMALE",
+        "health_status": "HEALTHY",
+        "vaccination_status": "UP_TO_DATE",
+        "registration_date": "2026-02-18"
+      },
+      {
+        "ear_tag_id": "ET 0016 0100 03",
+        "species": "CATTLE",
+        "breed": "BREED_LOCAL",
+        "quantity": 1,
+        "weight": 395,
+        "date_of_birth": "2019-03-08",
+        "gender": "MALE",
+        "health_status": "HEALTHY",
+        "vaccination_status": "UP_TO_DATE",
+        "registration_date": "2026-02-18"
+      },
+      {
+        "ear_tag_id": "ET 0016 0100 04",
+        "species": "CATTLE",
+        "breed": "BREED_LOCAL",
+        "quantity": 1,
+        "weight": 190,
+        "date_of_birth": "2025-01-22",
+        "gender": "FEMALE",
+        "health_status": "HEALTHY",
+        "vaccination_status": "NONE",
+        "registration_date": "2026-02-18"
+      }
+    ],
+    "health_events": [],
+    "vaccinations": [
+      {
+        "ear_tag_id": "ET 0016 0100 01",
+        "species": "CATTLE",
+        "vaccine_type": "VACCINE_TYPE_FMD_CATTLE",
+        "vaccination_date": "2026-03-18",
+        "batch_number": "FMD 2026 112",
+        "administered_by": "Bekele Mulugeta"
+      },
+      {
+        "ear_tag_id": "ET 0016 0100 02",
+        "species": "CATTLE",
+        "vaccine_type": "VACCINE_TYPE_FMD_CATTLE",
+        "vaccination_date": "2026-03-18",
+        "batch_number": "FMD 2026 112",
+        "administered_by": "Bekele Mulugeta"
+      },
+      {
+        "ear_tag_id": "ET 0016 0100 03",
+        "species": "CATTLE",
+        "vaccine_type": "VACCINE_TYPE_BLACKLEG",
+        "vaccination_date": "2026-03-18",
+        "batch_number": "BLK 2026 031",
+        "administered_by": "Bekele Mulugeta"
+      }
+    ],
+    "vital_events": [],
+    "breeding": [
+      {
+        "ear_tag_id": "ET 0016 0100 01",
+        "species": "CATTLE",
+        "event_type": "AI",
+        "breeding_date": "2026-05-09",
+        "sire_or_semen_id": "Jersey semen straw 0457",
+        "location": "HOME",
+        "location_details": "Cattle shed at the homestead",
+        "ai_technician_name": "Bekele Mulugeta",
+        "ai_technique": "Artificial insemination after heat detection",
+        "semen_batch_number": "JB2026118",
+        "expected_calving_date": "2027-02-16",
+        "pregnancy_confirmed": true,
+        "pregnancy_confirmation_date": "2026-07-11",
+        "outcome": "PENDING",
+        "notes": "Improved dairy cross for milk production"
+      }
+    ]
+  },
+  {
+    "individual_id": "ETH-IND-0018",
+    "survey_personnel": {
+      "surveyor_name": "Selamawit Dawit",
+      "surveyor_mobile_number": "0925577406",
+      "supervisor_name": "Aster Mulugeta",
+      "supervisor_mobile_number": "0964815374"
+    },
+    "location": {
+      "latitude": 14.10502,
+      "longitude": 38.28153
+    },
+    "animals": [
+      {
+        "ear_tag_id": "ET 0018 0300 01",
+        "species": "SHEEP",
+        "breed": "BREED_LOCAL",
+        "quantity": 1,
+        "weight": 32,
+        "date_of_birth": "2022-04-04",
+        "gender": "FEMALE",
+        "health_status": "HEALTHY",
+        "vaccination_status": "UP_TO_DATE",
+        "registration_date": "2026-03-20"
+      },
+      {
+        "ear_tag_id": "ET 0018 0300 02",
+        "species": "SHEEP",
+        "breed": "BREED_LOCAL",
+        "quantity": 1,
+        "weight": 30,
+        "date_of_birth": "2022-10-16",
+        "gender": "FEMALE",
+        "health_status": "HEALTHY",
+        "vaccination_status": "UP_TO_DATE",
+        "registration_date": "2026-03-20"
+      },
+      {
+        "ear_tag_id": "ET 0018 0300 03",
+        "species": "SHEEP",
+        "breed": "BREED_LOCAL",
+        "quantity": 1,
+        "weight": 45,
+        "date_of_birth": "2021-07-29",
+        "gender": "MALE",
+        "health_status": "HEALTHY",
+        "vaccination_status": "UP_TO_DATE",
+        "registration_date": "2026-03-20"
+      },
+      {
+        "ear_tag_id": "ET 0018 0300 04",
+        "species": "SHEEP",
+        "breed": "BREED_LOCAL",
+        "quantity": 1,
+        "weight": 28,
+        "date_of_birth": "2023-03-21",
+        "gender": "FEMALE",
+        "health_status": "HEALTHY",
+        "vaccination_status": "NONE",
+        "registration_date": "2026-03-20"
+      },
+      {
+        "ear_tag_id": "ET 0018 0300 05",
+        "species": "SHEEP",
+        "breed": "BREED_LOCAL",
+        "quantity": 1,
+        "weight": 26,
+        "date_of_birth": "2023-11-08",
+        "gender": "FEMALE",
+        "health_status": "HEALTHY",
+        "vaccination_status": "NONE",
+        "registration_date": "2026-03-20"
+      },
+      {
+        "ear_tag_id": "ET 0018 0300 06",
+        "species": "SHEEP",
+        "breed": "BREED_LOCAL",
+        "quantity": 1,
+        "weight": 20,
+        "date_of_birth": "2025-05-30",
+        "gender": "MALE",
+        "health_status": "HEALTHY",
+        "vaccination_status": "NONE",
+        "registration_date": "2026-03-20"
+      },
+      {
+        "ear_tag_id": "ET 0018 0300 07",
+        "species": "SHEEP",
+        "breed": "BREED_LOCAL",
+        "quantity": 1,
+        "weight": 18,
+        "date_of_birth": "2026-03-02",
+        "gender": "FEMALE",
+        "health_status": "DECEASED",
+        "vaccination_status": "NONE",
+        "registration_date": "2026-03-20"
+      }
+    ],
+    "health_events": [],
+    "vaccinations": [
+      {
+        "ear_tag_id": "ET 0018 0300 01",
+        "species": "SHEEP",
+        "vaccine_type": "VACCINE_TYPE_PPR_SHEEP",
+        "vaccination_date": "2026-04-20",
+        "batch_number": "PPR 2026 311",
+        "administered_by": "Selamawit Dawit"
+      },
+      {
+        "ear_tag_id": "ET 0018 0300 02",
+        "species": "SHEEP",
+        "vaccine_type": "VACCINE_TYPE_PPR_SHEEP",
+        "vaccination_date": "2026-04-20",
+        "batch_number": "PPR 2026 311",
+        "administered_by": "Selamawit Dawit"
+      },
+      {
+        "ear_tag_id": "ET 0018 0300 03",
+        "species": "SHEEP",
+        "vaccine_type": "VACCINE_TYPE_PPR_SHEEP",
+        "vaccination_date": "2026-04-20",
+        "batch_number": "PPR 2026 311",
+        "administered_by": "Selamawit Dawit"
+      }
+    ],
+    "vital_events": [
+      {
+        "ear_tag_id": "ET 0018 0300 07",
+        "species": "SHEEP",
+        "event_type": "MORTALITY",
+        "event_date": "2026-09-26",
+        "cause": "PREDATION",
+        "location": "FIELD",
+        "location_details": "Grazing field near the stream",
+        "reporting_officer": "Selamawit Dawit",
+        "notes": "Lamb taken by a hyena at dusk"
+      }
+    ],
+    "breeding": []
+  },
+  {
+    "individual_id": "ETH-IND-0019",
+    "survey_personnel": {
+      "surveyor_name": "Bekele Mulugeta",
+      "surveyor_mobile_number": "0936065802",
+      "supervisor_name": "Aster Mulugeta",
+      "supervisor_mobile_number": "0964815374"
+    },
+    "location": {
+      "latitude": 14.09692,
+      "longitude": 38.28803
+    },
+    "animals": [
+      {
+        "ear_tag_id": "ET 0019 0400 01",
+        "species": "POULTRY",
+        "breed": "BREED_LOCAL",
+        "quantity": 15,
+        "weight": 1.6,
+        "gender": "MIXED",
+        "health_status": "HEALTHY",
+        "vaccination_status": "NONE",
+        "registration_date": "2026-03-21",
+        "secondary_identifier": "Selamawit Dawit Flock"
+      }
+    ],
+    "health_events": [],
+    "vaccinations": [],
+    "vital_events": [],
+    "breeding": []
+  }
+]

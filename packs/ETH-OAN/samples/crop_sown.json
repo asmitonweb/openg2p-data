@@ -1,0 +1,1415 @@
+[
+  {
+    "individual_id": "ETH-IND-0001",
+    "production_season": "SEASON_MEHER",
+    "location": {
+      "latitude": 14.41125,
+      "longitude": 37.74358
+    },
+    "planning": [
+      {
+        "land_ref": "L1",
+        "land_id": "Plot 1",
+        "is_plot_not_registered": false,
+        "land_area": 0.5,
+        "soil_fertility_type": "SF_HIGH",
+        "season": "SEASON_MEHER",
+        "start_gc": "2026-05-01",
+        "end_gc": "2026-12-31",
+        "commodity": "CROP_TEFF",
+        "crop_category": "CROPCAT_CEREAL",
+        "cropping_system": "MONO_CROPPING",
+        "planned_date": "2026-05-12",
+        "growth_duration_days": 125,
+        "planned_area": 0.5,
+        "expected_yield": 8.5,
+        "seed_class": "IMPROVED",
+        "seed_source": "GOVERNMENT / WOREDS AGRICULTURE",
+        "seed_variety": "VAR_TEFF_QUNCHO",
+        "planned_seed_qty": 12,
+        "planned_fertilizer_type": "FERT_NPSB",
+        "planned_fertilizer_qty": 25,
+        "planned_labor": 34,
+        "water_source": "WS_RAINFED",
+        "da_name": "Yeshi Kebede",
+        "da_mobile_number": "0912148121",
+        "supervisor_name": "Tadesse Berhanu",
+        "supervisor_mobile_number": "0952800638"
+      },
+      {
+        "land_ref": "L2",
+        "land_id": "Plot 2",
+        "is_plot_not_registered": false,
+        "land_area": 1.25,
+        "soil_fertility_type": "SF_MEDIUM",
+        "season": "SEASON_MEHER",
+        "start_gc": "2026-05-01",
+        "end_gc": "2026-12-31",
+        "commodity": "CROP_SORGHUM",
+        "crop_category": "CROPCAT_CEREAL",
+        "cropping_system": "INTER_CROPPING",
+        "planned_date": "2026-05-14",
+        "growth_duration_days": 145,
+        "planned_area": 1.0,
+        "expected_yield": 22.0,
+        "seed_class": "IMPROVED",
+        "seed_source": "AGRICULTURE COOPERATIVE / UNION",
+        "seed_variety": "VAR_SORGHUM_MELKAM",
+        "planned_seed_qty": 10,
+        "planned_fertilizer_type": "FERT_DAP",
+        "planned_fertilizer_qty": 100,
+        "planned_labor": 52,
+        "water_source": "WS_RAINFED",
+        "da_name": "Yeshi Kebede",
+        "da_mobile_number": "0912148121",
+        "supervisor_name": "Tadesse Berhanu",
+        "supervisor_mobile_number": "0952800638"
+      }
+    ],
+    "clusters": [],
+    "cultivation": [
+      {
+        "land_ref": "L1",
+        "land_id": "Plot 1",
+        "is_plot_not_registered": false,
+        "land_area": 0.5,
+        "season": "SEASON_MEHER",
+        "start_gc": "2026-05-01",
+        "end_gc": "2026-12-31",
+        "commodity": "CROP_TEFF",
+        "crop_category": "CROPCAT_CEREAL",
+        "cropping_system": "MONO_CROPPING",
+        "actual_cultivation_date": "2026-06-10",
+        "actual_growth_duration_days": 125,
+        "actual_crop_area": 0.5,
+        "actual_seed_class": "IMPROVED",
+        "actual_seed_source": "GOVERNMENT / WOREDS AGRICULTURE",
+        "seed_variety": "VAR_TEFF_QUNCHO",
+        "actual_seed_qty": 12,
+        "actual_fertilizer_type": "FERT_NPSB",
+        "actual_fertilizer_qty": 25,
+        "water_source": "WS_RAINFED",
+        "da_name": "Yeshi Kebede",
+        "da_mobile_number": "0912148121",
+        "supervisor_name": "Tadesse Berhanu",
+        "supervisor_mobile_number": "0952800638"
+      },
+      {
+        "land_ref": "L2",
+        "land_id": "Plot 2",
+        "is_plot_not_registered": false,
+        "land_area": 1.25,
+        "season": "SEASON_MEHER",
+        "start_gc": "2026-05-01",
+        "end_gc": "2026-12-31",
+        "commodity": "CROP_SORGHUM",
+        "crop_category": "CROPCAT_CEREAL",
+        "cropping_system": "INTER_CROPPING",
+        "actual_cultivation_date": "2026-06-12",
+        "actual_growth_duration_days": 145,
+        "actual_crop_area": 1.0,
+        "actual_seed_class": "IMPROVED",
+        "actual_seed_source": "AGRICULTURE COOPERATIVE / UNION",
+        "seed_variety": "VAR_SORGHUM_MELKAM",
+        "actual_seed_qty": 10,
+        "actual_fertilizer_type": "FERT_DAP",
+        "actual_fertilizer_qty": 100,
+        "water_source": "WS_RAINFED",
+        "da_name": "Yeshi Kebede",
+        "da_mobile_number": "0912148121",
+        "supervisor_name": "Tadesse Berhanu",
+        "supervisor_mobile_number": "0952800638"
+      }
+    ],
+    "cultivation_clusters": [],
+    "sowing": [
+      {
+        "land_ref": "L1",
+        "land_id": "Plot 1",
+        "cluster_status": [
+          "INDEPENDENT"
+        ],
+        "season": "SEASON_MEHER",
+        "area_sown": 0.5,
+        "commodity": "CROP_TEFF",
+        "sowing_date": "2026-07-10",
+        "fertilizer_type": "FERT_NPSB",
+        "fertilizer_qty": 25,
+        "has_pest_disease": false,
+        "da_name": "Yeshi Kebede",
+        "da_mobile_number": "0912148121",
+        "supervisor_name": "Tadesse Berhanu",
+        "supervisor_mobile_number": "0952800638"
+      },
+      {
+        "land_ref": "L2",
+        "land_id": "Plot 2",
+        "cluster_status": [
+          "INDEPENDENT"
+        ],
+        "season": "SEASON_MEHER",
+        "area_sown": 0.9,
+        "commodity": "CROP_SORGHUM",
+        "sowing_date": "2026-07-11",
+        "fertilizer_type": "FERT_DAP",
+        "fertilizer_qty": 90,
+        "has_pest_disease": true,
+        "da_name": "Yeshi Kebede",
+        "da_mobile_number": "0912148121",
+        "supervisor_name": "Tadesse Berhanu",
+        "supervisor_mobile_number": "0952800638"
+      }
+    ],
+    "infestations": [
+      {
+        "infestation_id": "Infestation 1",
+        "land_ref": "L2",
+        "land_id": "Plot 2",
+        "commodity": "CROP_SORGHUM",
+        "infestation_type": "INFT_PEST",
+        "pest_name": "Stalk borer",
+        "pesticide_method": "chemical_spray",
+        "pesticide_type": "insecticide",
+        "pesticide_name": "Cypermethrin",
+        "pesticide_frequency": "Twice per season",
+        "growth_stage": "FLOWERING",
+        "observation_date": "2026-09-04",
+        "severity_level": "MEDIUM",
+        "estimated_damage_pct": 12
+      }
+    ],
+    "harvest": [
+      {
+        "land_ref": "L1",
+        "land_id": "Plot 1",
+        "cluster_status": [
+          "INDEPENDENT"
+        ],
+        "commodity": "CROP_TEFF",
+        "crop_maturity_status": "READY_FOR_HARVEST",
+        "harvest_date": "2026-11-18",
+        "area_harvested": 0.5,
+        "qty_harvested": 8.5,
+        "qty_stored": 3.0,
+        "qty_sold": 5.0,
+        "da_name": "Yeshi Kebede",
+        "da_mobile_number": "0912148121",
+        "supervisor_name": "Tadesse Berhanu",
+        "supervisor_mobile_number": "0952800638"
+      },
+      {
+        "land_ref": "L2",
+        "land_id": "Plot 2",
+        "cluster_status": [
+          "INDEPENDENT"
+        ],
+        "commodity": "CROP_SORGHUM",
+        "crop_maturity_status": "READY_FOR_HARVEST",
+        "harvest_date": "2026-12-02",
+        "area_harvested": 0.9,
+        "qty_harvested": 19.8,
+        "qty_stored": 8.0,
+        "qty_sold": 11.0,
+        "da_name": "Yeshi Kebede",
+        "da_mobile_number": "0912148121",
+        "supervisor_name": "Tadesse Berhanu",
+        "supervisor_mobile_number": "0952800638"
+      }
+    ]
+  },
+  {
+    "individual_id": "ETH-IND-0002",
+    "production_season": "SEASON_MEHER",
+    "location": {
+      "latitude": 14.40355,
+      "longitude": 37.74508
+    },
+    "planning": [
+      {
+        "land_ref": "L1",
+        "land_id": "Plot 1",
+        "is_plot_not_registered": false,
+        "land_area": 2.25,
+        "soil_fertility_type": "SF_MEDIUM",
+        "season": "SEASON_MEHER",
+        "start_gc": "2026-05-01",
+        "end_gc": "2026-12-31",
+        "commodity": "CROP_SORGHUM",
+        "crop_category": "CROPCAT_CEREAL",
+        "cropping_system": "MONO_CROPPING",
+        "planned_date": "2026-05-13",
+        "growth_duration_days": 145,
+        "planned_area": 0.75,
+        "expected_yield": 16.5,
+        "seed_class": "IMPROVED",
+        "seed_source": "AGRICULTURE COOPERATIVE / UNION",
+        "seed_variety": "VAR_SORGHUM_ERER",
+        "planned_seed_qty": 8,
+        "planned_fertilizer_type": "FERT_UREA",
+        "planned_fertilizer_qty": 30,
+        "planned_labor": 30,
+        "water_source": "WS_RAINFED",
+        "da_name": "Tadesse Berhanu",
+        "da_mobile_number": "0952800638",
+        "supervisor_name": "Berhanu Abebe",
+        "supervisor_mobile_number": "0941923320"
+      }
+    ],
+    "clusters": [
+      {
+        "land_ref": "L1",
+        "land_id": "Plot 1",
+        "cluster_id": "FPC 01",
+        "cluster_name": "Badme Sorghum Growers Cluster",
+        "season": "SEASON_MEHER",
+        "agro_ecological_zone": "KOLLA",
+        "latitude": "14.4021",
+        "longitude": "37.7455",
+        "primary_commodity": "CROP_SORGHUM",
+        "fpc_type": "GREEN",
+        "cluster_area_timad": 6.0,
+        "cluster_area_hectare": 1.5,
+        "water_source": "WS_RAINFED",
+        "number_of_smallholders": 28,
+        "da_name": "Tadesse Berhanu",
+        "da_mobile_number": "0952800638",
+        "supervisor_name": "Berhanu Abebe",
+        "supervisor_mobile_number": "0941923320",
+        "start_gc": "2026-05-13",
+        "end_gc": "2026-12-31",
+        "establishing_date": "2023-05-15",
+        "cluster_plan": 1.2,
+        "collected_land": 1.2,
+        "collected_by_combiner": 0.9
+      }
+    ],
+    "cultivation": [
+      {
+        "land_ref": "L1",
+        "land_id": "Plot 1",
+        "is_plot_not_registered": false,
+        "land_area": 2.25,
+        "season": "SEASON_MEHER",
+        "start_gc": "2026-05-01",
+        "end_gc": "2026-12-31",
+        "commodity": "CROP_SORGHUM",
+        "crop_category": "CROPCAT_CEREAL",
+        "cropping_system": "MONO_CROPPING",
+        "actual_cultivation_date": "2026-06-11",
+        "actual_growth_duration_days": 145,
+        "actual_crop_area": 0.75,
+        "actual_seed_class": "IMPROVED",
+        "actual_seed_source": "AGRICULTURE COOPERATIVE / UNION",
+        "seed_variety": "VAR_SORGHUM_ERER",
+        "actual_seed_qty": 8,
+        "actual_fertilizer_type": "FERT_UREA",
+        "actual_fertilizer_qty": 30,
+        "water_source": "WS_RAINFED",
+        "da_name": "Tadesse Berhanu",
+        "da_mobile_number": "0952800638",
+        "supervisor_name": "Berhanu Abebe",
+        "supervisor_mobile_number": "0941923320"
+      }
+    ],
+    "cultivation_clusters": [
+      {
+        "land_ref": "L1",
+        "land_id": "Plot 1",
+        "cluster_id": "FPC 01",
+        "cluster_name": "Badme Sorghum Growers Cluster",
+        "season": "SEASON_MEHER",
+        "agro_ecological_zone": "KOLLA",
+        "latitude": "14.4021",
+        "longitude": "37.7455",
+        "primary_commodity": "CROP_SORGHUM",
+        "fpc_type": "GREEN",
+        "cluster_area_timad": 6.0,
+        "cluster_area_hectare": 1.5,
+        "water_source": "WS_RAINFED",
+        "number_of_smallholders": 28,
+        "da_name": "Tadesse Berhanu",
+        "da_mobile_number": "0952800638",
+        "supervisor_name": "Berhanu Abebe",
+        "supervisor_mobile_number": "0941923320",
+        "start_gc": "2026-06-11",
+        "end_gc": "2026-12-31",
+        "establishing_date": "2023-05-15",
+        "cluster_plan": 1.2,
+        "collected_land": 1.2,
+        "collected_by_combiner": 0.9
+      }
+    ],
+    "sowing": [
+      {
+        "land_ref": "L1",
+        "land_id": "Plot 1",
+        "cluster_status": [
+          "CLUSTER"
+        ],
+        "cluster_id": "FPC 01",
+        "cluster_name": "Badme Sorghum Growers Cluster",
+        "cluster_season": "SEASON_MEHER",
+        "agro_ecological_zone": "KOLLA",
+        "cluster_area_hectare": 1.5,
+        "cluster_area_sown": 0.7,
+        "cluster_has_pest_disease": false,
+        "commodity": "CROP_SORGHUM",
+        "da_name": "Tadesse Berhanu",
+        "da_mobile_number": "0952800638",
+        "supervisor_name": "Berhanu Abebe",
+        "supervisor_mobile_number": "0941923320"
+      }
+    ],
+    "infestations": [],
+    "harvest": [
+      {
+        "land_ref": "L1",
+        "land_id": "Plot 1",
+        "cluster_status": [
+          "CLUSTER"
+        ],
+        "cluster_name": "Badme Sorghum Growers Cluster",
+        "commodity": "CROP_SORGHUM",
+        "cluster_crop_maturity_status": "READY_FOR_HARVEST",
+        "cluster_harvest_date": "2026-12-04",
+        "cluster_area_harvested": 0.7,
+        "cluster_qty_harvested": 15.4,
+        "cluster_qty_stored": 6.0,
+        "cluster_qty_sold": 8.0,
+        "da_name": "Tadesse Berhanu",
+        "da_mobile_number": "0952800638",
+        "supervisor_name": "Berhanu Abebe",
+        "supervisor_mobile_number": "0941923320"
+      }
+    ]
+  },
+  {
+    "individual_id": "ETH-IND-0006",
+    "production_season": "SEASON_MEHER",
+    "location": {
+      "latitude": 14.39207,
+      "longitude": 37.75076
+    },
+    "planning": [
+      {
+        "land_ref": "L1",
+        "land_id": "Plot 1",
+        "is_plot_not_registered": false,
+        "land_area": 1.75,
+        "soil_fertility_type": "SF_LOW",
+        "season": "SEASON_MEHER",
+        "start_gc": "2026-05-01",
+        "end_gc": "2026-12-31",
+        "commodity": "CROP_SESAME",
+        "crop_category": "CROPCAT_OILSEED",
+        "cropping_system": "MONO_CROPPING",
+        "planned_date": "2026-05-16",
+        "growth_duration_days": 112,
+        "planned_area": 1.5,
+        "expected_yield": 10.5,
+        "seed_class": "IMPROVED",
+        "seed_source": "PRIVATE SEED ENTERPRISE",
+        "seed_variety": "VAR_SESAME_HACHALU",
+        "planned_seed_qty": 8,
+        "planned_fertilizer_type": "FERT_NPS",
+        "planned_fertilizer_qty": 150,
+        "planned_labor": 40,
+        "water_source": "WS_RAINFED",
+        "da_name": "Yeshi Kebede",
+        "da_mobile_number": "0912148121",
+        "supervisor_name": "Berhanu Abebe",
+        "supervisor_mobile_number": "0941923320"
+      }
+    ],
+    "clusters": [],
+    "cultivation": [
+      {
+        "land_ref": "L1",
+        "land_id": "Plot 1",
+        "is_plot_not_registered": false,
+        "land_area": 1.75,
+        "season": "SEASON_MEHER",
+        "start_gc": "2026-05-01",
+        "end_gc": "2026-12-31",
+        "commodity": "CROP_SESAME",
+        "crop_category": "CROPCAT_OILSEED",
+        "cropping_system": "MONO_CROPPING",
+        "actual_cultivation_date": "2026-06-13",
+        "actual_growth_duration_days": 112,
+        "actual_crop_area": 1.5,
+        "actual_seed_class": "IMPROVED",
+        "actual_seed_source": "PRIVATE SEED ENTERPRISE",
+        "seed_variety": "VAR_SESAME_HACHALU",
+        "actual_seed_qty": 8,
+        "actual_fertilizer_type": "FERT_NPS",
+        "actual_fertilizer_qty": 150,
+        "water_source": "WS_RAINFED",
+        "da_name": "Yeshi Kebede",
+        "da_mobile_number": "0912148121",
+        "supervisor_name": "Berhanu Abebe",
+        "supervisor_mobile_number": "0941923320"
+      }
+    ],
+    "cultivation_clusters": [],
+    "sowing": [
+      {
+        "land_ref": "L1",
+        "land_id": "Plot 1",
+        "cluster_status": [
+          "INDEPENDENT"
+        ],
+        "season": "SEASON_MEHER",
+        "area_sown": 1.5,
+        "commodity": "CROP_SESAME",
+        "sowing_date": "2026-07-15",
+        "fertilizer_type": "FERT_NPS",
+        "fertilizer_qty": 150,
+        "has_pest_disease": true,
+        "da_name": "Yeshi Kebede",
+        "da_mobile_number": "0912148121",
+        "supervisor_name": "Berhanu Abebe",
+        "supervisor_mobile_number": "0941923320"
+      }
+    ],
+    "infestations": [
+      {
+        "infestation_id": "Infestation 2",
+        "land_ref": "L1",
+        "land_id": "Plot 1",
+        "commodity": "CROP_SESAME",
+        "infestation_type": "INFT_WEED",
+        "weed_name": "Parthenium weed",
+        "weed_control_method": "hand_picking",
+        "weedicide_frequency": "Three times per season",
+        "growth_stage": "VEGETATIVE",
+        "observation_date": "2026-08-22",
+        "severity_level": "LOW",
+        "estimated_damage_pct": 5
+      }
+    ],
+    "harvest": [
+      {
+        "land_ref": "L1",
+        "land_id": "Plot 1",
+        "cluster_status": [
+          "INDEPENDENT"
+        ],
+        "commodity": "CROP_SESAME",
+        "crop_maturity_status": "READY_FOR_HARVEST",
+        "harvest_date": "2026-11-06",
+        "area_harvested": 1.5,
+        "qty_harvested": 10.5,
+        "qty_stored": 2.5,
+        "qty_sold": 8.0,
+        "da_name": "Yeshi Kebede",
+        "da_mobile_number": "0912148121",
+        "supervisor_name": "Berhanu Abebe",
+        "supervisor_mobile_number": "0941923320"
+      }
+    ]
+  },
+  {
+    "individual_id": "ETH-IND-0007",
+    "production_season": "SEASON_IRRIGATION",
+    "location": {
+      "latitude": 14.38497,
+      "longitude": 37.75186
+    },
+    "planning": [
+      {
+        "land_ref": "L1",
+        "land_id": "Plot 1",
+        "is_plot_not_registered": false,
+        "land_area": 1.0,
+        "soil_fertility_type": "SF_HIGH",
+        "season": "SEASON_IRRIGATION",
+        "start_gc": "2026-01-05",
+        "end_gc": "2026-06-30",
+        "commodity": "CROP_MAIZE",
+        "crop_category": "CROPCAT_CEREAL",
+        "cropping_system": "MONO_CROPPING",
+        "planned_date": "2026-01-08",
+        "growth_duration_days": 100,
+        "planned_area": 1.0,
+        "expected_yield": 45.0,
+        "seed_class": "IMPROVED",
+        "seed_source": "GOVERNMENT / WOREDS AGRICULTURE",
+        "seed_variety": "VAR_MAIZE_BH661",
+        "planned_seed_qty": 25,
+        "planned_fertilizer_type": "FERT_UREA",
+        "planned_fertilizer_qty": 100,
+        "planned_labor": 60,
+        "water_source": "WS_IRRIGATION_SURFACE",
+        "da_name": "Tadesse Berhanu",
+        "da_mobile_number": "0952800638",
+        "supervisor_name": "Berhanu Abebe",
+        "supervisor_mobile_number": "0941923320"
+      }
+    ],
+    "clusters": [],
+    "cultivation": [
+      {
+        "land_ref": "L1",
+        "land_id": "Plot 1",
+        "is_plot_not_registered": false,
+        "land_area": 1.0,
+        "season": "SEASON_IRRIGATION",
+        "start_gc": "2026-01-05",
+        "end_gc": "2026-06-30",
+        "commodity": "CROP_MAIZE",
+        "crop_category": "CROPCAT_CEREAL",
+        "cropping_system": "MONO_CROPPING",
+        "actual_cultivation_date": "2026-01-22",
+        "actual_growth_duration_days": 100,
+        "actual_crop_area": 1.0,
+        "actual_seed_class": "IMPROVED",
+        "actual_seed_source": "GOVERNMENT / WOREDS AGRICULTURE",
+        "seed_variety": "VAR_MAIZE_BH661",
+        "actual_seed_qty": 25,
+        "actual_fertilizer_type": "FERT_UREA",
+        "actual_fertilizer_qty": 100,
+        "water_source": "WS_IRRIGATION_SURFACE",
+        "da_name": "Tadesse Berhanu",
+        "da_mobile_number": "0952800638",
+        "supervisor_name": "Berhanu Abebe",
+        "supervisor_mobile_number": "0941923320"
+      }
+    ],
+    "cultivation_clusters": [],
+    "sowing": [
+      {
+        "land_ref": "L1",
+        "land_id": "Plot 1",
+        "cluster_status": [
+          "INDEPENDENT"
+        ],
+        "season": "SEASON_IRRIGATION",
+        "area_sown": 0.9,
+        "commodity": "CROP_MAIZE",
+        "sowing_date": "2026-02-12",
+        "fertilizer_type": "FERT_UREA",
+        "fertilizer_qty": 90,
+        "has_pest_disease": true,
+        "da_name": "Tadesse Berhanu",
+        "da_mobile_number": "0952800638",
+        "supervisor_name": "Berhanu Abebe",
+        "supervisor_mobile_number": "0941923320"
+      }
+    ],
+    "infestations": [
+      {
+        "infestation_id": "Infestation 3",
+        "land_ref": "L1",
+        "land_id": "Plot 1",
+        "commodity": "CROP_MAIZE",
+        "infestation_type": "INFT_PEST",
+        "pest_name": "Fall armyworm",
+        "pesticide_method": "chemical_spray",
+        "pesticide_type": "insecticide",
+        "pesticide_name": "Emamectin benzoate",
+        "pesticide_frequency": "Twice per season",
+        "growth_stage": "VEGETATIVE",
+        "observation_date": "2026-03-26",
+        "severity_level": "HIGH",
+        "estimated_damage_pct": 22
+      }
+    ],
+    "harvest": [
+      {
+        "land_ref": "L1",
+        "land_id": "Plot 1",
+        "cluster_status": [
+          "INDEPENDENT"
+        ],
+        "commodity": "CROP_MAIZE",
+        "crop_maturity_status": "READY_FOR_HARVEST",
+        "harvest_date": "2026-05-21",
+        "area_harvested": 0.9,
+        "qty_harvested": 40.5,
+        "post_harvest_loss_pct": 6,
+        "qty_stored": 12.0,
+        "qty_sold": 24.0,
+        "da_name": "Tadesse Berhanu",
+        "da_mobile_number": "0952800638",
+        "supervisor_name": "Berhanu Abebe",
+        "supervisor_mobile_number": "0941923320"
+      }
+    ]
+  },
+  {
+    "individual_id": "ETH-IND-0009",
+    "production_season": "SEASON_MEHER",
+    "location": {
+      "latitude": 14.03085,
+      "longitude": 38.32212
+    },
+    "planning": [
+      {
+        "land_ref": "L1",
+        "land_id": "Plot 1",
+        "is_plot_not_registered": false,
+        "land_area": 2.0,
+        "soil_fertility_type": "SF_LOW",
+        "season": "SEASON_MEHER",
+        "start_gc": "2026-05-01",
+        "end_gc": "2026-12-31",
+        "commodity": "CROP_SORGHUM",
+        "crop_category": "CROPCAT_CEREAL",
+        "cropping_system": "MONO_CROPPING",
+        "planned_date": "2026-05-15",
+        "growth_duration_days": 145,
+        "planned_area": 0.6,
+        "expected_yield": 13.2,
+        "seed_class": "IMPROVED",
+        "seed_source": "AGRICULTURE COOPERATIVE / UNION",
+        "seed_variety": "VAR_SORGHUM_AYINAGE",
+        "planned_seed_qty": 6,
+        "planned_fertilizer_type": "FERT_NPS",
+        "planned_fertilizer_qty": 36,
+        "planned_labor": 28,
+        "water_source": "WS_RAINFED",
+        "da_name": "Bethlehem Dawit",
+        "da_mobile_number": "0920856921",
+        "supervisor_name": "Tigist Mekonnen",
+        "supervisor_mobile_number": "0921118013"
+      }
+    ],
+    "clusters": [
+      {
+        "land_ref": "L1",
+        "land_id": "Plot 1",
+        "cluster_id": "FPC 02",
+        "cluster_name": "Semema Sorghum Growers Cluster",
+        "season": "SEASON_MEHER",
+        "agro_ecological_zone": "WOINA_DEGA",
+        "latitude": "14.0291",
+        "longitude": "38.3236",
+        "primary_commodity": "CROP_SORGHUM",
+        "fpc_type": "GREEN",
+        "cluster_area_timad": 5.6,
+        "cluster_area_hectare": 1.4,
+        "water_source": "WS_RAINFED",
+        "number_of_smallholders": 34,
+        "da_name": "Bethlehem Dawit",
+        "da_mobile_number": "0920856921",
+        "supervisor_name": "Tigist Mekonnen",
+        "supervisor_mobile_number": "0921118013",
+        "start_gc": "2026-05-15",
+        "end_gc": "2026-12-31",
+        "establishing_date": "2022-05-20",
+        "cluster_plan": 1.2,
+        "collected_land": 1.2,
+        "collected_by_combiner": 0.8
+      }
+    ],
+    "cultivation": [
+      {
+        "land_ref": "L1",
+        "land_id": "Plot 1",
+        "is_plot_not_registered": false,
+        "land_area": 2.0,
+        "season": "SEASON_MEHER",
+        "start_gc": "2026-05-01",
+        "end_gc": "2026-12-31",
+        "commodity": "CROP_SORGHUM",
+        "crop_category": "CROPCAT_CEREAL",
+        "cropping_system": "MONO_CROPPING",
+        "actual_cultivation_date": "2026-06-14",
+        "actual_growth_duration_days": 145,
+        "actual_crop_area": 0.6,
+        "actual_seed_class": "IMPROVED",
+        "actual_seed_source": "AGRICULTURE COOPERATIVE / UNION",
+        "seed_variety": "VAR_SORGHUM_AYINAGE",
+        "actual_seed_qty": 6,
+        "actual_fertilizer_type": "FERT_NPS",
+        "actual_fertilizer_qty": 36,
+        "water_source": "WS_RAINFED",
+        "da_name": "Bethlehem Dawit",
+        "da_mobile_number": "0920856921",
+        "supervisor_name": "Tigist Mekonnen",
+        "supervisor_mobile_number": "0921118013"
+      }
+    ],
+    "cultivation_clusters": [
+      {
+        "land_ref": "L1",
+        "land_id": "Plot 1",
+        "cluster_id": "FPC 02",
+        "cluster_name": "Semema Sorghum Growers Cluster",
+        "season": "SEASON_MEHER",
+        "agro_ecological_zone": "WOINA_DEGA",
+        "latitude": "14.0291",
+        "longitude": "38.3236",
+        "primary_commodity": "CROP_SORGHUM",
+        "fpc_type": "GREEN",
+        "cluster_area_timad": 5.6,
+        "cluster_area_hectare": 1.4,
+        "water_source": "WS_RAINFED",
+        "number_of_smallholders": 34,
+        "da_name": "Bethlehem Dawit",
+        "da_mobile_number": "0920856921",
+        "supervisor_name": "Tigist Mekonnen",
+        "supervisor_mobile_number": "0921118013",
+        "start_gc": "2026-06-14",
+        "end_gc": "2026-12-31",
+        "establishing_date": "2022-05-20",
+        "cluster_plan": 1.2,
+        "collected_land": 1.2,
+        "collected_by_combiner": 0.8
+      }
+    ],
+    "sowing": [
+      {
+        "land_ref": "L1",
+        "land_id": "Plot 1",
+        "cluster_status": [
+          "CLUSTER"
+        ],
+        "cluster_id": "FPC 02",
+        "cluster_name": "Semema Sorghum Growers Cluster",
+        "cluster_season": "SEASON_MEHER",
+        "agro_ecological_zone": "WOINA_DEGA",
+        "cluster_area_hectare": 1.4,
+        "cluster_area_sown": 0.55,
+        "cluster_has_pest_disease": false,
+        "commodity": "CROP_SORGHUM",
+        "da_name": "Bethlehem Dawit",
+        "da_mobile_number": "0920856921",
+        "supervisor_name": "Tigist Mekonnen",
+        "supervisor_mobile_number": "0921118013"
+      }
+    ],
+    "infestations": [],
+    "harvest": [
+      {
+        "land_ref": "L1",
+        "land_id": "Plot 1",
+        "cluster_status": [
+          "CLUSTER"
+        ],
+        "cluster_name": "Semema Sorghum Growers Cluster",
+        "commodity": "CROP_SORGHUM",
+        "cluster_crop_maturity_status": "READY_FOR_HARVEST",
+        "cluster_harvest_date": "2026-12-06",
+        "cluster_area_harvested": 0.55,
+        "cluster_qty_harvested": 11.0,
+        "cluster_qty_stored": 4.0,
+        "cluster_qty_sold": 6.5,
+        "da_name": "Bethlehem Dawit",
+        "da_mobile_number": "0920856921",
+        "supervisor_name": "Tigist Mekonnen",
+        "supervisor_mobile_number": "0921118013"
+      }
+    ]
+  },
+  {
+    "individual_id": "ETH-IND-0010",
+    "production_season": "SEASON_BELG",
+    "location": {
+      "latitude": 14.02445,
+      "longitude": 38.31362
+    },
+    "planning": [
+      {
+        "land_ref": "L1",
+        "land_id": "Plot 1",
+        "is_plot_not_registered": false,
+        "land_area": 1.25,
+        "soil_fertility_type": "SF_HIGH",
+        "season": "SEASON_BELG",
+        "start_gc": "2026-01-10",
+        "end_gc": "2026-07-31",
+        "commodity": "CROP_BARLEY",
+        "crop_category": "CROPCAT_CEREAL",
+        "cropping_system": "MONO_CROPPING",
+        "planned_date": "2026-01-14",
+        "growth_duration_days": 120,
+        "planned_area": 1.0,
+        "expected_yield": 25.0,
+        "seed_class": "IMPROVED",
+        "seed_source": "AGRICULTURE COOPERATIVE / UNION",
+        "seed_variety": "VAR_BARLEY_HB1307",
+        "planned_seed_qty": 100,
+        "planned_fertilizer_type": "FERT_DAP",
+        "planned_fertilizer_qty": 100,
+        "planned_labor": 44,
+        "water_source": "WS_RAINFED",
+        "da_name": "Abebe Berhanu",
+        "da_mobile_number": "0959031795",
+        "supervisor_name": "Tigist Mekonnen",
+        "supervisor_mobile_number": "0921118013"
+      }
+    ],
+    "clusters": [],
+    "cultivation": [
+      {
+        "land_ref": "L1",
+        "land_id": "Plot 1",
+        "is_plot_not_registered": false,
+        "land_area": 1.25,
+        "season": "SEASON_BELG",
+        "start_gc": "2026-01-10",
+        "end_gc": "2026-07-31",
+        "commodity": "CROP_BARLEY",
+        "crop_category": "CROPCAT_CEREAL",
+        "cropping_system": "MONO_CROPPING",
+        "actual_cultivation_date": "2026-02-03",
+        "actual_growth_duration_days": 120,
+        "actual_crop_area": 1.0,
+        "actual_seed_class": "IMPROVED",
+        "actual_seed_source": "AGRICULTURE COOPERATIVE / UNION",
+        "seed_variety": "VAR_BARLEY_HB1307",
+        "actual_seed_qty": 100,
+        "actual_fertilizer_type": "FERT_DAP",
+        "actual_fertilizer_qty": 100,
+        "water_source": "WS_RAINFED",
+        "da_name": "Abebe Berhanu",
+        "da_mobile_number": "0959031795",
+        "supervisor_name": "Tigist Mekonnen",
+        "supervisor_mobile_number": "0921118013"
+      }
+    ],
+    "cultivation_clusters": [],
+    "sowing": [
+      {
+        "land_ref": "L1",
+        "land_id": "Plot 1",
+        "cluster_status": [
+          "INDEPENDENT"
+        ],
+        "season": "SEASON_BELG",
+        "area_sown": 1.0,
+        "commodity": "CROP_BARLEY",
+        "sowing_date": "2026-02-24",
+        "fertilizer_type": "FERT_DAP",
+        "fertilizer_qty": 100,
+        "has_pest_disease": true,
+        "da_name": "Abebe Berhanu",
+        "da_mobile_number": "0959031795",
+        "supervisor_name": "Tigist Mekonnen",
+        "supervisor_mobile_number": "0921118013"
+      }
+    ],
+    "infestations": [
+      {
+        "infestation_id": "Infestation 4",
+        "land_ref": "L1",
+        "land_id": "Plot 1",
+        "commodity": "CROP_BARLEY",
+        "infestation_type": "INFT_DISEASE",
+        "disease_name": "Barley leaf rust",
+        "disease_control_method": "chemical_spray",
+        "fungicide_type": "fungicide",
+        "fungicide_name": "Mancozeb",
+        "disease_frequency_of_application": "Once per season",
+        "growth_stage": "FLOWERING",
+        "observation_date": "2026-04-21",
+        "severity_level": "MEDIUM",
+        "estimated_damage_pct": 10
+      }
+    ],
+    "harvest": [
+      {
+        "land_ref": "L1",
+        "land_id": "Plot 1",
+        "cluster_status": [
+          "INDEPENDENT"
+        ],
+        "commodity": "CROP_BARLEY",
+        "crop_maturity_status": "READY_FOR_HARVEST",
+        "harvest_date": "2026-06-24",
+        "area_harvested": 1.0,
+        "qty_harvested": 25.0,
+        "qty_stored": 10.0,
+        "qty_sold": 14.0,
+        "da_name": "Abebe Berhanu",
+        "da_mobile_number": "0959031795",
+        "supervisor_name": "Tigist Mekonnen",
+        "supervisor_mobile_number": "0921118013"
+      }
+    ]
+  },
+  {
+    "individual_id": "ETH-IND-0014",
+    "production_season": "SEASON_IRRIGATION",
+    "location": {
+      "latitude": 14.36662,
+      "longitude": 38.39383
+    },
+    "planning": [
+      {
+        "land_ref": "L1",
+        "land_id": "Plot 1",
+        "is_plot_not_registered": false,
+        "land_area": 0.75,
+        "soil_fertility_type": "SF_MEDIUM",
+        "season": "SEASON_IRRIGATION",
+        "start_gc": "2026-01-05",
+        "end_gc": "2026-06-30",
+        "commodity": "CROP_MAIZE",
+        "crop_category": "CROPCAT_CEREAL",
+        "cropping_system": "MONO_CROPPING",
+        "planned_date": "2026-01-10",
+        "growth_duration_days": 100,
+        "planned_area": 0.75,
+        "expected_yield": 33.75,
+        "seed_class": "IMPROVED",
+        "seed_source": "GOVERNMENT / WOREDS AGRICULTURE",
+        "seed_variety": "VAR_MAIZE_BH661",
+        "planned_seed_qty": 19,
+        "planned_fertilizer_type": "FERT_UREA",
+        "planned_fertilizer_qty": 38,
+        "planned_labor": 36,
+        "water_source": "WS_IRRIGATION_GROUND",
+        "da_name": "Abebe Berhanu",
+        "da_mobile_number": "0959031795",
+        "supervisor_name": "Bethlehem Dawit",
+        "supervisor_mobile_number": "0920856921"
+      }
+    ],
+    "clusters": [],
+    "cultivation": [
+      {
+        "land_ref": "L1",
+        "land_id": "Plot 1",
+        "is_plot_not_registered": false,
+        "land_area": 0.75,
+        "season": "SEASON_IRRIGATION",
+        "start_gc": "2026-01-05",
+        "end_gc": "2026-06-30",
+        "commodity": "CROP_MAIZE",
+        "crop_category": "CROPCAT_CEREAL",
+        "cropping_system": "MONO_CROPPING",
+        "actual_cultivation_date": "2026-01-24",
+        "actual_growth_duration_days": 100,
+        "actual_crop_area": 0.75,
+        "actual_seed_class": "IMPROVED",
+        "actual_seed_source": "GOVERNMENT / WOREDS AGRICULTURE",
+        "seed_variety": "VAR_MAIZE_BH661",
+        "actual_seed_qty": 19,
+        "actual_fertilizer_type": "FERT_UREA",
+        "actual_fertilizer_qty": 38,
+        "water_source": "WS_IRRIGATION_GROUND",
+        "da_name": "Abebe Berhanu",
+        "da_mobile_number": "0959031795",
+        "supervisor_name": "Bethlehem Dawit",
+        "supervisor_mobile_number": "0920856921"
+      }
+    ],
+    "cultivation_clusters": [],
+    "sowing": [
+      {
+        "land_ref": "L1",
+        "land_id": "Plot 1",
+        "cluster_status": [
+          "INDEPENDENT"
+        ],
+        "season": "SEASON_IRRIGATION",
+        "area_sown": 0.7,
+        "commodity": "CROP_MAIZE",
+        "sowing_date": "2026-02-14",
+        "fertilizer_type": "FERT_UREA",
+        "fertilizer_qty": 35,
+        "has_pest_disease": false,
+        "da_name": "Abebe Berhanu",
+        "da_mobile_number": "0959031795",
+        "supervisor_name": "Bethlehem Dawit",
+        "supervisor_mobile_number": "0920856921"
+      }
+    ],
+    "infestations": [],
+    "harvest": [
+      {
+        "land_ref": "L1",
+        "land_id": "Plot 1",
+        "cluster_status": [
+          "INDEPENDENT"
+        ],
+        "commodity": "CROP_MAIZE",
+        "crop_maturity_status": "READY_FOR_HARVEST",
+        "harvest_date": "2026-05-24",
+        "area_harvested": 0.7,
+        "qty_harvested": 28.0,
+        "qty_stored": 9.0,
+        "qty_sold": 17.0,
+        "da_name": "Abebe Berhanu",
+        "da_mobile_number": "0959031795",
+        "supervisor_name": "Bethlehem Dawit",
+        "supervisor_mobile_number": "0920856921"
+      }
+    ]
+  },
+  {
+    "individual_id": "ETH-IND-0016",
+    "production_season": "SEASON_MEHER",
+    "location": {
+      "latitude": 14.09571,
+      "longitude": 38.28944
+    },
+    "planning": [
+      {
+        "land_ref": "L1",
+        "land_id": "Plot 1",
+        "is_plot_not_registered": false,
+        "land_area": 1.75,
+        "soil_fertility_type": "SF_HIGH",
+        "season": "SEASON_MEHER",
+        "start_gc": "2026-05-01",
+        "end_gc": "2026-12-31",
+        "commodity": "CROP_SORGHUM",
+        "crop_category": "CROPCAT_CEREAL",
+        "cropping_system": "MONO_CROPPING",
+        "planned_date": "2026-05-17",
+        "growth_duration_days": 145,
+        "planned_area": 1.75,
+        "expected_yield": 38.5,
+        "seed_class": "IMPROVED",
+        "seed_source": "GOVERNMENT / WOREDS AGRICULTURE",
+        "seed_variety": "VAR_SORGHUM_MELKAM",
+        "planned_seed_qty": 18,
+        "planned_fertilizer_type": "FERT_NPS",
+        "planned_fertilizer_qty": 175,
+        "planned_labor": 46,
+        "water_source": "WS_RAINFED",
+        "da_name": "Bekele Mulugeta",
+        "da_mobile_number": "0936065802",
+        "supervisor_name": "Selamawit Dawit",
+        "supervisor_mobile_number": "0925577406"
+      }
+    ],
+    "clusters": [],
+    "cultivation": [
+      {
+        "land_ref": "L1",
+        "land_id": "Plot 1",
+        "is_plot_not_registered": false,
+        "land_area": 1.75,
+        "season": "SEASON_MEHER",
+        "start_gc": "2026-05-01",
+        "end_gc": "2026-12-31",
+        "commodity": "CROP_SORGHUM",
+        "crop_category": "CROPCAT_CEREAL",
+        "cropping_system": "MONO_CROPPING",
+        "actual_cultivation_date": "2026-06-15",
+        "actual_growth_duration_days": 145,
+        "actual_crop_area": 1.5,
+        "actual_seed_class": "IMPROVED",
+        "actual_seed_source": "GOVERNMENT / WOREDS AGRICULTURE",
+        "seed_variety": "VAR_SORGHUM_MELKAM",
+        "actual_seed_qty": 15,
+        "actual_fertilizer_type": "FERT_NPS",
+        "actual_fertilizer_qty": 150,
+        "water_source": "WS_RAINFED",
+        "da_name": "Bekele Mulugeta",
+        "da_mobile_number": "0936065802",
+        "supervisor_name": "Selamawit Dawit",
+        "supervisor_mobile_number": "0925577406"
+      }
+    ],
+    "cultivation_clusters": [],
+    "sowing": [
+      {
+        "land_ref": "L1",
+        "land_id": "Plot 1",
+        "cluster_status": [
+          "INDEPENDENT"
+        ],
+        "season": "SEASON_MEHER",
+        "area_sown": 1.5,
+        "commodity": "CROP_SORGHUM",
+        "sowing_date": "2026-07-15",
+        "fertilizer_type": "FERT_NPS",
+        "fertilizer_qty": 150,
+        "has_pest_disease": false,
+        "da_name": "Bekele Mulugeta",
+        "da_mobile_number": "0936065802",
+        "supervisor_name": "Selamawit Dawit",
+        "supervisor_mobile_number": "0925577406"
+      }
+    ],
+    "infestations": [],
+    "harvest": [
+      {
+        "land_ref": "L1",
+        "land_id": "Plot 1",
+        "cluster_status": [
+          "INDEPENDENT"
+        ],
+        "commodity": "CROP_SORGHUM",
+        "crop_maturity_status": "READY_FOR_HARVEST",
+        "harvest_date": "2026-12-01",
+        "area_harvested": 1.5,
+        "qty_harvested": 33.0,
+        "qty_stored": 13.0,
+        "qty_sold": 18.0,
+        "da_name": "Bekele Mulugeta",
+        "da_mobile_number": "0936065802",
+        "supervisor_name": "Selamawit Dawit",
+        "supervisor_mobile_number": "0925577406"
+      }
+    ]
+  },
+  {
+    "individual_id": "ETH-IND-0018",
+    "production_season": "SEASON_MEHER",
+    "location": {
+      "latitude": 14.10502,
+      "longitude": 38.28153
+    },
+    "planning": [
+      {
+        "land_ref": "L1",
+        "land_id": "Plot 1",
+        "is_plot_not_registered": false,
+        "land_area": 2.75,
+        "soil_fertility_type": "SF_LOW",
+        "season": "SEASON_MEHER",
+        "start_gc": "2026-05-01",
+        "end_gc": "2026-12-31",
+        "commodity": "CROP_BREAD_WHEAT",
+        "crop_category": "CROPCAT_CEREAL",
+        "cropping_system": "MONO_CROPPING",
+        "planned_date": "2026-05-18",
+        "growth_duration_days": 130,
+        "planned_area": 2.5,
+        "expected_yield": 75.0,
+        "seed_class": "IMPROVED",
+        "seed_source": "GOVERNMENT / WOREDS AGRICULTURE",
+        "seed_variety": "VAR_WHEAT_KAKABA",
+        "planned_seed_qty": 375,
+        "planned_fertilizer_type": "FERT_NPSB",
+        "planned_fertilizer_qty": 500,
+        "planned_labor": 70,
+        "water_source": "WS_RAINFED",
+        "da_name": "Selamawit Dawit",
+        "da_mobile_number": "0925577406",
+        "supervisor_name": "Aster Mulugeta",
+        "supervisor_mobile_number": "0964815374"
+      },
+      {
+        "land_ref": "L2",
+        "land_id": "Plot 2",
+        "is_plot_not_registered": false,
+        "land_area": 1.0,
+        "soil_fertility_type": "SF_HIGH",
+        "season": "SEASON_MEHER",
+        "start_gc": "2026-05-01",
+        "end_gc": "2026-12-31",
+        "commodity": "CROP_FABA_BEAN",
+        "crop_category": "CROPCAT_FOOD_LEGUME",
+        "cropping_system": "MONO_CROPPING",
+        "planned_date": "2026-05-18",
+        "growth_duration_days": 140,
+        "planned_area": 1.0,
+        "expected_yield": 20.0,
+        "seed_class": "IMPROVED",
+        "seed_source": "AGRICULTURE COOPERATIVE / UNION",
+        "seed_variety": "VAR_FABA_BEAN_SHOA",
+        "planned_seed_qty": 150,
+        "planned_fertilizer_type": "FERT_DAP",
+        "planned_fertilizer_qty": 100,
+        "planned_labor": 32,
+        "water_source": "WS_RAINFED",
+        "da_name": "Selamawit Dawit",
+        "da_mobile_number": "0925577406",
+        "supervisor_name": "Aster Mulugeta",
+        "supervisor_mobile_number": "0964815374"
+      }
+    ],
+    "clusters": [],
+    "cultivation": [
+      {
+        "land_ref": "L1",
+        "land_id": "Plot 1",
+        "is_plot_not_registered": false,
+        "land_area": 2.75,
+        "season": "SEASON_MEHER",
+        "start_gc": "2026-05-01",
+        "end_gc": "2026-12-31",
+        "commodity": "CROP_BREAD_WHEAT",
+        "crop_category": "CROPCAT_CEREAL",
+        "cropping_system": "MONO_CROPPING",
+        "actual_cultivation_date": "2026-06-16",
+        "actual_growth_duration_days": 130,
+        "actual_crop_area": 2.5,
+        "actual_seed_class": "IMPROVED",
+        "actual_seed_source": "GOVERNMENT / WOREDS AGRICULTURE",
+        "seed_variety": "VAR_WHEAT_KAKABA",
+        "actual_seed_qty": 375,
+        "actual_fertilizer_type": "FERT_NPSB",
+        "actual_fertilizer_qty": 500,
+        "water_source": "WS_RAINFED",
+        "da_name": "Selamawit Dawit",
+        "da_mobile_number": "0925577406",
+        "supervisor_name": "Aster Mulugeta",
+        "supervisor_mobile_number": "0964815374"
+      },
+      {
+        "land_ref": "L2",
+        "land_id": "Plot 2",
+        "is_plot_not_registered": false,
+        "land_area": 1.0,
+        "season": "SEASON_MEHER",
+        "start_gc": "2026-05-01",
+        "end_gc": "2026-12-31",
+        "commodity": "CROP_FABA_BEAN",
+        "crop_category": "CROPCAT_FOOD_LEGUME",
+        "cropping_system": "MONO_CROPPING",
+        "actual_cultivation_date": "2026-06-16",
+        "actual_growth_duration_days": 140,
+        "actual_crop_area": 1.0,
+        "actual_seed_class": "IMPROVED",
+        "actual_seed_source": "AGRICULTURE COOPERATIVE / UNION",
+        "seed_variety": "VAR_FABA_BEAN_SHOA",
+        "actual_seed_qty": 150,
+        "actual_fertilizer_type": "FERT_DAP",
+        "actual_fertilizer_qty": 100,
+        "water_source": "WS_RAINFED",
+        "da_name": "Selamawit Dawit",
+        "da_mobile_number": "0925577406",
+        "supervisor_name": "Aster Mulugeta",
+        "supervisor_mobile_number": "0964815374"
+      }
+    ],
+    "cultivation_clusters": [],
+    "sowing": [
+      {
+        "land_ref": "L1",
+        "land_id": "Plot 1",
+        "cluster_status": [
+          "INDEPENDENT"
+        ],
+        "season": "SEASON_MEHER",
+        "area_sown": 2.4,
+        "commodity": "CROP_BREAD_WHEAT",
+        "sowing_date": "2026-07-17",
+        "fertilizer_type": "FERT_NPSB",
+        "fertilizer_qty": 480,
+        "has_pest_disease": true,
+        "da_name": "Selamawit Dawit",
+        "da_mobile_number": "0925577406",
+        "supervisor_name": "Aster Mulugeta",
+        "supervisor_mobile_number": "0964815374"
+      },
+      {
+        "land_ref": "L2",
+        "land_id": "Plot 2",
+        "cluster_status": [
+          "INDEPENDENT"
+        ],
+        "season": "SEASON_MEHER",
+        "area_sown": 0.9,
+        "commodity": "CROP_FABA_BEAN",
+        "sowing_date": "2026-07-18",
+        "fertilizer_type": "FERT_DAP",
+        "fertilizer_qty": 90,
+        "has_pest_disease": false,
+        "da_name": "Selamawit Dawit",
+        "da_mobile_number": "0925577406",
+        "supervisor_name": "Aster Mulugeta",
+        "supervisor_mobile_number": "0964815374"
+      }
+    ],
+    "infestations": [
+      {
+        "infestation_id": "Infestation 5",
+        "land_ref": "L1",
+        "land_id": "Plot 1",
+        "commodity": "CROP_BREAD_WHEAT",
+        "infestation_type": "INFT_DISEASE",
+        "disease_name": "Wheat stem rust",
+        "disease_control_method": "chemical_spray",
+        "fungicide_type": "fungicide",
+        "fungicide_name": "Propiconazole",
+        "disease_frequency_of_application": "Twice per season",
+        "growth_stage": "FLOWERING",
+        "observation_date": "2026-09-10",
+        "severity_level": "HIGH",
+        "estimated_damage_pct": 18
+      }
+    ],
+    "harvest": [
+      {
+        "land_ref": "L1",
+        "land_id": "Plot 1",
+        "cluster_status": [
+          "INDEPENDENT"
+        ],
+        "commodity": "CROP_BREAD_WHEAT",
+        "crop_maturity_status": "READY_FOR_HARVEST",
+        "harvest_date": "2026-11-27",
+        "area_harvested": 2.4,
+        "qty_harvested": 72.0,
+        "qty_stored": 22.0,
+        "qty_sold": 48.0,
+        "da_name": "Selamawit Dawit",
+        "da_mobile_number": "0925577406",
+        "supervisor_name": "Aster Mulugeta",
+        "supervisor_mobile_number": "0964815374"
+      },
+      {
+        "land_ref": "L2",
+        "land_id": "Plot 2",
+        "cluster_status": [
+          "INDEPENDENT"
+        ],
+        "commodity": "CROP_FABA_BEAN",
+        "crop_maturity_status": "READY_FOR_HARVEST",
+        "harvest_date": "2026-12-05",
+        "area_harvested": 0.9,
+        "qty_harvested": 18.0,
+        "qty_stored": 7.0,
+        "qty_sold": 10.0,
+        "da_name": "Selamawit Dawit",
+        "da_mobile_number": "0925577406",
+        "supervisor_name": "Aster Mulugeta",
+        "supervisor_mobile_number": "0964815374"
+      }
+    ]
+  },
+  {
+    "individual_id": "ETH-IND-0019",
+    "production_season": "SEASON_MEHER",
+    "location": {
+      "latitude": 14.09692,
+      "longitude": 38.28803
+    },
+    "planning": [
+      {
+        "land_ref": "L1",
+        "land_id": "Plot 1",
+        "is_plot_not_registered": false,
+        "land_area": 2.0,
+        "soil_fertility_type": "SF_HIGH",
+        "season": "SEASON_MEHER",
+        "start_gc": "2026-05-01",
+        "end_gc": "2026-12-31",
+        "commodity": "CROP_FABA_BEAN",
+        "crop_category": "CROPCAT_FOOD_LEGUME",
+        "cropping_system": "MONO_CROPPING",
+        "planned_date": "2026-05-20",
+        "growth_duration_days": 140,
+        "planned_area": 1.5,
+        "expected_yield": 30.0,
+        "seed_class": "IMPROVED",
+        "seed_source": "AGRICULTURE COOPERATIVE / UNION",
+        "seed_variety": "VAR_FABA_BEAN_SHOA",
+        "planned_seed_qty": 225,
+        "planned_fertilizer_type": "FERT_DAP",
+        "planned_fertilizer_qty": 150,
+        "planned_labor": 38,
+        "water_source": "WS_RAINFED",
+        "da_name": "Bekele Mulugeta",
+        "da_mobile_number": "0936065802",
+        "supervisor_name": "Aster Mulugeta",
+        "supervisor_mobile_number": "0964815374"
+      }
+    ],
+    "clusters": [],
+    "cultivation": [],
+    "cultivation_clusters": [],
+    "sowing": [],
+    "infestations": [],
+    "harvest": []
+  }
+]

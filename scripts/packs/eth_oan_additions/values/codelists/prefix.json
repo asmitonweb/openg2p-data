@@ -1,0 +1,12 @@
+{
+  "description": "Dr, which the DA registry's salutation field offers (Development Agents with a doctorate) and the base list lacks.",
+  "values": [
+    {
+      "value_id": "DR",
+      "value_code": "DR",
+      "value_display": "Dr",
+      "sort_order": 5,
+      "display_i18n": {}
+    }
+  ]
+}

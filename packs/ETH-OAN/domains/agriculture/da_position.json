@@ -1,0 +1,23 @@
+{
+  "attribute_id": "DA_POSITION",
+  "attribute_code": "DA_POSITION",
+  "attribute_display": "Development Agent position",
+  "description": "Post a Development Agent holds in the kebele extension structure. Source: OpenAgriNet DA Registry field list (Oct 2026).",
+  "is_hierarchical": false,
+  "values": [
+    {
+      "value_id": "DEVELOPMENT_AGENT",
+      "value_code": "DEVELOPMENT_AGENT",
+      "value_display": "Development agent",
+      "sort_order": 1,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "SENIOR_DA",
+      "value_code": "SENIOR_DA",
+      "value_display": "Senior development agent",
+      "sort_order": 2,
+      "display_i18n": {}
+    }
+  ]
+}
