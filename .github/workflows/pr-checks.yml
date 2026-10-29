@@ -54,6 +54,9 @@ jobs:
       - name: Data files parse
         run: python scripts/ci/check_data_files.py
 
+      - name: Registry theme renders
+        run: python scripts/themes/build_theme_sql.py --check
+
   packs:
     runs-on: ubuntu-latest
     steps:

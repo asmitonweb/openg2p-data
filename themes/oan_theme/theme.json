@@ -1,0 +1,23 @@
+{
+  "mnemonic": "oan_theme",
+  "theme_id": "0d5b7b6e-6e0f-5a52-9a39-1f1a0b6c3d11",
+  "description": "OpenAgriNet registry staff-portal theme. One theme, one entry per registry; each entry carries that registry's palette and its background image (stored as the theme's dashboard_image).",
+  "registries": {
+    "farmer": {
+      "image": "images/farmer.jpg",
+      "colours": {"primary_color_1": "#EABB13", "primary_color_2": "#ED7C22", "secondary_color_1": "#F3F1E4", "secondary_color_2": "#E1E1E1", "secondary_color_3": "#A1A1A1", "neutral_color_1": "#000000", "neutral_color_2": "#FFFFFF"}
+    },
+    "crop": {
+      "image": "images/crop.jpg",
+      "colours": {"primary_color_1": "#EABB13", "primary_color_2": "#009147", "secondary_color_1": "#F3F1E4", "secondary_color_2": "#FFDB00", "secondary_color_3": "#A1A1A1", "neutral_color_1": "#000000", "neutral_color_2": "#FFFFFF"}
+    },
+    "livestock": {
+      "image": "images/livestock.jpg",
+      "colours": {"primary_color_1": "#009147", "primary_color_2": "#91AC34", "secondary_color_1": "#EEF2E1", "secondary_color_2": "#FAA819", "secondary_color_3": "#374151", "neutral_color_1": "#000000", "neutral_color_2": "#FFFFFF"}
+    },
+    "da": {
+      "image": "images/da.jpg",
+      "colours": {"primary_color_1": "#009147", "primary_color_2": "#91AC34", "secondary_color_1": "#EEF2E1", "secondary_color_2": "#FFDB00", "secondary_color_3": "#000000", "neutral_color_1": "#000000", "neutral_color_2": "#FFFFFF"}
+    }
+  }
+}
