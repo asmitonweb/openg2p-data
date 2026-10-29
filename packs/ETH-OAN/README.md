@@ -64,7 +64,7 @@ registry before you point that environment at this pack.
 
 `ETH`'s list no longer has `SELF`, so on its own it fails `validate_pack.py`: no value carries
 the `head_of_household` role, and six samples use `SELF`. The pack contract needs one value with
-that role, so this pack adds `SELF` (sort order 1, role `head_of_household`) from
+that role, so this pack adds `SELF` ("Head of household", sort order 1, role `head_of_household`) from
 [`eth_oan_additions/values/`](../../scripts/packs/eth_oan_additions/values). The farmer registry
 marks the head with Is Head, and accepts `SELF` only for that member. If `ETH` gets `SELF` back,
 the build stops and names the addition to drop.
@@ -88,7 +88,10 @@ overrides it. Values without `interval_days` get no default due date.
 ## Names that differ from `ETH`
 
 A few base values are shown under OpenAgriNet's wording, so the dropdown matches the registries'
-field labels: `SUBJECT_ID_TYPE` `FAYDA_FAN` reads "Fayda FAN ID". The names come from
+field labels and reads as plain text in a farmer form: `SUBJECT_ID_TYPE` `FAYDA_FAN` reads "Fayda FAN
+ID", `EDUCATION_LEVEL` `BASIC` "Basic education" and `INTERMEDIARY` "Intermediate (middle school)",
+`MOBILE_PHONE_TYPE` `BASIC` "Basic phone (calls and SMS)", `LAND_OWNERSHIP_TYPE` `CROP_SHARE`
+"Sharecropper". The names come from
 [`eth_oan_additions/displays/`](../../scripts/packs/eth_oan_additions/displays), one file per list
 as `{"values": {value_id: value_display}}`. The build sets only `value_display` on those values,
 after the species settings, and leaves `ETH` as OpenG2P ships it. It stops if the list or a value

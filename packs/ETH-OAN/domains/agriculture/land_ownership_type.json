@@ -21,7 +21,7 @@
     {
       "value_id": "CROP_SHARE",
       "value_code": "CROP_SHARE",
-      "value_display": "Crop share",
+      "value_display": "Sharecropper",
       "sort_order": 3,
       "display_i18n": {}
     }

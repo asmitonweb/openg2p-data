@@ -14,7 +14,7 @@
     {
       "value_id": "BASIC",
       "value_code": "BASIC",
-      "value_display": "Basic",
+      "value_display": "Basic phone (calls and SMS)",
       "sort_order": 2,
       "display_i18n": {}
     },
