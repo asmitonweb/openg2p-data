@@ -85,6 +85,16 @@ default number of days until the next dose, from which the livestock registry fi
 vaccination's next due date. An approved row in the registry's Vaccine Schedule register
 overrides it. Values without `interval_days` get no default due date.
 
+## Names that differ from `ETH`
+
+A few base values are shown under OpenAgriNet's wording, so the dropdown matches the registries'
+field labels: `SUBJECT_ID_TYPE` `FAYDA_FAN` reads "Fayda FAN ID". The names come from
+[`eth_oan_additions/displays/`](../../scripts/packs/eth_oan_additions/displays), one file per list
+as `{"values": {value_id: value_display}}`. The build sets only `value_display` on those values,
+after the species settings, and leaves `ETH` as OpenG2P ships it. It stops if the list or a value
+is missing, and `check_pack_lists.py` fails when the built pack shows a different name. Change a
+name there and rebuild, never in this pack.
+
 ## Lists the farmer registry adds
 
 The farmer registry's own choice lists come from Master Data like every other dropdown, so the
