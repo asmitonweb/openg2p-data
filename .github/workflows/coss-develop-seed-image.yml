@@ -1,0 +1,115 @@
+# Keeps ghcr.io/<owner>/master-data-db-seed in step with COSS openg2p-data develop.
+#
+# Every 15 minutes (and on demand) this resolves the head of
+# Centre-for-Open-Societal-Systems/openg2p-data develop. When no image exists yet
+# for that commit, it checks the commit out and builds
+# docker/master-data-db-seed/Dockerfile from it, so the packs, the loader base
+# (BASE, pinned by digest in that Dockerfile) and the build recipe all come from
+# COSS, never from this fork. It pushes two tags:
+#
+#   coss-develop-<12-char commit>   immutable, one per COSS develop commit
+#   coss-develop                    moves to the newest build
+#
+# Environments keep pinning an image digest; nothing deploys from these tags on
+# its own. The tag-triggered master-data-db-seed workflow and its
+# <base tag>-oan.<n> releases are unchanged.
+#
+# Schedules run only from this fork's default branch (develop), and GitHub pauses
+# them after 60 days without a commit to the repository; re-enable the workflow
+# under Actions if that happens.
+name: coss-develop-seed-image
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+    inputs:
+      force:
+        description: Rebuild even when an image for the current COSS develop commit exists
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+  packages: write
+
+concurrency:
+  group: coss-develop-seed-image
+  cancel-in-progress: false
+
+env:
+  SOURCE_REPOSITORY: Centre-for-Open-Societal-Systems/openg2p-data
+  SOURCE_BRANCH: develop
+
+jobs:
+  image:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Resolve COSS develop
+        id: source
+        run: |
+          sha=$(git ls-remote "https://github.com/${SOURCE_REPOSITORY}.git" "refs/heads/${SOURCE_BRANCH}" | cut -f1)
+          if ! [[ "$sha" =~ ^[0-9a-f]{40}$ ]]; then
+            echo "Could not resolve ${SOURCE_REPOSITORY} ${SOURCE_BRANCH}" >&2
+            exit 1
+          fi
+          image="ghcr.io/${GITHUB_REPOSITORY_OWNER,,}/master-data-db-seed"
+          {
+            echo "sha=$sha"
+            echo "image=$image"
+            echo "tag=coss-develop-${sha:0:12}"
+          } >> "$GITHUB_OUTPUT"
+
+      - uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Skip a commit that is already built
+        id: existing
+        env:
+          REF: ${{ steps.source.outputs.image }}:${{ steps.source.outputs.tag }}
+          FORCE: ${{ inputs.force || false }}
+        run: |
+          if [[ "$FORCE" != true ]] && docker buildx imagetools inspect "$REF" > /dev/null 2>&1; then
+            echo "built=true" >> "$GITHUB_OUTPUT"
+            echo "$REF already exists; nothing to build." | tee -a "$GITHUB_STEP_SUMMARY"
+          else
+            echo "built=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/checkout@v4
+        if: steps.existing.outputs.built != 'true'
+        with:
+          repository: ${{ env.SOURCE_REPOSITORY }}
+          ref: ${{ steps.source.outputs.sha }}
+          persist-credentials: false
+
+      - uses: docker/setup-buildx-action@v3
+        if: steps.existing.outputs.built != 'true'
+
+      - id: build
+        if: steps.existing.outputs.built != 'true'
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: docker/master-data-db-seed/Dockerfile
+          push: true
+          provenance: false
+          tags: |
+            ${{ steps.source.outputs.image }}:${{ steps.source.outputs.tag }}
+            ${{ steps.source.outputs.image }}:coss-develop
+          labels: |
+            org.opencontainers.image.source=https://github.com/${{ github.repository }}
+            org.opencontainers.image.title=master-data-db-seed
+            org.opencontainers.image.version=${{ steps.source.outputs.tag }}
+            org.opencontainers.image.revision=${{ steps.source.outputs.sha }}
+            org.openg2p.pin.openg2p-data-repo=https://github.com/${{ env.SOURCE_REPOSITORY }}.git
+            org.openg2p.pin.openg2p-data-branch=${{ steps.source.outputs.sha }}
+
+      - name: Digest
+        if: steps.existing.outputs.built != 'true'
+        run: |
+          echo "${{ steps.source.outputs.image }}:${{ steps.source.outputs.tag }}@${{ steps.build.outputs.digest }} (COSS ${SOURCE_BRANCH} ${{ steps.source.outputs.sha }})" | tee -a "$GITHUB_STEP_SUMMARY"
