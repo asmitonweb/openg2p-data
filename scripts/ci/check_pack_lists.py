@@ -23,7 +23,8 @@ introduces; the rest are listed, so they stay visible until someone fixes them.
 
 It also checks that packs/ETH-OAN matches scripts/packs/eth_oan_additions: an
 addition that is not in the built pack (for attributes/, a list whose schema or
-value attributes differ from the overlay) means build_eth_oan_pack.py was not run,
+value attributes differ from the overlay, for displays/, a value whose shown name
+differs) means build_eth_oan_pack.py was not run,
 and a pack edited by hand loses that edit at the next rebuild. Those findings
 always fail.
 
@@ -141,6 +142,16 @@ def additions_errors(root):
             for code, attributes in (overlay.get("values") or {}).items():
                 if (by_code.get(code) or {}).get("attributes") != attributes:
                     errors.append((rel, (f"{rel}: attributes of {code} differ from {target} or the value is "
+                                         f"missing (run build_eth_oan_pack.py)")))
+        elif sub.startswith("displays/"):
+            target = f"{BUILT}/{sub[len('displays/'):]}"
+            if not os.path.exists(os.path.join(root, target)):
+                errors.append((rel, f"{rel}: renames values in {target}, which does not exist"))
+                continue
+            built = {v["value_id"]: v for v in read_json(root, target)["values"]}
+            for value_id, display in (read_json(root, rel).get("values") or {}).items():
+                if (built.get(value_id) or {}).get("value_display") != display:
+                    errors.append((rel, (f"{rel}: {value_id} does not read {display!r} in {target} or is "
                                          f"missing (run build_eth_oan_pack.py)")))
         else:
             target = f"{BUILT}/{sub}"

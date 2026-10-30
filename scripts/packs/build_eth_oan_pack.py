@@ -27,8 +27,13 @@ What is taken from where
   LIVESTOCK_SPECIES says per species whether an animal carries an ear tag and
   whether it is recorded as a flock. Each file is {"attribute_schema": ...,
   "values": {value_id: attributes}}; the build stops if a named value is
-  missing or the base list already has a different attribute_schema. Kebele moves out of address.json's sub_levels, because here it is a
-  level.
+  missing or the base list already has a different attribute_schema.
+  eth_oan_additions/displays/ sets the shown name of base-list values where
+  OpenAgriNet's wording differs (SUBJECT_ID_TYPE FAYDA_FAN reads "Fayda FAN
+  ID", as in the registries' field labels). Each file is {"values": {value_id:
+  value_display}}; the build stops if a named value is missing. `ETH` keeps its
+  own wording. Kebele moves out of address.json's sub_levels, because here it
+  is a level.
 - boundaries/ are the base pack's polygons for the units that are still the
   same unit, so every OAN registry and dashboard draws and looks up locations
   from Master Data rather than its own copy. A woreda keeps its polygon when
@@ -219,6 +224,24 @@ def apply_attributes(out):
             write_json(dest, doc)
 
 
+def apply_displays(out):
+    """Set value_display of base-list values from eth_oan_additions/displays/."""
+    displays_dir = os.path.join(ADDITIONS, "displays")
+    for dirpath, _, files in os.walk(displays_dir):
+        for name in sorted(files):
+            rel = os.path.relpath(os.path.join(dirpath, name), displays_dir)
+            dest = os.path.join(out, rel)
+            if not os.path.exists(dest):
+                raise SystemExit(f"{rel}: the base pack has no such list to rename values in")
+            doc = read_json(dest)
+            by_id = {v["value_id"]: v for v in doc["values"]}
+            for value_id, display in read_json(os.path.join(dirpath, name))["values"].items():
+                if value_id not in by_id:
+                    raise SystemExit(f"{rel}: the base list has no value {value_id}")
+                by_id[value_id]["value_display"] = display
+            write_json(dest, doc)
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
     ap.add_argument("--source", required=True, help="source catalog (geo_level_values.json)")
@@ -314,7 +337,7 @@ def main():
     # Lists only the farmer registry needs are added on top. They never replace
     # a base list, so both Ethiopia packs keep describing a farmer the same way.
     for dirpath, _, files in os.walk(ADDITIONS):
-        if os.path.relpath(dirpath, ADDITIONS).split(os.sep)[0] in ("values", "attributes"):
+        if os.path.relpath(dirpath, ADDITIONS).split(os.sep)[0] in ("values", "attributes", "displays"):
             continue
         for name in files:
             rel = os.path.relpath(os.path.join(dirpath, name), ADDITIONS)
@@ -342,6 +365,7 @@ def main():
             doc["values"].sort(key=lambda v: v.get("sort_order", 0))
             write_json(dest, doc)
     apply_attributes(args.out)
+    apply_displays(args.out)
     address =read_json(os.path.join(args.base, "address.json"))
     address["sub_levels"] = [s for s in address["sub_levels"] if s["id"] != "kebele"]
     address["lines"] = ["House {house_number}"]
