@@ -35,7 +35,7 @@
     {
       "value_id": "BASIC",
       "value_code": "BASIC",
-      "value_display": "Basic",
+      "value_display": "Basic education",
       "sort_order": 5,
       "display_i18n": {}
     },
@@ -49,7 +49,7 @@
     {
       "value_id": "INTERMEDIARY",
       "value_code": "INTERMEDIARY",
-      "value_display": "Intermediary",
+      "value_display": "Intermediate (middle school)",
       "sort_order": 7,
       "display_i18n": {}
     },

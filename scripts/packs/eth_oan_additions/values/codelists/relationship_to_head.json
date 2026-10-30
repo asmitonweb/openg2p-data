@@ -4,7 +4,7 @@
     {
       "value_id": "SELF",
       "value_code": "SELF",
-      "value_display": "Self (head)",
+      "value_display": "Head of household",
       "sort_order": 1,
       "roles": [
         "head_of_household"
