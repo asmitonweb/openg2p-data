@@ -7,140 +7,140 @@
     {
       "value_id": "CROP_WHEAT",
       "value_code": "CROP_WHEAT",
-      "value_display": "WHEAT",
+      "value_display": "Wheat",
       "sort_order": 1,
       "display_i18n": {}
     },
     {
       "value_id": "CROP_TEFF",
       "value_code": "CROP_TEFF",
-      "value_display": "TEFF",
+      "value_display": "Teff",
       "sort_order": 2,
       "display_i18n": {}
     },
     {
       "value_id": "CROP_MAIZE",
       "value_code": "CROP_MAIZE",
-      "value_display": "MAIZE",
+      "value_display": "Maize",
       "sort_order": 3,
       "display_i18n": {}
     },
     {
       "value_id": "CROP_SESAME",
       "value_code": "CROP_SESAME",
-      "value_display": "SESAME",
+      "value_display": "Sesame",
       "sort_order": 4,
       "display_i18n": {}
     },
     {
       "value_id": "CROP_MALT_BARLEY",
       "value_code": "CROP_MALT_BARLEY",
-      "value_display": "MALT_BARLEY",
+      "value_display": "Malt Barley",
       "sort_order": 5,
       "display_i18n": {}
     },
     {
       "value_id": "CROP_TOMATO",
       "value_code": "CROP_TOMATO",
-      "value_display": "TOMATO",
+      "value_display": "Tomato",
       "sort_order": 6,
       "display_i18n": {}
     },
     {
       "value_id": "CROP_ONION",
       "value_code": "CROP_ONION",
-      "value_display": "ONION",
+      "value_display": "Onion",
       "sort_order": 7,
       "display_i18n": {}
     },
     {
       "value_id": "CROP_AVOCADO",
       "value_code": "CROP_AVOCADO",
-      "value_display": "AVOCADO",
+      "value_display": "Avocado",
       "sort_order": 8,
       "display_i18n": {}
     },
     {
       "value_id": "CROP_BANANA",
       "value_code": "CROP_BANANA",
-      "value_display": "BANANA",
+      "value_display": "Banana",
       "sort_order": 9,
       "display_i18n": {}
     },
     {
       "value_id": "CROP_MANGO",
       "value_code": "CROP_MANGO",
-      "value_display": "MANGO",
+      "value_display": "Mango",
       "sort_order": 10,
       "display_i18n": {}
     },
     {
       "value_id": "CROP_SOYBEAN",
       "value_code": "CROP_SOYBEAN",
-      "value_display": "SOYBEAN",
+      "value_display": "Soybean",
       "sort_order": 11,
       "display_i18n": {}
     },
     {
       "value_id": "CROP_SORGHUM",
       "value_code": "CROP_SORGHUM",
-      "value_display": "SORGHUM",
+      "value_display": "Sorghum",
       "sort_order": 12,
       "display_i18n": {}
     },
     {
       "value_id": "CROP_BARLEY",
       "value_code": "CROP_BARLEY",
-      "value_display": "BARLEY",
+      "value_display": "Barley",
       "sort_order": 13,
       "display_i18n": {}
     },
     {
       "value_id": "CROP_FINGER_MILLET",
       "value_code": "CROP_FINGER_MILLET",
-      "value_display": "FINGER_MILLET",
+      "value_display": "Finger Millet",
       "sort_order": 14,
       "display_i18n": {}
     },
     {
       "value_id": "CROP_FABA_BEAN",
       "value_code": "CROP_FABA_BEAN",
-      "value_display": "FABA_BEAN",
+      "value_display": "Faba Bean",
       "sort_order": 15,
       "display_i18n": {}
     },
     {
       "value_id": "CROP_HARICOT_BEAN",
       "value_code": "CROP_HARICOT_BEAN",
-      "value_display": "HARICOT_BEAN",
+      "value_display": "Haricot Bean",
       "sort_order": 16,
       "display_i18n": {}
     },
     {
       "value_id": "CROP_CHICKPEA",
       "value_code": "CROP_CHICKPEA",
-      "value_display": "CHICKPEA",
+      "value_display": "Chickpea",
       "sort_order": 17,
       "display_i18n": {}
     },
     {
       "value_id": "CROP_COFFEE",
       "value_code": "CROP_COFFEE",
-      "value_display": "COFFEE",
+      "value_display": "Coffee",
       "sort_order": 18,
       "display_i18n": {}
     },
     {
       "value_id": "CROP_POTATO",
       "value_code": "CROP_POTATO",
-      "value_display": "POTATO",
+      "value_display": "Potato",
       "sort_order": 19,
       "display_i18n": {}
     },
     {
       "value_id": "CROP_OTHER",
       "value_code": "CROP_OTHER",
-      "value_display": "OTHER",
+      "value_display": "Other",
       "sort_order": 20,
       "display_i18n": {}
     }
