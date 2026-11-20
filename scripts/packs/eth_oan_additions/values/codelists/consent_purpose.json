@@ -1,0 +1,12 @@
+{
+  "description": "registry_intake: the purpose of the signed Farmer reference lookup the Crop Sown and Livestock registries make to the Farmer registry when an intake is submitted (consent purpose code registry_intake). OpenG2P Partner Management accepts a policy purpose only from this list.",
+  "values": [
+    {
+      "value_id": "registry_intake",
+      "value_code": "registry_intake",
+      "value_display": "Registry intake (Farmer reference lookup)",
+      "sort_order": 7,
+      "display_i18n": {}
+    }
+  ]
+}

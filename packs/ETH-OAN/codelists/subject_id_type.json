@@ -17,6 +17,20 @@
       "value_display": "Farmer ID",
       "sort_order": 2,
       "display_i18n": {}
+    },
+    {
+      "value_id": "fayda_fin",
+      "value_code": "fayda_fin",
+      "value_display": "Fayda FIN (12 digits)",
+      "sort_order": 3,
+      "display_i18n": {}
+    },
+    {
+      "value_id": "fayda_fan_id",
+      "value_code": "fayda_fan_id",
+      "value_display": "Fayda FAN (16 digits)",
+      "sort_order": 4,
+      "display_i18n": {}
     }
   ]
 }

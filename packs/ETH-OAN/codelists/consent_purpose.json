@@ -45,6 +45,13 @@
       "value_display": "Research and statistics",
       "sort_order": 6,
       "display_i18n": {}
+    },
+    {
+      "value_id": "registry_intake",
+      "value_code": "registry_intake",
+      "value_display": "Registry intake (Farmer reference lookup)",
+      "sort_order": 7,
+      "display_i18n": {}
     }
   ]
 }
